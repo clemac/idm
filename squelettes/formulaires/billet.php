@@ -1,7 +1,6 @@
 <?php
 
 include_spip('base/abstract_sql');
-include_spip('inc/envoyer_mail');
 
 function notify_comite ($id_auteur, $id_article, $titre, $date) {
   $today = floor(time()/(24*3600)) % count($idm_team_billets);
