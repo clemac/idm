@@ -20,6 +20,7 @@
 - [ ] Wait for label/ref to be in mainline mathjax
 - [ ] Wait for it to be in a stable release
 - [ ] Remove the previous hack
+*** Choose the member in the billets team differently
 * Backburner
 *** Buttons to write to groups of people
 *** Filter display by color
