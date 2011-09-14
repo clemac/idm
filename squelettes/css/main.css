@@ -261,12 +261,17 @@ div.mjlabel_top { color: #e20000; text-align: right; margin-bottom: -4.5ex; font
 
 div.mjlabel_bot { color: #e20000; text-align: right; margin-top: -4.5ex; margin-bottom: 2ex; font-weight: bold; }
 
+#social { float: left; padding-top: 10px; }
+#social .twitter-share-button { display: inline; vertical-align: top; }
+#social #fb-root, #social .fb-like { display: inline; vertical-align: top; margin-left: 2px; }
+
 @media print { html, body { font-family: Times, serif; }
   .noprint, div.spip-admin-float { display: none; }
   div.page { width: 100%; border: none; margin: 0; padding: 0; }
   div.shadow { box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; }
   div.article { margin: 0; }
   div.article .spip_logos { margin: 0 0 1ex; }
-  div.citer { padding: 1ex 0 0; margin: 2ex 0 0; border-top: 1px solid #e20000; } }
+  div.citer { padding: 1ex 0 0; margin: 2ex 0 0; border-top: 1px solid #e20000; }
+  div.fb-like { display: none; } }
 @media screen and (max-width: 700px) { #actu { float: none; padding: 2ex 0em; width: 100%; }
   #une { width: 100%; } }

@@ -315,6 +315,11 @@ ul.checkboxTree { padding-left: 20px;
 div.mjlabel_top { color: $red; text-align: right; margin-bottom: -4.5ex; font-weight: bold; }
 div.mjlabel_bot { color: $red; text-align: right; margin-top: -4.5ex; margin-bottom: 2ex; font-weight: bold; }
 
+#social { float : left; padding-top : 10px;
+          .twitter-share-button { display : inline; vertical-align : top; }
+          #fb-root, .fb-like { display : inline; vertical-align : top; margin-left : 2px; }
+        }
+
 @media print {
     html,body { font-family : Times, serif; }
     .noprint, div.spip-admin-float { display : none; }
@@ -323,6 +328,7 @@ div.mjlabel_bot { color: $red; text-align: right; margin-top: -4.5ex; margin-bot
     div.article { margin : 0; }
     div.article .spip_logos { margin : 0 0 1ex; }
     div.citer { padding : 1ex 0 0; margin : 2ex 0 0; border-top : 1px solid $red; }
+    div.fb-like { display: none; }
 }
 
 @media screen and (max-width: 700px) {
