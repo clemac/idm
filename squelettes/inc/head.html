@@ -3,16 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" version="XHTML+RDFa 1.0" xml:lang="fr">
 
 <?php
-  $uri = $_SERVER['REQUEST_URI'];
   if ($_SERVER['HTTP_HOST'] == 'www.images.math.cnrs.fr') {
     include_spip ('inc/headers');
+    $uri = $_SERVER['REQUEST_URI'];
     redirige_par_entete ("http://images.math.cnrs.fr$uri", '', 301);
   }
 ?>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=#CHARSET"/>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=#CHARSET"/>
+
   <meta name="svg.config.data-path" content="#CHEMIN{svgweb}" />
+
   <meta property="fb:app_id" content="152460711490894" />
 
   <title>[(#ENV*{title}|textebrut) - ]#NOM_SITE_SPIP</title>
