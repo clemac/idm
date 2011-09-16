@@ -1,21 +1,10 @@
 <?php
 
 include_spip('base/abstract_sql');
-include_spip('inc/envoyer_mail');
 
 function notify_comite ($id_auteur, $id_article, $titre, $date) {
-  $staff = array();
-  $staff[] = "Aurelien.Alvarez@umpa.ens-lyon.fr";
-  $staff[] = "Olivier.DRUET@umpa.ens-lyon.fr";
-  $staff[] = "Edouard.Oudet@univ-savoie.fr";
-  $staff[] = "Bruno.Sevennec@umpa.ens-lyon.fr";
-  $staff[] = "paul.vigneaux@umpa.ens-lyon.fr";
-
-  $today = floor (time() / (24*3600));
-  $today = $today % 5;
-
-  $gars = $staff[$today];
-  $email = "comite@images.math.cnrs.fr";
+  $today = floor(time()/(24*3600)) % count($idm_team_billets);
+  $gars = $idm_team_billets [$today];
 
   $qui = sql_getfetsel ("nom", "spip_auteurs", "id_auteur = $id_auteur");
   $qui = utf8_decode ($qui);
@@ -23,9 +12,7 @@ function notify_comite ($id_auteur, $id_article, $titre, $date) {
 
   $subject = "Un nouveau billet pour Images des Maths";
 
-  $texte = "Bonjour !\n" .
-    "\n" .
-    "Un nouveau billet vient d'être validé pour Images des Maths.\n" .
+  $texte = "Un nouveau billet vient d'être validé pour Images des Maths.\n" .
     "\n" .
     "  Auteur : $qui\n" .
     "\n" .
@@ -38,14 +25,9 @@ function notify_comite ($id_auteur, $id_article, $titre, $date) {
     "\n" .
     "En attendant, il est accessible aux administrateurs ici :\n" .
     "\n" .
-    "  http://images.math.cnrs.fr/ecrire/?exec=articles&action=redirect&type=article&id=$id_article&var_mode=preview\n" .
-    "\n" .
-    "-- \n" .
-    "Le comité de rédaction de \"Images des Mathématiques\".";
+    "  http://images.math.cnrs.fr/ecrire/?exec=articles&action=redirect&type=article&id=$id_article&var_mode=preview";
 
-  $envoyer_mail = charger_fonction ('envoyer_mail', 'inc');
-  $envoyer_mail ($email, $subject, utf8_encode($texte));
-  $envoyer_mail ($gars,  $subject, utf8_encode($texte));
+  idm_notify (array(0,$gars), utf8_encode($texte), $subject);
 }
 
 function formulaires_billet_charger () {
