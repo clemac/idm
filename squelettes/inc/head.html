@@ -1,6 +1,9 @@
 #CACHE{3600}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" version="XHTML+RDFa 1.0" xml:lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml"
+      version="XHTML+RDFa 1.0" xml:lang="fr">
 
 <?php
   if ($_SERVER['HTTP_HOST'] == 'www.images.math.cnrs.fr') {
@@ -15,14 +18,23 @@
 
   <meta name="svg.config.data-path" content="#CHEMIN{svgweb}" />
 
-  <meta property="fb:app_id" content="152460711490894" />
-
   <title>[(#ENV*{title}|textebrut) - ]#NOM_SITE_SPIP</title>
 
   <link rel="stylesheet" type="text/css" media="all"   href="#CHEMIN{css/main.css}"/>
   <link rel="stylesheet" type="text/css" media="all"   href="#CHEMIN{css/tag_20110914.css}"/>
 
   <link rel="alternate"  type="application/rss+xml" title="<:syndiquer_site:>" href="#URL_PAGE{backend}"/>
+
+<BOUCLE_fb(ARTICLES){id_article}>
+  <meta property="fb:app_id" content="152460711490894" />
+  <meta property="og:site_name" content="Images des Mathématiques"/>
+
+  <meta property="og:type" content="article"/>
+  [<meta property="og:title" content="(#TITRE|textebrut)"/>]
+  <meta property="og:url" content="#URL_SITE_SPIP/#URL_ARTICLE"/>
+  [<meta property="og:image" content="#URL_SITE_SPIP/IMG/(#LOGO_ARTICLE**)"/>]
+  [<meta property="og:description" content="(#DESCRIPTIF|textebrut)"/>]
+</BOUCLE_fb>
 
   <link rel="home"  title="Page principale" href="#URL_SITE_SPIP/"/>
   <link rel="start" title="Page principale" href="#URL_SITE_SPIP/"/>
