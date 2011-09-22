@@ -21,27 +21,15 @@
     </p>
   </div>
 
-  <div id="social" class="noprint">
-    <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="ImagesDesMaths" data-lang="fr">Tweeter</a>
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-
-    <div id="fb-root"></div>
-    <script type="text/javascript">(function(d){
-      var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-      js = d.createElement('script'); js.id = id; js.async = true;
-      js.src = "//connect.facebook.net/fr_FR/all.js#appId=152460711490894&xfbml=1";
-      d.getElementsByTagName('head')[0].appendChild(js);
-      }(document));</script>
-    <div class="fb-like" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-font="arial"></div>
-  </div>
+  [(#INCLURE{fond=inc/social_bar})]
 
   [(#INCLURE{fond=inc/article}{id_article})]
 
-  <h3 class="discuter noprint"><a href="#URL_PAGE{forum,id_article=#ID_ARTICLE}"><?php
-                                                                            if ($nb>1)  print "Il y a $nb commentaires ...";
-      else if ($nb==1) print "Il y a 1 commentaire ...";
-      else             print "Soyez le premier à déposer un commentaire !";
-      ?></a></h3>
+  <h3 class="discuter noprint"><a href="#URL_PAGE{forum,id_article=#ID_ARTICLE}">
+      <?php if ($nb>1)  print "Il y a $nb commentaires ...";
+       else if ($nb==1) print "Il y a 1 commentaire ...";
+       else             print "Soyez le premier à déposer un commentaire !"; ?>
+  </a></h3>
 
   <div class="citer">Pour citer cet article : [(#LESAUTEURS),]
     <strong>&laquo; #TITRE &raquo;</strong> &mdash; <em>Images des Math&eacute;matiques</em>,
