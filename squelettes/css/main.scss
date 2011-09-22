@@ -317,7 +317,7 @@ div.mjlabel_bot { color: $red; text-align: right; margin-top: -4.5ex; margin-bot
 
 #social { float : left; padding-top : 10px;
           .twitter-share-button { display : inline; vertical-align : top; }
-          #fb-root, .fb-like { display : inline; vertical-align : top; margin-left : 2px; }
+          #fb-root, .fb_like { display : inline; vertical-align : top; margin-left : 2px; }
         }
 
 @media print {
