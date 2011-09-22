@@ -1,0 +1,51 @@
+<:spiptweets:date_dernier_traitement:> : [(#ENV{date_traitement}|sinon{<:spiptweets:pas_traitement:>})]<br/>
+<:spiptweets:date_dernier_post:> : [(#ENV{date_post}|sinon{<:spiptweets:pas_post:>})]<br/>
+<:spiptweets:followers:> : [(#ENV{followers}|sinon{0})]<br/><br/>
+
+<div style='background-color: #C0CAD4; padding: 4px; color: black; -moz-border-radius: 5px; font-weight: bold;' class='verdana2'>
+	<img id="triangle_L5" class="swap-couche" alt="<:info_deplier:>" title="<:info_deplier:>" src="#EVAL{_DIR_IMG_PACK}/deplierbas.gif" />
+	<span style='text-transform: uppercase;'><:spiptweets:raccourcir:></span>
+</div>
+<div id='Layer_L5' style='display:block;'>
+	[(#ENV{raccourcir}|=={oui}|?{<span style='font-weight: bold;'><:spiptweets:adresse_courte:></span>: <a href='[(#ENV{raccourcir_petite_url})]' target='_blank'>[(#ENV{raccourcir_petite_url})]</a></span><br/>})]
+	<form method="post" name="spiptweets" action="#SELF">
+		<label><:spiptweets:url:>:<br/><input class='fondl' type='text' maxlength='2000' name='url' size='60' value='[(#ENV{raccourcir_contenu_url})]'></label>
+		<input type="submit" class='fondo' name="raccourcir" value="<:spiptweets:envoyer:>" />
+	</form>
+</div>
+<br/>
+<div style='background-color: #C0CAD4; padding: 4px; color: black; -moz-border-radius: 5px; font-weight: bold;' class='verdana2'>
+	<img id="triangle_L3" class="swap-couche" alt="<:info_deplier:>" title="<:info_deplier:>" src="#EVAL{_DIR_IMG_PACK}/deplierbas.gif" />
+	<span style='text-transform: uppercase;'><:spiptweets:publier:></span>
+</div>
+<div id='Layer_L3' style='display:block;'>
+	<form method="post" name="spiptweets" action="#SELF">
+		<label><:spiptweets:message:>:<br/><input class='fondl' type='text' maxlength='140' name='message' size='60' value='[(#ENV{publier_contenu_message})]'></label>
+		<input type="submit" class='fondo' name="envoyer" value="<:spiptweets:envoyer:>" />
+	</form>
+</div>
+<br/>
+<B_liste_pub_twitter>
+<div style='background-color: #C0CAD4; padding: 4px; color: black; -moz-border-radius: 5px; font-weight: bold;' class='verdana2'>
+	<img id="triangle_L4" class="swap-couche" alt="<:info_deplier:>" title="<:info_deplier:>" onclick="swap_couche('_L4','','../prive/images/',0);" src="#EVAL{_DIR_IMG_PACK}/deplierhaut.gif" />
+	<span style='text-transform: uppercase;'><:spiptweets:liste_publication:></span>
+</div>
+<div id='Layer_L4' style='display:none;'> 
+<BOUCLE_liste_pub_twitter(spip_spiptweets){par date}{0,10}{inverse}>
+<div style='[(#NOTIFIE|=={non}|?{ [(#ESSAI|=={0}|?{border: 1px solid #00FF00;, [(#ESSAI|=={#ENV{max_essai}|sinon{5}}|?{border: 1px solid #FF0000;,border: 1px solid #FFC600;})] })] })] padding: 3px;'>
+	<form method="post" name="spiptweets_#ID" action="#SELF">
+		<span style='font-weight: bold;'><:spiptweets:date:>: </span>#DATE [(#ESSAI|=={#ENV{max_essai}|sinon{5}}|?{''})]<br/>
+		<span style='font-weight: bold;'><:spiptweets:message:>: </span>#MESSAGE<br/>
+		<span style='font-weight: bold;'><:spiptweets:tronque:>: </span>[(#TRUNCATED|=={1}|?{oui,non})]<br/>
+		[(#TYPE|=={article}|?{<div style='float: right;'><img src='../plugins/spiptweets/images/reload.png' onclick='javascript:document.forms.spiptweets_#ID.submit();'/></div>})]
+		<span style='font-weight: bold;'>#TWITTER_STATUS</span>
+		<input type='hidden' name='twitid' value='#ID' />
+	</form>
+</div>
+<hr/>
+
+</BOUCLE_liste_pub_twitter>
+	</div>
+<//B_liste_pub_twitter>
+
+

@@ -1,0 +1,19 @@
+<br />
+<div style='background-color: #C0CAD4; padding: 4px; color: black; -moz-border-radius: 5px; font-weight: bold;' class='verdana2'>
+	<img id="triangle_L2" class="swap-couche" alt="<:info_deplier:>" title="<:info_deplier:>" onclick="swap_couche('_L2','','../prive/images/',0);" src="#EVAL{_DIR_IMG_PACK}/deplierhaut.gif" />
+	<span style='[(#ENV{statut_erreur}|=={oui}|?{'color: #C00020;'})] text-transform: uppercase;'><:spiptweets:statut:></span>
+</div>
+<div id='Layer_L2' style='display:[(#ENV{statut_style})]'>
+	<div style='color: [(#ENV{statut_couleur_php})] padding: 4px; font-weight: bold;' class='verdana2'>[(#ENV{statut_php})]</div>
+	<div style='color: [(#ENV{statut_couleur_curl})] padding: 4px; font-weight: bold;' class='verdana2'>[(#ENV{statut_curl})]</div>
+	<div style='color: [(#ENV{statut_couleur_json})] padding: 4px; font-weight: bold;' class='verdana2'>[(#ENV{statut_json})]</div>
+	<div style='color: [(#ENV{statut_couleur_isgdclass})] padding: 4px; font-weight: bold;' class='verdana2'>[(#ENV{statut_isgdclass})]</div>
+	<div style='color: [(#ENV{statut_couleur_twitteroauthclass})] padding: 4px; font-weight: bold;' class='verdana2'>[(#ENV{statut_twitteroauthclass})]</div>
+	<div style='color: [(#ENV{statut_couleur_twitter})] padding: 4px; font-weight: bold;' class='verdana2'>[(#ENV{statut_twitter})]</div>
+</div>
+<br />
+[(#ENV{message}|=={oui}|?{<div style='background-color: #C0CAD4; color: [(#ENV{message_couleur}|sinon{#000;})]; padding: 4px; -moz-border-radius: 5px; font-weight: bold;' class='verdana2'>[(#ENV{message_txt})]</div><br />})]
+[(#ENV{verifier}|=={oui}|?{<div style='background-color: #C0CAD4; color: [(#ENV{verifier_couleur})] padding: 4px; -moz-border-radius: 5px; font-weight: bold; height: 48px;' class='verdana2'><div style="float:left; margin-right:5px;"><img src="[(#ENV{profile_image_url})]"></div>[(#ENV{verifier_message})]<br/><:spiptweets:login:>: [(#ENV{screen_name})]<br/><:spiptweets:nom:>: [(#ENV{name})]</div><br />})]
+[(#ENV{verifier}|=={non}|?{<div style='background-color: #C0CAD4; color: [(#ENV{verifier_couleur})] padding: 4px; -moz-border-radius: 5px; font-weight: bold; height: 48px;' class='verdana2'>[(#ENV{verifier_message})]<br/><:spiptweets:erreur:>: <i>[(#ENV{error})]</i></div><br />})]
+[(#ENV{publier}|?{<div style='background-color: #C0CAD4; color: [(#ENV{publier_couleur})] padding: 4px; -moz-border-radius: 5px; font-weight: bold;' class='verdana2'>[(#ENV{publier_message})]</div><br />})]
+[(#ENV{raccourcir}|?{<div style='background-color: #C0CAD4; color: [(#ENV{raccourcir_couleur})] padding: 4px; -moz-border-radius: 5px; font-weight: bold;' class='verdana2'>[(#ENV{raccourcir_message})]</div><br />})]

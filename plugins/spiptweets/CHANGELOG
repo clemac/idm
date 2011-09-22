@@ -1,0 +1,13 @@
+spiptweet v2.0.0
+	- twitter + OAuth API support
+	- mise a jour interface config
+	- suppresssion parametre https.
+	- amelioration de la verification du compte
+	- mise sous forme de lib les appels a twitter
+	- nouveau parametres pour la balise - followers, nom, logo, date_creation, login
+	- convertion de isgd class avec le support json
+	- reduction de la taille du code
+	- creation automatique des valeurs par defaut (meta de conf)
+	- l'ancienne table 'spip_spiplovestwitter' est renommee en 'spip_spiptweets'
+	- spiptweets a un meta qui renseigne la version en cours
+
