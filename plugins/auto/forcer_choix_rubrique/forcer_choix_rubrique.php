@@ -1,8 +1,9 @@
 <?php
-function forcer_choix_rubrique_boite(&$flux) {
-  if ($GLOBALS['afficher_boite_rubrique'] == "oui") {
-    $flux .= "
-<script type='text/javascript'>
+
+function forcer_choix_rubrique_boite($ret){
+	if($GLOBALS['afficher_boite_rubrique']=="oui"){
+	$ret .= 
+"<script type='text/javascript'>
 	function masquer_boite(){
 		ma_Boite=document.getElementById('maBoite');
 		if (document.all) { // Rustine pour IE6 -- la peste soit de ce navigateur
@@ -30,20 +31,21 @@ function forcer_choix_rubrique_boite(&$flux) {
 	}
 
 </script>
-<div id='maBoite' class='XXX' style='display:inherit; position:fixed; width:99%; height:99%;'>
+<div id='maBoite' style='display:inherit; position:fixed; width:99%; height:99%;'>
 	<div style='position:absolute; width:70%; top:25%; left:15%; border:#5DA7C5 medium solid; background-color:#EEEEEE; opacity:0.8; z-index:100; padding:10px; -moz-border-radius:10px; text-align:justify'>
 		<h2>Attention&nbsp!</h2>
 		<div>
 	";
-    $flux .= file_get_contents(find_in_path('message_boite.inc'));
-    $flux .= "
+	$ret .= file_get_contents(find_in_path('message_boite.inc'));
+	$ret .= "
 		</div>
 		<div>&nbsp;</div>
 		<div style='text-align:center'>[<a href='javascript:masquer_boite()'>Fermer</a>]</div>
 	</div>
 </div>
 	";
-  }
-  return $flux;
+	
+	}
+	return $ret;
 }
 ?>

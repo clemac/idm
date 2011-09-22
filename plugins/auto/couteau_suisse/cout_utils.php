@@ -157,8 +157,9 @@ function cs_get_defaut($variable) {
 	}
 	$variable = &$cs_variables[$variable];
 	if(isset($variable['externe'])) $variable['defaut'] = $variable['externe'];
-	$defaut = function_exists($f='initialiser_variable_'.$variable['nom'])?$f()
-		:(!isset($variable['defaut'])?'':$variable['defaut']);
+	$defaut = !isset($variable['defaut'])?'':$variable['defaut'];
+	if(function_exists($f='initialiser_variable_'.$variable['nom']))
+		$defaut = $f($defaut);
 	if(!strlen($defaut)) $defaut = "''";
 	if(@$variable['format']==_format_NOMBRE) $defaut = "intval($defaut)";
 		elseif(@$variable['format']==_format_CHAINE) $defaut = "strval($defaut)";
@@ -245,7 +246,7 @@ function cs_aide_raccourci($id) {
 	if($outils[$id]['actif']) {
 		include_spip('outils/'.$id);	
 		if(function_exists($f = $id.'_raccourcis')) return $f();
-		if(!preg_match(',:aide$,', _T("couteauprive:$id:aide") )) return _T("couteauprive:$id:aide");
+		if(!preg_match(',:aide(?:<|$),', $x = _T("couteauprive:$id:aide") )) return $x;
 	}
 	return '';
 }
@@ -319,7 +320,7 @@ function cs_sauve_configuration() {
 		. "\t'variables' => array(\n\t" . join(",\n\t", $metas_actifs) . "\n\t)\n);} # $nom_pack #\n";
 
 	ecrire_fichier(_DIR_CS_TMP.'config.php', '<'."?php\n// Configuration de controle pour le plugin 'Couteau Suisse'\n\n$sauve?".'>');
-	if(@$_GET['cmd']=='pack') $GLOBALS['cs_pack_actuel'] = $temp;
+	if(_request('cmd')=='pack' || (_request('cmd')=='descrip' && _request('outil')=='pack')) $GLOBALS['cs_pack_actuel'] = $temp;
 }
 
 // cree les tableaux $infos_pipelines et $infos_fichiers, puis initialise $cs_metas_pipelines
@@ -332,7 +333,7 @@ function cs_initialise_includes($count_metas_outils) {
 	// variables temporaires
 	$temp_js_html = $temp_css_html = $temp_css = $temp_js = $temp_jq = $temp_jq_init = $temp_filtre_imprimer = array();
 	@define('_CS_HIT_EXTERNE', 1500);
-	// inclure d'office outils/cout_fonctions.php
+	// inclure d'office outils/couteau_suisse_fonctions.php
 	if($temp=cs_lire_fichier_php("outils/cout_fonctions.php"))
 		$infos_fichiers['code_fonctions'][] = $temp;
 	// variable de verification
@@ -477,7 +478,8 @@ jQuery.fn.cs_todo=function(){return this.not('.cs_done').addClass('cs_done');};\
 	foreach($traitements_utilises as $bal=>$balise) {
 		foreach($balise as $obj=>$type_objet) {
 			// ici, on fait attention de ne pas melanger propre et typo
-			if(array_key_exists('typo', $type_objet) && array_key_exists('propre', $type_objet)) die(_T('couteauprive:erreur:traitements'));
+			if(array_key_exists('typo', $type_objet) && array_key_exists('propre', $type_objet)) 
+				die(var_dump($type_objet) . "<br/>>> <b>#$bal/$obj</b><br/>" . _T('couteauprive:erreur:traitements'));
 			$traitements_type_objet = &$traitements_utilises[$bal][$obj];
 			foreach($type_objet as $f=>$fonction)  {
 				// pas d'objet precis
@@ -535,7 +537,7 @@ define('_CS_SPIP_OPTIONS_B', "// Fin du code. Ne pas modifier ces lignes, merci"
 function cs_verif_FILE_OPTIONS($activer=false, $ecriture = false) {
 	$include = str_replace('\\','/',realpath(_DIR_CS_TMP.'mes_spip_options.php'));
 	$include = "@include_once \"$include\";\nif(\$GLOBALS['cs_spip_options']) define('_CS_SPIP_OPTIONS_OK',1);";
-	$inclusion = _CS_SPIP_OPTIONS_A."\n// Please don’t modify; this code is auto-generated\n$include\n"._CS_SPIP_OPTIONS_B;
+	$inclusion = _CS_SPIP_OPTIONS_A."\n// Please don't modify; this code is auto-generated\n$include\n"._CS_SPIP_OPTIONS_B;
 cs_log("cs_verif_FILE_OPTIONS($activer, $ecriture) : le code d'appel est $include");
 	if($fo = cs_spip_file_options(1)) {
 		if(lire_fichier($fo, $t)) {
@@ -681,8 +683,9 @@ function cs_optimise_if($code, $root=true) {
 }
 
 // lance la fonction d'installation de chaque outil actif, si elle existe.
-// la fonction doit etre ecrite sous la forme monoutil_installe() et placee
+// la fonction doit etre ecrite sous la forme monoutil_installe_dist() et placee
 // dans le fichier outils/monoutil.php
+// une surcharge de la fnction native est possible en ecrivant une fonction monoutil_installe() 
 function cs_installe_outils() {
 	global $metas_outils;
 	$datas = array();

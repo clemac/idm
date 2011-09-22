@@ -13,6 +13,35 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_parcourir_docs_rubrique' => 'Rubrik durchsuchen',
 	'bouton_parcourir_mediatheque' => 'Mediathek durchsuchen',
 
+	// C
+	'construire_action_annuler' => 'Abbrechen',
+	'construire_action_configurer' => 'Konfigurieren',
+	'construire_action_deplacer' => 'Verschieben',
+	'construire_action_dupliquer' => 'Duplizieren',
+	'construire_action_dupliquer_copie' => '(Kopie)',
+	'construire_action_supprimer' => 'Löschen',
+	'construire_ajouter_champ' => 'Feld hinzufügen',
+	'construire_attention_enregistrer' => 'Vergessen Sie nicht, Ihre Änderungen zu speichern.',
+	'construire_attention_modifie' => 'Das untere Formular unterscheidet sich vom ursprünglichen. Sie können es in den Zustand vor den Änderungen zurücksetzen.',
+	'construire_attention_supprime' => 'Ihre Änderungen umfassen das Löschen von Feldern. Bitte bestätigen das Speichern dieser neuen Version des Formulars.',
+	'construire_aucun_champs' => 'Dieses Formular enthält noch keine Felder.',
+	'construire_confirmer_supprimer_champ' => 'Wollen Sie dieses Feld wirklich löschen?',
+	'construire_info_nb_champs_masques' => '@nb@ Feld/er während der Konfiguration der Gruppe ausgeblendet.',
+	'construire_position_explication' => 'Geben Sie an, vor welchem anderen Feld dieses erscheinen soll.',
+	'construire_position_fin_formulaire' => 'Am Ende des Formulars',
+	'construire_position_fin_groupe' => 'Am Ende der Gruppe @groupe@',
+	'construire_position_label' => 'Feldposition',
+	'construire_reinitialiser' => 'Formular neu initialisieren',
+	'construire_reinitialiser_confirmer' => 'Alle Ihre Änderungen werden verlorengehen. Wollen Sie wirklich das ursprüngliche Formular wieder herstellen?',
+	'construire_verifications_aucune' => 'Keine',
+	'construire_verifications_label' => 'Art der Überprüfung',
+
+	// E
+	'erreur_option_nom_unique' => 'Dieser Name wird bereits für ein anderes Feld verwendet; er kann in diesem Formular nur einmal verwendet werden.',
+
+	// I
+	'info_configurer_saisies' => 'Testseite der Eingabefelder.',
+
 	// L
 	'label_annee' => 'Jahr',
 	'label_jour' => 'Tag',
@@ -27,6 +56,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'option_aff_rub_interface_label' => 'Mehrsprachige Anzeige',
 	'option_attention_explication' => 'Nachricht wichtiger als Meldung',
 	'option_attention_label' => 'Achtung',
+	'option_autocomplete_defaut' => 'Standardeinstellung belassen',
+	'option_autocomplete_explication' => 'Beim Laden der Seite kann Ihr Browser das Feld mit bereits verwendeten Werten vorausfüllen.',
+	'option_autocomplete_label' => 'Feld vorausfüllen',
+	'option_autocomplete_off' => 'Deaktivieren',
+	'option_autocomplete_on' => 'Aktivieren',
 	'option_cacher_option_intro_label' => 'Erste leere Auswahl ausblenden',
 	'option_choix_destinataires_explication' => 'Einer oder mehrere Empfänger, welche der Besucher auswählen kann. Wenn er keine Auswahl trifft, geht die Nachricht an den ersten Administrator (Autor 1).',
 	'option_choix_destinataires_label' => 'Mögliche Empfänger',

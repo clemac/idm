@@ -10,8 +10,8 @@ if(!defined("_ECRIRE_INC_VERSION")) return;
 
 // Noter :
 // outils/mon_outil.php : inclus par les pipelines de l'outil
-// outils/mon_outil_options.php : inclus par cout_options.php
-// outils/mon_outil_fonctions.php : inclus par cout_fonctions.php
+// outils/mon_outil_options.php : inclus par couteau_suisse_options.php
+// outils/mon_outil_fonctions.php : inclus par couteau_suisse_fonctions.php
 
 cs_log("inclusion de config_outils.php");
 //-----------------------------------------------------------------------------//
@@ -309,6 +309,8 @@ add_variables( array(
 	'check' => 'couteauprive:auteur_forum_deux',
 	'defaut' => 0,
 ));
+// chaine de langue en extension sous SPIP>=3.0
+$cs_temp = defined('_SPIP30000')?'forum:':'';
 add_outil( array(
 	'id' => 'auteur_forum',
 	'categorie'	 => 'securite',
@@ -316,7 +318,7 @@ add_outil( array(
 	'code:jq_init' => 'cs_auteur_forum.apply(this);',
 	'code:js' => "var cs_verif_email = %%auteur_forum_email%%;\nvar cs_verif_nom = %%auteur_forum_nom%%;\nvar cs_verif_deux = %%auteur_forum_deux%%;",
 	'pipelinecode:pre_description_outil' => 'if($id=="auteur_forum") $texte=str_replace(array("@_CS_FORUM_NOM@","@_CS_FORUM_EMAIL@"),
-	array(preg_replace(\',:$,\',"",_T("forum_votre_nom")),preg_replace(\',:$,\',"",_T("forum_votre_email"))),$texte);',
+	array(preg_replace(\',:$,\',"",_T("'.$cs_temp.'forum_votre_nom")),preg_replace(\',:$,\',"",_T("'.$cs_temp.'forum_votre_email"))),$texte);',
 ));
 
 // ici on a besoin de trois boutons radio : _T('couteauprive:par_defaut'), _T('couteauprive:sf_amont') et _T('couteauprive:sf_tous')
@@ -772,6 +774,9 @@ add_outil( array(
 function cs_compter_visiteurs(){ return count(preg_files(_DIR_TMP.'visites/','.')); }
 function action_visiteurs_connectes(){ echo cs_compter_visiteurs(); return true; }",
 	'version-min' => '1.9200', // pour la balise #ARRAY
+	'pipelinecode:pre_description_outil' => 'if($id=="visiteurs_connectes") if($GLOBALS["meta"]["activer_statistiques"]!="oui")
+		$texte.="\n\n<span style=\\"color:red;\\">"._T("couteauprive:visiteurs_connectes:inactif")."</span>";',
+
 	//	une mise a jour toutes les 120 sec ?
 /*	'code:js' => 'function Timer_visiteurs_connectes(){
 		jQuery("span.cs_nb_visiteurs").load("spip.php?action=visiteurs_connectes");
@@ -1037,8 +1042,8 @@ add_outil( array(
 	 traitement:TEXTE/forums:post_propre,
 	 traitement:TEXTE/rubriques:post_propre,
 	 traitement:CHAPO:post_propre' => 'cs_glossaire',
-	// Precaution pour les articles virtuels
-	'traitement:CHAPO:pre_propre' => 'nettoyer_chapo',
+	// Precaution pour les articles virtuels (SPIP < 3.0)
+	defined('_SPIP30000')?'foo':'traitement:CHAPO:pre_propre' => 'nettoyer_chapo',
 	// Mise en forme des titres
 	'traitement:TITRE/mots:post_typo' => 'cs_glossaire_titres',
 	'code:css' =>  'a.cs_glossaire:after {display:none;}',
@@ -1169,7 +1174,9 @@ add_outil( array(
 	'code:options' => "%%insertions%%",
 	// sans oublier les articles, les breves, les forums et les rubriques !
 	// SPIP ne considere pas que la premiere definition est un tronc commun :
-	'traitement:TEXTE:pre_propre,
+	'traitement:CHAPO:pre_propre,
+	 traitement:PS:pre_propre,
+	 traitement:TEXTE:pre_propre,
 	 traitement:TEXTE/articles:pre_propre,
 	 traitement:TEXTE/breves:pre_propre,
 	 traitement:TEXTE/forums:post_propre,
@@ -1184,7 +1191,9 @@ add_outil( array(
 	'categorie' => 'admin',
 	'version-min' => '1.9300',
 	'code:options' => '%%moderation_admin%%%%moderation_redac%%%%moderation_visit%%',
-	'code:jq_init' => 'if(window.location.search.match(/page=forum/)!=null) jQuery("legend:contains(\''.addslashes(unicode2charset(html2unicode(_T('bouton_radio_modere_priori')))).'\')", this).next().html(\''.addslashes(_T('couteauprive:moderation_message')).'\');',
+	'code:jq_init' => 'if(window.location.search.match(/page=forum/)!=null) jQuery("legend:contains(\''
+		.addslashes(unicode2charset(html2unicode(_T((defined('_SPIP30000')?'forum:':'').'bouton_radio_modere_priori')))).'\')", this).next().html(\''
+		.addslashes(_T('couteauprive:moderation_message')).'\');',
 	'pipeline:pre_edition' => 'moderation_vip',
 ));
 add_variables( array(
@@ -1263,10 +1272,10 @@ add_outil(defined('_SPIP20100')?array(
 	'contrib' => 3223,
 ):array(
 	'id' => 'maj_auto',
-	'categorie' => 'admin',
+	'categorie' => 'securite',
 	'version-min' => '1.9300',
 	'contrib' => 3223,
-	'distant' => defined('_SPIP20100')?NULL:'http://core.spip.org/projects/spip/repository/raw/branches/spip-2.1/ecrire/genie/mise_a_jour.php',
+	'distant' => 'http://core.spip.org/projects/spip/repository/raw/branches/spip-2.1/ecrire/genie/mise_a_jour.php',
 ));
 
 // reglage des differents selecteurs en partie privee

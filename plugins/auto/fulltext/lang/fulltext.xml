@@ -1,5 +1,7 @@
 <traduction module="fulltext" gestionnaire="salvatore" reference="fr">
-	<langue code="ar" />
+	<langue code="ar">
+		<traducteur nom="kandalaft" />
+	</langue>
 	<langue code="ast">
 		<traducteur nom="xuacu" />
 	</langue>
@@ -21,7 +23,9 @@
 	<langue code="pl" />
 	<langue code="pt" />
 	<langue code="ro" />
-	<langue code="sk" />
+	<langue code="sk">
+		<traducteur nom="jaro" />
+	</langue>
 	<langue code="tr" />
 	<langue code="uk" />
 </traduction>

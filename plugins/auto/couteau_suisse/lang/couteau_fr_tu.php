@@ -84,14 +84,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 Chacun de ces outils peut être activé ou non par l\'utilisateur sur [la page d\'administration du plugin->./?exec=admin_couteau_suisse] et gérer un certain nombre de variables : cliquer sur {{Configuration}}, puis choisir l\'onglet {{Le Couteau Suisse}}.
 
-Les catégories disponibles sont : Administration, Améliorations typographiques, Raccourcis typographiques, Affichage public, Balises, filtres, critères.
+Les catégories disponibles sont : Administration, Sécurité, Interface privée, Améliorations des textes, Raccourcis typographiques, Affichage public, Balises, filtres, critères.
 
 Découvre dans ce plugin tes outils favoris : {Supprime le numéro}, {Format des URLs}, {Exposants typographiques}, {Guillemets typographiques}, {Belles puces}, {Lutte contre le SPAM}, {Mailcrypt}, {Belles URLs}, {SPIP et les liens... externes}, {Smileys}, {Un sommaire pour tes articles}, {Découpe en pages et onglets}, etc., etc.
 
 N\'hésite pas à consulter les articles de documentation du plugin publiés sur : [spip-contrib.net->http://www.spip-contrib.net/Le-Couteau-Suisse].
 
-Compatibilité : SPIP v1.92x et v2.0.x et v2.1.x',
-	'pp_autobr' => 'Insérer un bloc où les retours á la ligne sont automatiques', # MODIF
+Compatibilité : SPIP v1.92x, v2.x.x et v3.0',
+	'pp_autobr' => 'Insérer un bloc où les retours à la ligne sont automatiques',
 	'pp_blocs_bloc' => 'Insérer un bloc replié',
 	'pp_blocs_visible' => 'Insérer un bloc déplié',
 	'pp_chatons_inserer' => 'Insérer le chaton « @chaton@ »',
@@ -131,7 +131,7 @@ Compatibilité : SPIP v1.92x et v2.0.x et v2.1.x',
 	'tri_monter' => 'Monter cet auteur',
 
 	// U
-	'url_verrouillee' => 'URL verrouillée', # NEW
+	'url_verrouillee' => 'URL verrouillée',
 	'urls_propres_erreur' => 'Ce format ne prend pas compte les URLs propres listées ci-dessous.',
 	'urls_propres_format' => 'Le format actuel des URLs est : {{« @format@ »}}. [<span>[Configuration->@url@]</span>]',
 	'urls_propres_lien' => 'Lien public d\'accès',

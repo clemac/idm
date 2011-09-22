@@ -2,7 +2,7 @@
 	<nom><multi>[fr]Champs Extras2[de]Zusatzfelder 2[en]Extra fields 2[it]Campi Extra 2</multi></nom>
 	<auteur>Matthieu Marcillaud, Fil</auteur>
 	<licence>GNU/GPL</licence>
-	<version>1.9.0</version>
+	<version>1.10.0</version>
 	<icon>images/cextras-64.png</icon>
 	<description>
 		<multi>
@@ -17,7 +17,7 @@
 	<prefix>cextras</prefix>
 	<options>cextras_options.php</options>
 	<fonctions>cextras_balises.php</fonctions>
-	<necessite id="SPIP" version="[2.0;]" />
+	<necessite id="SPIP" version="[2.0;3.0.0-dev)" />
  	<pipeline>
 		<nom>autoriser</nom>
 		<inclure>inc/cextras_autoriser.php</inclure>

@@ -12,10 +12,12 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
  *
  * @return unknown
  */
-function action_editer_document_dist() {
+function action_editer_document_dist($arg=null) {
 
-	$securiser_action = charger_fonction('securiser_action', 'inc');
-	$arg = $securiser_action();
+	if(is_null($arg)){
+		$securiser_action = charger_fonction('securiser_action', 'inc');
+		$arg = $securiser_action();
+	}
 
 	// Envoi depuis le formulaire de creation d'un document
 	if (!$id_document = intval($arg)) {
@@ -159,7 +161,9 @@ function instituer_document($id_document,$champs=array()){
 			$table = table_objet_sql($row['objet']);
 			$desc = $trouver_table($table);
 			// si pas de champ statut, c'est un objet publie, donc c'est bon
-			if (!isset($desc['field']['statut'])){
+			// si c'est une rubrique, c'est bon aussi, car un document publie une rubrique
+			if (!isset($desc['field']['statut'])
+			  OR $row['objet']=='rubrique'){
 				$statut = 'publie';
 				$date_publication=0;
 				continue;
@@ -179,7 +183,7 @@ function instituer_document($id_document,$champs=array()){
 			}
 		}
 		$date_publication = date('Y-m-d H:i:s',$date_publication);
-		if ($statut=='publie' AND $statut_ancien=='publie' AND $date_publie==$date_publication_ancienne)
+		if ($statut=='publie' AND $statut_ancien=='publie' AND $date_publication==$date_publication_ancienne)
 			return false;
 		if ($statut!='publie' AND $statut_ancien!='publie' AND $statut_ancien!='0')
 			return false;

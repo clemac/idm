@@ -12,7 +12,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'2pts_oui' => ' : oui',
 
 	// S
-	'SPIP_liens:description' => '@puce@ Tous les liens du site s\'ouvrent par défaut dans la fenêtre de navigation en cours. Mais il peut être utile d\'ouvrir les liens externes au site dans une nouvelle fenêtre extérieure -- cela revient à ajouter {target="_blank"} à toutes les balises &lt;a&gt; dotées par SPIP des classes {spip_out}, {spip_url} ou {spip_glossaire}. Il est parfois nécessaire d\'ajouter l\'une de ces classes aux liens du squelette du site (fichiers html) afin d\'étendre au maximum cette fonctionnalité.[[%radio_target_blank3%]]
+	'SPIP_liens:description' => '@puce@ Tous les liens du site s\'ouvrent par défaut dans la fenêtre de navigation en cours. Mais il peut être utile d\'ouvrir les liens externes au site dans une nouvelle fenêtre extérieure -- cela revient à ajouter {target=\\"_blank\\"} à toutes les balises &lt;a&gt; dotées par SPIP des classes {spip_out}, {spip_url} ou {spip_glossaire}. Il est parfois nécessaire d\'ajouter l\'une de ces classes aux liens du squelette du site (fichiers html) afin d\'étendre au maximum cette fonctionnalité.[[%radio_target_blank3%]]
 
 @puce@ SPIP permet de relier des mots à leur définition grâce au raccourci typographique <code>[?mot]</code>. Par défaut (ou si tu laisses vide la case ci-dessous), le glossaire externe renvoie vers l’encyclopédie libre wikipedia.org. À toi de choisir l\'adresse à utiliser. <br />Lien de test : [?SPIP][[%url_glossaire_externe2%]]',
 	'SPIP_liens:description1' => '@puce@ SPIP a prévu un style CSS pour les liens «~mailto:~» : une petite enveloppe devrait apparaître devant chaque lien lié à un courriel; mais puisque tous les navigateurs ne peuvent pas l\'afficher (notamment IE6, IE7 et SAF3), à toi de voir s\'il faut conserver cet ajout.
@@ -97,7 +97,7 @@ Exemples : <code>#SET{x,1}#SET_PLUS{x,2}</code> ou <code>#SET{x,avions}#SET_REPL
 
 @puce@ En cochant «oui» ci-dessous, l\'état des blocs numérotés sera stocké dans un cookie le temps de la session, afin de conserver l\'aspect de la page en cas de retour.[[%blocs_cookie%]]
 
-@puce@ Le Couteau Suisse utilise par défaut la balise HTML &lt;h4&gt; pour le titre des blocs dépliables. Choisis ici une autre balise &lt;hN&gt; :[[%bloc_h4%]]
+@puce@ Le Couteau Suisse utilise par défaut la balise HTML &lt;h4&gt; pour le titre des blocs dépliables. Choisissez ici une autre balise &lt;hN&gt; :[[%bloc_h4%]]
 
 @puce@ Afin d\'obtenir un effet plus doux au moment du clic, tes blocs dépliables peuvent s\'animer à la manière d\'un "glissement".[[%blocs_slide%]][[->%blocs_millisec% millisecondes]]',
 	'blocs:nom' => 'Blocs Dépliables',
@@ -151,7 +151,7 @@ Tu peux ici définir certains raccourcis de SPIP. Une valeur vide équivaut à u
 SPIP utilise habituellement la balise &lt;h3&gt; pour les intertitres. Choisis ici un autre remplacement :[[%racc_h1%]][[->%racc_h2%]]',
 	'class_spip:description4' => '
 
-SPIP a choisi d\'utiliser la balise &lt;strong> pour transcrire les gras. Mais &lt;b> aurait pu également convenir, avec ou sans style. À toi de voir :[[%racc_g1%]][[->%racc_g2%]]
+SPIP a choisi d\'utiliser la balise &lt;strong> pour transcrire les gras. Mais &lt;b> aurait pu également convenir, avec ou sans style. À vous de voir :[[%racc_g1%]][[->%racc_g2%]]
 
 SPIP a choisi d\'utiliser la balise &lt;i> pour transcrire les italiques. Mais &lt;em> aurait pu également convenir, avec ou sans style. À toi de voir :[[%racc_i1%]][[->%racc_i2%]]
 
@@ -288,7 +288,7 @@ Cet outil peut être couplé avec « [.->sommaire] ».',
 	'ecran_conflit2' => 'Note : un fichier statique «@file@» a été détecté et activé. Le Couteau Suisse ne pourra le mettre à jour ou le configurer.',
 	'ecran_ko' => 'Ecran inactif !',
 	'ecran_maj_ko' => 'La version {{@n@}} de l\'écran de sécurité est disponible. Actualise le fichier distant de cet outil.',
-	'ecran_maj_ko2' => 'La version @n@ de l\'écran de sécurité est disponible. Vous pouvez actualiser le fichier distant de l\'outil « [.->ecran_securite] ».', # NEW
+	'ecran_maj_ko2' => 'La version @n@ de l\'écran de sécurité est disponible. Tu peux actualiser le fichier distant de l\'outil « [.->ecran_securite] ».',
 	'ecran_maj_ok' => '(semble à jour).',
 	'ecran_securite:description' => 'L\'écran de sécurité est un fichier PHP directement téléchargé du site officiel de SPIP, qui protège tes sites en bloquant certaines attaques liées à des trous de sécurité. Ce système permet de réagir très rapidement lorsqu\'un problème est découvert, en colmatant le trou sans pour autant devoir mettre à niveau tout son site ni appliquer un « patch » complexe.
 
@@ -370,9 +370,9 @@ Les blocs multi s\'affichent alors toujours dans la langue demandée par le visi
 	// H
 	'help' => '{{Cette page est uniquement accessible aux responsables du site.}} Elle permet la configuration des différentes fonctions supplémentaires apportées par le plugin «{{Le Couteau Suisse}}».',
 	'help2' => 'Version locale : @version@',
-	'help3' => '<p>Liens de documentation :<br />• [{{Le&nbsp;Couteau&nbsp;Suisse}}->http://www.spip-contrib.net/?article2166]@contribs@</p><p>R&eacute;initialisations :
-_ • [Des outils cach&eacute;s|Revenir &agrave; l\'apparence initiale de cette page->@hide@]
-_ • [De tout le plugin|Revenir &agrave; l\'&eacute;tat initial du plugin->@reset@]@install@
+	'help3' => '<p>Liens de documentation :@contribs@</p><p>Réinitialisations :
+_ • [Des outils cachés|Revenir à l\'apparence initiale de cette page->@hide@]
+_ • [De tout le plugin|Revenir à l\'état initial du plugin->@reset@]@install@
 </p>',
 	'horloge:description' => 'Outil en cours de développement. T\'offre une horloge JavaScript . Balise : <code>#HORLOGE</code>. Modèle : <code><horloge></code>
 
@@ -388,14 +388,14 @@ Pour définir ce logo, va sur la page «<:titre_configuration:>» en cliquant su
 	'insert_head:nom' => 'Balise #INSERT_HEAD',
 	'insertions:description' => 'ATTENTION : outil en cours de développement !! [[%insertions%]]',
 	'insertions:nom' => 'Corrections automatiques',
-	'introduction:description' => 'Cette balise &amp;agrave; placer dans les squelettes sert en g&amp;eacute;n&amp;eacute;ral &amp;agrave; la une ou dans les rubriques afin de produire un r&amp;eacute;sum&amp;eacute; des articles, des br&amp;egrave;ves, etc..</p>
-<p>{{Attention}} : Avant d\'activer cette fonctionnalit&amp;eacute;, v&amp;eacute;rifie bien qu\'aucune fonction {balise_INTRODUCTION()} n\'existe d&amp;eacute;j&amp;agrave; dans ton squelette ou tes plugins, la surcharge produirait alors une erreur de compilation.</p>
-@puce@ Tu peux pr&amp;eacute;ciser (en pourcentage par rapport &amp;agrave; la valeur utilis&amp;eacute;e par d&amp;eacute;faut) la longueur du texte renvoy&amp;eacute; par balise #INTRODUCTION. Une valeur nulle ou &amp;eacute;gale &amp;agrave; 100 ne modifie pas l\'aspect de l\'introduction et utilise donc les valeurs par d&amp;eacute;faut suivantes : 500 caract&amp;egrave;res pour les articles, 300 pour les br&amp;egrave;ves et 600 pour les forums ou les rubriques.
-[[%lgr_introduction%&amp;nbsp;%]]
-@puce@ Par d&amp;eacute;faut, les points de suite ajout&amp;eacute;s au r&amp;eacute;sultat de la balise #INTRODUCTION si le texte est trop long sont : <html>&amp;laquo;&amp;amp;nbsp;(…)&amp;raquo;</html>.Tu peux ici pr&amp;eacute;ciser ta propre cha&amp;icirc;ne de caract&amp;egrave;res indiquant au lecteur que le texte tronqu&amp;eacute; a bien une suite.
+	'introduction:description' => 'Cette balise à placer dans les squelettes sert en général à la une ou dans les rubriques afin de produire un résumé des articles, des brèves, etc..</p>
+<p>{{Attention}} : Avant d\'activer cette fonctionnalité, vérifie bien qu\'aucune fonction {balise_INTRODUCTION()} n\'existe déjà dans ton squelette ou tes plugins, la surcharge produirait alors une erreur de compilation.</p>
+@puce@ Tu peux préciser (en pourcentage par rapport à la valeur utilisée par défaut) la longueur du texte renvoyé par balise #INTRODUCTION. Une valeur nulle ou égale à 100 ne modifie pas l\'aspect de l\'introduction et utilise donc les valeurs par défaut suivantes : 500 caractères pour les articles, 300 pour les brèves et 600 pour les forums ou les rubriques.
+[[%lgr_introduction% %]]
+@puce@ Par défaut, les points de suite ajoutés au résultat de la balise #INTRODUCTION si le texte est trop long sont : <html>«&amp;nbsp;(…)»</html>. Tu peux ici préciser votre propre chaîne de caractère indiquant au lecteur que le texte tronqué a bien une suite.
 [[%suite_introduction%]]
-@puce@ Si la balise #INTRODUCTION est utilis&amp;eacute;e pour r&amp;eacute;sumer un article, alors le Couteau Suisse peut fabriquer un lien hypertexte sur les points de suite d&amp;eacute;finis ci-dessus afin de mener le lecteur vers le texte original. Par exemple : &amp;laquo;Lire la suite de l\'article…&amp;raquo;
-[[%lien_introduction%]]', # MODIF
+@puce@ Si la balise #INTRODUCTION est utilisée pour résumer un article, alors le Couteau Suisse peut fabriquer un lien hypertexte sur les points de suite définis ci-dessus afin de mener le lecteur vers le texte original. Par exemple : «Lire la suite de l\'article…»
+[[%lien_introduction%]]',
 	'introduction:nom' => 'Balise #INTRODUCTION',
 
 	// J
@@ -472,7 +472,7 @@ Attention, cet outil a besoin pour fonctionner du plugin {jQuery} : {Round Corne
 	'label:liens_orphelins' => 'Liens cliquables :',
 	'label:log_couteau_suisse' => 'Activer :',
 	'label:logo_Hmax' => 'Taille maximale des logos :',
-	'label:long_url' => 'Longueur du libellé cliquable :', # NEW
+	'label:long_url' => 'Longueur du libellé cliquable :',
 	'label:marqueurs_urls_propres' => 'Ajouter les marqueurs dissociant les objets (SPIP>=2.0) :<br />(ex. : « - » pour -Ma-rubrique-, « @ » pour @Mon-site@) ',
 	'label:max_auteurs_page' => 'Auteurs par page :',
 	'label:message_travaux' => 'Ton message de maintenance :',
@@ -530,17 +530,17 @@ _ • {Basique} : sont remplac&eacute;s les liens du type {<html>http://spip.net
 _ • {&Eacute;tendu} : sont remplac&eacute;s en plus les liens du type {<html>moi@spip.net</html>}, {<html>mailto:monmail</html>} ou {<html>news:mesnews</html>}.
 _ • {Par d&eacute;faut} : remplacement automatique d\'origine (&agrave; partir de la version 2.0 de SPIP).
 [[%liens_orphelins%]]',
-	'liens_orphelins:description1' => '[[Si l\'URL rencontrée dépasse les %long_url% caractères, alors SPIP la réduit à %coupe_url% caractères]].', # NEW
+	'liens_orphelins:description1' => '[[Si l\'URL rencontrée dépasse les %long_url% caractères, alors SPIP la réduit à %coupe_url% caractères]].',
 	'liens_orphelins:nom' => 'Belles URLs',
 
 	// M
 	'mailcrypt:description' => 'Masque tous les liens de courriels présents dans tes textes en les remplaçant par un lien JavaScript permettant quand même d\'activer la messagerie du lecteur. Cet outil antispam tente d\'empêcher les robots de collecter les adresses électroniques laissées en clair dans les forums ou dans les balises de tes squelettes.',
 	'mailcrypt:nom' => 'MailCrypt',
-	'maj_auto:description' => 'Cet outil te permet de gérer facilement la mise à jour de vos différents plugins, récupérant notamment le numéro de révision contenu dans le fichier <code>svn.revision</code> et le comparant avec celui trouvé sur <code>zone.spip.org</code>.
+	'maj_auto:description' => 'Cet outil te permet de gérer facilement la mise à jour de tes différents plugins, récupérant notamment le numéro de révision contenu dans le fichier <code>svn.revision</code> et le comparant avec celui trouvé sur <code>zone.spip.org</code>.
 
-La liste ci-dessus offre la possibilité de lancer le processus de mise à jour automatique de SPIP sur chacun des plugins préalablement installés dans le dossier <code>plugins/auto/</code>. Les autres plugins se trouvant dans le dossier <code>plugins/</code> sont simplement listés à titre d\'information. Si la révision distante n\'a pas pu être trouvée, alors tentez de procéder manuellement à la mise à jour du plugin.
+La liste ci-dessus offre la possibilité de lancer le processus de mise à jour automatique de SPIP sur chacun des plugins préalablement installés dans le dossier <code>plugins/auto/</code>. Les autres plugins se trouvant dans le dossier <code>plugins/</code> ou <code>extensions/</code> sont simplement listés à titre d\'information. Si la révision distante n\'a pas pu être trouvée, alors tente de procéder manuellement à la mise à jour du plugin.
 
-Note : les paquets <code>.zip</code> n\'étant pas reconstruits instantanément, il se peut que tu sois  obligé d\'attendre un certain délai avant de pouvoir effectuer la totale mise à jour d\'un plugin tout récemment modifié.',
+Note : les paquets <code>.zip</code> n\'étant pas reconstruits instantanément, il se peut que tu sois obligé d\'attendre un certain délai avant de pouvoir effectuer la totale mise à jour d\'un plugin tout récemment modifié.',
 	'maj_auto:nom' => 'Mises à jour automatiques',
 	'masquer:description' => 'Cet outil permet de masquer sur le site public et sans modification particulière de tes squelettes, les contenus (rubriques ou articles) qui ont le mot-clé défini ci-dessous. Si une rubrique est masquée, toute sa branche l\'est aussi.[[%mot_masquer%]]
 
@@ -697,10 +697,10 @@ Ce sommaire est compatible avec « [.->decoupe] » et « [.->titres_typo] »
 _ • Pour spécifier un mot entier, mets-le entre parenthèses. Exemple~:~{(asses)}.
 _ • Pour une expression régulière, vérifie bien la syntaxe et place-la entre slashes puis entre guillemets.
 _ Exemple~:~{<html>"/@test\\.(com|fr)/"</html>}.
-_ • Pour une expression régulière devant agir sur des caractères HTML, place le test entre «&#» et «;».
+_ • Pour une expression régulière devant agir sur des caractères HTML, placez le test entre «&#» et «;».
 _ Exemple~:~{<html>"/&#(?:1[4-9][0-9]{3}|[23][0-9]{4});/"</html>}.</q1>
 
-@puce@ Certaines adresses IP peuvent également être bloquées à la source. Note toutefois que derrière ces adresses (souvent variables), il peut y avoir plusieurs utilisateurs, voire un réseau entier.[[%spam_ips%]]
+@puce@ Certaines adresses IP peuvent également être bloquées à la source. Sache toutefois que derrière ces adresses (souvent variables), il peut y avoir plusieurs utilisateurs, voire un réseau entier.[[%spam_ips%]]
 <q1>• Utilise le caractère «*» pour plusieurs chiffres, «?» pour un seul et les crochets pour des classes de chiffres.</q1>',
 	'spam:nom' => 'Lutte contre le SPAM',
 	'spam_ip' => 'Blocage IP de @ip@ :',
@@ -862,7 +862,7 @@ Choisis ici de mettre en exposant certains raccourcis supplémentaires, malgré 
 	'url_propres2' => 'propres2@_CS_ASTER@',
 	'url_propres_qs' => 'propres_qs',
 	'url_standard' => 'standard',
-	'url_verouillee' => 'URL verrouillée', # NEW
+	'url_verouillee' => 'URL verrouillée',
 	'urls_3_chiffres' => 'Imposer un minimum de 3 chiffres',
 	'urls_avec_id' => 'Le placer en suffixe',
 	'urls_avec_id2' => 'Le placer en préfixe',
@@ -873,7 +873,7 @@ Choisis ici de mettre en exposant certains raccourcis supplémentaires, malgré 
 	'urls_enregistrer' => 'Enregistrer cette URL en base',
 	'urls_id_sauf_rubriques' => 'Exclure les objets suivants (séparés par « : ») :',
 	'urls_minuscules' => 'Lettres minuscules',
-	'urls_nouvelle' => 'Éditer l\'URL « propres » :', # MODIF
+	'urls_nouvelle' => 'Éditer l\'URL « propres » principale :',
 	'urls_num_objet' => 'Numéro :',
 	'urls_purger' => 'Tout vider',
 	'urls_purger_tables' => 'Vider les tables sélectionnées',
@@ -882,9 +882,9 @@ Choisis ici de mettre en exposant certains raccourcis supplémentaires, malgré 
 	'urls_titre_objet' => 'Titre enregistré :',
 	'urls_type_objet' => 'Objet :',
 	'urls_url_calculee' => 'URL publique « @type@ » :',
-	'urls_url_objet' => 'URL « propres » enregistrée :', # MODIF
-	'urls_valeur_vide' => '(Une valeur vide entraîne le recalcul de l\'URL)', # MODIF
-	'urls_verrouiller' => '{{Verrouiller}} cette URL afin que SPIP ne la modifie plus, notamment lors d\'un clic sur « @voir@ » ou d\'un changement du titre de l\'objet.', # NEW
+	'urls_url_objet' => 'URL(s) « propres » enregistrée(s) :',
+	'urls_valeur_vide' => 'Note : Une valeur vide entraine la suppression des URL(s) « propres » enregistrée(s) puis un nouveau calcul de l\'URL principale sans verrouillage.',
+	'urls_verrouiller' => '{{Verrouiller}} cette URL afin que SPIP ne la modifie plus, notamment lors d\'un clic sur « @voir@ » ou d\'un changement du titre de l\'objet.',
 
 	// V
 	'validez_page' => 'Pour accéder aux modifications :',
@@ -903,9 +903,10 @@ Choisis ici de mettre en exposant certains raccourcis supplémentaires, malgré 
 _ version_texte : extrait le contenu texte d\'une page html à l\'exclusion de quelques balises élémentaires.
 _ version_plein_texte : extrait le contenu texte d\'une page html pour rendre du texte brut.',
 	'verstexte:nom' => 'Version texte',
-	'visiteurs_connectes:description' => 'Offre une noisette pour ton squelette qui affiche le nombre de visiteurs connectés sur le site public.
+	'visiteurs_connectes:description' => 'Offre une noisette pour votre squelette qui affiche le nombre de visiteurs connectés sur le site public.
 
-Ajoute simplement <code><INCLURE{fond=fonds/visiteurs_connectes}></code> dans tes pages.',
+Ajoute simplement <code><INCLURE{fond=fonds/visiteurs_connectes}></code> dans tes pages après avoir activé les statistiques de ton site.',
+	'visiteurs_connectes:inactif' => 'Attention : les statistiques du site ne sont pas activées.',
 	'visiteurs_connectes:nom' => 'Visiteurs connectés',
 	'voir' => 'Voir : @voir@',
 	'votre_choix' => 'Ton choix :',

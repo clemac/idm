@@ -41,7 +41,7 @@ function cs_preg_quote(&$item) {
 }
 
 // lit ecrit les metas et initialise $cs_metas_pipelines
-// cette fonction est appellee par cout_options a chaque hit de la page
+// cette fonction est appellee par couteau_suisse_options a chaque hit de la page
 function cs_initialisation($forcer=false, $init_includes=true) {
 	global $cs_metas_pipelines, $metas_outils;
 	static $deja_passe_ici = 0;
@@ -95,17 +95,13 @@ if($log) cs_log($rand.($forcer?"\$forcer = true":"cs_initialisation($forcer) : S
 	// completer les variables manquantes et incorporer l'activite lue dans les metas
 if($log) cs_log("$rand -- foreach(\$outils) : cs_initialisation_d_un_outil()");
 
-	// initialiser chaque outil et construire la liste des contribs
-	$contribs = array();
+	// initialiser chaque outil
 	include_spip('inc/cs_outils');
-	foreach($outils as $outil) {
+	foreach($outils as $outil)
 		cs_initialisation_d_un_outil($id = $outil['id'], $description_outil, false);
-		if(isset($outil['contrib']) && isset($metas_outils[$id]['actif']) && $metas_outils[$id]['actif'])
-			$contribs[] = '<br/> &bull; [@@couteauprive:'.$outil['id'].':nom@@->http://www.spip-contrib.net/?article'.$outil['contrib'].']';
-	}
 	// installer $cs_metas_pipelines
 	$cs_metas_pipelines = array();
-if($log) cs_log("$rand -- cs_initialise_includes()... cout_fonctions.php sera peut-etre inclus.");
+if($log) cs_log("$rand -- cs_initialise_includes()... couteau_suisse_fonctions.php sera peut-etre inclus.");
 	// creer les includes (config/mes_options, mes_options et mes_fonctions) et le fichier de controle pipelines.php
 	if($init_includes) cs_initialise_includes(count($metas_outils));
 	// verifier le fichier d'options _FILE_OPTIONS (ecrire/mes_options.php ou config/mes_options.php)
@@ -120,8 +116,6 @@ if($log) cs_log("$rand -- ecriture metas");
 	ecrire_meta('tweaks_variables', serialize($metas_vars));
 	// en metas : code inline pour les pipelines, mes_options et mes_fonctions;
 	ecrire_meta('tweaks_pipelines', serialize($cs_metas_pipelines));
-	// en metas : les liens sur spip-contrib
-	ecrire_meta('tweaks_contribs', serialize($contribs));
 	ecrire_metas();
 	$GLOBALS['cs_init'] = 0;
 if($log) cs_log("{$rand}cs_initialisation($forcer) : Sortie");
@@ -157,7 +151,7 @@ function cs_echappe_balises($balises, $fonction, $texte, $arg=NULL){
 	if(!strlen($texte)) return '';
 	if (($fonction!==false) && !function_exists($fonction)) {
 		// chargement des fonctions
-		include_spip('cout_fonctions');
+		include_spip('couteau_suisse_fonctions');
 		if (!function_exists($fonction)) {
 			spip_log("Erreur - cs_echappe_balises() : $fonction() non definie dans : ".$_SERVER['REQUEST_URI']);
 			return $texte;
@@ -217,7 +211,9 @@ if(defined('_LOG_CS')) cs_log(" -- fichier $fo absent ".($ok?'mais cree avec l\'
 // liste des barres typo disponibles
 function cs_pp_liste_barres($outil=false) {
 	global $metas_vars;
-	include_spip('inc/barre_outils');
+	// pour barre_outils_liste() qu'on trouve maintenant dans l'extension porte_plume
+	if(defined('_SPIP30000')) include_spip('public/parametrer');
+		else include_spip('inc/barre_outils');
 	if (!$sets = barre_outils_liste()) return array();
 	if($outil) foreach($sets as $f=>$b) {
 		$v = 'pp_'.$b.'_'.$outil;
@@ -263,6 +259,14 @@ function rep_icones_barre(&$icones_barre) {
 function define_IMG_GD_MAX_PIXELS() {
 	if(!defined('_IMG_GD_MAX_PIXELS'))
 		define('_IMG_GD_MAX_PIXELS', (isset($GLOBALS['meta']['max_taille_vignettes'])&&$GLOBALS['meta']['max_taille_vignettes']<5500000)?$GLOBALS['meta']['max_taille_vignettes']:0);
+}
+
+// renvoie _T('couteauprive:'.$texte) puis detruit la chaine du module concerne
+function couteauprive_T($texte, $args=array()) {
+	$res = _T('couteauprive:'.$texte, $args);
+	if(defined('_SPIP19300') && isset($GLOBALS[$tmp='i18n_couteauprive_'.$GLOBALS['spip_lang']][$texte]))
+			unset($GLOBALS[$tmp][$texte]);
+	return $res;
 }
 
 ?>

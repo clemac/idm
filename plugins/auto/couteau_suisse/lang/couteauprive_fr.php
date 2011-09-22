@@ -368,7 +368,7 @@ Les blocs multi s\'affichent alors toujours dans la langue demandée par le visi
 	// H
 	'help' => '{{Cette page est uniquement accessible aux responsables du site.}} Elle permet la configuration des différentes  fonctions supplémentaires apportées par le plugin «{{Le Couteau Suisse}}».',
 	'help2' => 'Version locale : @version@',
-	'help3' => '<p>Liens de documentation :<br />• [{{Le Couteau Suisse}}->http://www.spip-contrib.net/?article2166]@contribs@</p><p>Réinitialisations :
+	'help3' => '<p>Liens de documentation :@contribs@</p><p>Réinitialisations :
 _ • [Des outils cachés|Revenir à l\'apparence initiale de cette page->@hide@]
 _ • [De tout le plugin|Revenir à l\'état initial du plugin->@reset@]@install@
 </p>',
@@ -903,7 +903,8 @@ _ version_plein_texte : extrait le contenu texte d\'une page html pour rendre du
 	'verstexte:nom' => 'Version texte',
 	'visiteurs_connectes:description' => 'Offre une noisette pour votre squelette qui affiche le nombre de visiteurs connectés sur le site public.
 
-Ajoutez simplement <code><INCLURE{fond=fonds/visiteurs_connectes}></code> dans vos pages.',
+Ajoutez simplement <code><INCLURE{fond=fonds/visiteurs_connectes}></code> dans vos pages après avoir activé les statistiques de votre site.',
+	'visiteurs_connectes:inactif' => 'Attention : les statistiques du site ne sont pas activées.',
 	'visiteurs_connectes:nom' => 'Visiteurs connectés',
 	'voir' => 'Voir : @voir@',
 	'votre_choix' => 'Votre choix :',

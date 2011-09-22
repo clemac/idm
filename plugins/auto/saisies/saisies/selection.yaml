@@ -55,12 +55,6 @@ options:
           nom: 'disable_avec_post'
           label: '<:saisies:option_disable_avec_post_label:>'
           explication: '<:saisies:option_disable_avec_post_explication:>'
-      -
-        saisie: 'oui_non'
-        options:
-          nom: 'readonly'
-          label: '<:saisies:option_readonly_label:>'
-          explication: '<:saisies:option_readonly_explication:>'
   -
     saisie: 'fieldset'
     options:
@@ -88,6 +82,16 @@ options:
       -
         saisie: 'input'
         options:
+          nom: 'size'
+          label: '<:saisies:option_size_label:>'
+          explication: '<:saisies:option_size_explication:>'
+        verifier:
+          type: 'entier'
+          options:
+            min: 1
+      -
+        saisie: 'input'
+        options:
           nom: 'info_obligatoire'
           label: '<:saisies:option_info_obligatoire_label:>'
           explication: '<:saisies:option_info_obligatoire_explication:>'
@@ -109,3 +113,5 @@ defaut:
       choix1: '<:saisies:saisie_radio_defaut_choix1:>'
       choix2: '<:saisies:saisie_radio_defaut_choix2:>'
       choix3: '<:saisies:saisie_radio_defaut_choix3:>'
+    # champs extras (definition du champ sql)
+    sql: "text DEFAULT '' NOT NULL"

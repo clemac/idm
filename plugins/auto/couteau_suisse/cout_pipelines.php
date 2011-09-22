@@ -20,7 +20,7 @@ function couteau_suisse_ajouter_onglets($flux){
 	$arg = $flux['args']=='configuration' || $flux['args']=='plugins';
 	// si on est admin...
 	if($arg && autoriser('configurer', 'cs'))
-		$flux['data']['couteau_suisse']= new Bouton(find_in_path('img/couteau-24.gif'), _T('couteau:titre'), generer_url_ecrire('admin_couteau_suisse'));
+		$flux['data']['couteau_suisse']= new Bouton(find_in_path('img/couteau-24.gif'), 'couteau:titre', generer_url_ecrire('admin_couteau_suisse'));
 	return $flux;
 }
 
@@ -148,6 +148,7 @@ function couteau_suisse_propres_creer_chaine_url($flux){
 	return eval_metas_pipelines($flux, 'propres_creer_chaine_url');
 }
 
+// eux fonctions obsoletes, conservees pour SPIP<3.0 :
 // le contenu du sous-menu est gere par les lames elles-memes
 function couteau_suisse_bt_toolbox($params) {
 	global $cs_metas_pipelines;
@@ -161,7 +162,6 @@ function couteau_suisse_bt_toolbox($params) {
 	$params['flux'] .= produceWharf('couteau_suisse', '', $tableau_formulaire);
 	return $params;
 }
-
 // bouton principal du Couteau Suisse
 function couteau_suisse_bt_gadgets($params) {
 	global $cs_metas_pipelines;
