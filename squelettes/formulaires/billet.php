@@ -3,6 +3,7 @@
 include_spip('base/abstract_sql');
 
 function notify_comite ($id_auteur, $id_article, $titre, $date) {
+  $idm_team_billets   = array (63,285,286,7,50);
   $today = floor(time()/(24*3600)) % count($idm_team_billets);
   $gars = $idm_team_billets [$today];
 

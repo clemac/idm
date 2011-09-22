@@ -147,8 +147,8 @@ function idm_notify ($ids, $message, $subject = "Un message du site \"Images des
   $envoyer_mail = charger_fonction ('envoyer_mail', 'inc');
 
   foreach ((array)$ids as $id) {
-    if ($id == 0) $email = "comite@images.math.cnrs.fr";
-    else          $email = sql_getfetsel ("email", "spip_auteurs", "id_auteur = $id");
+    $email = "comite@images.math.cnrs.fr";
+    if ($id > 0) $email = sql_getfetsel ("email", "spip_auteurs", "id_auteur = $id");
     $envoyer_mail ($email, $subject, $message);
   }
 }
