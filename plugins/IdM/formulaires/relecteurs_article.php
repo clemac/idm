@@ -8,9 +8,7 @@ function notify_user ($id_auteur, $id_article) {
 
   $subject = "Relecture d'un article pour Images des Maths";
 
-  $texte = "Bonjour !\n" .
-    "\n" .
-    "Un article vient d'être proposé pour publication dans \"Images des\n" .
+  $texte = "Un article vient d'être proposé pour publication dans \"Images des\n" .
     "Mathématiques\". Il s'intitule :\n" .
     "\n" .
     "  « $titre »\n" .
@@ -32,9 +30,7 @@ function notify_user ($id_auteur, $id_article) {
     "viennent. Si vous n'avez pas le temps de le relire d'ici là, ça n'est\n" .
     "pas grave - mais nous le publierons peut-être sans vous attendre ...\n".
     "\n" .
-    "Merci pour votre aide !\n\n" .
-    "-- \n" .
-    "Le comité de rédaction de \"Images des Mathématiques\".";
+    "Merci pour votre aide !";
 
   idm_notify ($id_auteur, utf8_encode($texte), $subject);
 }
