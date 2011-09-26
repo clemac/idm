@@ -355,4 +355,8 @@ function idm_header_prive ($texte) {
   return idm_insert_head ($texte);
 }
 
+function idm_initiale ($mot) {
+  return strtoupper($mot[0]);
+}
+
 ?>

@@ -45,13 +45,13 @@
       </BOUCLE_rub>
     </ul>
 
-    [(#SET{initiale,' '})]
+    [(#SET{idm_initiale,' '})]
     <ul id="par_auteur" title="Par auteur">
       <BOUCLE_aut(AUTEURS) {par nom}>
-        [(#SET{newinitiale,[(#NOM*|initiale)]})]
-        [(#GET{initiale}|!={#GET{newinitiale}}|oui)
-        <li class="group">&mdash;&nbsp;#GET{newinitiale}&nbsp;&mdash;</li>]
-        [(#SET{initiale,#GET{newinitiale}})]
+        [(#SET{newidm_initiale,[(#NOM*|idm_initiale)]})]
+        [(#GET{idm_initiale}|!={#GET{newidm_initiale}}|oui)
+        <li class="group">&mdash;&nbsp;#GET{newidm_initiale}&nbsp;&mdash;</li>]
+        [(#SET{idm_initiale,#GET{newidm_initiale}})]
         <li><a href="#aut_#ID_AUTEUR">#NOM</a></li>
       </BOUCLE_aut>
     </ul>
