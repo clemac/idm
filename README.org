@@ -59,3 +59,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - [X] Call it with an array when possible
 - [X] Store recipient lists in a config file
 - [ ] Solve the problem that mes_options is not read during AJAX calls
+
+* SPIP 3 related
+*** Preview of articles still in redaction phase (previsu_redaction)
