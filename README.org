@@ -62,3 +62,10 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 
 * SPIP 3 related
 *** Preview of articles still in redaction phase (previsu_redaction)
+*** Plugins that have been removed
+***** spip-bonux
+***** forms_et_tables_2_0
+***** mediatheque
+***** previsu_redaction
+***** champs_extras
+- SVN version installed
