@@ -28,6 +28,7 @@ function notify_comite ($id_auteur, $id_article, $titre, $date) {
     "\n" .
     "  http://images.math.cnrs.fr/ecrire/?exec=articles&action=redirect&type=article&id=$id_article&var_mode=preview";
 
+  include_spip ('idm');
   idm_notify (array(0,$gars), utf8_encode($texte), $subject);
 }
 
