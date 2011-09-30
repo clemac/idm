@@ -2,7 +2,12 @@
 <INCLURE{fond=inc/head}{title=#TITRE}>
 
 [<h1 class="titre">(#TITRE)</h1>]
-<h3 class="auteur">Le [(#DATE|affdate)].</h3>
+
+<BOUCLE_futur (BREVES) {id_breve} {id_rubrique=33}>
+  <h3 class="auteur">Jusqu'au [(#DATE|affdate)]</h3>
+</BOUCLE_futur>
+  <h3 class="auteur">Le [(#DATE|affdate)]</h3>
+<//B_futur>
 
 [<div class="texte">(#TEXTE|lettrine)</div>]
 
