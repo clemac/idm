@@ -1,32 +1,22 @@
 <?php
 
-// Stuff related to te inner workings of the editorial committee:
-
 $idm_team_relecture = array (327,633,637);
 $idm_team_billets   = array (63,285,286,7,50);
 
-// Super-administrateur :
-
 define ('_ID_WEBMESTRES', '1');
-
-// Afficher les messages d'erreurs de PHP (en cours de développement, 
-// mettre à 0 en production !)
 
 //ini_set('display_errors', '1');
 
-// Activation des URL propres 
-// (http://images.math.cnrs.fr/Titre-de-l-article.html)
-
 $type_urls = "propres2";
-
-// Perdre le cookie d'admin à la déconnection :
-
-include_spip('inc/cookie');
 
 function prenom_nom ($texte) {
   $texte = preg_replace ('/([^,]+), ([^,]+)/s', '\2 \1', $texte);
   return $texte;
 }
+
+// Perdre le cookie d'admin a la daconnection :
+
+include_spip('inc/cookie');
 
 $table_des_traitements['TITRE'][]= 'supprimer_numero(%s)';
 $table_des_traitements['NOM'][]= 'prenom_nom(%s)';
@@ -61,7 +51,7 @@ function action_logout()
         ask_php_auth(_T('login_deconnexion_ok'),
           _T('login_verifiez_navigateur'),
           _T('login_retour_public'),
-          "redirect=". _DIR_RESTREINT_ABS, 
+          "redirect=". _DIR_RESTREINT_ABS,
           _T('login_test_navigateur'),
           true);
         exit;
@@ -71,58 +61,43 @@ function action_logout()
   redirige_par_entete(url_de_base());
 }
 
-function inc_envoyer_mail ($email, $sujet, $texte, $from = "", $headers = "") {
-  global $hebergeur, $queue_mails;
+include_spip ('inc/envoyer_mail');
 
-  if (!email_valide($email)) return false;
-  if ($email == _T('info_mail_fournisseur')) return false; // tres fort
+function inc_envoyer_mail ($destinataire, $sujet, $corps, $from = "", $headers = "") {
 
-  // Traiter les headers existants
-  if (strlen($headers)) $headers = trim($headers)."\n";
+  if (!email_valide($destinataire)) return false;
+  if ($destinataire == _T('info_mail_fournisseur')) return false; // tres fort
 
   // Fournir si possible un Message-Id: conforme au RFC1036,
   // sinon SpamAssassin denoncera un MSGID_FROM_MTA_HEADER
 
   $email_envoi = $GLOBALS['meta']["email_envoi"];
-  if (email_valide($email_envoi)) {
-    preg_match('/(@\S+)/', $email_envoi, $domain);
-    $mid = 'Message-Id: <' . time() . '_' . rand() . '_' . md5($email . $texte) . $domain[1] . ">\n";
-  } else {
+  if (!email_valide($email_envoi)) {
     spip_log("Meta email_envoi invalide. Le mail sera probablement vu comme spam.");
-    $email_envoi = $email;
-    $mid = '';
+    $email_envoi = $destinataire;
   }
+
+  if (is_array($corps)){
+    $texte = $corps['texte'];
+    $from = (isset($corps['from'])?$corps['from']:$from);
+    $headers = (isset($corps['headers'])?$corps['headers']:$headers);
+    if (is_array($headers))
+      $headers = implode("\n",$headers);
+    $parts = "";
+    if ($corps['pieces_jointes'] AND function_exists('mail_embarquer_pieces_jointes'))
+      $parts = mail_embarquer_pieces_jointes($corps['pieces_jointes']);
+  } else
+    $texte = $corps;
+
   if (!$from) $from = $email_envoi;
 
   // ceci est la RegExp NO_REAL_NAME faisant hurler SpamAssassin
   if (preg_match('/^["\s]*\<?\S+\@\S+\>?\s*$/', $from))
     $from .= ' (' . str_replace(')','', translitteration(str_replace('@', ' at ', $from))) . ')';
 
-  // Et maintenant le champ From:
-  $headers .= "From: $from\n";
-
-  // indispensable pour les sites qui colle d'office From: serveur-http
-  // sauf si deja mis par l'envoyeur
-  if (strpos($headers,"Reply-To:")===FALSE)
-    $headers .= "Reply-To: $from\n";
-
-  $charset = $GLOBALS['meta']['charset'];
-
-  // Ajouter le Content-Type et consort s'il n'y est pas deja
-  if (strpos($headers, "Content-Type: ") === false)
-    $headers .=
-    "Content-Type: text/plain; charset=$charset\n".
-    "Content-Transfer-Encoding: 8bit\n" .
-    "MIME-Version: 1.0\n";
-
-  $headers .= $mid;
-
   // nettoyer les &eacute; &#8217, &emdash; etc...
   // les 'cliquer ici' etc sont a eviter;  voir:
   // http://mta.org.ua/spamassassin-2.55/stuff/wiki.CustomRulesets/20050914/rules/french_rules.cf
-
-  include_spip ('inc/envoyer_mail');
-
   $texte = nettoyer_caracteres_mail($texte);
   $sujet = nettoyer_caracteres_mail($sujet);
 
@@ -130,17 +105,16 @@ function inc_envoyer_mail ($email, $sujet, $texte, $from = "", $headers = "") {
   if (init_mb_string()) {
     # un bug de mb_string casse mb_encode_mimeheader si l'encoding interne
     # est UTF-8 et le charset iso-8859-1 (constate php5-mac ; php4.3-debian)
+    $charset = $GLOBALS['meta']['charset'];
     mb_internal_encoding($charset);
     $sujet = mb_encode_mimeheader($sujet, $charset, 'Q', "\n");
     mb_internal_encoding('utf-8');
   }
 
-  spip_log("mail (override) $email\n$sujet\n$headers",'mails');
-
-  // Ajouter le \n final
-  if ($headers = trim($headers)) $headers .= "\n";
-  if (function_exists('wordwrap') && (preg_match('/multipart\/mixed/',$headers) == 0))
+  if (function_exists('wordwrap') && (preg_match(',multipart/mixed,',$headers) == 0))
     $texte = wordwrap($texte);
+
+  list($headers, $texte) = mail_normaliser_headers($headers, $from, $destinataire, $texte, $parts);
 
   if (_OS_SERVEUR == 'windows') {
     $texte = preg_replace ("@\r*\n@","\r\n", $texte);
@@ -148,18 +122,15 @@ function inc_envoyer_mail ($email, $sujet, $texte, $from = "", $headers = "") {
     $sujet = preg_replace ("@\r*\n@","\r\n", $sujet);
   }
 
-  switch($hebergeur) {
-  case 'lycos':
-    $queue_mails[] = array(
-      'email' => $email,
-      'sujet' => $sujet,
-      'texte' => $texte,
-      'headers' => $headers);
-    return true;
-  case 'free':
-    return false;
-  default:
-    return @mail($email, $sujet, $texte, $headers, "-f noreply@images.math.cnrs.fr");
+  spip_log("mail $destinataire\n$sujet\n$headers",'mails');
+  // mode TEST : forcer l'email
+  if (defined('_TEST_EMAIL_DEST')) {
+    if (!_TEST_EMAIL_DEST)
+      return false;
+    else
+      $destinataire = _TEST_EMAIL_DEST;
   }
+
+  return @mail($destinataire, $sujet, $texte, $headers, "-f noreply@images.math.cnrs.fr");
 }
 ?>

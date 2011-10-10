@@ -74,7 +74,7 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 *** Files to check for compatibility
 ***** config/ecran_securite.php
 ***** config/mes_options.php
- - contains action_logout() and inc_envoyer_mail()
+ - contains action_logout()
 ***** plugins/IdM/formulaires/forum_relecture.html
 ***** plugins/IdM/formulaires/forum_relecture.php
 ***** plugins/IdM/formulaires/idm_projet.html
