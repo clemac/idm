@@ -282,11 +282,8 @@ div.texte { clear : both;
             h4 { text-align : center; font-style : italic; font-weight : bold; text-decoration : underline; padding-top : .5ex; font-size : 110%; }
             h5 { text-align : left; font-style : italic; font-weight : bold; text-decoration : none; padding : .5ex 2em; margin : 0px; font-size : 110%; }
             li { margin-top : 1ex; }
-            p.lettrine { text-indent : 0px;
-                         span.lettrine span.lettrine_first { color : #500; float : left; font-size : 440%; font-weight : bold; margin : -.4ex .1em -.4ex 0px; }
-                         span.lettrine { text-transform : uppercase; }
-                       }
             pre { padding-left : 1em; margin-left : 1em; border-left : 1px solid $red; }
+            > p:first-child:first-letter { color : #500; float : left; font-size : 440%; font-weight : bold; margin : -.4ex .1em -.4ex 0px; }
           }
 
 div.thm { border-left : 2px solid $red; margin : 1ex 0em 1ex 1.5em; padding-left : 1em; font-style : italic;
