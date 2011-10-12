@@ -29,8 +29,13 @@
     #BLOC_FIN
   </div>
 
-  <BOUCLE_affiliation(AUTEURS) {id_auteur=#GET{uniqueauteur}}>
-    [<div class="notes"><h3>Affiliation de l'auteur</h3>(#AFFILIATION)</div>]
-  </BOUCLE_affiliation>
+  <B_affiliation>
+  <div class="notes">
+    <h3>
+      [(#TOTAL_BOUCLE|>{1}|?{Affiliation des auteurs,Affiliation de l'auteur})]
+    </h3>
+    <BOUCLE_affiliation(AUTEURS) {id_article} {", "}>[<a class="auteur" href="#URL_AUTEUR">#NOM</a> : (#AFFILIATION)]</BOUCLE_affiliation>
+  </div>
+  </B_affiliation>
 </div>
 </BOUCLE_article>
