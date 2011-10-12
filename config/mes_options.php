@@ -17,8 +17,6 @@ function prenom_nom ($texte) {
 $table_des_traitements['TITRE'][]= 'supprimer_numero(%s)';
 $table_des_traitements['NOM'][]= 'prenom_nom(%s)';
 
-include_spip ('inc/envoyer_mail');
-
 function inc_envoyer_mail ($destinataire, $sujet, $corps, $from = "", $headers = "") {
 
   if (!email_valide($destinataire)) return false;
@@ -54,6 +52,8 @@ function inc_envoyer_mail ($destinataire, $sujet, $corps, $from = "", $headers =
   // nettoyer les &eacute; &#8217, &emdash; etc...
   // les 'cliquer ici' etc sont a eviter;  voir:
   // http://mta.org.ua/spamassassin-2.55/stuff/wiki.CustomRulesets/20050914/rules/french_rules.cf
+
+  include_spip ('inc/envoyer_mail');
   $texte = nettoyer_caracteres_mail($texte);
   $sujet = nettoyer_caracteres_mail($sujet);
 
