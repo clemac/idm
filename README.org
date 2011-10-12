@@ -1,44 +1,47 @@
-* Urgent
-*** "Call to the people" button
-* In progress
-*** Overhaul of the search engine
-*** iPhone version [25%]
+
+* Issues
+
+*** Urgent
+***** "Call to the people" button
+*** In progress
+***** Overhaul of the search engine
+***** iPhone version [25%]
 - [X] Basic iphone.html
 - [ ] Specific style for small screens (it used to work using max-width,
   but apparently that breaks older browsers ...)
 - [ ] Automatic suggestion
 - [ ] Find a way to make login etc. possible
-*** One year ago on IdM [50%]
+***** One year ago on IdM [50%]
 - [X] Create the page, basic functionality
 - [ ] Merge it with sommaire.html for maintainability
 - [ ] Merge the system with the color filtering ?
-* Next
-*** CC per article
-*** Loop videos
-*** Make the billets visually different
-*** Upgrade Mathjax [0%]
+*** Next
+***** CC per article
+***** Loop videos
+***** Make the billets visually different
+***** Upgrade Mathjax [0%]
 - [ ] Wait for label/ref to be in mainline mathjax
 - [ ] Wait for it to be in a stable release
 - [ ] Remove the previous hack
-*** Choose the member in the billets team differently
-* Backburner
-*** Buttons to write to groups of people
-*** Filter display by color
-*** Floating picture
-*** Planification
-*** Relecteur occasionnel
-*** Translation encouragement
-*** Unify the permissions
-* Geekeries and SPIPeries
-*** In a loop, #_parent:TITRE
-*** pipeline jquery_plugins
+***** Choose the member in the billets team differently
+*** Backburner
+***** Buttons to write to groups of people
+***** Filter display by color
+***** Floating picture
+***** Planification
+***** Relecteur occasionnel
+***** Translation encouragement
+***** Unify the permissions
+*** Geekeries and SPIPeries
+***** In a loop, #_parent:TITRE
+***** pipeline jquery_plugins
 #+begin_src php
   function XXX_jquery_plugins($scripts) {
     $scripts[] = "js/bla.js";
     return $scripts;
   }
 #+end_src
-*** pipeline taches_generales_cron
+***** pipeline taches_generales_cron
 #+begin_src php
   function XXX_taches_generales_cron ($taches) {
     $taches['toto'] = 24*3600;
@@ -48,13 +51,10 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - =0 : rien à faire
 - >0 : fait
 - <0 : il en reste, revenir dans |.| secondes
-*** plugin spip-bonux
+***** plugin spip-bonux
 - [ ] #INFO_TITRE{article,324}
-*** Refactor uses of idm_notify [100%]
+***** Refactor uses of idm_notify [100%]
 - [X] Accept an array as recipient
 - [X] Call it with an array when possible
 - [X] Store recipient lists in a config file
-* Done
-*** Use mathjax [100%]
-- [X] Port the dynamic parts (forum previews)
-- [X] Create a \label/\ref replacement
+- [ ] Solve the problem that mes_options is not read during AJAX calls
