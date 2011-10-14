@@ -70,6 +70,8 @@ function idm_declarer_tables_objets_sql ($tables) {
                                                                  'id_article' => "BIGINT(21) NOT NULL"),
                                                'key' => array ());
 
+  $tables['spip_auteurs']['field']['billettiste'] = "ENUM('oui','non') NOT NULL DEFAULT 'non'";
+
   return $tables;
 }
 

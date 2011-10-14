@@ -147,8 +147,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/lastyear.html
 ***** squelettes/lexique.html
 ***** squelettes/local_fr.php
-***** squelettes/mes_fonctions.php
-- only tables_principales spip_auteurs.billettiste
 ***** squelettes/modeles/applet.html
 ***** squelettes/modeles/billettistes.html
 ***** squelettes/modeles/cqfd.html
