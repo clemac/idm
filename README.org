@@ -98,6 +98,7 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** plugins/IdM/formulaires/relecteurs_vote.html
 ***** plugins/IdM/formulaires/relecteurs_vote.php
 ***** plugins/IdM/idm.php
+- autoriser : do it new-style
 ***** plugins/IdM/img/IdM_gestion_24.png
 ***** plugins/IdM/img/IdM_gestion_24.xcf
 ***** plugins/IdM/img/IdM_gestion_48.png
@@ -112,6 +113,7 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** plugins/IdM/prive/exec/idm_billettistes.html
 ***** plugins/IdM/prive/exec/idm_moderation.html
 ***** plugins/IdM/prive/exec/idm_projets.html
+- Style of the boxes is wrong
 ***** plugins/IdM/prive/exec/idm_relecteur.html
 ***** plugins/IdM/prive/exec/idm_relecteurs.html
 ***** plugins/IdM/prive/exec/idm_relecture.html
@@ -209,6 +211,7 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/navigation.html
 ***** squelettes/perso.html
 ***** squelettes/plan.html
+- Nothing appears in "par rubrique"
 ***** squelettes/propose.html
 ***** squelettes/random.html
 ***** squelettes/recherche.html
