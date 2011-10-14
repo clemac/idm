@@ -75,6 +75,10 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** config/ecran_securite.php
 ***** config/mes_options.php
  - contains action_logout()
+***** plugins/IdM/base/idm.php
+***** plugins/IdM/Dewey.html
+***** plugins/IdM/Dewey.org
+***** plugins/IdM/formulaires
 ***** plugins/IdM/formulaires/forum_relecture.html
 ***** plugins/IdM/formulaires/forum_relecture.php
 ***** plugins/IdM/formulaires/idm_projet.html
@@ -97,19 +101,14 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** plugins/IdM/formulaires/relecteurs_perso.php
 ***** plugins/IdM/formulaires/relecteurs_vote.html
 ***** plugins/IdM/formulaires/relecteurs_vote.php
-***** plugins/IdM/idm.php
+***** plugins/IdM/idm_administrations.php
+***** plugins/IdM/idm_fonctions.php
 - autoriser : do it new-style
-***** plugins/IdM/img/IdM_gestion_24.png
-***** plugins/IdM/img/IdM_gestion_24.xcf
-***** plugins/IdM/img/IdM_gestion_48.png
-***** plugins/IdM/img/IdM_gestion_48.xcf
-***** plugins/IdM/img/minus.png
-***** plugins/IdM/img/plus.png
-***** plugins/IdM/img/relecteurs.gif
+***** plugins/IdM/idm_options.php
 ***** plugins/IdM/javascript/jquery-ui.min.js
-***** plugins/IdM/javascript/jquery.checkboxtree.js
 ***** plugins/IdM/javascript/jquery.tablesorter.min.js
-***** plugins/IdM/plugin.xml
+***** plugins/IdM/lang/paquet-idm_fr.php
+***** plugins/IdM/paquet.xml
 ***** plugins/IdM/prive/exec/idm_billettistes.html
 ***** plugins/IdM/prive/exec/idm_moderation.html
 ***** plugins/IdM/prive/exec/idm_projets.html
@@ -117,6 +116,11 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** plugins/IdM/prive/exec/idm_relecteur.html
 ***** plugins/IdM/prive/exec/idm_relecteurs.html
 ***** plugins/IdM/prive/exec/idm_relecture.html
+***** plugins/IdM/prive/objets/infos/article.html
+***** plugins/IdM/prive/themes/spip/images/idm-24.png
+***** plugins/IdM/prive/themes/spip/images/idm-48.png
+***** plugins/IdM/prive/themes/spip/images/idm-logo-60.png
+***** plugins/IdM/prive/themes/spip/images/relecteurs-24.png
 ***** squelettes/anciens.html
 ***** squelettes/article-18.html
 ***** squelettes/article.html
