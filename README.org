@@ -72,13 +72,9 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - Need to reattach the fields by hand, to replace the IDM plugin
 
 *** Files to check for compatibility
-***** config/ecran_securite.php
 ***** config/mes_options.php
- - contains action_logout()
-***** plugins/IdM/base/idm.php
-***** plugins/IdM/Dewey.html
-***** plugins/IdM/Dewey.org
-***** plugins/IdM/formulaires
+- contains action_logout()
+- table_des_traitements belongs in the plugin ?
 ***** plugins/IdM/formulaires/forum_relecture.html
 ***** plugins/IdM/formulaires/forum_relecture.php
 ***** plugins/IdM/formulaires/idm_projet.html
@@ -105,10 +101,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** plugins/IdM/idm_fonctions.php
 - autoriser : do it new-style
 ***** plugins/IdM/idm_options.php
-***** plugins/IdM/javascript/jquery-ui.min.js
-***** plugins/IdM/javascript/jquery.tablesorter.min.js
-***** plugins/IdM/lang/paquet-idm_fr.php
-***** plugins/IdM/paquet.xml
 ***** plugins/IdM/prive/exec/idm_billettistes.html
 ***** plugins/IdM/prive/exec/idm_moderation.html
 ***** plugins/IdM/prive/exec/idm_projets.html
@@ -117,10 +109,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** plugins/IdM/prive/exec/idm_relecteurs.html
 ***** plugins/IdM/prive/exec/idm_relecture.html
 ***** plugins/IdM/prive/objets/infos/article.html
-***** plugins/IdM/prive/themes/spip/images/idm-24.png
-***** plugins/IdM/prive/themes/spip/images/idm-48.png
-***** plugins/IdM/prive/themes/spip/images/idm-logo-60.png
-***** plugins/IdM/prive/themes/spip/images/relecteurs-24.png
 ***** squelettes/anciens.html
 ***** squelettes/article-18.html
 ***** squelettes/article.html
@@ -130,15 +118,8 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/billet.html
 ***** squelettes/breve.html
 ***** squelettes/breves.html
-***** squelettes/css/iehacks-5.0.css
-***** squelettes/css/iehacks-5.5.css
-***** squelettes/css/iehacks-6.0.css
-***** squelettes/css/iehacks-7.0.css
-***** squelettes/css/iehacks-8.0.css
-***** squelettes/css/iehacks-9.0.css
 ***** squelettes/css/main.css
 ***** squelettes/css/main.scss
-***** squelettes/css/oldsafarihack.css
 ***** squelettes/css/tag_20110922.css
 ***** squelettes/favicon.ico
 ***** squelettes/formulaires/billet.html
@@ -148,13 +129,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/formulaires/recherche.html
 ***** squelettes/forum.html
 ***** squelettes/image.html
-***** squelettes/img/cc.png
-***** squelettes/img/CNRS.jpg
-***** squelettes/img/Logo_IDM_blanc_e00000.gif
-***** squelettes/img/rechercher.gif
-***** squelettes/img/triangle-bas.gif
-***** squelettes/img/triangle.gif
-***** squelettes/img/up.png
 ***** squelettes/inc/article.html
 ***** squelettes/inc/auteur.html
 ***** squelettes/inc/foot.html
@@ -170,33 +144,11 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/inc/social_bar.html
 ***** squelettes/inscription.html
 ***** squelettes/iphone.html
-***** squelettes/iui/backButton.png
-***** squelettes/iui/blueButton.png
-***** squelettes/iui/cancel.png
-***** squelettes/iui/grayButton.png
-***** squelettes/iui/iui-logo-touch-icon.png
-***** squelettes/iui/iui.css
-***** squelettes/iui/iui.js
-***** squelettes/iui/iuix.css
-***** squelettes/iui/iuix.js
-***** squelettes/iui/listArrow.png
-***** squelettes/iui/listArrowSel.png
-***** squelettes/iui/listGroup.png
-***** squelettes/iui/loading.gif
-***** squelettes/iui/pinstripes.png
-***** squelettes/iui/redButton.png
-***** squelettes/iui/selection.png
-***** squelettes/iui/thumb.png
-***** squelettes/iui/toggle.png
-***** squelettes/iui/toggleOn.png
-***** squelettes/iui/toolbar.png
-***** squelettes/iui/toolButton.png
-***** squelettes/iui/whiteButton.png
-***** squelettes/javascript/swfobject.js
 ***** squelettes/lastyear.html
 ***** squelettes/lexique.html
 ***** squelettes/local_fr.php
 ***** squelettes/mes_fonctions.php
+- only tables_principales spip_auteurs.billettiste
 ***** squelettes/modeles/applet.html
 ***** squelettes/modeles/billettistes.html
 ***** squelettes/modeles/cqfd.html
@@ -224,12 +176,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/sitemap.html
 ***** squelettes/sommaire.html
 ***** squelettes/suivi.html
-***** squelettes/svgweb/svg.htc
-***** squelettes/svgweb/svg.js
-***** squelettes/svgweb/svg.swf
-***** squelettes/swf/dewplayer.swf
-***** squelettes/swf/player.swf
-***** squelettes/swf/yt.swf
 
 * SPIP 3 related, solved
 *** Some articles give an Internal Server Error
