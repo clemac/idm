@@ -1,0 +1,56 @@
+<BOUCLE_article(ARTICLES){id_article}>
+  <pre>
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\newenvironment{ps}{\section*{P.S.}\indent}{}
+\newenvironment{notes}{\section*{Notes}\indent}{}
+
+[\title{(#TITRE)[\\{\normalsize (#SOUSTITRE)}]}]
+
+[\author{(#LESAUTEURS)}]
+[\date{(#DATE|affdate)}]
+
+\begin{document}
+  \maketitle
+
+  [\section*{(#SOUSTITRE)}]
+
+  [\begin{abstract}
+    (#CHAPO|wordwrap)
+  \end{abstract}]
+
+  [(#TEXTE|wordwrap)]
+
+  [\begin{ps}
+    (#PS|wordwrap)
+  \end{ps}]
+
+  [\begin{notes}
+    (#NOTES|wordwrap)
+  \end{notes}]
+\end{document}
+
+    [(#LOGO_ARTICLE|right||image_reduire{300,300})]
+    [(#LOGO_ARTICLE|fichier|non) <INCLURE{fond=inc/auteur}{id_article=#ID_ARTICLE}{taille=300}>]
+      <div class="noprint">
+        #BLOC_TITRE Cr&eacute;dits images
+        #BLOC_DEBUT
+        [<a href="IMG/#LOGO_ARTICLE**">Image &agrave; la une</a> &mdash; (#CREDITS_LOGO|PtoBR)<br/>]
+        <BOUCLE_img(DOCUMENTS) {id_article} {credits == .}>
+          <a href="#URL_DOCUMENT">[(#TITRE|sinon{img_#ID_DOCUMENT})]</a> &mdash; [(#CREDITS|propre|PtoBR)]<br/>
+        </BOUCLE_img>
+        #BLOC_FIN
+      </div>
+
+      <B_affiliation>
+        <div class="notes">
+          <h3>
+            [(#TOTAL_BOUCLE|>{1}|?{Affiliation des auteurs,Affiliation de l'auteur})]
+          </h3>
+          <BOUCLE_affiliation(AUTEURS) {id_article} {", "}>[<a class="auteur" href="#URL_AUTEUR">#NOM</a> : (#AFFILIATION)]</BOUCLE_affiliation>
+        </div>
+      </B_affiliation>
+  </pre>
+</BOUCLE_article>

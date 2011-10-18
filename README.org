@@ -3,6 +3,7 @@
 
 *** Urgent
 ***** "Call to the people" button
+***** page=latex
 *** In progress
 ***** Overhaul of the search engine
 ***** iPhone version [25%]
