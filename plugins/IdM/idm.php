@@ -370,7 +370,7 @@ function idm_texify ($texte) {
   foreach ($matches as $m) {
     $f = generer_url_document_dist(intval($m[2]));
     $f = preg_replace ('/.*\//', '', $f);
-    $texte = str_replace ($m[0], '\centerline{\includegraphics{'.$f.'}}', $texte);
+    $texte = str_replace ($m[0], '\centerline{\includegraphics[width=.5\hsize]{'.$f.'}}', $texte);
   }
 
   $texte = preg_replace ('/\\\\href{([0-9]*)}/', '\href{http://images.math.cnrs.fr/?article\1}', $texte);

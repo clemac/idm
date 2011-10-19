@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[margin=3cm]{geometry}
-\usepackage{graphicx}
+\usepackage{graphicx,grffile}
 \usepackage{hyperref}
 
 [\title{(#TITRE)}]
@@ -16,7 +16,7 @@
 \begin{document}
   \maketitle
 
-  [\centerline{\includegraphics{(#LOGO_ARTICLE**)}}]
+  \centerline{\includegraphics[width=.5\hsize]{#LOGO_ARTICLE**}}
 
   [\begin{abstract}
     (#CHAPO|wordwrap)
