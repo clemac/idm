@@ -1,56 +1,38 @@
 <BOUCLE_article(ARTICLES){id_article}>
   <pre>
-\documentclass{article}
+\documentclass[a4paper,11pt]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[margin=3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
 
-\newenvironment{ps}{\section*{P.S.}\indent}{}
-\newenvironment{notes}{\section*{Notes}\indent}{}
+[\title{(#TITRE)}]
+[\subtitle{(#SOUSTITRE)}]
 
-[\title{(#TITRE)[\\{\normalsize (#SOUSTITRE)}]}]
-
-[\author{(#LESAUTEURS)}]
-[\date{(#DATE|affdate)}]
+[\author{Par (#LESAUTEURS)}]
+[\date{Publié sur IdM le (#DATE|affdate)}]
 
 \begin{document}
   \maketitle
 
-  [\section*{(#SOUSTITRE)}]
+  [\centerline{\includegraphics{(#LOGO_ARTICLE**)}}]
 
   [\begin{abstract}
     (#CHAPO|wordwrap)
   \end{abstract}]
 
-  [(#TEXTE|wordwrap)]
+  [(#TEXTE*|idm_texify|wordwrap)]
 
-  [\begin{ps}
-    (#PS|wordwrap)
-  \end{ps}]
-
-  [\begin{notes}
-    (#NOTES|wordwrap)
-  \end{notes}]
+  [\section*{Post Scriptum}(#PS|wordwrap)]
 \end{document}
 
-    [(#LOGO_ARTICLE|right||image_reduire{300,300})]
-    [(#LOGO_ARTICLE|fichier|non) <INCLURE{fond=inc/auteur}{id_article=#ID_ARTICLE}{taille=300}>]
-      <div class="noprint">
-        #BLOC_TITRE Cr&eacute;dits images
-        #BLOC_DEBUT
-        [<a href="IMG/#LOGO_ARTICLE**">Image &agrave; la une</a> &mdash; (#CREDITS_LOGO|PtoBR)<br/>]
-        <BOUCLE_img(DOCUMENTS) {id_article} {credits == .}>
-          <a href="#URL_DOCUMENT">[(#TITRE|sinon{img_#ID_DOCUMENT})]</a> &mdash; [(#CREDITS|propre|PtoBR)]<br/>
-        </BOUCLE_img>
-        #BLOC_FIN
-      </div>
+<hr/>
 
-      <B_affiliation>
-        <div class="notes">
-          <h3>
-            [(#TOTAL_BOUCLE|>{1}|?{Affiliation des auteurs,Affiliation de l'auteur})]
-          </h3>
-          <BOUCLE_affiliation(AUTEURS) {id_article} {", "}>[<a class="auteur" href="#URL_AUTEUR">#NOM</a> : (#AFFILIATION)]</BOUCLE_affiliation>
-        </div>
-      </B_affiliation>
+<a href="IMG/#LOGO_ARTICLE**">#LOGO_ARTICLE**</a>
+<BOUCLE_doc(DOCUMENTS) {id_article}>
+<a href="#URL_DOCUMENT">#URL_DOCUMENT</a>
+</BOUCLE_doc>
+
   </pre>
 </BOUCLE_article>

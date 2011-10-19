@@ -359,4 +359,22 @@ function idm_initiale ($mot) {
   return strtoupper($mot[0]);
 }
 
+function idm_texify ($texte) {
+  include_spip ('inc/documents');
+
+  $texte = preg_replace ('/{{{(.*?)}}}/', '\section*{\1}', $texte);
+  $texte = preg_replace ('/\[\[(.*?)\]\]/', '\footnote{\1}', $texte);
+  $texte = preg_replace ('/\[([^]]*)->([^]]*)\]/', '\href{\2}{\1}', $texte);
+
+  preg_match_all ('/<(doc|img)([0-9]*).*?>/', $texte, $matches, PREG_SET_ORDER);
+  foreach ($matches as $m) {
+    $f = generer_url_document_dist(intval($m[2]));
+    $f = preg_replace ('/.*\//', '', $f);
+    $texte = str_replace ($m[0], '\centerline{\includegraphics{'.$f.'}}', $texte);
+  }
+
+  $texte = preg_replace ('/\\\\href{([0-9]*)}/', '\href{http://images.math.cnrs.fr/?article\1}', $texte);
+  return $texte;
+}
+
 ?>
