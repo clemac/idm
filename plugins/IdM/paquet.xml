@@ -12,12 +12,12 @@
   <auteur mail="vbeffara@ens-lyon.fr">Vincent Beffara</auteur>
   <licence>GPLv3</licence>
 
-  <menu nom="idm"              titre="IdM"          icone="images/idm-48.png" parent=""/>
-  <menu nom="idm_projets"      titre="Projets"      icone="images/idm-24.png" parent="idm"/>
-  <menu nom="idm_relecteurs"   titre="Relecteurs"   icone="images/idm-24.png" parent="idm"/>
-  <menu nom="idm_relecture"    titre="Relecture"    icone="images/idm-24.png" parent="idm"/>
-  <menu nom="idm_moderation"   titre="Modération"   icone="images/idm-24.png" parent="idm"/>
-  <menu nom="idm_billettistes" titre="Billettistes" icone="images/idm-24.png" parent="idm"/>
+  <menu nom="idm"              titre="idm:menu"         icone="images/idm-48.png" parent=""/>
+  <menu nom="idm_projets"      titre="idm:projets"      icone="images/idm-24.png" parent="idm"/>
+  <menu nom="idm_relecteurs"   titre="idm:relecteurs"   icone="images/idm-24.png" parent="idm"/>
+  <menu nom="idm_relecture"    titre="idm:relecture"    icone="images/idm-24.png" parent="idm"/>
+  <menu nom="idm_moderation"   titre="idm:moderation"   icone="images/idm-24.png" parent="idm"/>
+  <menu nom="idm_billettistes" titre="idm:billettistes" icone="images/idm-24.png" parent="idm"/>
 
   <pipeline nom="declarer_tables_interfaces" inclure="base/idm.php" />
   <pipeline nom="declarer_tables_objets_sql" inclure="base/idm.php" />
