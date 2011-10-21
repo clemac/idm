@@ -9,14 +9,6 @@ ini_set('display_errors', '1');
 
 $type_urls = "propres2";
 
-function prenom_nom ($texte) {
-  $texte = preg_replace ('/([^,]+), ([^,]+)/s', '\2 \1', $texte);
-  return $texte;
-}
-
-$table_des_traitements['TITRE'][]= 'supprimer_numero(%s)';
-$table_des_traitements['NOM'][]= 'prenom_nom(%s)';
-
 function inc_envoyer_mail ($destinataire, $sujet, $corps, $from = "", $headers = "") {
 
   if (!email_valide($destinataire)) return false;

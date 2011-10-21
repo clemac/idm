@@ -73,8 +73,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - Need to reattach the fields by hand, to replace the IDM plugin
 
 *** Files to check for compatibility
-***** config/mes_options.php
-- table_des_traitements belongs in the plugin ?
 ***** plugins/IdM/formulaires/forum_relecture.html
 ***** plugins/IdM/formulaires/forum_relecture.php
 ***** plugins/IdM/formulaires/idm_projet.html

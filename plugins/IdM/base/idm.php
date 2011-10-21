@@ -7,12 +7,12 @@ function idm_declarer_tables_interfaces ($interfaces) {
   $interfaces['table_des_tables']['relecteurs_articles'] = 'relecteurs_articles';
   $interfaces['table_des_tables']['idm_sujets_articles'] = 'idm_sujets_articles';
 
+  $interfaces['table_des_traitements']['TITRE'][] = 'supprimer_numero(%s)';
+
   /*
    * $interfaces['table_date']['syndication'] = 'date';
    *
    * $interfaces['tables_jointures']['spip_syndic_articles'][]= 'syndic';
-   *
-   * $interfaces['table_des_traitements']['NOM_SITE'][]=  _TRAITEMENT_TYPO;
    *
    * // Articles syndiques : passage des donnees telles quelles, sans traitement typo
    * // la securite et conformite XHTML de ces champs est assuree par safehtml()

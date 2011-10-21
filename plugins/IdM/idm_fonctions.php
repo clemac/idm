@@ -294,4 +294,9 @@ function idm_texify ($texte) {
   return $texte;
 }
 
+function idm_prenom_nom ($texte) {
+  $texte = preg_replace ('/([^,]+), ([^,]+)/s', '\2 \1', $texte);
+  return $texte;
+}
+
 ?>
