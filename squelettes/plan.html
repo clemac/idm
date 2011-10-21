@@ -3,13 +3,12 @@
 <div class="plan">
   #ONGLETS_DEBUT{par rubrique}
 
-  <B_rub><ul><BOUCLE_rub(RUBRIQUES) {id_parent} {id_secteur != 18} {doublons rub} {par num titre, titre}>
-    <li><span[ (#ID_PARENT|?{'','class="heading"'})]><a href="#URL_RUBRIQUE" >#TITRE</a></span>
-    <B_art><ul><BOUCLE_art(ARTICLES) {id_rubrique} {par num titre, date}>
+  <B_rub><ul><BOUCLE_rub(RUBRIQUES) {id_secteur != 18} {doublons rub} {par num titre, titre}>
+    <B_art><li><span class="heading"><a href="#URL_RUBRIQUE" >#TITRE</a></span>
+    <ul><BOUCLE_art(ARTICLES) {id_rubrique} {par num titre, date}>
       <li><a class="article" href="#URL_ARTICLE">#TITRE</a></li>
-    </BOUCLE_art></ul></B_art>
-    <BOUCLE_sousrub(BOUCLE_rub)></BOUCLE_sousrub>
-    </li>
+    </BOUCLE_art></ul>
+    </li></B_art>
   </BOUCLE_rub></ul></B_rub>
 
   #ONGLETS_TITRE{par auteur}

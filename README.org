@@ -164,8 +164,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/mot.html
 ***** squelettes/navigation.html
 ***** squelettes/perso.html
-***** squelettes/plan.html
-- Nothing appears in "par rubrique"
 ***** squelettes/propose.html
 ***** squelettes/random.html
 ***** squelettes/recherche.html
