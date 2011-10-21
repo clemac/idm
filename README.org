@@ -74,7 +74,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 
 *** Files to check for compatibility
 ***** config/mes_options.php
-- contains action_logout()
 - table_des_traitements belongs in the plugin ?
 ***** plugins/IdM/formulaires/forum_relecture.html
 ***** plugins/IdM/formulaires/forum_relecture.php
@@ -182,9 +181,3 @@ Reason : GD2 crashes even harder than before on huge images (for "Quand
 les maths donnent des ailes", doc6742 is 12 Mpix, max is 4 Mpix) For
 some reason the crash does not occur anymore ... now the test is done so
 that might explain it. Anyway, installing Image Magick cures it for good.
-
-*** Plugins that have been removed
-***** spip-bonux
-- SVN version spip-bonux-3 installed
-***** mediatheque
-- now in the core
