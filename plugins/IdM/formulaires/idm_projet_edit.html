@@ -1,68 +1,65 @@
 <BOUCLE_proj(IDM_PROJETS){id_projet=#ENV{id_projet}}>
-<div class='cadre cadre-trait-couleur'>
-  <div class='titrem'>#SUJET &mdash; statut : #STATUT</div>
+  <form action="#ENV{action}" method="post" class="formulaire_spip">
+    #ACTION_FORMULAIRE{#ENV{action}}
 
-  <div class='cadre_padding'>
+    <h3 class="titrem">#SUJET (statut : #STATUT)</h3>
+
     Article : <BOUCLE_art(ARTICLES){id_article}{statut IN prepa,prop}>
-    <a href="?exec=articles&id_article=#ID_ARTICLE"><strong>#TITRE</strong></a>
+      <a href="?exec=articles&id_article=#ID_ARTICLE"><strong>#TITRE</strong></a>
     </BOUCLE_art>(pas attribu&eacute;)<//B_art><br/>
 
     Auteur : <BOUCLE_aut(AUTEURS){id_auteur}{tous}>
-    <a href="?exec=auteur_infos&id_auteur=#ID_AUTEUR"><strong>#NOM</strong></a>
+      <a href="?exec=auteur_infos&id_auteur=#ID_AUTEUR"><strong>#NOM</strong></a>
     </BOUCLE_aut>[(#AUTEUR) (contact&eacute;)]<//B_aut><br/>
 
     Rubrique : <BOUCLE_rub(RUBRIQUES){id_rubrique}>
-    <a href="?exec=naviguer&id_rubrique=#ID_RUBRIQUE"><strong>#TITRE</strong></a>
+      <a href="?exec=naviguer&id_rubrique=#ID_RUBRIQUE"><strong>#TITRE</strong></a>
     </BOUCLE_rub><br/>
 
-    [<fieldset><legend>&nbsp;Commentaires&nbsp;</legend>(#COMMENT|propre)</fieldset>]
+    [<h6>Commentaires</h6>(#COMMENT|propre)]
 
-    Derni&egrave;re modification : #MODIF par <BOUCLE_ed(AUTEURS){id_auteur=#ID_EDITEUR}{tous}>#NOM</BOUCLE_ed>.<br/>
-  </div>
+    Derni&egrave;re modification : #MODIF par <BOUCLE_ed(AUTEURS){id_auteur=#ID_EDITEUR}{tous}>#NOM</BOUCLE_ed>.
 
-  <form action="#ENV{action}" method="post">
-    #ACTION_FORMULAIRE{#ENV{action}}
+    [<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+    [<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
 
-    <div class="formulaire_spip">
-      [<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
-      [<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
-
-      [(#ENV{step}|=={display}|oui)
-      <p class="boutons"><input type="submit" class="submit" name="submit" value="Modifier" /></p>
-      <input type="hidden" name="step" value="edit" />]
-
-      <BOUCLE_edit(CONDITION){si #ENV{step}|=={edit}}>
+    <BOUCLE_edit(CONDITION){si #ENV{step}|=={edit}}>
       <input type="hidden" name="step" value="display" />
       <ul>
         <li class="editer_id_auteur obligatoire"><label for="id_auteur">Identifier l'auteur</label>
-        <select name="id_auteur" id="id_auteur" value="#ENV{id_auteur}">
-          <option value="0" [(#ENV{id_auteur}|non) selected="yes"]></option>
-          <BOUCLE_auteur(AUTEURS){tous}{par nom}>
-          <option value="#ID_AUTEUR" [(#ENV{id_auteur}|=={#ID_AUTEUR}|oui) selected="yes"]>#NOM*</option>
-          </BOUCLE_auteur>
-        </select>
+          <select name="id_auteur" id="id_auteur" value="#ENV{id_auteur}">
+            <option value="0" [(#ENV{id_auteur}|non) selected="yes"]></option>
+            <BOUCLE_auteur(AUTEURS){tous}{par nom}>
+              <option value="#ID_AUTEUR" [(#ENV{id_auteur}|=={#ID_AUTEUR}|oui) selected="yes"]>#NOM*</option>
+            </BOUCLE_auteur>
+          </select>
         </li>
 
         <li class="editer_id_article obligatoire"><label for="id_article">Identifier l'article</label>
-        <select name="id_article" id="id_article" value="#ENV{id_article}">
-          <option value="0" [(#ENV{id_article}|non) selected="yes"]></option>
-          <BOUCLE_article(ARTICLES){statut IN prepa,prop}{par id_article}{inverse}>
-          <option value="#ID_ARTICLE" [(#ENV{id_article}|=={#ID_ARTICLE}|oui) selected="yes"]>#TITRE</option>
-          </BOUCLE_article>
-        </select>
+          <select name="id_article" id="id_article" value="#ENV{id_article}">
+            <option value="0" [(#ENV{id_article}|non) selected="yes"]></option>
+            <BOUCLE_article(ARTICLES){statut IN prepa,prop}{par id_article}{inverse}>
+              <option value="#ID_ARTICLE" [(#ENV{id_article}|=={#ID_ARTICLE}|oui) selected="yes"]>#TITRE</option>
+            </BOUCLE_article>
+          </select>
         </li>
 
-        <li class="editer_comment"><label for="comment">Commentaires</label>
-        <textarea name="comment" id="comment" rows="5">#ENV{comment}</textarea>
+        <li class="editer editer_comment pleine_largeur">
+          <label for="comment">Commentaires</label>
+          <textarea name="comment" id="comment" rows="5" class="textarea">#ENV{comment}</textarea>
         </li>
       </ul>
-      <p class="boutons">
+    </BOUCLE_edit>
+
+    <p class="boutons">
+      [(#ENV{step}|=={edit}|oui)
       [(#STATUT|=={redaction}|oui)<input type="submit" class="submit" name="submit" value="Mettre en relecture" />]
       <input type="submit" class="submit" name="submit" value="Supprimer" />
-      <input type="submit" class="submit" name="submit" value="Appliquer" />
-      </p>
-      </BOUCLE_edit>
-    </div>
+      <input type="submit" class="submit" name="submit" value="Appliquer" />]
+
+      [(#ENV{step}|=={display}|oui)
+      <input type="submit" class="submit" name="submit" value="Modifier" />
+      <input type="hidden" name="step" value="edit" />]
+    </p>
   </form>
-</div>
 </BOUCLE_proj>
