@@ -1,17 +1,12 @@
 <BOUCLE_article(ARTICLES) {statut = prop} {id_article}>
-<div class='cadre cadre-trait-couleur'>
-  <div class='titrem'>
-    <a href="#URL_PAGE{propose,id_article=#ID_ARTICLE}" style="color:white;">#TITRE</a>
-  </div>
-  <div class='cadre_padding'>
-    <strong>par #LESAUTEURS, proposé le [(#DATE|affdate)]</strong>
-  </div>
+<div class='formulaire_spip'>
+  <h3 class='titrem'><a href="#URL_PAGE{propose,id_article=#ID_ARTICLE}">#TITRE</a></h3>
+  <strong>par #LESAUTEURS, proposé le [(#DATE|affdate)]</strong>
 
   <form action="#ENV{action}" method="post">
     #ACTION_FORMULAIRE{#ENV{action}}
 
-    <div class="formulaire_spip">
-      <B_relecteurs>
+    <B_relecteurs>
       <table id="assigned_#ID_ARTICLE" class="sortable">
         <thead>
           <tr>
@@ -32,14 +27,14 @@
           </BOUCLE_relecteurs>
         </tbody>
       </table>
-      </B_relecteurs>
+    </B_relecteurs>
 
-      <div class='cs_blocs'>
-        <h4 class='blocs_titre blocs_replie blocs_click'>
-          <a href='javascript:;'>Affecter des relecteurs &agrave; cet article ...</a>
-        </h4>
-        <div class='blocs_destination blocs_invisible'>
-          <B_gars>
+    <div class='cs_blocs'>
+      <h4 class='blocs_titre blocs_replie blocs_click'>
+        <a href='javascript:;'>Affecter des relecteurs &agrave; cet article ...</a>
+      </h4>
+      <div class='blocs_destination blocs_invisible'>
+        <B_gars>
           <table id="unassigned_#ID_ARTICLE" class="sortable">
             <thead>
               <tr>
@@ -66,7 +61,6 @@
         </div>
       </div>
       <p class="boutons"><input type="submit" name="go" value="Allons-y !"/></p>
-    </div>
   </form>
 </div>
 </BOUCLE_article>

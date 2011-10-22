@@ -63,6 +63,7 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 * SPIP 3 related
 *** Preview of articles still in redaction phase (previsu_redaction)
 *** Table names missing in exec=champs_extras
+*** Plugin tablesorter does not work (at least in /ecrire)
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
 ***** previsu_redaction
@@ -84,8 +85,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** plugins/IdM/formulaires/idm_relecteur.php
 ***** plugins/IdM/formulaires/navigation.html
 ***** plugins/IdM/formulaires/navigation.php
-***** plugins/IdM/formulaires/relecteurs_article.html
-***** plugins/IdM/formulaires/relecteurs_article.php
 ***** plugins/IdM/formulaires/relecteurs_gestion.html
 ***** plugins/IdM/formulaires/relecteurs_gestion.php
 ***** plugins/IdM/formulaires/relecteurs_moderation.html
@@ -102,7 +101,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** plugins/IdM/prive/exec/idm_moderation.html
 ***** plugins/IdM/prive/exec/idm_relecteur.html
 ***** plugins/IdM/prive/exec/idm_relecteurs.html
-***** plugins/IdM/prive/exec/idm_relecture.html
 ***** plugins/IdM/prive/objets/infos/article.html
 ***** squelettes/anciens.html
 ***** squelettes/article-18.html
