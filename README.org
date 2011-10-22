@@ -63,6 +63,7 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 * SPIP 3 related
 *** Preview of articles still in redaction phase (previsu_redaction)
 *** Table names missing in exec=champs_extras
+*** idm_prenom_nom everywhere, put it in table_des_traitements again ?
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
 ***** previsu_redaction
@@ -97,7 +98,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - autoriser : do it new-style
 ***** plugins/IdM/idm_options.php
 ***** plugins/IdM/prive/objets/infos/article.html
-***** squelettes/anciens.html
 ***** squelettes/article-18.html
 ***** squelettes/article.html
 ***** squelettes/article=35.html
