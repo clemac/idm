@@ -41,7 +41,8 @@
 billettistes_effect_change ('#SELF', 'admin'); ?>
 
 <B_deja>
-  <h2>Le dernier billet de chaque billettiste :</h2>
+  #BOITE_OUVRIR{Le dernier billet de chaque billettiste, simple, titrem}
+
   <table class="sortable" style="font-size : 90%">
     <thead><tr>
         <th>Date de publication</th>
@@ -59,12 +60,13 @@ billettistes_effect_change ('#SELF', 'admin'); ?>
         <td>-</td>
         <td>-</td>
   <//B_billet>
-        <td><a href="#URL_AUTEUR">#NOM</a></td>
+        <td><a href="#URL_AUTEUR">[(#NOM|idm_prenom_nom)]</a></td>
         <td><BOUCLE_compte(ARTICLES) {statut=publie} {id_auteur} {id_rubrique=6}></BOUCLE_compte>#TOTAL_BOUCLE<//B_compte></td>
       </tr>
 </BOUCLE_deja>
     </tbody>
   </table>
+  #BOITE_FERMER
 </B_deja>
 
 <B_new>
@@ -84,7 +86,7 @@ billettistes_effect_change ('#SELF', 'admin'); ?>
             <BOUCLE_new(AUTEURS) {statut == .} {billettiste=non} {par nom}>
             <tr>
               <td>#ID_AUTEUR</td>
-              <td>#NOM</td>
+              <td>[(#NOM|idm_prenom_nom)]</td>
               <td>#EMAIL</td>
               <td>#STATUT</td>
               <td><input type="checkbox" name="form_billettistes_bless_#ID_AUTEUR"/></td>
@@ -116,7 +118,7 @@ billettistes_effect_change ('#SELF', 'admin'); ?>
 <BOUCLE_kill(AUTEURS) {tous} {billettiste=oui}>
             <tr>
               <td>#ID_AUTEUR</td>
-              <td>#NOM</td>
+              <td>[(#NOM|idm_prenom_nom)]</td>
               <td>#EMAIL</td>
               <td>#STATUT</td>
               <td><input type="checkbox" name="form_billettistes_demote_#ID_AUTEUR"/></td>
