@@ -63,7 +63,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 * SPIP 3 related
 *** Preview of articles still in redaction phase (previsu_redaction)
 *** Table names missing in exec=champs_extras
-*** Plugin tablesorter does not work (at least in /ecrire)
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
 ***** previsu_redaction
