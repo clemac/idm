@@ -83,7 +83,7 @@ html, body { padding : 0px; margin : 0px; font-family : Arial, sans-serif; text-
              a:hover { text-decoration : underline; }
 }
 
-.page      { clear : both; margin : 2ex auto; padding : 1ex 1em; width : 80%; border : 1px solid black; background : white; }
+.page      { clear : both; margin : 2ex auto; padding : 1ex 1em; width : 80%; border : 1px solid black; background : white; overflow : hidden; }
 .nopage    { padding : 0 1em 1ex; }
 .frame     { border : 1px solid black; margin : 0ex 1em; padding : 1ex 1em; background : white; }
 .shadow    { -moz-box-shadow: 5px 5px 15px black; -webkit-box-shadow: 5px 5px 15px black; box-shadow: 5px 5px 15px black; }

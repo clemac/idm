@@ -53,7 +53,7 @@ html, body { padding: 0px; margin: 0px; font-family: Arial, sans-serif; text-ali
 #editolink { text-align: center; font-size: 180%; font-weight: bold; margin: .5ex 0em 2.5ex; font-variant: small-caps; }
 #editolink a:hover { text-decoration: underline; }
 
-.page { clear: both; margin: 2ex auto; padding: 1ex 1em; width: 80%; border: 1px solid black; background: white; }
+.page { clear: both; margin: 2ex auto; padding: 1ex 1em; width: 80%; border: 1px solid black; background: white; overflow: hidden; }
 
 .nopage { padding: 0 1em 1ex; }
 

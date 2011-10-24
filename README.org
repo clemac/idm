@@ -134,7 +134,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/inscription.html
 ***** squelettes/iphone.html
 ***** squelettes/lastyear.html
-***** squelettes/lexique.html
 ***** squelettes/modeles/applet.html
 ***** squelettes/modeles/billettistes.html
 ***** squelettes/modeles/cqfd.html
@@ -149,7 +148,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/modeles/special.html
 ***** squelettes/modeles/svg.html
 ***** squelettes/modeles/video.html
-***** squelettes/mot.html
 ***** squelettes/navigation.html
 ***** squelettes/perso.html
 ***** squelettes/propose.html
