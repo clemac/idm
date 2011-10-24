@@ -7,7 +7,7 @@ function idm_declarer_tables_interfaces ($interfaces) {
   $interfaces['table_des_tables']['relecteurs_articles'] = 'relecteurs_articles';
   $interfaces['table_des_tables']['idm_sujets_articles'] = 'idm_sujets_articles';
 
-  $interfaces['table_des_traitements']['TITRE'][] = 'supprimer_numero(%s)';
+  $interfaces['table_des_traitements']['NOM'][0] = str_replace ('%s', 'idm_prenom_nom(%s)', $interfaces['table_des_traitements']['NOM'][0]);
 
   /*
    * $interfaces['table_date']['syndication'] = 'date';
