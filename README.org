@@ -64,6 +64,7 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 *** Preview of articles still in redaction phase (previsu_redaction)
 *** Table names missing in exec=champs_extras
 *** idm_prenom_nom everywhere, put it in table_des_traitements again ?
+*** Create a proper 404 page
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
 ***** previsu_redaction
@@ -157,7 +158,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/recherche.html
 ***** squelettes/rubrique-24.html
 ***** squelettes/rubrique.html
-***** squelettes/sitemap.html
 ***** squelettes/sommaire.html
 ***** squelettes/suivi.html
 
