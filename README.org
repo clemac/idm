@@ -99,9 +99,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - autoriser : do it new-style
 ***** plugins/IdM/idm_options.php
 ***** plugins/IdM/prive/objets/infos/article.html
-***** squelettes/article-18.html
-***** squelettes/article.html
-***** squelettes/article=35.html
 ***** squelettes/auteur.html
 ***** squelettes/backend.html
 ***** squelettes/billet.html
