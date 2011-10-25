@@ -118,7 +118,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/iphone.html
 ***** squelettes/lastyear.html
 ***** squelettes/modeles/applet.html
-***** squelettes/modeles/billettistes.html
 ***** squelettes/modeles/cqfd.html
 ***** squelettes/modeles/creativecommons.html
 ***** squelettes/modeles/fig.html
