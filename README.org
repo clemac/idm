@@ -98,12 +98,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - autoriser : do it new-style
 ***** plugins/IdM/idm_options.php
 ***** plugins/IdM/prive/objets/infos/article.html
-***** squelettes/breve.html
-***** squelettes/breves.html
-***** squelettes/css/main.css
-***** squelettes/css/main.scss
-***** squelettes/css/tag_20110922.css
-***** squelettes/favicon.ico
 ***** squelettes/formulaires/billet.html
 ***** squelettes/formulaires/billet.php
 ***** squelettes/formulaires/inc-forum_previsu.html
