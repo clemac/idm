@@ -12,7 +12,7 @@
   but apparently that breaks older browsers ...)
 - [ ] Automatic suggestion
 - [ ] Find a way to make login etc. possible
-***** One year ago on IdM [50%]
+***** One year ago on IdM [33%]
 - [X] Create the page, basic functionality
 - [ ] Merge it with sommaire.html for maintainability
 - [ ] Merge the system with the color filtering ?
@@ -94,15 +94,11 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** plugins/IdM/formulaires/relecteurs_vote.html
 ***** plugins/IdM/formulaires/relecteurs_vote.php
 ***** plugins/IdM/idm_administrations.php
-***** plugins/IdM/idm_fonctions.php
-- autoriser : do it new-style
 ***** plugins/IdM/idm_options.php
-***** plugins/IdM/prive/objets/infos/article.html
 ***** squelettes/formulaires/billet.html
 ***** squelettes/formulaires/billet.php
 ***** squelettes/formulaires/inscription.php
 ***** squelettes/formulaires/recherche.html
-***** squelettes/image.html
 ***** squelettes/inc/article.html
 ***** squelettes/inc/auteur.html
 ***** squelettes/inc/foot.html
@@ -115,19 +111,15 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/inc/resume_une.html
 ***** squelettes/inc/social_bar.html
 ***** squelettes/inscription.html
-***** squelettes/iphone.html
-***** squelettes/lastyear.html
-***** squelettes/navigation.html
 ***** squelettes/perso.html
 ***** squelettes/propose.html
-***** squelettes/random.html
 ***** squelettes/recherche.html
-***** squelettes/rubrique-24.html
-***** squelettes/rubrique.html
-***** squelettes/sommaire.html
-***** squelettes/suivi.html
-
-* Files which are patched versions of upstream (store as a patch for upgrades)
+*** Files to re-write
+***** plugins/IdM/idm_fonctions.php
+- autoriser : do it new-style
+***** squelettes/navigation.html
+- should be re-done completely
+*** Files which are patched versions of upstream (store as a patch for upgrades)
 - .htaccess (from htaccess.txt)
 - formulaires/inc-forum_previsu.html
 * SPIP 3 related, solved
