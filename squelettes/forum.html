@@ -6,10 +6,8 @@
   <INCLURE{fond=inc/resume}{id_article}>
 </div>
 
-<BOUCLE_auteur(spip_auteurs_articles) {id_article} {0,1}>
-<BOUCLE_auteur2(AUTEURS){id_auteur}>
-[(#SET{auteur_article,#NOM})]
-</BOUCLE_auteur2>
+<BOUCLE_auteur(AUTEURS){id_article}>
+  [(#SET{auteur_article,#NOM})]
 </BOUCLE_auteur>
 
 <div class="page shadow">
