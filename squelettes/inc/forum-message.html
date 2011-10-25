@@ -1,7 +1,9 @@
 <BOUCLE_message(FORUMS) {id_forum}>
   <div class="forum-message[ (#NOM|=={#ENV{auteur_article}}?{forum-message-delauteur})]">
-    <h3>#TITRE</h3> <h4>[le&nbsp;(#DATE|affdate_jourcourt)][&nbsp;&agrave&nbsp;(#DATE|heures)][:(#DATE|minutes)][, <:par_auteur:>
-    (#NOM)]</h4> [<div class="forum-texte">(#TEXTE)</div>]
+    <h3>#TITRE</h3>
+    <h4>[le&nbsp;(#DATE|affdate_jourcourt)][&nbsp;&agrave&nbsp;(#DATE|heures)][:(#DATE|minutes)][,
+    par (#NOM)]</h4>
+    [<div class="forum-texte">(#TEXTE)</div>]
     [<div class="forum-notes">(#NOTES)</div>]
     [<h4 class="repondre"><a href="(#PARAMETRES_FORUM|url_reponse_forum)">R&eacute;pondre
     &agrave; ce message</a></h4>]

@@ -6,7 +6,7 @@
   <ul class="forum">
     <BOUCLE_forum_precis(FORUMS) {id_article} {id_forum} {statut IN rel}>
       <li class="forum-fil">
-      [(#INCLURE {fond=inc/forum-message-prive} {id_forum})]
+      [(#INCLURE {fond=inc/forum-message-prive} {id_forum} {id_article} {auteur_article})]
         <B_forum_precis_fils>
           <ul>
             <BOUCLE_forum_precis_fils(FORUMS) {id_parent} {par date} {statut IN rel}>
@@ -28,12 +28,12 @@
   <ul class="forum">
     <BOUCLE_reforums(FORUMS) {id_article} {par date} {statut IN rel}>
       <li class="forum-fil">
-      [(#INCLURE {fond=inc/forum-message-prive} {id_forum})]
+      [(#INCLURE {fond=inc/forum-message-prive} {id_forum} {id_article} {auteur_article})]
         <B_reforums_fils>
           <ul>
             <BOUCLE_reforums_fils(FORUMS) {id_parent} {par date} {statut IN rel}>
               <li>
-              [(#INCLURE {fond=inc/forum-message-prive} {id_forum})]
+              [(#INCLURE {fond=inc/forum-message-prive} {id_forum} {id_article} {auteur_article})]
                 <BOUCLE_reForums_Boucle(boucle_reforums_fils)></BOUCLE_reForums_Boucle>
               </li>
             </BOUCLE_reforums_fils>
