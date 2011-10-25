@@ -1,6 +1,4 @@
-
 * Issues
-
 *** Urgent
 ***** "Call to the people" button
 ***** page=latex
@@ -54,12 +52,11 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - <0 : il en reste, revenir dans |.| secondes
 ***** plugin spip-bonux
 - [ ] #INFO_TITRE{article,324}
-***** Refactor uses of idm_notify [100%]
+***** Refactor uses of idm_notify [75%]
 - [X] Accept an array as recipient
 - [X] Call it with an array when possible
 - [X] Store recipient lists in a config file
 - [ ] Solve the problem that mes_options is not read during AJAX calls
-
 * SPIP 3 related
 *** Preview of articles still in redaction phase (previsu_redaction)
 *** Table names missing in exec=champs_extras
@@ -72,7 +69,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** champs_extras
 - SVN version installed
 - Need to reattach the fields by hand, to replace the IDM plugin
-
 *** Files to check for compatibility
 ***** plugins/IdM/formulaires/forum_relecture.html
 ***** plugins/IdM/formulaires/forum_relecture.php
