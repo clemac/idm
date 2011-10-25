@@ -141,6 +141,9 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** squelettes/sommaire.html
 ***** squelettes/suivi.html
 
+* Files which are patched versions of upstream (store as a patch for upgrades)
+- .htaccess (from htaccess.txt)
+- formulaires/inc-forum_previsu.html
 * SPIP 3 related, solved
 *** Some articles give an Internal Server Error
 Reason : GD2 crashes even harder than before on huge images (for "Quand
