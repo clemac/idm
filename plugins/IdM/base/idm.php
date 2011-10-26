@@ -3,9 +3,7 @@
 function idm_declarer_tables_interfaces ($interfaces) {
   $interfaces['table_des_tables']['idm_projets']         = 'idm_projets';
   $interfaces['table_des_tables']['idm_relecteurs']      = 'idm_relecteurs';
-  $interfaces['table_des_tables']['idm_sujets']          = 'idm_sujets';
   $interfaces['table_des_tables']['relecteurs_articles'] = 'relecteurs_articles';
-  $interfaces['table_des_tables']['idm_sujets_articles'] = 'idm_sujets_articles';
 
   $interfaces['table_des_traitements']['NOM'][0] = str_replace ('%s', 'idm_prenom_nom(%s)', $interfaces['table_des_traitements']['NOM'][0]);
 
@@ -29,6 +27,7 @@ function idm_declarer_tables_interfaces ($interfaces) {
 
 function idm_declarer_tables_objets_sql ($tables) {
   $tables['spip_idm_projets'] = array ('principale' => "oui",
+                                       'texte_objets' => "idm:titre_projets",
                                        'field' => array ('id_projet'   => 'BIGINT(21) NOT NULL',
                                                          'id_editeur'  => 'BIGINT(21) NOT NULL',
                                                          'id_auteur'   => 'BIGINT(21) NOT NULL default 0',
@@ -41,7 +40,8 @@ function idm_declarer_tables_objets_sql ($tables) {
                                                          'statut'      => "ENUM ('contact', 'redaction', 'relecture', 'publie', 'refus') NOT NULL DEFAULT 'contact'"),
                                        'key' => array ('PRIMARY KEY' => 'id_projet'));
 
-  $tables['spip_idm_relecteurs'] = array ('field' => array ('id_auteur'   => "BIGINT(21) NOT NULL",
+  $tables['spip_idm_relecteurs'] = array ('texte_objets' => "idm:titre_relecteurs",
+                                          'field' => array ('id_auteur'   => "BIGINT(21) NOT NULL",
                                                             'role'        => "ENUM ('visiteur', 'candidat', 'relecteur', 'occasionnel') NOT NULL DEFAULT 'visiteur'",
                                                             'math'        => "TEXT NOT NULL",
                                                             'combien'     => "INT NOT NULL DEFAULT 0",
@@ -52,25 +52,18 @@ function idm_declarer_tables_objets_sql ($tables) {
                                                             'categorie'   => "ENUM ('nouveau', 'chercheur', 'enseignant', 'etudiant', 'autre', 'candidat', 'non_classe') NOT NULL DEFAULT 'nouveau'"),
                                           'key' => array('PRIMARY KEY' => "id_auteur"));
 
+  $tables['spip_auteurs']['field']['billettiste'] = "ENUM('oui','non') NOT NULL DEFAULT 'non'";
+
+  return $tables;
+}
+
+function idm_declarer_tables_auxiliaires ($tables) {
   $tables['spip_relecteurs_articles'] = array ('field' => array ('id_article'  => 'BIGINT(21) NOT NULL',
                                                                  'id_auteur'   => 'BIGINT(21) NOT NULL',
                                                                  'date_change' => 'TIMESTAMP NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP',
                                                                  'status'      => "ENUM('pas_vu','vu','non','moyen','oui') NOT NULL DEFAULT 'pas_vu'",
                                                                  'avis'        => "TINYTEXT"),
                                                'key' => array());
-
-  $tables['spip_idm_sujets'] = array ('principale' => "oui",
-                                      'field' => array ('id_sujet' => "BIGINT(21) NOT NULL",
-                                                        'id_parent' => "BIGINT(21) NOT NULL DEFAULT 0",
-                                                        'intitule' => "TINYTEXT NOT NULL",
-                                                        'description' => "TEXT NOT NULL"),
-                                      'key' => array ('PRIMARY KEY' => "id_sujet"));
-
-  $tables['spip_idm_sujets_articles'] = array ('field' => array ('id_sujet' => "BIGINT(21) NOT NULL",
-                                                                 'id_article' => "BIGINT(21) NOT NULL"),
-                                               'key' => array ());
-
-  $tables['spip_auteurs']['field']['billettiste'] = "ENUM('oui','non') NOT NULL DEFAULT 'non'";
 
   return $tables;
 }

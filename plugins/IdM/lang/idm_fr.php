@@ -1,15 +1,18 @@
 <?php
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
-                                       'billettistes' => "Liste des billettistes",
+                                       'billettistes'     => "Gestion des billettistes",
 
-                                       'menu'         => "IdM",
-                                       'moderation'   => "Interface de modération",
+                                       'menu'             => "IdM",
+                                       'moderation'       => "Interface de modération",
 
-                                       'projets'      => "Gestion des projets",
+                                       'projets'          => "Gestion des articles en projet",
 
-                                       'relecteurs'   => "Liste des relecteurs",
-                                       'relecture'    => "Articles en cours de relecture",
+                                       'relecteurs'       => "Gestion des relecteurs",
+                                       'relecture'        => "Articles en cours de relecture",
+
+                                       'titre_projets'    => "Projets d'articles",
+                                       'titre_relecteurs' => "Relecteurs",
 );
 
 ?>
