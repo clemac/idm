@@ -52,14 +52,7 @@
 * SPIP 3 related
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
-***** forcer_choix_rubrique
-- Not compatible with SPIP 3
 *** Files to check for compatibility
-***** plugins/IdM/formulaires/idm_projet.html
-***** plugins/IdM/formulaires/idm_projet.php
-***** plugins/IdM/formulaires/idm_projet_edit.html
-***** plugins/IdM/formulaires/idm_projet_orphelin.html
-***** plugins/IdM/formulaires/idm_projet_orphelin.php
 ***** plugins/IdM/formulaires/idm_relecteur.html
 ***** plugins/IdM/formulaires/idm_relecteur.php
 ***** plugins/IdM/formulaires/navigation.html

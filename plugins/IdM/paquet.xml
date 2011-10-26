@@ -13,7 +13,6 @@
   <licence>GPLv3</licence>
 
   <menu nom="idm"              titre="idm:menu"         icone="images/idm-48.png" parent=""/>
-  <menu nom="idm_projets"      titre="idm:projets"      icone="images/idm-24.png" parent="idm"/>
   <menu nom="idm_relecteurs"   titre="idm:relecteurs"   icone="images/idm-24.png" parent="idm"/>
   <menu nom="idm_relecture"    titre="idm:relecture"    icone="images/idm-24.png" parent="idm"/>
   <menu nom="idm_moderation"   titre="idm:moderation"   icone="images/idm-24.png" parent="idm"/>
