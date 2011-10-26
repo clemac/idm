@@ -16,7 +16,7 @@
   [(#INCLURE{fond=inc/article}{id_article})]
   [(#STATUT|=={tmp}|oui)</fieldset>]
 </BOUCLE_preview>
-</div><script>MathJax.Hub.Typeset();</script></B_preview>
+</div></B_preview>
 <h1>&Eacute;crire un nouveau billet</h1><//B_preview>
 
 [(#ENV{message_ok}|non)
@@ -29,3 +29,5 @@
   <p><input type="submit" name="preview" value="[(#GET{id_article}|?{Mettre à jour,Prévisualiser})]" /></p>
 </form>
 ]
+
+<script>setTimeout("MathJax.Hub.Typeset(\"preview\");",500);</script>

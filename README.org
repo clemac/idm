@@ -53,19 +53,15 @@
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
 *** Files to check for compatibility
-***** plugins/IdM/formulaires/relecteurs_vote.html
-***** plugins/IdM/formulaires/relecteurs_vote.php
-***** squelettes/formulaires/billet.html
-***** squelettes/formulaires/billet.php
 ***** squelettes/formulaires/inscription.php
 ***** squelettes/formulaires/recherche.html
 ***** squelettes/inscription.html
-***** squelettes/perso.html
-***** squelettes/recherche.html
 *** Files to re-write before going live
 ***** plugins/IdM/idm_fonctions.php
 - autoriser : do it new-style
 *** Files to re-write some day
+***** formulaires/relecteurs_vote.php
+- the SQL update code should be elsewhere, the rest should go
 ***** squelettes/navigation.html
 - should be re-done completely
 ***** squelettes/propose.html

@@ -53,8 +53,9 @@ function formulaires_billet_verifier () {
         "accepter_forum" => "abo",
         "date" => "NOW()"));
 
-      sql_insertq ("spip_auteurs_articles",
-        array ("id_article" => $id_article,
+      sql_insertq ("spip_auteurs_liens",
+        array ("objet" => 'article',
+               "id_objet" => $id_article,
                "id_auteur" => $GLOBALS['auteur_session']['id_auteur']));
     }
 
@@ -77,8 +78,8 @@ function formulaires_billet_traiter () {
   $today -= $today % (24*3600); // Midnight this morning
 
   $previous = sql_getfetsel ("UNIX_TIMESTAMP(date)",
-    "spip_auteurs_articles,spip_articles",
-    "(spip_articles.id_article=spip_auteurs_articles.id_article) AND (id_auteur=$id_auteur) AND (statut='publie')",
+    "spip_auteurs_liens,spip_articles",
+    "(spip_auteurs_liens.objet='article') AND (spip_articles.id_article=spip_auteurs_liens.id_objet) AND (id_auteur=$id_auteur) AND (statut='publie')",
     array(), "date DESC", "1");
   $previous -= $previous % (24*3600); // Their last contribution to the site
 
