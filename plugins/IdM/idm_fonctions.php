@@ -28,7 +28,7 @@ function autoriser_article_relire_dist ($faire, $type, $id, $qui, $opt) {
   if ($qui['statut'] == '0minirezo') return true;
 
   $id_auteur = $qui['id_auteur'];
-  if (sql_countsel('spip_auteurs_articles', "id_article = $id AND id_auteur = $id_auteur")) return true;
+  if (sql_countsel('spip_auteurs_liens', "objet = 'article' AND id_objet = $id AND id_auteur = $id_auteur")) return true;
   if (sql_countsel('spip_relecteurs_articles', "id_article = $id AND id_auteur = $id_auteur")) return true;
 
   return false;

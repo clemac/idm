@@ -52,9 +52,6 @@
 * SPIP 3 related
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
-*** Files to re-write before going live
-***** plugins/IdM/idm_fonctions.php
-- autoriser : do it new-style
 *** Files to re-write some day
 ***** formulaires/relecteurs_vote.php
 - the SQL update code should be elsewhere, the rest should go
@@ -71,7 +68,9 @@
 - prive/objets/infos/article.html
 * SPIP 3 transition checklist
 *** Essential
-***** Upload the 'spip3' branch to the server
+***** Upload the 'spip3' branch to the server (to test: import the live db instead)
+***** Visit the /ecrire/ and upgrade the database
+***** Visit the plugins page and activate everything
 ***** Re-attach the 'champs_extras'
 *** Clean up
 ***** Fields that are safe to delete
