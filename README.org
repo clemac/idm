@@ -53,10 +53,6 @@
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
 *** Files to check for compatibility
-***** plugins/IdM/formulaires/relecteurs_gestion.html
-***** plugins/IdM/formulaires/relecteurs_gestion.php
-***** plugins/IdM/formulaires/relecteurs_perso.html
-***** plugins/IdM/formulaires/relecteurs_perso.php
 ***** plugins/IdM/formulaires/relecteurs_vote.html
 ***** plugins/IdM/formulaires/relecteurs_vote.php
 ***** squelettes/formulaires/billet.html
