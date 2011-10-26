@@ -75,7 +75,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - SVN version installed
 - Need to reattach the fields by hand, to replace the IDM plugin
 *** Plugins to validate for compatibility
-- auto/cfg
 - auto/couteau_suisse
 - auto/eva_geometrie_pour_spip_2_0
 - auto/modeles_facebook
