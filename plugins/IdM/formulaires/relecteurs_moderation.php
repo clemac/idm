@@ -17,7 +17,7 @@ function formulaires_relecteurs_moderation_traiter ($id_forum) {
   sql_updateq ('spip_forum', array ('statut' => $statut), "id_forum = $id_forum");
 
   if ($statut == "rel") {
-    $id_article = sql_getfetsel ('id_article', 'spip_forum', "id_forum = $id_forum");
+    $id_article = sql_getfetsel ('id_objet', 'spip_forum', "id_forum = $id_forum");
     $id_auteur  = sql_getfetsel ('id_auteur',  'spip_forum', "id_forum = $id_forum");
     $title      = sql_getfetsel ('titre', 'spip_articles', "id_article = $id_article");
 
@@ -38,7 +38,7 @@ END;
     $idm_team_relecture = array (327,633,637);
     $id_recipients = $idm_team_relecture;
 
-    $auteurs = sql_select ('*', 'spip_auteurs_articles', "id_article = $id_article");
+    $auteurs = sql_select ('*', 'spip_auteurs_liens', "objet = 'article' AND id_objet = $id_article");
     while ($r = sql_fetch($auteurs)) {
       $id = $r['id_auteur'];
       if (!in_array($id, $id_recipients)) $id_recipients[] = $id;

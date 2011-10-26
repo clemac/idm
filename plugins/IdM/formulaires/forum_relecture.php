@@ -28,7 +28,8 @@ function formulaires_forum_relecture_traiter ($id_article, $id_parent) {
 
   sql_insertq ('spip_forum', array (
     'id_parent'  => intval ($id_parent),
-    'id_article' => intval ($id_article),
+    'objet'      => 'article',
+    'id_objet'   => intval ($id_article),
     'id_auteur'  => $id_auteur,
     'auteur'     => $auteur,
     'titre'      => _request ('titre'),

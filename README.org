@@ -79,8 +79,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - SVN version installed
 - Need to reattach the fields by hand, to replace the IDM plugin
 *** Files to check for compatibility
-***** plugins/IdM/formulaires/forum_relecture.html
-***** plugins/IdM/formulaires/forum_relecture.php
 ***** plugins/IdM/formulaires/idm_projet.html
 ***** plugins/IdM/formulaires/idm_projet.php
 ***** plugins/IdM/formulaires/idm_projet_edit.html
@@ -92,8 +90,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 ***** plugins/IdM/formulaires/navigation.php
 ***** plugins/IdM/formulaires/relecteurs_gestion.html
 ***** plugins/IdM/formulaires/relecteurs_gestion.php
-***** plugins/IdM/formulaires/relecteurs_moderation.html
-***** plugins/IdM/formulaires/relecteurs_moderation.php
 ***** plugins/IdM/formulaires/relecteurs_perso.html
 ***** plugins/IdM/formulaires/relecteurs_perso.php
 ***** plugins/IdM/formulaires/relecteurs_vote.html

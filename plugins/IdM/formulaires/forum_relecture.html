@@ -12,7 +12,6 @@
         <legend>Pr&eacute;visualisation &mdash; #ENV{titre}</legend>
         [(#ENV{texte}|propre)]
       </fieldset>
-      <script>MathJax.Hub.Queue(new Array("Typeset",MathJax.Hub,"previsu"));</script>
     ]
     </div>
 
@@ -26,3 +25,5 @@
 [(#ENV{message_ok}|oui)<p>Merci pour votre message ! Il doit maintenant
 subir une validation de forme avant de pouvoir apparaitre dans le
 forum.</p>]
+
+<script>setTimeout("MathJax.Hub.Typeset(\"previsu\");",500);</script>
