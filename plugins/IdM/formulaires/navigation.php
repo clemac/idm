@@ -17,7 +17,7 @@ function formulaires_navigation_charger () {
   $auteurs = array();
   foreach (sql_allfetsel ("*", "spip_auteurs", "", "", "nom") as $p) {
     $id = intval($p["id_auteur"]);
-    if (sql_getfetsel ("id_article", "spip_auteurs_articles", "id_auteur=$id"))
+    if (sql_getfetsel ("id_objet", "spip_auteurs_liens", "objet='article' AND id_auteur=$id"))
       $auteurs [$p["id_auteur"]] = $p["nom"];
   }
 
