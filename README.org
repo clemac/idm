@@ -1,7 +1,6 @@
 * Issues
 *** Urgent
 ***** "Call to the people" button
-***** page=latex
 *** In progress
 ***** Overhaul of the search engine
 ***** iPhone version [25%]
@@ -43,16 +42,6 @@
     return $scripts;
   }
 #+end_src
-***** pipeline taches_generales_cron
-#+begin_src php
-  function XXX_taches_generales_cron ($taches) {
-    $taches['toto'] = 24*3600;
-  }
-#+end_src
-fichier genie/toto.php, genie_toto_dist(), retour :
-- =0 : rien à faire
-- >0 : fait
-- <0 : il en reste, revenir dans |.| secondes
 ***** plugin spip-bonux
 - [ ] #INFO_TITRE{article,324}
 ***** Refactor uses of idm_notify [75%]
@@ -61,22 +50,10 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - [X] Store recipient lists in a config file
 - [ ] Solve the problem that mes_options is not read during AJAX calls
 * SPIP 3 related
-*** Champs extras
-***** Fields that are safe to delete
-- articles/extra
-- auteurs/extra
-- breves/extra
-- mots/extra
-- rubriques/extra
-- syndic/extra
-***** Table names missing in exec=champs_extras
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
 ***** forcer_choix_rubrique
 - Not compatible with SPIP 3
-***** champs_extras
-- SVN version installed
-- Need to reattach the fields by hand, to replace the IDM plugin
 *** Files to check for compatibility
 ***** plugins/IdM/formulaires/idm_projet.html
 ***** plugins/IdM/formulaires/idm_projet.php
@@ -112,9 +89,15 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - .htaccess (from htaccess.txt)
 - formulaires/inc-forum_previsu.html
 - prive/objets/infos/article.html
-* SPIP 3 related, solved
-*** Some articles give an Internal Server Error
-Reason : GD2 crashes even harder than before on huge images (for "Quand
-les maths donnent des ailes", doc6742 is 12 Mpix, max is 4 Mpix) For
-some reason the crash does not occur anymore ... now the test is done so
-that might explain it. Anyway, installing Image Magick cures it for good.
+* SPIP 3 transition checklist
+*** Essential
+***** Upload the 'spip3' branch to the server
+***** Re-attach the 'champs_extras'
+*** Clean up
+***** Fields that are safe to delete
+- articles/extra
+- auteurs/extra
+- breves/extra
+- mots/extra
+- rubriques/extra
+- syndic/extra
