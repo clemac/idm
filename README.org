@@ -65,26 +65,11 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 *** Create a proper 404 page
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
-***** fulltext
-- not used fully anyway ...
-***** previsu_redaction
-- not needed anymore, it is standard in SPIP 3
 ***** forcer_choix_rubrique
 - Not compatible with SPIP 3
 ***** champs_extras
 - SVN version installed
 - Need to reattach the fields by hand, to replace the IDM plugin
-*** Plugins to validate for compatibility
-- auto/couteau_suisse
-- auto/eva_geometrie_pour_spip_2_0
-- auto/modeles_facebook
-- auto/saisies
-- auto/thickbox2
-- cextra_core
-- cextra_interface
-- spip-bonux-3
-- verifier
-- yaml
 *** Files to check for compatibility
 ***** plugins/IdM/formulaires/forum_relecture.html
 ***** plugins/IdM/formulaires/forum_relecture.php
