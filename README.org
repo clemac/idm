@@ -61,7 +61,15 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - [X] Store recipient lists in a config file
 - [ ] Solve the problem that mes_options is not read during AJAX calls
 * SPIP 3 related
-*** Table names missing in exec=champs_extras
+*** Champs extras
+***** Fields that are safe to delete
+- articles/extra
+- auteurs/extra
+- breves/extra
+- mots/extra
+- rubriques/extra
+- syndic/extra
+***** Table names missing in exec=champs_extras
 *** Create a proper 404 page
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
