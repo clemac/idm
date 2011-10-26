@@ -61,17 +61,31 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - [X] Store recipient lists in a config file
 - [ ] Solve the problem that mes_options is not read during AJAX calls
 * SPIP 3 related
-*** Preview of articles still in redaction phase (previsu_redaction)
 *** Table names missing in exec=champs_extras
 *** Create a proper 404 page
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
+***** fulltext
+- not used fully anyway ...
 ***** previsu_redaction
+- not needed anymore, it is standard in SPIP 3
 ***** forcer_choix_rubrique
-- It seems deactivated in the new version
+- Not compatible with SPIP 3
 ***** champs_extras
 - SVN version installed
 - Need to reattach the fields by hand, to replace the IDM plugin
+*** Plugins to validate for compatibility
+- auto/cfg
+- auto/couteau_suisse
+- auto/eva_geometrie_pour_spip_2_0
+- auto/modeles_facebook
+- auto/saisies
+- auto/thickbox2
+- cextra_core
+- cextra_interface
+- spip-bonux-3
+- verifier
+- yaml
 *** Files to check for compatibility
 ***** plugins/IdM/formulaires/forum_relecture.html
 ***** plugins/IdM/formulaires/forum_relecture.php
@@ -110,6 +124,7 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 *** Files which are patched versions of upstream (store as a patch for upgrades)
 - .htaccess (from htaccess.txt)
 - formulaires/inc-forum_previsu.html
+- prive/objets/infos/article.html
 * SPIP 3 related, solved
 *** Some articles give an Internal Server Error
 Reason : GD2 crashes even harder than before on huge images (for "Quand
