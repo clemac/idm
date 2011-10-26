@@ -53,8 +53,6 @@
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
 *** Files to check for compatibility
-***** plugins/IdM/formulaires/idm_relecteur.html
-***** plugins/IdM/formulaires/idm_relecteur.php
 ***** plugins/IdM/formulaires/navigation.html
 ***** plugins/IdM/formulaires/navigation.php
 ***** plugins/IdM/formulaires/relecteurs_gestion.html
@@ -70,14 +68,17 @@
 ***** squelettes/inscription.html
 ***** squelettes/perso.html
 ***** squelettes/recherche.html
-*** Files to re-write
+*** Files to re-write before going live
 ***** plugins/IdM/idm_fonctions.php
 - autoriser : do it new-style
+*** Files to re-write some day
 ***** squelettes/navigation.html
 - should be re-done completely
 ***** squelettes/propose.html
 - BOUCLE_bug, BOUCLE_cetarticle are ugly
 - Add an anchor to the forum messages for linking
+***** prive/squelettes/contenu/idm_relecteur.html
+- Make the relecteur an "objet éditorial" ?
 *** Files which are patched versions of upstream (store as a patch for upgrades)
 - .htaccess (from htaccess.txt)
 - formulaires/inc-forum_previsu.html

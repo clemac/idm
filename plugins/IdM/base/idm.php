@@ -40,18 +40,6 @@ function idm_declarer_tables_objets_sql ($tables) {
                                                          'statut'      => "ENUM ('contact', 'redaction', 'relecture', 'publie', 'refus') NOT NULL DEFAULT 'contact'"),
                                        'key' => array ('PRIMARY KEY' => 'id_projet'));
 
-  $tables['spip_idm_relecteurs'] = array ('texte_objets' => "idm:titre_relecteurs",
-                                          'field' => array ('id_auteur'   => "BIGINT(21) NOT NULL",
-                                                            'role'        => "ENUM ('visiteur', 'candidat', 'relecteur', 'occasionnel') NOT NULL DEFAULT 'visiteur'",
-                                                            'math'        => "TEXT NOT NULL",
-                                                            'combien'     => "INT NOT NULL DEFAULT 0",
-                                                            'lus'         => "INT NOT NULL DEFAULT 0",
-                                                            'comments'    => "INT NOT NULL DEFAULT 0",
-                                                            'quand'       => "TIMESTAMP NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP",
-                                                            'comment'     => "TEXT NOT NULL",
-                                                            'categorie'   => "ENUM ('nouveau', 'chercheur', 'enseignant', 'etudiant', 'autre', 'candidat', 'non_classe') NOT NULL DEFAULT 'nouveau'"),
-                                          'key' => array('PRIMARY KEY' => "id_auteur"));
-
   $tables['spip_auteurs']['field']['billettiste'] = "ENUM('oui','non') NOT NULL DEFAULT 'non'";
 
   return $tables;
@@ -64,6 +52,18 @@ function idm_declarer_tables_auxiliaires ($tables) {
                                                                  'status'      => "ENUM('pas_vu','vu','non','moyen','oui') NOT NULL DEFAULT 'pas_vu'",
                                                                  'avis'        => "TINYTEXT"),
                                                'key' => array());
+
+  $tables['spip_idm_relecteurs'] = array ('texte_objets' => "idm:titre_relecteurs",
+                                          'field' => array ('id_auteur'   => "BIGINT(21) NOT NULL",
+                                                            'role'        => "ENUM ('visiteur', 'candidat', 'relecteur', 'occasionnel') NOT NULL DEFAULT 'visiteur'",
+                                                            'math'        => "TEXT NOT NULL",
+                                                            'combien'     => "INT NOT NULL DEFAULT 0",
+                                                            'lus'         => "INT NOT NULL DEFAULT 0",
+                                                            'comments'    => "INT NOT NULL DEFAULT 0",
+                                                            'quand'       => "TIMESTAMP NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP",
+                                                            'comment'     => "TEXT NOT NULL",
+                                                            'categorie'   => "ENUM ('nouveau', 'chercheur', 'enseignant', 'etudiant', 'autre', 'candidat', 'non_classe') NOT NULL DEFAULT 'nouveau'"),
+                                          'key' => array('PRIMARY KEY' => "id_auteur"));
 
   return $tables;
 }
