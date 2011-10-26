@@ -70,7 +70,6 @@ fichier genie/toto.php, genie_toto_dist(), retour :
 - rubriques/extra
 - syndic/extra
 ***** Table names missing in exec=champs_extras
-*** Create a proper 404 page
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
 ***** forcer_choix_rubrique
