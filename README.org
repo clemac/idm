@@ -52,10 +52,6 @@
 * SPIP 3 related
 *** Plugins that have been removed
 ***** forms_et_tables_2_0
-*** Files to check for compatibility
-***** squelettes/formulaires/inscription.php
-***** squelettes/formulaires/recherche.html
-***** squelettes/inscription.html
 *** Files to re-write before going live
 ***** plugins/IdM/idm_fonctions.php
 - autoriser : do it new-style
