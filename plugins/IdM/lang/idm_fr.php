@@ -3,7 +3,7 @@
 $GLOBALS[$GLOBALS['idx_lang']] = array(
                                        'billettistes'     => "Gestion des billettistes",
 
-                                       'menu'             => "IdM",
+                                       'menu'             => "Gestion IdM",
                                        'moderation'       => "Interface de modération",
 
                                        'projets'          => "Gestion des articles en projet",
