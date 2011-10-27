@@ -50,8 +50,8 @@
 - [X] Store recipient lists in a config file
 - [ ] Solve the problem that mes_options is not read during AJAX calls
 * SPIP 3 related
-*** Plugins that have been removed
-***** forms_et_tables_2_0
+*** Still to do
+- re-install forms_et_tables (3.0, doesn't work yet)
 *** Files to re-write some day
 ***** formulaires/relecteurs_vote.php
 - the SQL update code should be elsewhere, the rest should go
@@ -72,10 +72,14 @@
 ***** Visit the /ecrire/ and upgrade the database
 ***** Visit the plugins page and activate everything
 ***** Re-attach the 'champs_extras'
+- articles/credits_logo
+- auteurs/affiliation
+***** Check the GD2 / iMagick configuration
 *** Clean up
 ***** Fields that are safe to delete
 - articles/extra
 - auteurs/extra
+- auteurs/relecteur_*
 - breves/extra
 - mots/extra
 - rubriques/extra
