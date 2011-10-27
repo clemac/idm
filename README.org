@@ -22,6 +22,11 @@
 - [ ] Wait for it to be in a stable release
 - [ ] Remove the previous hack
 ***** Choose the member in the billets team differently
+***** squelettes/propose.html
+- Add an anchor to the forum messages for linking
+***** squelettes/navigation.html
+- should be re-done completely
+***** re-install forms_et_tables (3.0, doesn't work yet)
 *** Backburner
 ***** Buttons to write to groups of people
 ***** Filter display by color
@@ -33,6 +38,8 @@
 ***** Put #SPIP_CRON on specific pages but not on sommaire.html
 ***** Use #HTTP_HEADER rather than php in inc/head.php
 ***** Merge inc/forum-message and inc/forum-message-prive
+***** formulaires/relecteurs_vote.php
+- the SQL update code should be elsewhere, the rest should go
 *** Geekeries and SPIPeries
 ***** In a loop, #_parent:TITRE
 ***** pipeline jquery_plugins
@@ -49,19 +56,9 @@
 - [X] Call it with an array when possible
 - [X] Store recipient lists in a config file
 - [ ] Solve the problem that mes_options is not read during AJAX calls
-* SPIP 3 related
-*** Still to do
-- re-install forms_et_tables (3.0, doesn't work yet)
-*** Files to re-write some day
-***** formulaires/relecteurs_vote.php
-- the SQL update code should be elsewhere, the rest should go
-***** squelettes/navigation.html
-- should be re-done completely
-***** squelettes/propose.html
-- Add an anchor to the forum messages for linking
 ***** prive/squelettes/contenu/idm_relecteur.html
 - Make the relecteur an "objet éditorial" ?
-*** Files which are patched versions of upstream (store as a patch for upgrades)
+***** Files which are patched versions of upstream (store as a patch for upgrades)
 - .htaccess (from htaccess.txt)
 - formulaires/inc-forum_previsu.html
 - prive/objets/infos/article.html
