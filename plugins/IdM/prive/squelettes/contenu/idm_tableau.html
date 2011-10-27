@@ -6,24 +6,20 @@
 <table>
   <thead>
     <tr>
-      <th>Rubrique</th>
       <th>Titre</th>
       <th>Auteur(s)</th>
-      <th>Statut</th>
-      <th>Date</th>
+      <th>Rubrique</th>
       <th>Éditeur</th>
-      <th></th>
+      <th>Modifier</th>
     </tr>
   </thead>
 <BOUCLE_article2(ARTICLES) {statut IN prepa,prop} {id_secteur !IN 18} {date_prevue = 0000-00-00 00:00:00} {doublons}>
   <tr>
-    <td>#INFO_TITRE{rubrique,#ID_RUBRIQUE}</td>
     <td><a href="[(#ID_ARTICLE|generer_url_entite{article})]">#TITRE</a></td>
     <td>#LESAUTEURS</td>
-    <td>#STATUT</td>
-    <td>(aucune)</td>
+    <td>#INFO_TITRE{rubrique,#ID_RUBRIQUE}</td>
     <td>[<a href="(#ID_EDITEUR|generer_url_entite{auteur})">[(#INFO_TITRE{auteur,#ID_EDITEUR}|idm_prenom_nom)]</a>]</td>
-    <td>[<a href="(#VAL{idm_gerer}|generer_url_ecrire{id_article=#ID_ARTICLE})">GERER</a>]</td>
+    <td>[<a href="(#VAL{idm_gerer}|generer_url_ecrire{id_article=#ID_ARTICLE})">Modifier</a>]</td>
   </tr>
 </BOUCLE_article2>
 </table>
@@ -35,24 +31,22 @@
 <table>
   <thead>
     <tr>
-      <th>Rubrique</th>
       <th>Titre</th>
       <th>Auteur(s)</th>
-      <th>Statut</th>
-      <th>Date</th>
+      <th>Rubrique</th>
+      <th>Date prévue</th>
       <th>Éditeur</th>
-      <th></th>
+      <th>Modifier</th>
     </tr>
   </thead>
 <BOUCLE_article(ARTICLES) {statut IN prepa,prop} {id_secteur !IN 18} {par date_prevue} {doublons}>
   <tr>
-    <td>#INFO_TITRE{rubrique,#ID_RUBRIQUE}</td>
     <td><a href="[(#ID_ARTICLE|generer_url_entite{article})]">#TITRE</a></td>
     <td>#LESAUTEURS</td>
-    <td>#STATUT</td>
+    <td>#INFO_TITRE{rubrique,#ID_RUBRIQUE}</td>
     <td>[(#DATE_PREVUE|affdate{Y.m.d})]</td>
     <td>[<a href="(#ID_EDITEUR|generer_url_entite{auteur})">[(#INFO_TITRE{auteur,#ID_EDITEUR}|idm_prenom_nom)]</a>]</td>
-    <td>[<a href="(#VAL{idm_gerer}|generer_url_ecrire{id_article=#ID_ARTICLE})">GERER</a>]</td>
+    <td>[<a href="(#VAL{idm_gerer}|generer_url_ecrire{id_article=#ID_ARTICLE})">Modifier</a>]</td>
   </tr>
 </BOUCLE_article>
 </table>
