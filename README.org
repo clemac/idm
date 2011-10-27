@@ -58,7 +58,6 @@
 ***** squelettes/navigation.html
 - should be re-done completely
 ***** squelettes/propose.html
-- BOUCLE_bug, BOUCLE_cetarticle are ugly
 - Add an anchor to the forum messages for linking
 ***** prive/squelettes/contenu/idm_relecteur.html
 - Make the relecteur an "objet éditorial" ?
