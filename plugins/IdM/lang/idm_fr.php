@@ -11,6 +11,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
                                        'relecteurs'       => "Gestion des relecteurs",
                                        'relecture'        => "Articles en cours de relecture",
 
+                                       'tableau'          => "Tableau de bord",
                                        'titre_projets'    => "Projets d'articles",
                                        'titre_relecteurs' => "Relecteurs",
 );

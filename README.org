@@ -62,6 +62,7 @@
 - .htaccess (from htaccess.txt)
 - formulaires/inc-forum_previsu.html
 - prive/objets/infos/article.html
+***** Use the |unique filter instead of doing it by hand
 * SPIP 3 transition checklist
 *** Essential
 ***** Upload the 'spip3' branch to the server (to test: import the live db instead)

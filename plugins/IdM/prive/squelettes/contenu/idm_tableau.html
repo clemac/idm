@@ -1,0 +1,59 @@
+<h1>Tableau de bord</h1>
+
+<h2>Articles non planifiés</h2>
+
+<B_article2>
+<table>
+  <thead>
+    <tr>
+      <th>Rubrique</th>
+      <th>Titre</th>
+      <th>Auteur(s)</th>
+      <th>Statut</th>
+      <th>Date</th>
+      <th>Éditeur</th>
+      <th></th>
+    </tr>
+  </thead>
+<BOUCLE_article2(ARTICLES) {statut IN prepa,prop} {id_secteur !IN 18} {date_prevue = 0000-00-00 00:00:00} {doublons}>
+  <tr>
+    <td>#INFO_TITRE{rubrique,#ID_RUBRIQUE}</td>
+    <td><a href="[(#ID_ARTICLE|generer_url_entite{article})]">#TITRE</a></td>
+    <td>#LESAUTEURS</td>
+    <td>#STATUT</td>
+    <td>(aucune)</td>
+    <td>[<a href="(#ID_EDITEUR|generer_url_entite{auteur})">[(#INFO_TITRE{auteur,#ID_EDITEUR}|idm_prenom_nom)]</a>]</td>
+    <td>[<a href="(#VAL{idm_gerer}|generer_url_ecrire{id_article=#ID_ARTICLE})">GERER</a>]</td>
+  </tr>
+</BOUCLE_article2>
+</table>
+</B_article2>
+
+<h2>Planning de publication</h2>
+
+<B_article>
+<table>
+  <thead>
+    <tr>
+      <th>Rubrique</th>
+      <th>Titre</th>
+      <th>Auteur(s)</th>
+      <th>Statut</th>
+      <th>Date</th>
+      <th>Éditeur</th>
+      <th></th>
+    </tr>
+  </thead>
+<BOUCLE_article(ARTICLES) {statut IN prepa,prop} {id_secteur !IN 18} {par date_prevue} {doublons}>
+  <tr>
+    <td>#INFO_TITRE{rubrique,#ID_RUBRIQUE}</td>
+    <td><a href="[(#ID_ARTICLE|generer_url_entite{article})]">#TITRE</a></td>
+    <td>#LESAUTEURS</td>
+    <td>#STATUT</td>
+    <td>[(#DATE_PREVUE|affdate{Y.m.d})]</td>
+    <td>[<a href="(#ID_EDITEUR|generer_url_entite{auteur})">[(#INFO_TITRE{auteur,#ID_EDITEUR}|idm_prenom_nom)]</a>]</td>
+    <td>[<a href="(#VAL{idm_gerer}|generer_url_ecrire{id_article=#ID_ARTICLE})">GERER</a>]</td>
+  </tr>
+</BOUCLE_article>
+</table>
+</B_article>

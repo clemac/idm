@@ -42,6 +42,10 @@ function idm_declarer_tables_objets_sql ($tables) {
 
   $tables['spip_auteurs']['field']['billettiste'] = "ENUM('oui','non') NOT NULL DEFAULT 'non'";
 
+  $tables['spip_articles']['field']['id_editeur'] = "BIGINT(21) NOT NULL";
+  $tables['spip_articles']['field']['date_prevue'] = "DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL";
+  $tables['spip_articles']['field']['commentaires'] = "TEXT NOT NULL";
+
   return $tables;
 }
 
