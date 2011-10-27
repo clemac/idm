@@ -152,8 +152,6 @@ form p.erreur { color: #e20000; font-weight: bold; }
 form fieldset.previsu { text-align: justify; }
 form fieldset.previsu ul { list-style-type: none; }
 
-hr.huge { margin: 2ex 0px; height: 20px; color: #e20000; background-color: #e20000; border: 0px; }
-
 table { margin: 0px auto; text-align: center; border: 1px solid #e20000; border-collapse: collapse; }
 table td { border: 1px solid #e20000; padding: 1px .5em; }
 table th { font-weight: bold; border: 1px solid #e20000; padding: 1px .5em; }
