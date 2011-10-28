@@ -1,7 +1,7 @@
 <BOUCLE_article(ARTICLES){id_article}>
 <INCLURE{fond=inc/head}{title=#TITRE}{id_rubrique=#ID_RUBRIQUE}{id_article=#ID_ARTICLE}>
 
-<?php $nb = sql_countsel ('spip_forum', "id_article=#ID_ARTICLE AND statut='publie'"); ?>
+<BOUCLE_f(FORUMS){id_article}> </BOUCLE_f>#SET{nb,#TOTAL_BOUCLE}</B_f>
 
   <div class="relies noprint">
     <p>
@@ -14,10 +14,9 @@
             <a href="#URL_MOT">#TITRE</a>
       </BOUCLE_mots></span></B_mots>
 
-      &mdash; <a href="#URL_PAGE{forum,id_article=#ID_ARTICLE}"><?php
-                                                                   if ($nb>1)  print "$nb commentaires";
-        else if ($nb==1) print "1 commentaire";
-        else             print "0 commentaire"; ?></a>
+      &mdash; <a href="#URL_PAGE{forum,id_article=#ID_ARTICLE}">
+        #GET{nb,0} [ (#GET{nb}|>{1}|?{commentaires,commentaire})]
+      </a>
     </p>
   </div>
 
@@ -45,9 +44,7 @@
   </B_affiliation>
 
   <h3 class="discuter noprint"><a href="#URL_PAGE{forum,id_article=#ID_ARTICLE}">
-      <?php if ($nb>1)  print "Il y a $nb commentaires ...";
-       else if ($nb==1) print "Il y a 1 commentaire ...";
-       else             print "Soyez le premier à déposer un commentaire !"; ?>
+      [(#GET{nb}|>{0}|?{Commentaires sur l'article,Soyez le premier &agrave; d&eacute;poser un commentaire})]
   </a></h3>
 
   <div class="citer">Pour citer cet article : [(#LESAUTEURS),]
