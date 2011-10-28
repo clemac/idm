@@ -24,8 +24,7 @@ function formulaires_idm_gerer_charger ($id_article) {
 function formulaires_idm_gerer_verifier ($id_article) {}
 
 function formulaires_idm_gerer_traiter ($id_article) {
-  $date = date_parse_from_format ("d/m/Y", _request("date_prevue"));
-  $mysqldate = "" . $date["year"] . "-" . $date["month"] . "-" . $date["day"];
+  $mysqldate = preg_replace ('/([0-9]*).([0-9]*).([0-9]*)/', '$3-$2-$1', _request("date_prevue"));
 
   $modif = array(
                  "id_editeur" => intval(_request("id_editeur")),
