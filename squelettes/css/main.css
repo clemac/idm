@@ -87,6 +87,7 @@ h1 { text-align: center; margin: 0px; padding: 0px; }
 h2 { text-align: center; }
 h2.bio { margin-top: 0px; }
 h2.plan { border: 2px solid #e20000; border-width: 0px 0px 2px; }
+h2.spip { text-align: center; padding: 1ex; border-top: 2px solid #e20000; border-bottom: 2px solid #e20000; clear: both; }
 h2.rdp { margin: 0ex .5em 1ex; text-align: right; }
 h2.rdp a { color: black; border-bottom: 2px solid #e20000; }
 h2.rdp a:hover { color: #e20000; }
@@ -95,7 +96,6 @@ h2.button a:hover { color: black; text-shadow: 0px 0px 15px red; }
 
 h3 { text-align: left; }
 h3.discuter { text-align: right; font-style: italic; margin: .5ex 1em 1ex; }
-h3.spip { text-align: center; padding: 1ex; border-top: 2px solid #e20000; border-bottom: 2px solid #e20000; clear: both; }
 h3.titre { margin: 0px; border-bottom: 2px solid #e20000; }
 h3.auteur { text-align: right; font-weight: normal; }
 h3.bio { text-align: right; font-weight: normal; font-size: medium; margin-top: -2ex; }
