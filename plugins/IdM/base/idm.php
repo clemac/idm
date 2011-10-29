@@ -40,11 +40,12 @@ function idm_declarer_tables_objets_sql ($tables) {
                                                          'statut'      => "ENUM ('contact', 'redaction', 'relecture', 'publie', 'refus') NOT NULL DEFAULT 'contact'"),
                                        'key' => array ('PRIMARY KEY' => 'id_projet'));
 
-  $tables['spip_auteurs']['field']['billettiste'] = "ENUM('oui','non') NOT NULL DEFAULT 'non'";
+  $tables['spip_auteurs']['field']['billettiste'] = "ENUM('oui','non') DEFAULT 'non' NOT NULL";
 
-  $tables['spip_articles']['field']['id_editeur'] = "BIGINT(21) NOT NULL";
-  $tables['spip_articles']['field']['date_prevue'] = "DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL";
+  $tables['spip_articles']['field']['id_editeur']   = "BIGINT(21) NOT NULL";
+  $tables['spip_articles']['field']['date_prevue']  = "DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL";
   $tables['spip_articles']['field']['commentaires'] = "TEXT NOT NULL";
+  $tables['spip_articles']['field']['prevu']        = "ENUM('oui','non') DEFAULT 'non' NOT NULL";
 
   return $tables;
 }

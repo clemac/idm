@@ -5,7 +5,7 @@
     etat          = "stable"
     compatibilite = "[3.0.0-alpha2;3.0.*]"
     logo          = "prive/themes/spip/images/idm-logo-60.png"
-    schema        = "20111029"
+    schema        = "20111030"
     >
   <nom>IdM</nom>
 

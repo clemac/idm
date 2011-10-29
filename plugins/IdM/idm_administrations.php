@@ -11,7 +11,7 @@ function idm_upgrade ($nom_meta_base_version, $version_cible) {
                                                    'spip_auteurs',
                                                    'spip_articles')));
 
-  $maj['20111029'] = $maj['create'];
+  $maj['20111030'] = $maj['create'];
 
   include_spip ('base/upgrade');
   maj_plugin ($nom_meta_base_version, $version_cible, $maj);
