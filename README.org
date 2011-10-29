@@ -63,12 +63,3 @@
 - formulaires/inc-forum_previsu.html
 - prive/objets/infos/article.html
 ***** Use the |unique filter instead of doing it by hand
-* SPIP 3 transition clean up
-*** Fields that are safe to delete
-- articles/extra
-- auteurs/extra
-- auteurs/relecteur_*
-- breves/extra
-- mots/extra
-- rubriques/extra
-- syndic/extra
