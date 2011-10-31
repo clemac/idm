@@ -59,7 +59,7 @@ function base_dump_dir($meta){
  * @param array $exclude
  * @return array
  */
-function base_lister_toutes_tables($serveur='', $tables=array(), $exclude = array()) {
+function base_lister_toutes_tables($serveur='', $tables=array(), $exclude = array(),$affiche_vrai_prefixe=false) {
 	spip_connect($serveur);
 	$connexion = $GLOBALS['connexions'][$serveur ? $serveur : 0];
 	$prefixe = $connexion['prefixe'];
@@ -68,8 +68,9 @@ function base_lister_toutes_tables($serveur='', $tables=array(), $exclude = arra
 	$res = $tables;
 	foreach(sql_alltable(null,$serveur) as $t) {
 		if (preg_match($p, $t)) {
-			$t = preg_replace($p, 'spip', $t);
-			if (!in_array($t, $tables) AND !in_array($t, $exclude)) $res[]= $t;
+			$t1 = preg_replace($p, 'spip', $t);
+			if (!in_array($t1, $tables) AND !in_array($t1, $exclude))
+				$res[]= ($affiche_vrai_prefixe?$t:$t1);
 		}
 	}
 	sort($res);
@@ -566,7 +567,18 @@ function base_copier_tables($status_file, $tables, $serveur_source, $serveur_des
  * @return int/bool
  */
 function base_inserer_copie($table,$rows,$desc_dest,$serveur_dest){
+
+	// verifier le nombre d'insertion
+	$nb1 = sql_countsel($table);
 	// si l'enregistrement est deja en base, ca fera un echec ou un doublon
-	return sql_insertq_multi($table,$rows,$desc_dest,$serveur_dest);
+	$r = sql_insertq_multi($table,$rows,$desc_dest,$serveur_dest);
+	$nb = sql_countsel($table);
+	if ($nb-$nb1<count($rows)){
+		foreach($rows as $row){
+			// si l'enregistrement est deja en base, ca fera un echec ou un doublon
+			$r = sql_insertq($table,$row,$desc_dest,$serveur_dest);
+		}
+	}
+	return $r;
 }
 ?>

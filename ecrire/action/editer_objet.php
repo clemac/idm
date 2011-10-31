@@ -104,7 +104,7 @@ function objet_modifier($objet, $id, $set=null) {
 		$indexation = false;
 	}
 
-	modifier_contenu($objet, $id,
+	if ($err = objet_modifier_champs($objet, $id,
 		array(
 			'nonvide' => '',
 			'invalideur' => $invalideur,
@@ -112,7 +112,8 @@ function objet_modifier($objet, $id, $set=null) {
 			 // champ a mettre a date('Y-m-d H:i:s') s'il y a modif
 			'date_modif' => (isset($desc['field']['date_modif'])?'date_modif':'')
 		),
-		$c);
+		$c))
+		return $err;
 
 	// Modification de statut, changement de rubrique ?
 	$c = collecter_requests(array($champ_date, 'statut', 'id_parent'),array(),$set);
@@ -211,7 +212,7 @@ function objet_inserer($objet, $id_parent=null) {
 		$id_auteur = (is_null(_request('id_auteur'))?$GLOBALS['visiteur_session']['id_auteur']:_request('id_auteur'));
 	  if ($id_auteur) {
 			include_spip('action/editer_auteur');
-			auteur_associer($GLOBALS['visiteur_session']['id_auteur'], array($objet=>$id));
+			auteur_associer($id_auteur, array($objet=>$id));
 	  }
 	}
 

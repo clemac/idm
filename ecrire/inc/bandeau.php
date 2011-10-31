@@ -27,8 +27,11 @@ function definir_barre_contexte($contexte = null){
 			if (isset($contexte[$_id]) AND $id=intval($contexte[$_id])){
 				$table = $e['table_objet_sql'];
 				$row = sql_fetsel('*',$table,"$_id=".intval($id));
-				if (isset($row['id_rubrique']))
-				$contexte['id_rubrique'] = $row['id_rubrique'];
+				if (isset($row['id_rubrique'])){
+					$contexte['id_rubrique'] = $row['id_rubrique'];
+					if (isset($row['id_secteur']))
+						$contexte['id_secteur'] = $row['id_secteur'];
+				}
 			}
 		}
 	}
@@ -67,6 +70,7 @@ function definir_barre_boutons($contexte=array(),$icones = true, $autorise = tru
 				if (!is_array($boutons_admin[$parent]->sousmenu))
 					$boutons_admin[$parent]->sousmenu = array();
 				$position = (strlen($infos['position'])?intval($infos['position']):count($boutons_admin[$parent]->sousmenu));
+				if ($position<0) $position = count($boutons_admin[$parent]->sousmenu)+1+$position;
 				$boutons_admin[$parent]->sousmenu = array_slice($boutons_admin[$parent]->sousmenu,0,$position)
 				+ array($id=> new Bouton(
 					($icones AND $infos['icone'])?find_in_theme($infos['icone']):'',  // icone
@@ -113,6 +117,8 @@ function bandeau_creer_url($url, $args="", $contexte=null){
 		// @machin@ etant remplace par _request('machin')
 		$url = str_replace('&amp;','&',$url);
 		while (preg_match(",[&?]([a-z_]+)=@([a-z_]+)@,i",$url,$matches)){
+			if ($matches[2]=='id_secteur' AND !isset($contexte['id_secteur']) AND isset($contexte['id_rubrique']))
+				$contexte['id_secteur'] = sql_getfetsel('id_secteur','spip_rubriques','id_rubrique='.intval($contexte['id_rubrique']));
 			$val = _request($matches[2],$contexte);
 			$url = parametre_url($url,$matches[1],$val?$val:'','&');
 		}

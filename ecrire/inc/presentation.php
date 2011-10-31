@@ -102,13 +102,14 @@ function afficher_objets($type, $titre_table,$requete,$formater='',$force=false)
 
 // Fonctions onglets
 // http://doc.spip.org/@debut_onglet
-function debut_onglet(){return "<div class='barre_onglet'><ul class='clearfix'>\n";}
+// @param string $sous_classe	prend la valeur second pour definir les onglet de deuxieme niveau
+function debut_onglet($classe="barre_onglet"){return "<div class='$classe clearfix'><ul>\n";}
 // http://doc.spip.org/@fin_onglet
 function fin_onglet(){return "</ul></div>\n";}
 // http://doc.spip.org/@onglet
 function onglet($texte, $lien, $onglet_ref, $onglet, $icone=""){
-	return "<li class='box_onglet'>"
-	 . ($icone?http_img_pack($icone, '', " class='cadre-icone'"):'')
+	return "<li>"
+ 	 . ($icone?http_img_pack($icone, '', " class='cadre-icone'"):'')
 	 . lien_ou_expose($lien,$texte,$onglet == $onglet_ref)
 	 . "</li>";
 }

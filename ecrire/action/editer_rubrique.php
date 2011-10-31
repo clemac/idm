@@ -106,16 +106,17 @@ function rubrique_modifier($id_rubrique, $set=null) {
 		$set
 	);
 
-	modifier_contenu('rubrique', $id_rubrique,
+	if ($err = objet_modifier_champs('rubrique', $id_rubrique,
 		array(
-			'nonvide' => array('titre' => _T('info_sans_titre'))
+			'nonvide' => array('titre' => _T('titre_nouvelle_rubrique')." "._T('info_numero_abbreviation').$id_rubrique)
 		),
-		$c);
+		$c))
+		return $err;
 
 	$c = collecter_requests(array('id_parent', 'confirme_deplace'),array(),$set);
 	// Deplacer la rubrique
 	if (isset($c['id_parent'])) {
-		rubrique_instituer($id_rubrique, $c);
+		$err = rubrique_instituer($id_rubrique, $c);
 	}
 
 	// invalider les caches marques de cette rubrique
@@ -123,7 +124,7 @@ function rubrique_modifier($id_rubrique, $set=null) {
 	suivre_invalideur("id='rubrique/$id_rubrique'");
 	// et celui de menu_rubriques 
 	effacer_meta("date_calcul_rubriques");
-	return '';
+	return $err;
 }
 
 /**
@@ -169,7 +170,7 @@ function rubrique_instituer($id_rubrique, $c) {
 
 	if (NULL !== ($id_parent = $c['id_parent'])) {
 		$id_parent = intval($id_parent);
-		$filles = calcul_branche($id_rubrique);
+		$filles = calcul_branche_in($id_rubrique);
 		if (strpos(",$id_parent,", ",$filles,") !== false)
 			spip_log("La rubrique $id_rubrique ne peut etre fille de sa descendante $id_parent");
 		else {

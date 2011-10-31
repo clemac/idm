@@ -808,7 +808,7 @@ function compile_cas($tableau, $descr, &$boucles, $id_boucle) {
 		  // Erreur de construction de l'arbre de syntaxe abstraite
 			$code = "''";
 			$p->descr = $descr;
-			$err_e_c = array('zbug_erreur_compilation');
+			$err_e_c = _T('zbug_erreur_compilation');
 			erreur_squelette($err_e_c, $p);
 		} // switch
 
@@ -1001,7 +1001,7 @@ function compiler_squelette($squelette, $boucles, $nom, $descr, $sourcefile, $co
 				$boucles[$id]->show = $show;
 				// recopie les infos les plus importantes
 				$boucles[$id]->primary = $show['key']["PRIMARY KEY"];
-				$boucles[$id]->id_table = $x = $show['id_table'];
+				$boucles[$id]->id_table = $x = preg_replace(",^spip_,","",$show['id_table']);
 				$boucles[$id]->from[$x] = $nom_table = $show['table'];
 				$boucles[$id]->iterateur = 'SQL';
 
