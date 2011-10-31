@@ -1,0 +1,21 @@
+<paquet
+	prefix="dev"
+	categorie="outil"
+	version="0.2.0"
+	etat="dev"
+	compatibilite="[3.0.0-alpha2;["
+	logo="dev-32.png"
+>	
+
+	<nom>D&#233;veloppement</nom>
+	<!-- Outils de developpement -->
+
+	<auteur>Collectif SPIP</auteur>
+
+	<onglet nom="charte" titre="charter:titre_charte" parent="charte" action="charte" />
+	<onglet nom="charte_icones" titre="charter:titre_icones" parent="charte" action="charte_icones" />
+	<onglet nom="charte_typo" titre="charter:titre_typo" parent="charte" action="charte_typo" />
+	<onglet nom="charte_boites" titre="charter:titre_boites" parent="charte" action="charte_boites" />
+	<onglet nom="charte_listes" titre="charter:titre_listes" parent="charte" action="charte_listes" />
+	<onglet nom="charte_forms" titre="charter:titre_formulaires" parent="charte" action="charte_forms" />
+</paquet>
