@@ -116,6 +116,15 @@ function plugin_resume($info, $dir_plugins, $plug_file, $url_page){
 	// couper par securite
 	$slogan = couper($slogan, 80);
 
+	// Si dtd paquet, on traite le nom soit par son item de langue soit par sa valeur immediate a l'index "nom"
+	if ($info['dtd'] == "paquet") {
+		$nom = PtoBR(plugin_propre("{$prefix}_nom", "$dir/lang/paquet-$prefix"));
+		if (!$nom)
+			$nom = PtoBR(propre($info['nom']));
+	}
+	else
+		$nom = typo(attribut_html($info['nom']));
+
 	$url = parametre_url($url_page, "plugin", substr($dir,strlen(_DIR_RACINE)));
 
 	if (isset($info['logo']) and $i = trim($info['logo'])) {
@@ -126,7 +135,7 @@ function plugin_resume($info, $dir_plugins, $plug_file, $url_page){
 
 	return "<div class='resume'>"
 	. "<h3><a href='$url' rel='info'>"
-	. typo(attribut_html($info['nom']))
+	. $nom
 	. "</a></h3>"
 	. " <span class='version'>".$info['version']."</span>"
 	. " <span class='etat'> - "
@@ -163,7 +172,7 @@ function plugin_propre($texte, $module='') {
 	if (_DIR_RACINE AND strncmp($module,_DIR_RACINE,strlen(_DIR_RACINE))==0)
 		$module = substr($module,strlen(_DIR_RACINE));
 	if (preg_match("|^\w+_[\w_]+$|", $texte)) {
-		$texte = _T(($module ? "$module:" : '') . $texte);
+		$texte = _T(($module ? "$module:" : '') . $texte, array(), array('force' => false));
 	}
 	return propre($texte);
 }
@@ -193,20 +202,29 @@ function affiche_bloc_plugin($plug_file, $info, $dir_plugins=null) {
 
 	if (isset($info['auteur'])){
 		if (is_array($info['auteur']))
-			$a = implode(', ',$info['auteur']);
+			$a = formater_credits($info['auteur'], ', ');
 		// pour compat mais ne doit plus arriver
 		else
 			$a = trim($info['auteur']);
 		if ($a)
-			$s .= "<dt class='auteurs'>" . _T('public:par_auteur') ."</dt><dd class='auteurs'>". PtoBR(plugin_propre($a, $dir)) . "</dd>\n";
-	}
-	if (isset($info['credit'])){
-		if ($a = implode(', ',$info['credit']))
-			$s .= "<dt class='credits'>" . _T('plugin_info_credit') ."</dt><dd class='credits'>". PtoBR(plugin_propre($a, $dir)) . "</dd>\n";
+			$s .= "<dt class='auteurs'>" . _T('public:par_auteur') ."</dt><dd class='auteurs'>". PtoBR(propre($a, $dir)) . "</dd>\n";
 	}
 
-	if (isset($info['licence']))
-	  $s .= "<dt class='licence'>" . _T('intitule_licence') ."</dt><dd class='licence'>". PtoBR(plugin_propre($info['licence'], $dir)) . "</dd>\n";
+	if (isset($info['credit'])){
+		if ($a = formater_credits($info['credit'], ', '))
+			$s .= "<dt class='credits'>" . _T('plugin_info_credit') ."</dt><dd class='credits'>". PtoBR(propre($a, $dir)) . "</dd>\n";
+	}
+
+	if (isset($info['licence'])) {
+		if (is_array($info['licence']))
+			$a = formater_credits($info['licence'], ', ');
+		// pour compat mais ne doit plus arriver
+		else
+			$a = trim($info['licence']);
+	if ($a)
+		$s .= "<dt class='licence'>" . _T('intitule_licence') ."</dt><dd class='licence'>". PtoBR(propre($a, $dir)) . "</dd>\n";
+	}
+
 	$s = "<dl class='description'>$s</dl>";
 
 	//
@@ -237,4 +255,23 @@ function affiche_bloc_plugin($plug_file, $info, $dir_plugins=null) {
 
 	return $s;
 }
+
+function formater_credits($infos, $sep=', ') {
+	$texte = '';
+
+	foreach ($infos as $_credit) {
+		if ($texte)
+			$texte .= $sep;
+		// Si le credit en cours n'est pas un array c'est donc un copyright
+		$texte .=
+			(!is_array($_credit))
+			? $_credit
+			: ($_credit['url'] ? '<a href="' . $_credit['url'] . '">' : '') .
+			  $_credit['nom'] .
+			  ($_credit['url'] ? '</a>' : '');
+	}
+
+	return $texte;
+}
+
 ?>
