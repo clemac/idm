@@ -41,8 +41,9 @@ function formulaires_idm_gerer_traiter ($id_article) {
 
   sql_updateq ("spip_articles", $modif, "id_article = $id_article");
 
-  return array("message_ok" => "Modification effectu&eacute;e.",
-               //"redirect"   => generer_url_ecrire("idm_tableau")
+  return array(
+               "message_ok" => "Modification effectu&eacute;e.",
+               "redirect"   => generer_url_ecrire("idm_tableau"),
                );
 }
 
