@@ -1,6 +1,8 @@
 * Issues
 *** Urgent
 ***** "Call to the people" button
+***** Find a style for the Courrier
+***** Use the Partenariats keywords
 *** In progress
 ***** Overhaul of the search engine
 ***** iPhone version [25%]
