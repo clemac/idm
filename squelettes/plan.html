@@ -3,40 +3,39 @@
 <div class="plan">
   #ONGLETS_DEBUT{par rubrique}
 
-  <B_rub><ul><BOUCLE_rub(RUBRIQUES) {id_secteur != 18} {doublons rub} {par num titre, titre}>
-    <B_art><li><span class="heading"><a href="#URL_RUBRIQUE" >#TITRE</a></span>
-    <ul><BOUCLE_art(ARTICLES) {id_rubrique} {par num titre, date}>
-      <li><a class="article" href="#URL_ARTICLE">#TITRE</a></li>
-    </BOUCLE_art></ul>
-    </li></B_art>
-  </BOUCLE_rub></ul></B_rub>
+  <ul>
+    <BOUCLE_rub(RUBRIQUES) {id_secteur != 18} {doublons rub} {par num titre, titre}>
+      <li class="heading"><a href="#URL_RUBRIQUE" >#TITRE</a></li>
+      <li>
+        <ul><BOUCLE_art(ARTICLES) {id_rubrique} {par num titre, date}>
+            <li><a class="article" href="#URL_ARTICLE">#TITRE</a></li>
+        </BOUCLE_art></ul>
+      </li>
+    </BOUCLE_rub>
+  </ul>
 
   #ONGLETS_TITRE{par auteur}
 
-  [(#SET{idm_initiale,' '})]
-  <B_init><p style="text-align : right; margin-top : 0px;"><BOUCLE_init(AUTEURS) {par nom}>
-    [(#SET{newidm_initiale,[(#NOM*|idm_initiale)]})]
-    [(#GET{idm_initiale}|=={#GET{newidm_initiale}}|non) <a href="#ini_#GET{newidm_initiale}">#GET{newidm_initiale}</a>]
-    [(#SET{idm_initiale,#GET{newidm_initiale}})]
-  </BOUCLE_init></p></B_init>
+  <p style="text-align : right; margin-top : 0px;">
+    <BOUCLE_init(AUTEURS) {par nom}>
+      [<a href="#ini_(#NOM*|idm_initiale|unique{ini_head})">[(#NOM*|idm_initiale)]</a>]
+    </BOUCLE_init>
+  </p>
 
-  [(#SET{idm_initiale,' '})]
-  <B_aut><ul><BOUCLE_aut(AUTEURS) {par nom}>
-    [(#SET{newidm_initiale,[(#NOM*|idm_initiale)]})]
-    [(#GET{idm_initiale}|!={#GET{newidm_initiale}}|oui)
-      [(#GET{idm_initiale}|!={' '}|oui) </ul></li>]
-      <li><span class="heading" id="ini_#GET{newidm_initiale}">-&nbsp;#GET{newidm_initiale}&nbsp;-</span><ul>
-      [(#SET{idm_initiale,#GET{newidm_initiale}})]
-    ]
-
-    <li><a href="#URL_AUTEUR">#NOM</a>
-    <B_artaut><ul><BOUCLE_artaut(ARTICLES) {id_auteur} {par titre}>
-      <li><a class="article" href="#URL_ARTICLE">#TITRE</a>
-      <B_coaut>(avec <BOUCLE_coaut(AUTEURS) {id_auteur != #ID_AUTEUR} {id_article} {par nom} {", "}>
-        <a href="#URL_AUTEUR">#NOM</a></BOUCLE_coaut>)</B_coaut>
+  <ul>
+    <BOUCLE_aut(AUTEURS) {par nom}>
+      [<li class="heading" id="ini_(#NOM*|idm_initiale|unique{ini_body})">- [(#NOM*|idm_initiale)] -</li>]
+      <li><a href="#URL_AUTEUR">#NOM</a>
+        <ul>
+          <BOUCLE_artaut(ARTICLES) {id_auteur} {par titre}>
+            <li><a class="article" href="#URL_ARTICLE">#TITRE</a>
+              <B_coaut>(avec <BOUCLE_coaut(AUTEURS) {id_auteur != #ID_AUTEUR} {id_article} {par nom} {", "}><a href="#URL_AUTEUR">#NOM</a></BOUCLE_coaut>)</B_coaut>
+            </li>
+          </BOUCLE_artaut>
+        </ul>
       </li>
-    </BOUCLE_artaut></ul></B_artaut></li>
-  </BOUCLE_aut></ul></li></ul></B_aut>
+    </BOUCLE_aut>
+  </ul>
 
   #ONGLETS_TITRE{par sujet}
 
