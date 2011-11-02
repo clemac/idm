@@ -2,6 +2,16 @@
 <div class="[script(#ID_RUBRIQUE|=={34}|oui)]article">
   [(#LOGO_ARTICLE|right||image_reduire{300,300})]
   [(#LOGO_ARTICLE|fichier|non) <INCLURE{fond=inc/auteur}{id_article=#ID_ARTICLE}{taille=300}>]
+
+  <B_partenariat>
+    <div id="partenariat">
+      <BOUCLE_partenariat(MOTS) {id_groupe=6} {id_article}>
+        Article en collaboration avec
+        [(#LOGO_MOT|#URL_MOT|image_reduire{200,100})]
+      </BOUCLE_partenariat>
+    </div>
+  </B_partenariat>
+
   [<h2 class="surtitre">(#SURTITRE|echappe_retour)</h2>]
   [<h1 class="titre">(#TITRE)</h1>]
   [<h2 class="soustitre">(#SOUSTITRE|echappe_retour)</h2>]
