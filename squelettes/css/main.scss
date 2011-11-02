@@ -3,6 +3,7 @@ $dark:   #660000;
 $medium: #730000;
 $light:  #830000;
 $bg:     #908080;
+$grey:   #bbbbbb;
 
 html, body { padding : 0px; margin : 0px; font-family : Arial, sans-serif; text-align : justify; color : black; background : $bg; line-height : 1.2; }
 
@@ -141,10 +142,10 @@ span.spip_documents_center { display : block; margin-top : 1em; }
 
 .spip_surligne { color : black; background : yellow; }
 
-div.relies { margin : -1ex -1em 0; background : #ccc; padding : .3ex .5em;
+div.relies { margin : -1ex -1em 0; background : $grey; padding : .3ex .5em;
              #social { float : right;
                        .twitter-share-button { display : inline; vertical-align : top; }
-                       #fb-root, .fb_like { display : inline; vertical-align : top; margin-left : 2px; }
+                       #fb-root, .fb_like { display : inline; vertical-align : top; margin : 0 0 0 2px;}
                      }
            }
 
@@ -166,7 +167,7 @@ div.figure { width : 95%; text-align : center; margin : 1ex auto;
              }
            }
 
-div.citer { background : #ccc; padding : .5ex 1ex; text-size : small; margin : 0 -1em -1ex; }
+div.citer { background : $grey; padding : .5ex 1ex; text-size : small; margin : 0 -1em -1ex; }
 
 a.article { font-weight : normal; }
 a.lexique { font-weight : normal; border-bottom : 1px dotted; }
@@ -237,9 +238,9 @@ div.plan {
         h2.onglets_titre { background-color : #dddddd; position : relative; display : inline; float : left; padding : 2px 1em; border : 1px solid $red; }
         h2.onglets_titre.selected { background-color : white; top : -1px; padding-bottom : 0px; }
     }
-    span.heading { display : block; text-align : center; font-size : x-large; font-weight : bold; border-bottom : 2px solid $red; margin : 1ex 0px; }
+    span.heading, li.heading { display : block; text-align : center; font-size : x-large; font-weight : bold; border-bottom : 2px solid $red; margin : 1ex 0px; }
     ul { padding-left : 0em; list-style-type : none;
-         ul ul { padding-left : 2em; }
+         ul { padding-left : 2em; }
        }
 }
 

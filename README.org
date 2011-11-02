@@ -4,6 +4,7 @@
 ***** Find a style for the Courrier
 ***** Use the Partenariats keywords
 *** In progress
+***** [CSS] Merge div.plan and div.lexique
 ***** Overhaul of the search engine
 ***** iPhone version [25%]
 - [X] Basic iphone.html

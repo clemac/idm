@@ -120,10 +120,10 @@ span.spip_documents_center { display: block; margin-top: 1em; }
 
 .spip_surligne { color: black; background: yellow; }
 
-div.relies { margin: -1ex -1em 0; background: #ccc; padding: .3ex .5em; }
+div.relies { margin: -1ex -1em 0; background: #bbbbbb; padding: .3ex .5em; }
 div.relies #social { float: right; }
 div.relies #social .twitter-share-button { display: inline; vertical-align: top; }
-div.relies #social #fb-root, div.relies #social .fb_like { display: inline; vertical-align: top; margin-left: 2px; }
+div.relies #social #fb-root, div.relies #social .fb_like { display: inline; vertical-align: top; margin: 0 0 0 2px; }
 
 div.article { margin: 0ex 4em; }
 div.article #partenariat { text-align: center; margin: 0 0 0 -5em; padding: .5ex; float: left; font-size: 90%; }
@@ -139,7 +139,7 @@ div.figure p.titre { font-weight: bold; margin: 1ex; }
 div.figure div.legende { width: 80%; margin: 0px auto; text-align: justify; }
 div.figure div.legende p { font-size: 90%; font-style: italic; margin-top: 0px; }
 
-div.citer { background: #ccc; padding: .5ex 1ex; text-size: small; margin: 0 -1em -1ex; }
+div.citer { background: #bbbbbb; padding: .5ex 1ex; text-size: small; margin: 0 -1em -1ex; }
 
 a.article { font-weight: normal; }
 
@@ -198,9 +198,9 @@ div.plan div.onglets_bloc .onglets_contenu { display: none; border: none; paddin
 div.plan div.onglets_bloc .onglets_contenu.selected { display: block; }
 div.plan div.onglets_bloc h2.onglets_titre { background-color: #dddddd; position: relative; display: inline; float: left; padding: 2px 1em; border: 1px solid #e20000; }
 div.plan div.onglets_bloc h2.onglets_titre.selected { background-color: white; top: -1px; padding-bottom: 0px; }
-div.plan span.heading { display: block; text-align: center; font-size: x-large; font-weight: bold; border-bottom: 2px solid #e20000; margin: 1ex 0px; }
+div.plan span.heading, div.plan li.heading { display: block; text-align: center; font-size: x-large; font-weight: bold; border-bottom: 2px solid #e20000; margin: 1ex 0px; }
 div.plan ul { padding-left: 0em; list-style-type: none; }
-div.plan ul ul ul { padding-left: 2em; }
+div.plan ul ul { padding-left: 2em; }
 
 div.ps { margin-top: 1ex; padding-top: 1ex; border-top: 1px solid #e20000; font-style: italic; }
 div.ps span.ps { font-weight: bold; }
