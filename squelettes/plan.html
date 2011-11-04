@@ -6,11 +6,9 @@
   <ul>
     <BOUCLE_rub(RUBRIQUES) {id_secteur != 18} {doublons rub} {par num titre, titre}>
       <li class="heading"><a href="#URL_RUBRIQUE" >#TITRE</a></li>
-      <li>
-        <ul><BOUCLE_art(ARTICLES) {id_rubrique} {par num titre, date}>
-            <li><a class="article" href="#URL_ARTICLE">#TITRE</a></li>
-        </BOUCLE_art></ul>
-      </li>
+      <BOUCLE_art(ARTICLES) {id_rubrique} {par num titre, date}>
+        <li><a class="article" href="#URL_ARTICLE">#TITRE</a></li>
+      </BOUCLE_art>
     </BOUCLE_rub>
   </ul>
 
@@ -39,27 +37,23 @@
 
   #ONGLETS_TITRE{par sujet}
 
-  <B_mot><ul><BOUCLE_mot(MOTS) {id_groupe = 1} {par titre}>
-    <li><span class="heading"><a href="#URL_MOT">#TITRE</a></span>
-    <B_artmot><ul><BOUCLE_artmot(ARTICLES) {id_mot} {par titre}>
-      <li><a class="article" href="#URL_ARTICLE">#TITRE</a>[, par (#LESAUTEURS)]</li>
-    </BOUCLE_artmot></ul></B_artmot>
-    </li>
-  </BOUCLE_mot></ul></B_mot>
+  <ul>
+    <BOUCLE_mot(MOTS) {id_groupe = 1} {par titre}>
+      <li class="heading"><a href="#URL_MOT">#TITRE</a></li>
+      <BOUCLE_artmot(ARTICLES) {id_mot} {par titre}>
+        <li><a class="article" href="#URL_ARTICLE">#TITRE</a>[, par (#LESAUTEURS)]</li>
+      </BOUCLE_artmot>
+    </BOUCLE_mot>
+  </ul>
 
   #ONGLETS_TITRE{par date}
 
-  [(#SET{month,' '})]
-  <B_date><ul><BOUCLE_date(ARTICLES) {par date} {inverse}>
-    [(#SET{newmonth,[(#DATE|affdate{mois_annee})]})]
-    [(#GET{month}|!={#GET{newmonth}}|oui)
-      [(#GET{month}|!={' '}|oui) </ul></li>]
-      <li><span class="heading">#GET{newmonth}</span><ul>
-      [(#SET{month,#GET{newmonth}})]
-    ]
-
-    <li><a class="article" href="#URL_ARTICLE">#TITRE</a>, par #LESAUTEURS</li>
-  </BOUCLE_date></ul></li></ul></B_date>
+  <ul>
+    <BOUCLE_date(ARTICLES) {par date} {inverse}>
+      [<li class="heading">(#DATE|affdate{mois_annee}|unique)</li>]
+      <li><a class="article" href="#URL_ARTICLE">#TITRE</a>, par #LESAUTEURS</li>
+    </BOUCLE_date>
+  </ul>
 
   #ONGLETS_FIN
 </div>
