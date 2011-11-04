@@ -19,6 +19,14 @@
       </ul>
     </li>
 
+    <li><a href="#">Dossiers</a>
+      <ul>
+        <BOUCLE_dossier(MOTS) {id_groupe=3} {par titre}>
+          <li><a href="#URL_MOT">#TITRE</a></li>
+        </BOUCLE_dossier>
+      </ul>
+    </li>
+
     <li><a href="#">Liens</a>
       <ul><BOUCLE_liens(ARTICLES) {id_rubrique = 25} {par num titre, titre}>
           <li><a href="#URL_ARTICLE">#TITRE</a></li>
