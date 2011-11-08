@@ -5,6 +5,23 @@ http://images.math.cnrs.fr/ and complements the documentation there
 (which is mainly addressed at article authors and editors --- this one
 is full of SPIP ang PHP and geek stuff).
 
+* Code management
+This is done in Git, and there are 4 branches to keep track of (plus
+temporary ones for experimental features, if needed). That can change if
+we end up working in a team but so far:
+- =spip3= is tracking the SVN version of the SPIP core (without
+  extensions)
+- =upstream= incorporates the extensions, and merges =spip3=
+  periodically (meaning whenever a bug is fixed there)
+- =idm= is the current status of the website, and merges =upstream= when
+  needed
+- =test= is for development of new but "easy" features, and is typically
+  merged into =idm= the same day
+
+In addition there is a branch =oldidm= with the pre-spip3 version of the
+website and full history (the history is missing from =idm= until I can
+rebase it successfully)
+
 * Issues
 *** Urgent
 - /Call to the people/ button
