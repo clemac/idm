@@ -18,10 +18,6 @@ we end up working in a team but so far:
 - =test= is for development of new but "easy" features, and is typically
   merged into =idm= the same day
 
-In addition there is a branch =oldidm= with the pre-spip3 version of the
-website and full history (the history is missing from =idm= until I can
-rebase it successfully)
-
 * Issues
 *** Urgent
 - /Call to the people/ button

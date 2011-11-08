@@ -17,9 +17,9 @@
    [<p class="erreur">(#ENV**{erreurs}|table_valeur{avis})</p>]
     <p><label for="vote">Votre avis :</label>
        <select name="vote">
-         <option value="vu" [(#STATUS|=={vu}|?{'selected="yes"',''})]>Pas encore voté / Abstention</option>
-         <option value="non" [(#STATUS|=={non}|?{'selected="yes"',''})]>Avis défavorable</option>
-         <option value="moyen" [(#STATUS|=={moyen}|?{'selected="yes"',''})]>Quelques corrections à faire</option>
+         <option value="vu" [(#STATUS|=={vu}|?{'selected="yes"',''})]>Pas encore votÃ© / Abstention</option>
+         <option value="non" [(#STATUS|=={non}|?{'selected="yes"',''})]>Avis dÃ©favorable</option>
+         <option value="moyen" [(#STATUS|=={moyen}|?{'selected="yes"',''})]>Quelques corrections Ã  faire</option>
          <option value="oui" [(#STATUS|=={oui}|?{'selected="yes"',''})]>Avis favorable</option>
        </select></p>
     <input type="submit" name="form_relecteurs_go" value="Voter" />

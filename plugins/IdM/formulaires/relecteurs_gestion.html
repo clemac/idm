@@ -2,7 +2,7 @@
 <div class="formulaire_spip">
   <form action="#ENV{action}" method="post">
     #ACTION_FORMULAIRE{#ENV{action}}
-    <h3>Il y a #TOTAL_BOUCLE candidat(s) à être relecteurs ...</h3>
+    <h3>Il y a #TOTAL_BOUCLE candidat(s) Ã  Ãªtre relecteurs ...</h3>
     <table id="lescandidats" class="sortable">
       <thead>
         <tr>
@@ -10,7 +10,7 @@
           <th>ID</th>
           <th>E-Mail</th>
           <th>Qui est-ce ?</th>
-          <th>Décision</th>
+          <th>DÃ©cision</th>
         </tr>
       </thead>
       <tbody>
@@ -21,7 +21,7 @@
           <td>#EMAIL</td>
           <td><input type="text" name="math_#ID_AUTEUR" value="#ENV{math_#ID_AUTEUR}" size=20 /></td>
           <td><select name="decision_#ID_AUTEUR">
-              <option value="rien">Décider plus tard</option>
+              <option value="rien">DÃ©cider plus tard</option>
               <option value="oui">Accepter</option>
               <option value="non">Refuser</option>
           </select></td>

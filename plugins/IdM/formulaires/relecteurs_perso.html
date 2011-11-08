@@ -7,56 +7,56 @@
 
 [(#GET{role}|=={visiteur}|oui) <h3>Relire des articles.</h3>
 
-<p>Tous les articles des revues mathématiques sont relus et vérifiés par 
-des spécialistes avant leur publication. Ce site s'adressant au grand 
+<p>Tous les articles des revues mathÃ©matiques sont relus et vÃ©rifiÃ©s par 
+des spÃ©cialistes avant leur publication. Ce site s'adressant au grand 
 public, nous souhaitons faire relire nos articles par des relecteurs 
-aussi variés que possible avant de les faire apparaître au public ; le 
-but étant de s'assurer qu'ils sont non seulement corrects, mais surtout 
+aussi variÃ©s que possible avant de les faire apparaÃ®tre au public ; le 
+but Ã©tant de s'assurer qu'ils sont non seulement corrects, mais surtout 
 lisibles. C'est bien le but d'une revue de vulgarisation !</p>
 
-<p>Nous cherchons donc des relecteurs. Si cela vous intéresse de nous 
+<p>Nous cherchons donc des relecteurs. Si cela vous intÃ©resse de nous 
 aider, et de nous donner votre avis de temps en temps sur des articles 
-en préparation, nous vous en remercions par avance ! Vous n'avez qu'à 
-cliquer sur le bouton ci-dessous, après avoir indiqué rapidement qui 
-vous êtes. Dès que le comité de rédaction aura validé votre 
+en prÃ©paration, nous vous en remercions par avance ! Vous n'avez qu'Ã  
+cliquer sur le bouton ci-dessous, aprÃ¨s avoir indiquÃ© rapidement qui 
+vous Ãªtes. DÃ¨s que le comitÃ© de rÃ©daction aura validÃ© votre 
 inscription, vous deviendrez un relecteur officiel de <em>Images des 
-  Mathématiques</em>.</p>
+  MathÃ©matiques</em>.</p>
 
-<p>Bien entendu, même sans être relecteur, vous pouvez déjà répondre 
+<p>Bien entendu, mÃªme sans Ãªtre relecteur, vous pouvez dÃ©jÃ  rÃ©pondre 
 aux articles et participer aux discussions qui les accompagnent ! Le 
-rôle des relecteurs se situe en amont, avant l'apparition d'un article 
+rÃ´le des relecteurs se situe en amont, avant l'apparition d'un article 
 sur le site.</p>]
 
 
 [(#GET{role}|=={candidat}|oui) <h3>Relire des articles.</h3>
 
-<p>Nous avons bien enregistré votre inscription à la liste des 
-relecteurs, et nous vous en remercions. Dès que le comité de rédaction 
-aura validé votre inscription, vous ferez partie de l'équipe, et vous 
-commencerez à recevoir des articles sur lesquels vous pourrez donner 
+<p>Nous avons bien enregistrÃ© votre inscription Ã  la liste des 
+relecteurs, et nous vous en remercions. DÃ¨s que le comitÃ© de rÃ©daction 
+aura validÃ© votre inscription, vous ferez partie de l'Ã©quipe, et vous 
+commencerez Ã  recevoir des articles sur lesquels vous pourrez donner 
 votre avis. Si toutefois vous ne souhaitez plus relire d'articles, vous 
-n'avez qu'à cliquer sur le bouton ci-dessous.</p>]
+n'avez qu'Ã  cliquer sur le bouton ci-dessous.</p>]
 
-[(#GET{role}|=={relecteur}|oui) <h3>Vous êtes relecteur.</h3>
+[(#GET{role}|=={relecteur}|oui) <h3>Vous Ãªtes relecteur.</h3>
 
 <p>Vous faites partie des relecteurs de ce site. Merci pour votre aide ! 
-Quand un nouvel article sera proposé, si vous êtes choisi(e) pour le 
-relire vous recevrez un courier électronique vous donnant plus 
-d'informations sur la marche à suivre ; vous aurez accès à un espace de 
+Quand un nouvel article sera proposÃ©, si vous Ãªtes choisi(e) pour le 
+relire vous recevrez un courier Ã©lectronique vous donnant plus 
+d'informations sur la marche Ã  suivre ; vous aurez accÃ¨s Ã  un espace de 
 discussion pour dialoguer avec l'auteur, et vous pourrez donner votre 
-avis sur la publication de l'article ou les changements à y apporter. Si 
-toutefois vous ne souhaitez plus relire d'articles, vous n'avez qu'à 
+avis sur la publication de l'article ou les changements Ã  y apporter. Si 
+toutefois vous ne souhaitez plus relire d'articles, vous n'avez qu'Ã  
 cliquer sur le bouton ci-dessous.</p>]
 
 <form action="#ENV{action}" method="post" class="billet">
   #ACTION_FORMULAIRE{#ENV{action}}
 
   [(#GET{role}|=={visiteur}|oui)
-  <p><label for="titre">Qui êtes-vous ?</label>
+  <p><label for="titre">Qui Ãªtes-vous ?</label>
   <input type="text" name="qui" size="60" value="#ENV{qui}" />
   </p>[<p class="erreur">(#ENV**{erreurs}|table_valeur{qui})</p>]
-  <p><input type="submit" name="inscription" value="Je souhaite être relecteur !" /></p>]
+  <p><input type="submit" name="inscription" value="Je souhaite Ãªtre relecteur !" /></p>]
 
   [(#GET{role}|=={visiteur}|non)
-  <p><input type="submit" name="giveup" value="Je ne souhaite plus être relecteur." /></p>]
+  <p><input type="submit" name="giveup" value="Je ne souhaite plus Ãªtre relecteur." /></p>]
 </form>
