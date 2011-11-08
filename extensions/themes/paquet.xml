@@ -1,0 +1,18 @@
+<paquet
+	prefix="themes"
+	categorie="outil"
+	version="1.1.0"
+	etat="dev"
+	compatibilite="[3.0.0-alpha2;["
+	logo="images/themes-32.png"
+>	
+
+	<nom>Skins</nom>
+	<!-- Des thèmes pour l'espace privé -->
+
+	<auteur>Collectif SPIP</auteur>
+
+	<copyright>2009</copyright>
+
+	<licence lien="http://www.gnu.org/licenses/gpl-3.0.html">GPL</licence>
+</paquet>
