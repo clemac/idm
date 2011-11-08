@@ -1,6 +1,6 @@
 [(#SET{id_article,[(#ENV{id_article}|sinon{[(#ENV**{erreurs}|table_valeur{id_article})]})]})]
 
-<div class="page shadow">
+<div class="page">
 
 <BOUCLE_preview(ARTICLES) {id_article = #GET{id_article}} {statut == .}>
   [(#STATUT|=={publie}|oui)
@@ -10,11 +10,11 @@
   elle est d&eacute;j&agrave; valide) :</p>
   <p style="text-align:center;"><a href="#URL_SITE_SPIP/#URL_ARTICLE">#URL_SITE_SPIP/#URL_ARTICLE</a></p>
   <p>Le voici tel qu'il appara&icirc;tra sur le site.</p>
-  </div><div class="page shadow">]
+  </div><div class="page">]
 
   [(#STATUT|=={tmp}|oui)<h3 style="margin-top:0;">Pr&eacute;visualisation :</h3>]
   [(#INCLURE{fond=inc/article}{id_article})]
-  [(#STATUT|=={tmp}|oui)</div><div class="page shadow">]
+  [(#STATUT|=={tmp}|oui)</div><div class="page">]
 </BOUCLE_preview>
 <h1>&Eacute;crire un nouveau billet</h1>
 <//B_preview>

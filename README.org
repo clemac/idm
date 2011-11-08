@@ -20,7 +20,6 @@ we end up working in a team but so far:
 
 * Issues
 *** Urgent
-- /Call to the people/ button
 - Find a style for the Courrier
 - Use the Partenariats keywords
 *** In progress
