@@ -1,6 +1,8 @@
 <BOUCLE_article(ARTICLES){id_article}>
 [(#SET{desc,[(#DESCRIPTIF*|sinon{#INTRODUCTION*})]})]
-<INCLURE{fond=inc/head}{title=#TITRE}{id_rubrique=#ID_RUBRIQUE}{id_article=#ID_ARTICLE}{desc=#GET{desc}}>
+[(#SET{class,[(#ID_RUBRIQUE|=={6}|?{billet})]})]
+[(#SET{class,[(#ID_RUBRIQUE|=={34}|?{courrier,#GET{class}})]})]
+<INCLURE{fond=inc/head}{title=#TITRE}{id_rubrique=#ID_RUBRIQUE}{id_article=#ID_ARTICLE}{desc=#GET{desc}}{class=#GET{class}}>
 
 <BOUCLE_f(FORUMS){id_article}> </BOUCLE_f>#SET{nb,#TOTAL_BOUCLE}</B_f>
 

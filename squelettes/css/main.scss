@@ -91,6 +91,11 @@ html, body { padding : 0px; margin : 0px; font-family : Arial, sans-serif; text-
 .plain     { color : black; text-decoration : none; }
 .wrap      { overflow : hidden; }
 
+.courrier { @extend .page; background : transparent url("../img/papier.png") repeat-y;
+             .texte { font-style : italic; font-size : 110%; text-align : left; }
+           }
+.billet { @extend .page; }
+
 .piste_20 { color : #009900; }
 .piste_21 { color : #3333ff; }
 .piste_22 { color : $red; }

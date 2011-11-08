@@ -54,7 +54,7 @@ html, body { padding: 0px; margin: 0px; font-family: Arial, sans-serif; text-ali
 #editolink { text-align: center; font-size: 180%; font-weight: bold; margin: .5ex 0em 2.5ex; font-variant: small-caps; }
 #editolink a:hover { text-decoration: underline; }
 
-.page { clear: both; margin: 5ex auto; padding: 1ex 1em; width: 80%; border: 1px solid black; background: white; overflow: hidden; -moz-box-shadow: 5px 5px 15px black; -webkit-box-shadow: 5px 5px 15px black; box-shadow: 5px 5px 15px black; }
+.page, .courrier, .billet { clear: both; margin: 5ex auto; padding: 1ex 1em; width: 80%; border: 1px solid black; background: white; overflow: hidden; -moz-box-shadow: 5px 5px 15px black; -webkit-box-shadow: 5px 5px 15px black; box-shadow: 5px 5px 15px black; }
 
 .nopage { padding: 0 1em; clear: both; }
 
@@ -65,6 +65,9 @@ html, body { padding: 0px; margin: 0px; font-family: Arial, sans-serif; text-ali
 .plain { color: black; text-decoration: none; }
 
 .wrap { overflow: hidden; }
+
+.courrier { background: transparent url("../img/papier.png") repeat-y; }
+.courrier .texte { font-style: italic; font-size: 110%; text-align: left; }
 
 .piste_20 { color: #009900; }
 
@@ -259,7 +262,7 @@ div.mjlabel_bot { color: #e20000; text-align: right; margin-top: -4.5ex; margin-
 
 @media print { html, body { font-family: Times, serif; }
   .noprint, div.spip-admin-float { display: none; }
-  div.page { width: 100%; border: none; margin: 0; padding: 0; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; }
+  div.page, div.courrier, div.billet { width: 100%; border: none; margin: 0; padding: 0; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; }
   div.article { margin: 0; }
   div.article .spip_logos { margin: 0 0 1ex; }
   div.citer { padding: 1ex 0 0; margin: 2ex 0 0; border-top: 1px solid #e20000; } }
