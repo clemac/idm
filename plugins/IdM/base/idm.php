@@ -3,6 +3,7 @@
 function idm_declarer_tables_interfaces ($interfaces) {
   $interfaces['table_des_tables']['idm_projets']         = 'idm_projets';
   $interfaces['table_des_tables']['idm_relecteurs']      = 'idm_relecteurs';
+  $interfaces['table_des_tables']['idm_teams']           = 'idm_teams';
   $interfaces['table_des_tables']['relecteurs_articles'] = 'relecteurs_articles';
 
   $interfaces['table_des_traitements']['NOM'][0] = str_replace ('%s', 'idm_prenom_nom(%s)', $interfaces['table_des_traitements']['NOM'][0]);
@@ -58,8 +59,7 @@ function idm_declarer_tables_auxiliaires ($tables) {
                                                                  'avis'        => "TINYTEXT"),
                                                'key' => array());
 
-  $tables['spip_idm_relecteurs'] = array ('texte_objets' => "idm:titre_relecteurs",
-                                          'field' => array ('id_auteur'   => "BIGINT(21) NOT NULL",
+  $tables['spip_idm_relecteurs'] = array ('field' => array ('id_auteur'   => "BIGINT(21) NOT NULL",
                                                             'role'        => "ENUM ('visiteur', 'candidat', 'relecteur', 'occasionnel') NOT NULL DEFAULT 'visiteur'",
                                                             'math'        => "TEXT NOT NULL",
                                                             'combien'     => "INT NOT NULL DEFAULT 0",
@@ -68,7 +68,11 @@ function idm_declarer_tables_auxiliaires ($tables) {
                                                             'quand'       => "TIMESTAMP NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP",
                                                             'comment'     => "TEXT NOT NULL",
                                                             'categorie'   => "ENUM ('nouveau', 'chercheur', 'enseignant', 'etudiant', 'autre', 'candidat', 'non_classe') NOT NULL DEFAULT 'nouveau'"),
-                                          'key' => array('PRIMARY KEY' => "id_auteur"));
+                                          'key' => array ('PRIMARY KEY' => "id_auteur"));
+
+  $tables['spip_idm_teams'] = array ('field' => array ('team'      => "TINYTEXT",
+                                                       'id_auteur' => "BIGINT(21) NOT NULL"),
+                                     'key' => array ('KEY id_auteur' => 'id_auteur'));
 
   return $tables;
 }
