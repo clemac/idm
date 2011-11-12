@@ -1,5 +1,15 @@
 <?php
 
+function idm_teams () {
+  global $idm_team_relecture, $idm_team_billets;
+
+  sql_delete ("spip_idm_teams");
+  foreach ($idm_team_relecture as $i)
+    sql_insertq ("spip_idm_teams", array('id_auteur'=>$i, 'team'=>'relecture'));
+  foreach ($idm_team_billets as $i)
+    sql_insertq ("spip_idm_teams", array('id_auteur'=>$i, 'team'=>'billets'));
+}
+
 function idm_upgrade ($nom_meta_base_version, $version_cible) {
   $maj = array();
 
@@ -12,17 +22,12 @@ function idm_upgrade ($nom_meta_base_version, $version_cible) {
                                                    'spip_auteurs',
                                                    'spip_articles')));
 
-  $maj['201111102037'] = $maj['create'];
+  $maj['201111131024'] = array ($maj['create'][0], array('idm_teams',array()));
 
   include_spip ('base/upgrade');
   maj_plugin ($nom_meta_base_version, $version_cible, $maj);
 }
 
-function idm_vider_tables ($nom_meta_base_version) {
-        /*
-         * sql_drop_table("spip_chats");
-         * effacer_meta($nom_meta_base_version);
-         */
-}
+function idm_vider_tables ($nom_meta_base_version) {}
 
 ?>
