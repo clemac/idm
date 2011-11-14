@@ -5,6 +5,17 @@ http://images.math.cnrs.fr/ and complements the documentation there
 (which is mainly addressed at article authors and editors --- this one
 is full of SPIP ang PHP and geek stuff).
 
+* Features added to SPIP
+*** Visible
+***** Refereeing support
+***** Billettistes
+***** Planning
+***** MathJax
+***** Video and sound
+*** In the backgroung
+***** E-mail notification of teams
+***** LaTeX export
+
 * Code management
 This is done in Git, and there are 4 branches to keep track of (plus
 temporary ones for experimental features, if needed). That can change if
@@ -20,21 +31,24 @@ we end up working in a team but so far:
 
 * Issues
 *** Urgent
-- Find a style for the Courrier
-- Use the Partenariats keywords
 *** In progress
 - [CSS] Merge =div.plan= and =div.lexique=
-- Overhaul of the search engine
-- iPhone version [25%]
+- Overhaul of the search engine [33%]
+  - [X] Accents, this is done by SPIP3
+  - [ ] Sort, classify etc by theme
+  - [ ] Automatic article suggestion
+- iPhone version [33%]
   - [X] Basic iphone.html
   - [ ] Specific style for small screens (it used to work using
     =max-width=, but apparently that breaks older browsers ...)
-  - [ ] Automatic suggestion
   - [ ] Find a way to make login etc. possible
 - One year ago on IdM [33%]
   - [X] Create the page, basic functionality
   - [ ] Merge it with =sommaire.html= for maintainability
   - [ ] Merge the system with the color filtering ?
+- Partenariats [50%]
+  - [X] Add keywords, display the logo on relevant articles
+  - [ ] Make the phrase customizable by keyword
 *** Next
 - CC per article
 - Loop videos
@@ -63,20 +77,13 @@ we end up working in a team but so far:
   elsewhere, the rest should go
 *** Geekeries and SPIPeries
 - In a loop, =#_parent:TITRE=
-- pipeline =jquery_plugins=
-#+begin_src php
-  function XXX_jquery_plugins($scripts) {
-    $scripts[] = "js/bla.js";
-    return $scripts;
-  }
-#+end_src
 - plugin =spip-bonux=
   - [ ] =#INFO_TITRE{article,324}=
 - Refactor uses of =idm_notify= [75%]
   - [X] Accept an array as recipient
   - [X] Call it with an array when possible
-  - [X] Store recipient lists in a config file
-  - [ ] Solve the problem that =config/mes_options.html= is not read during AJAX calls
+  - [X] Store recipient lists in a the database, table =spip_teams=
+  - [ ] Accept the name of a team as an argument to =idm_notify=
 - =prive/squelettes/contenu/idm_relecteur.html=
   - Make the relecteur an "objet éditorial" ?
 - Files which are patched versions of upstream (store as a patch for upgrades)
