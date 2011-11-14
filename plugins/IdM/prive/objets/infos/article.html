@@ -6,34 +6,29 @@
 
 [(#REM)
 
-        Bouton voir en ligne
+	Bouton voir en ligne
 
 ]
 <BOUCLE_publie(ARTICLES){id_article}>
-        [(#VAL{redirect}
-                |generer_url_action{type=article&id=#ID_ARTICLE}
-                |parametre_url{var_mode,calcul}
-                |icone_horizontale{<:icone_voir_en_ligne:>,racine})]
+	[(#VAL{redirect}
+		|generer_url_action{type=article&id=#ID_ARTICLE}
+		|parametre_url{var_mode,calcul}
+		|icone_horizontale{<:icone_voir_en_ligne:>,racine})]
 </BOUCLE_publie>
-        [(#AUTORISER{previsualiser,article,#ID_ARTICLE,'',#ARRAY{statut,#STATUT}})
-                [(#VAL{propose}
-                        |generer_url_public
-                        |parametre_url{id_article,#ID_ARTICLE}
-                        |icone_horizontale{Relecture,relecteurs-24.png})]
-        ]
-        [(#AUTORISER{previsualiser,article,#ID_ARTICLE,'',#ARRAY{statut,#STATUT}})
-                [(#VAL{redirect}
-                        |generer_url_action{type=article&id=#ID_ARTICLE}
-                        |parametre_url{var_mode,preview}
-                        |icone_horizontale{<:previsualiser:>,preview})]
-        ]
+	[(#AUTORISER{previsualiser,article,#ID_ARTICLE,'',#ARRAY{statut,#STATUT}})
+		[(#VAL{propose}
+			|generer_url_public
+			|parametre_url{id_article,#ID_ARTICLE}
+			|icone_horizontale{Relecture,relecteurs-24.png})]
+	]
+	[(#AUTORISER{previsualiser,article,#ID_ARTICLE,'',#ARRAY{statut,#STATUT}})
+		[(#VAL{redirect}
+			|generer_url_action{type=article&id=#ID_ARTICLE}
+			|parametre_url{var_mode,preview}
+			|icone_horizontale{<:previsualiser:>,preview})]
+	]
 <//B_publie>
 
 
 </div>
 </BOUCLE_art>
-
-<style>
-  div.proposer p { margin : 0; padding-top : 1ex; }
-  div.proposer form { display : none ; }
-</style>
