@@ -4,6 +4,7 @@ $idm_team_relecture = array (327,633,637);
 $idm_team_billets   = array (63,285,286,7,50);
 
 define ('_ID_WEBMESTRES', '1');
+#define ('_SPIP_LOCK_MODE', 2); // utiliser le nfslock de spip
 
 ini_set('display_errors', '1');
 
@@ -70,7 +71,7 @@ function inc_envoyer_mail ($destinataire, $sujet, $corps, $from = "", $headers =
     $sujet = preg_replace ("@\r*\n@","\r\n", $sujet);
   }
 
-  spip_log("mail (override) $destinataire\n$sujet\n$headers",'mails');
+  spip_log("mail (override) $destinataire\n$sujet\n$headers",'mails.5');
   // mode TEST : forcer l'email
   if (defined('_TEST_EMAIL_DEST')) {
     if (!_TEST_EMAIL_DEST)
