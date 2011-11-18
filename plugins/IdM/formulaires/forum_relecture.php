@@ -51,8 +51,7 @@ Un nouveau commentaire a été posté dans un forum de relecture du site
   http://images.math.cnrs.fr/ecrire/?exec=idm_moderation
 END;
 
-  $idm_team_relecture = array (327,633,637);
-  idm_notify ($idm_team_relecture, utf8_encode($message), $subject);
+  idm_notify ('relecture', utf8_encode($message), $subject);
 
   return array ('message_ok' => "done");
 }
