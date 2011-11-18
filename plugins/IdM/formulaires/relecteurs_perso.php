@@ -12,8 +12,7 @@ function notify_relecteurs_team ($id_auteur) {
            "\n" .
            "  $qui";
 
-  $idm_team_relecture = array (327,633,637);
-  idm_notify ($idm_team_relecture, $texte, $subject);
+  idm_notify ('relecture', $texte, $subject);
 }
 
 function formulaires_relecteurs_perso_charger () {

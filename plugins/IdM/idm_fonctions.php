@@ -61,13 +61,18 @@ function autoriser_idm_billettistes_bouton_dist ($faire, $type, $id, $qui, $opt)
 
 function idm_notify ($ids, $message, $subject = "Un message du site \"Images des Maths\"") {
   $message = "Bonjour !\n\n" . $message . "\n\n-- \nLe robot du site http://images.math.cnrs.fr/\n";
-  $envoyer_mail = charger_fonction ('envoyer_mail', 'inc');
+  $emails = array();
 
   foreach ((array)$ids as $id) {
-    $email = "comite@images.math.cnrs.fr";
-    if ($id > 0) $email = sql_getfetsel ("email", "spip_auteurs", "id_auteur = $id");
-    $envoyer_mail ($email, $subject, $message);
+    if (is_numeric($id)) {
+      if ($id>0) $emails[] = sql_getfetsel ("email", "spip_auteurs", "id_auteur = $id");
+      else       $emails[] = "comite@images.math.cnrs.fr";
+    } else foreach (sql_allfetsel ("*", "spip_idm_teams", "team = '$id'") as $e)
+                 $emails[] = sql_getfetsel ("email", "spip_auteurs", "id_auteur = ".$e['id_auteur']);
   }
+
+  $envoyer_mail = charger_fonction ('envoyer_mail', 'inc');
+  foreach ($emails as $email) $envoyer_mail ($email, $subject, $message);
 }
 
 function idm_jquery_plugins ($scripts) {

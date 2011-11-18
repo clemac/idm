@@ -79,11 +79,12 @@ we end up working in a team but so far:
 - In a loop, =#_parent:TITRE=
 - plugin =spip-bonux=
   - [ ] =#INFO_TITRE{article,324}=
-- Refactor uses of =idm_notify= [75%]
+- Refactor uses of =idm_notify= [80%]
   - [X] Accept an array as recipient
   - [X] Call it with an array when possible
   - [X] Store recipient lists in a the database, table =spip_teams=
-  - [ ] Accept the name of a team as an argument to =idm_notify=
+  - [X] Accept the name of a team as an argument to =idm_notify=
+  - [ ] Use team names everywhere
 - =prive/squelettes/contenu/idm_relecteur.html=
   - Make the relecteur an "objet éditorial" ?
 - Files which are patched versions of upstream (store as a patch for upgrades)
