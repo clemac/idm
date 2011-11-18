@@ -1,8 +1,5 @@
 <?php
 
-$idm_team_relecture = array (327,633,637);
-$idm_team_billets   = array (63,285,286,7,50);
-
 define ('_ID_WEBMESTRES', '1');
 
 ini_set('display_errors', '1');
