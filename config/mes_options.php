@@ -4,7 +4,8 @@ $idm_team_relecture = array (327,633,637);
 $idm_team_billets   = array (63,285,286,7,50);
 
 define ('_ID_WEBMESTRES', '1');
-#define ('_SPIP_LOCK_MODE', 2); // utiliser le nfslock de spip
+#define ('_SPIP_LOCK_MODE', 0);
+#define ('_LOG_FILTRE_GRAVITE', 7);
 
 ini_set('display_errors', '1');
 
