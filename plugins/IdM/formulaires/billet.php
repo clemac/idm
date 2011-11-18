@@ -3,7 +3,10 @@
 include_spip('base/abstract_sql');
 
 function notify_comite ($id_auteur, $id_article, $titre, $date) {
-  $idm_team_billets   = array (63,285,286,7,50);
+  $idm_team_billets = array();
+  foreach (sql_allfetsel ("*", "spip_idm_teams", "team = 'billets'") as $e)
+    $idm_team_billets[] = $e['id_auteur'];
+
   $today = floor(time()/(24*3600)) % count($idm_team_billets);
   $gars = $idm_team_billets [$today];
 
@@ -28,7 +31,6 @@ function notify_comite ($id_auteur, $id_article, $titre, $date) {
     "\n" .
     "  http://images.math.cnrs.fr/ecrire/?exec=articles&action=redirect&type=article&id=$id_article&var_mode=preview";
 
-  include_spip ('idm');
   idm_notify (array(0,$gars), utf8_encode($texte), $subject);
 }
 
