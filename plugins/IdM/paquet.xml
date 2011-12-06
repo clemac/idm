@@ -5,7 +5,7 @@
     etat          = "stable"
     compatibilite = "[3.0.0-alpha2;3.0.*]"
     logo          = "prive/themes/spip/images/idm-logo-60.png"
-    schema        = "201112062040"
+    schema        = "201112062116"
     >
   <nom>IdM</nom>
 
@@ -18,6 +18,7 @@
   <menu nom="idm_relecteurs"   titre="idm:relecteurs"   icone="images/idm-24.png" parent="idm"/>
   <menu nom="idm_relecture"    titre="idm:relecture"    icone="images/idm-24.png" parent="idm"/>
   <menu nom="idm_moderation"   titre="idm:moderation"   icone="images/idm-24.png" parent="idm"/>
+  <menu nom="idm_teams"        titre="idm:teams"        icone="images/idm-24.png" parent="idm"/>
 
   <pipeline nom="declarer_tables_interfaces"  inclure="base/idm.php" />
   <pipeline nom="declarer_tables_objets_sql"  inclure="base/idm.php" />

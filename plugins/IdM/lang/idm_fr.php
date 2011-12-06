@@ -10,6 +10,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
                                        'relecture'        => "Articles en cours de relecture",
 
                                        'tableau'          => "Tableau de bord",
+                                       'teams'            => "Les équipes de rédaction",
                                        'titre_relecteurs' => "Relecteurs",
 );
 

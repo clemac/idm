@@ -56,8 +56,10 @@ function idm_declarer_tables_auxiliaires ($tables) {
                                           'key' => array ('PRIMARY KEY' => "id_auteur"));
 
   $tables['spip_idm_teams'] = array ('field' => array ('team'      => "TINYTEXT",
-                                                       'id_auteur' => "BIGINT(21) NOT NULL"),
-                                     'key' => array ('KEY id_auteur' => 'id_auteur'));
+                                                       'id_auteur' => "BIGINT(21) NOT NULL",
+                                                       'id_member' => "BIGINT(21) NOT NULL"),
+                                     'key' => array ('PRIMARY KEY' => "id_member",
+                                                     'KEY id_auteur' => 'id_auteur'));
 
   return $tables;
 }
