@@ -112,7 +112,7 @@ function idm_pre_edition ($flux) {
     $id_auteur   = intval($GLOBALS['visiteur_session']['id_auteur']);
     $nb_forums   = sql_countsel ('spip_forum',            "id_auteur=$id_auteur AND statut='publie'");
     $nb_refuses  = sql_countsel ('spip_forum',            "id_auteur=$id_auteur AND statut='off'");
-    $nb_articles = sql_countsel ('spip_auteurs_articles', "id_auteur=$id_auteur");
+    $nb_articles = sql_countsel ('spip_auteurs_liens',    "objet = 'article' AND id_auteur = $id_auteur");
 
     if ($nb_refuses>0) {
       spip_log ("IdM: visitor $id_auteur has a comment in the trash, moderating.");

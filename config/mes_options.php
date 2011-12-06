@@ -1,13 +1,15 @@
 <?php
 
 define ('_ID_WEBMESTRES', '1');
+#define ('_SPIP_LOCK_MODE', 0);
+#define ('_LOG_FILTRE_GRAVITE', 7);
 
 ini_set('display_errors', '1');
 
 $type_urls = "propres2";
 
 function inc_envoyer_mail ($destinataire, $sujet, $corps, $from = "", $headers = "") {
-
+  include_spip ("inc/filtres");
   if (!email_valide($destinataire)) return false;
   if ($destinataire == _T('info_mail_fournisseur')) return false; // tres fort
 
@@ -67,7 +69,7 @@ function inc_envoyer_mail ($destinataire, $sujet, $corps, $from = "", $headers =
     $sujet = preg_replace ("@\r*\n@","\r\n", $sujet);
   }
 
-  spip_log("mail $destinataire\n$sujet\n$headers",'mails');
+  spip_log("mail (override) $destinataire\n$sujet\n$headers",'mails.5');
   // mode TEST : forcer l'email
   if (defined('_TEST_EMAIL_DEST')) {
     if (!_TEST_EMAIL_DEST)

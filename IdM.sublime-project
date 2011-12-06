@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": [".dbdump", "applets", "files", "IMG", "local", "media", "pdf*", "tmp"],
+			"file_exclude_patterns": ["*.gif", "*.png", ".ok"]
+		}
+	]
+}
