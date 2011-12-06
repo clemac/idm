@@ -39,10 +39,6 @@ function autoriser_idm_bouton_dist ($faire, $type, $id, $qui, $opt) {
   return false;
 }
 
-function autoriser_idm_projets_bouton_dist ($faire, $type, $id, $qui, $opt) {
-  return autoriser_idm_bouton_dist ($faire, $type, $id, $qui, $opt);
-}
-
 function autoriser_idm_relecteurs_bouton_dist ($faire, $type, $id, $qui, $opt) {
   return autoriser_idm_bouton_dist ($faire, $type, $id, $qui, $opt);
 }

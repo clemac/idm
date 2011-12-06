@@ -14,8 +14,7 @@ function idm_teams () {
 function idm_upgrade ($nom_meta_base_version, $version_cible) {
   $maj = array();
 
-  $maj['create'] = array(array('maj_tables', array('spip_idm_projets',
-                                                   'spip_idm_relecteurs',
+  $maj['create'] = array(array('maj_tables', array('spip_idm_relecteurs',
                                                    'spip_idm_sujets',
                                                    'spip_idm_teams',
                                                    'spip_relecteurs_articles',
@@ -24,6 +23,7 @@ function idm_upgrade ($nom_meta_base_version, $version_cible) {
                                                    'spip_articles')));
 
   $maj['201111131024'] = array ($maj['create'][0], array('idm_teams',array()));
+  $maj['201112062040'] = $maj['create'];
 
   include_spip ('base/upgrade');
   maj_plugin ($nom_meta_base_version, $version_cible, $maj);

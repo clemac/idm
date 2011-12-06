@@ -1,7 +1,6 @@
 <?php
 
 function idm_declarer_tables_interfaces ($interfaces) {
-  $interfaces['table_des_tables']['idm_projets']         = 'idm_projets';
   $interfaces['table_des_tables']['idm_relecteurs']      = 'idm_relecteurs';
   $interfaces['table_des_tables']['idm_teams']           = 'idm_teams';
   $interfaces['table_des_tables']['relecteurs_articles'] = 'relecteurs_articles';
@@ -27,21 +26,7 @@ function idm_declarer_tables_interfaces ($interfaces) {
 }
 
 function idm_declarer_tables_objets_sql ($tables) {
-  $tables['spip_idm_projets'] = array ('principale' => "oui",
-                                       'texte_objets' => "idm:titre_projets",
-                                       'field' => array ('id_projet'   => 'BIGINT(21) NOT NULL',
-                                                         'id_editeur'  => 'BIGINT(21) NOT NULL',
-                                                         'id_auteur'   => 'BIGINT(21) NOT NULL default 0',
-                                                         'id_article'  => 'BIGINT(21) NOT NULL default 0',
-                                                         'id_rubrique' => 'BIGINT(21) NOT NULL',
-                                                         'auteur'      => 'TINYTEXT NOT NULL',
-                                                         'sujet'       => 'TINYTEXT NOT NULL',
-                                                         'modif'       => 'TIMESTAMP NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP',
-                                                         'comment'     => 'TEXT NOT NULL',
-                                                         'statut'      => "ENUM ('contact', 'redaction', 'relecture', 'publie', 'refus') NOT NULL DEFAULT 'contact'"),
-                                       'key' => array ('PRIMARY KEY' => 'id_projet'));
-
-  $tables['spip_auteurs']['field']['billettiste'] = "ENUM('oui','non') DEFAULT 'non' NOT NULL";
+  $tables['spip_auteurs']['field']['billettiste']   = "ENUM('oui','non') DEFAULT 'non' NOT NULL";
 
   $tables['spip_articles']['field']['id_editeur']   = "BIGINT(21) NOT NULL";
   $tables['spip_articles']['field']['date_prevue']  = "DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL";
