@@ -1,4 +1,4 @@
-#+TITLE: Images des Mathématiques --- technical documentation
+#+TITLE: IdM --- technical documentation
 
 This documents the /squelette/ of the website at
 http://images.math.cnrs.fr/ and complements the documentation there
@@ -20,8 +20,6 @@ we end up working in a team but so far:
 
 * Issues
 *** Urgent
-- Find a style for the Courrier
-- Use the Partenariats keywords
 *** In progress
 - [CSS] Merge =div.plan= and =div.lexique=
 - Overhaul of the search engine
@@ -63,20 +61,13 @@ we end up working in a team but so far:
   elsewhere, the rest should go
 *** Geekeries and SPIPeries
 - In a loop, =#_parent:TITRE=
-- pipeline =jquery_plugins=
-#+begin_src php
-  function XXX_jquery_plugins($scripts) {
-    $scripts[] = "js/bla.js";
-    return $scripts;
-  }
-#+end_src
-- plugin =spip-bonux=
-  - [ ] =#INFO_TITRE{article,324}=
 - Refactor uses of =idm_notify= [75%]
   - [X] Accept an array as recipient
   - [X] Call it with an array when possible
   - [X] Store recipient lists in a config file
-  - [ ] Solve the problem that =config/mes_options.html= is not read during AJAX calls
+  - [ ] Solve the problem that =config/mes_options.html= is not read
+    during AJAX calls - fixed (it was read but the variable was not
+    global) but now the point is moot, we do something else
 - =prive/squelettes/contenu/idm_relecteur.html=
   - Make the relecteur an "objet éditorial" ?
 - Files which are patched versions of upstream (store as a patch for upgrades)
