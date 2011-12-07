@@ -28,7 +28,6 @@
   <pipeline nom="boite_infos"    inclure="idm_fonctions.php" />
   <pipeline nom="insert_head"    inclure="idm_fonctions.php" />
   <pipeline nom="header_prive"   inclure="idm_fonctions.php" />
-  <pipeline nom="pre_edition"    inclure="idm_fonctions.php" />
   <pipeline nom="pre_typo"       inclure="idm_fonctions.php" />
   <pipeline nom="jquery_plugins" inclure="idm_fonctions.php" />
 </paquet>
