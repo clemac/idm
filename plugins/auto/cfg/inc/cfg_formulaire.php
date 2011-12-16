@@ -9,7 +9,7 @@
  * @category   outils
  * @copyright  (c) toggg, marcimat 2007-2008
  * @link       http://www.spip-contrib.net/
- * @version    $Id: cfg_formulaire.php 46896 2011-04-20 12:00:02Z root $
+ * @version    $Id: cfg_formulaire.php 46896 2011-04-20 11:05:37Z marcimat@rezo.net $
  */
 
 if (!defined("_ECRIRE_INC_VERSION")) return;

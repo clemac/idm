@@ -28,10 +28,10 @@ function glossaire_groupes() {
 if(!defined('_SPIP19300'))
 	@define('_GLOSSAIRE_QUERY', 'SELECT id_mot, titre, texte, descriptif FROM spip_mots WHERE type=' . glossaire_groupes() . ' ORDER BY id_mot ASC');
 		
-// surcharge possible de cette fonction glossaire_generer_url_dist par : glossaire_generer_url($id_mot, $titre) 
+// surcharge possible de cette fonction glossaire_generer_url_dist par : glossaire_generer_url($id_mot, $titre_mot) 
 // si elle existe, elle sera utilisee pour generer l'url cliquable des mots trouves
-//   exemple pour annuler le clic : function glossaire_generer_url($id_mot, $titre) { return 'javascript:;'; }
-function glossaire_generer_url_dist($id_mot, $titre) {
+//   exemple pour annuler le clic : function glossaire_generer_url($id_mot, $titre_mot) { return 'javascript:;'; }
+function glossaire_generer_url_dist($id_mot, $titre_mot) {
 	if(defined('_SPIP19300')) 
 		return generer_url_entite($id_mot, 'mot'); // depuis SPIP 2.0
 		else { charger_generer_url(); return generer_url_mot($id_mot); } // avant SPIP 2.0
@@ -92,7 +92,7 @@ function glossaire_echappe_mot_callback($matches) {
 
 function glossaire_safe($texte) {
 	// on retire les notes avant propre()
-	return safehtml(propre(preg_replace(', *\[\[(.*?)\]\],msS', '', nl2br(trim($texte)))));
+	return safehtml(cs_propre(preg_replace(', *\[\[(.*?)\]\],msS', '', nl2br(trim($texte)))));
 }
 
 // renvoie le tableau des mots du glossaire
@@ -175,8 +175,6 @@ function cs_rempl_glossaire($texte, $liste=false) {
 		$glossaire_generer_mot = '"<a $table1[\\2]_".$GLOBALS["gl_i"]++."\' class=\'cs_glossaire\'><span class=\'gl_mot\'>".'.$glossaire_generer_mot.'."</span>$table2[\\2]</a>"';
 	}
 	$unicode = false;
-	$mem = $GLOBALS['toujours_paragrapher'];
-	$GLOBALS['toujours_paragrapher'] = false;
 	// initialisation des globales d'echappement
 	$gloss_ech = $gloss_mots = array();
 	$gloss_ech_id = $gloss_mots_id = 0;
@@ -222,7 +220,6 @@ function cs_rempl_glossaire($texte, $liste=false) {
 			}
 		}
 	}
-	$GLOBALS['toujours_paragrapher'] = $mem;
 	$GLOBALS['gl_i'] = 0;
 	if($liste) $texte = (preg_match_all(',@@M(\d+)#(\d+)@@,', $texte, $reg, PREG_SET_ORDER) 
 			&& array_walk($reg,

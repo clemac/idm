@@ -320,6 +320,19 @@ add_outil( array(
 	'pipelinecode:pre_description_outil' => 'if($id=="auteur_forum") $texte=str_replace(array("@_CS_FORUM_NOM@","@_CS_FORUM_EMAIL@"),
 	array(preg_replace(\',:$,\',"",_T("'.$cs_temp.'forum_votre_nom")),preg_replace(\',:$,\',"",_T("'.$cs_temp.'forum_votre_email"))),$texte);',
 ));
+/* Astuce de b_b en php (a tester !)
+	'pipeline:formulaire_verifier' => 'nom_obligatoire',
+function nom_obligatoire($flux){
+	$form = $flux['args']['form'];
+	if ($form=='forum'){
+		if (!sinon($GLOBALS['visiteur_session']['nom'],$GLOBALS['visiteur_session']['session_nom'])){
+			$flux['data']['message_erreur'] .= _T('nom_obligatoire');
+			$flux['data']['session_nom'] = _T('nom_obligatoire');
+			unset($flux['data']['previsu']);
+		}
+	}
+	return $flux;
+}*/
 
 // ici on a besoin de trois boutons radio : _T('couteauprive:par_defaut'), _T('couteauprive:sf_amont') et _T('couteauprive:sf_tous')
 add_variable( array(
@@ -478,6 +491,12 @@ add_variables( array(
 	'radio' => array(1 => 'couteauprive:travaux_titre', 0 => 'couteauprive:travaux_nom_site'),
 	'defaut' => 1,
 	'code:%s' => "define('_en_travaux_TITRE', %s);",
+), array(
+	'nom' => 'cache_travaux',
+	'format' => _format_NOMBRE,
+	'check' => 'couteauprive:travaux_nocache',
+	'defaut' => 1,
+	'code:%s' => "define('_NO_CACHE',1);", // SPIP >=2.0
 ));
 add_outil( array(
 	'id' => 'en_travaux',
@@ -487,6 +506,7 @@ add_outil( array(
 	'pipeline:affichage_final' => 'en_travaux_affichage_final',
 	'pipelinecode:pre_description_outil' => 'if($id=="en_travaux") $texte=str_replace(array("@_CS_TRAVAUX_TITRE@","@_CS_NOM_SITE@"),
 	array("["._T("info_travaux_titre")."]","[".$GLOBALS["meta"]["nom_site"]."]"),$texte);',
+	'description' => '<:en_travaux::>[[%message_travaux%]][[%titre_travaux%]][[%admin_travaux%]][[-><admin_travaux valeur="1/2/3">%avertir_travaux%</admin_travaux>]][[->%cache_travaux%]][[%prive_travaux%]]',
 ));
 
 add_variables( array(
@@ -529,6 +549,9 @@ add_outil( array(
 	'pipeline:affiche_milieu' => 'boites_privees_affiche_milieu',
 	'pipeline:affiche_droite' => 'boites_privees_affiche_droite',
 	'pipeline:affiche_gauche' => 'boites_privees_affiche_gauche',
+	// controle de la boucle AUTEURS afin de respecter l'ordre des auteurs stockes en base
+	'pipeline:pre_boucle' => defined('_SPIP30000')?'boites_privees_pre_boucle':'',
+	'code:fonctions' => 'include_spip("outils/boites_privees");',
 	// Pour la constante _CS_RSS_SOURCE
 #	'pipelinecode:pre_description_outil' => 'if($id=="boites_privees") include_spip("cout_define");',
 ));
@@ -761,6 +784,27 @@ add_outil( array(
 	'code:css' => defined('_SPIP19300')?'[[%enveloppe_mails%]]':NULL,
 ));
 
+add_variables( array(
+	'nom' => 'tout_rub',
+	'check' => 'icone_rubriques',
+	'defaut' => 0,
+), array(
+	'nom' => 'tout_aut',
+	'check' => 'icone_auteurs',
+	'defaut' => 0,
+));
+add_outil( array(
+	'id' => 'aff_tout',
+	'categorie' => 'public',
+	'auteur' => 'b_b',
+	'description' => '<:aff_tout::>[[%tout_rub%]][[->%tout_aut%]]',
+	'pipelinecode:pre_boucle' =>
+'if(%%tout_rub%%) {if($flux->type_requete == \'rubriques\' && !isset($flux->modificateur[\'criteres\'][\'statut\']))
+	$flux->modificateur[\'criteres\'][\'statut\'] = true;}
+if(%%tout_aut%%) {if($flux->type_requete == \'auteurs\' && !isset($flux->modificateur[\'criteres\'][\'statut\']))
+	$flux->modificateur[\'criteres\'][\'statut\'] = true;}',
+));
+
 //-----------------------------------------------------------------------------//
 //                               NOISETTES                                     //
 //-----------------------------------------------------------------------------//
@@ -818,16 +862,22 @@ add_outil( array(
     'id' => 'citations_bb',
     'auteur'	=> 'Bertrand Marne, Romy T&ecirc;tue',
     'categorie'	=> 'typo-corr',
-	'code:css'	=> '/* fr */
-	q:lang(fr):before { content: "\00AB\A0"; }
-	q:lang(fr):after { content: "\A0\00BB"; }
-	q:lang(fr) q:before { content: "\201C"; }
-	q:lang(fr) q:after { content: "\201D"; }
-	q:lang(fr) q q:before { content: "\2018"; }
-	q:lang(fr) q q:after { content: "\2019"; }
-	/* IE */
-	* html q { font-style: italic; }
-	*+html q { font-style: italic; }', 
+	'code:css'	=> '/* Specifie des paires de guillemets sur plusieurs niveaux pour chaque langue */
+/* Cf.: http://www.yoyodesign.org/doc/w3c/css2/generate.html#quotes-specify */
+q { quotes: \'"\' \'"\' "\'" "\'" }
+/* Guillemets selon la langue du texte */
+:lang(fr) q { quotes: "\00AB\A0" "\A0\00BB" "\201C" "\201D" "\2018" "\2019"; }
+:lang(en) q { quotes: "\201C" "\201D" "\2018" "\2019" }
+:lang(es) q { quotes: "\00AB" "\00BB" "\201C" "\201D"; }
+:lang(it) q { quotes: "\00AB\A0" "\A0\00BB" "\201C" "\201D"; }
+:lang(de) q { quotes: "\00BB" "\00AB" ">" "<" }
+:lang(no) q { quotes: "\00AB\A0" "\A0\00BB" "<" ">" }
+/* Insere des guillemets avant et apres le contenu d\'un element Q */
+q:before { content: open-quote; } 
+q:after { content: close-quote; }
+/* IE */
+* html q { font-style: italic; }
+*+html q { font-style: italic; }', 
     'pipelinecode:pre_propre' => 'if(strpos($flux, "<qu")!==false) $flux=cs_echappe_balises("", "citations_bb_rempl", $flux);',
 	// Remplacer <quote> par <q> quand il n'y a pas de retour a la ligne (3 niveaux, preg sans l'option s) 
     'code:options' => 'function citations_bb_rempl($texte){
@@ -954,7 +1004,6 @@ add_variables( array(
 	'format' => _format_NOMBRE,
 	'defaut' => 35,
 	'code:%s' => "define('_MAX_COUPE_URL', %s);",
-), array(
 ));
 // attention : liens_orphelins doit etre place avant mailcrypt ou liens_en_clair
 add_outil( array(
@@ -1069,7 +1118,11 @@ add_outil( array(
 	});",
 	'code:css' => 'span.spancrypt {background:transparent url(' . url_absolue(find_in_path('img/mailcrypt/leure.gif'))
 		. ') no-repeat scroll 0.1em center; padding-left:12px; text-decoration:none;}',
-	'traitement:EMAIL' => 'mailcrypt',
+	'traitement:EMAIL' => 'mailcrypt_email_dist',
+	// compatibilite avec le plugin facteur
+ 	'pipelinecode:facteur_pre_envoi'   => 'include_spip("public/parametrer"); // charger mes_fonctions
+$flux->Body = maildecrypt($flux->Body);
+$flux->AltBody = maildecrypt($flux->AltBody);',
 )); 
 
 

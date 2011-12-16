@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -46,6 +46,10 @@ The value of 1,000,000 pixels appears to be reasonable for a configuration with 
 	'action_rapide' => 'Rapid action, only if you know what you are doing!',
 	'action_rapide_non' => 'Rapid action, available when this tool is activated:',
 	'admins_seuls' => 'Only administrators',
+	'aff_tout:description' => 'Il parfois utile d\'afficher toutes les rubriques ou tous les auteurs de votre site sans tenir compte de leur statut (pendant la période de développement par exemple). Par défaut, SPIP n\'affiche en public que les auteurs et les rubriques ayant au moins un élément publié.
+
+Bien qu\'il soit possible de contourner ce comportement à l\'aide du critère [<html>{tout}</html>->http://www.spip.net/fr_article4250.html], cet outil automatise le processus et vous évite d\'ajouter ce critère à toutes les boucles RUBRIQUES et/ou AUTEURS de vos squelettes.', # NEW
+	'aff_tout:nom' => 'Affiche tout', # NEW
 	'attente' => 'Waiting...',
 	'auteur_forum:description' => 'Request all authors of public messages to fill in (with at least one letter!) a name and/or email in order to avoid completely anonymous messages. Note that the tool performs a JavaScript validation with the user\'s browser.[[%auteur_forum_nom%]][[->%auteur_forum_email%]][[->%auteur_forum_deux%]]
 {Caution: The third option cancels the 2 others. It is important to verify that the forms in your SPIP templates are compatible with this tool.}',
@@ -337,20 +341,22 @@ This tool may be combined with "[.->sommaire]".', # MODIF
 	'distant_echoue' => 'An error occurred with the remote file download - this tool may not work properly!',
 	'distant_inactif' => 'Can not find the remote file (tool is inactive).',
 	'distant_present' => 'The file exists in the library since @date@.',
+	'docgen' => 'Documentation générale', # NEW
+	'docwiki' => 'Carnet d\'idées', # NEW
 	'dossier_squelettes:description' => 'Changes which template directory to use. For example: "squelettes/mytemplate". You can register several directories by separating them with a colon <html>":"</html>. If you leave the following box empty (or type "dist" in it), then the default "dist" template, supplied with SPIP, will be used.[[%dossier_squelettes%]]',
 	'dossier_squelettes:nom' => 'Template directory',
 
 	// E
 	'ecran_activer' => 'Enable the security screen',
 	'ecran_conflit' => 'Warning: the "@file@" file is causing a conflict and should be deleted!', # MODIF
-	'ecran_conflit2' => 'Note: a static file named "@file@" has been detected and activated. The Swiss Knife could not update it or configure it.',
+	'ecran_conflit2' => 'Note: a static file named "@file@" has been detected and activated. The Swiss Knife could not update it or configure it.', # MODIF
 	'ecran_ko' => 'Inactive screen!',
 	'ecran_maj_ko' => 'Version {{@n@}} of the security screen is available. Please update the remote file for this utility.',
 	'ecran_maj_ko2' => 'Version @n@ of the safetu screen is available. You can update the remote file " [.->ecran_securite] ".',
 	'ecran_maj_ok' => '(appears to be up to date).',
 	'ecran_securite:description' => 'The security screen is a PHP file directly downloaded from the official SPIP site which protects your sites by blocking certain attacks aimed at specific security flaws. This system allows you to react very quickly whenever a problem is discovered, by covering up for such flaws without needing to immediately update your site nor apply any complex patches.
 
-Important note: the screen locks down certain variables. For example, the variables named as <code>id_xxx</code> are all checked as being whole integer numbers in order to avoid SQL code injections via this very common URL variable. Certain plugins are not compatible with all of the rules imposed by this screen, including those that might use a syntax like  <code>&amp;id_x=new</code> to create a new object {x}.
+Important note: the screen locks down certain variables. For example, the variables named as <code>id_xxx</code> are all checked as being whole integer numbers in order to avoid SQL code injections via this very common URL variable. Certain plugins are not compatible with all of the rules imposed by this screen, including those that might use a syntax like  <code>&id_x=new</code> to create a new object {x}.
 
 In addition to the security, this screen has a configurable ability to restrict access by indexing robots to the PHP scripts, in such a way as to indicate that they should " come back later " whenever the server is currently saturated.[[ %ecran_actif%]][[->
 @puce@ Adjust the anti-robot protection when the server load exceeds the value: %ecran_load%
@@ -447,7 +453,7 @@ This means that multi blocks will always displayed in the language requested by 
 	// H
 	'help' => '{{This page is only accessible to main site administrators.}} It gives access to the configuration of some additional functions of the {{Penknife}}.',
 	'help2' => 'Local version: @version@',
-	'help3' => '<p>Documentation links:<br/>• [{{The&nbsp;Swiss&nbsp;Knife}}->http://www.spip-contrib.net/?article2166]@contribs@</p><p>Resets:
+	'help3' => '<p>Documentation links:<br/>• [{{The Swiss Knife}}->http://www.spip-contrib.net/?article2166]@contribs@</p><p>Resets:
 
 _ • [Hidden tools|Return to the original appearance of this page->@hide@]
 
@@ -478,9 +484,9 @@ To define this logo, go to the "<:titre_configuration:>" page by clicking on the
 
 @puce@ You can specify (as a percentage of the default value) the length of the text generated by the tag #INTRODUCTION. A null value, or a value equal to 100 will not modify anything and use the following default values: 500 characters for the articles, 300 for the news items and 600 for forums and sections.
 
-[[%lgr_introduction%&amp;nbsp;%]]
+[[%lgr_introduction%&nbsp;%]]
 
-@puce@ By default, if the text is too long, #INTRODUCTION will end with 3 dots (an ellipsis): <html>"&amp;amp;nbsp;(…)"</html>. You can change this to a customised string which indicates that there is more text available.
+@puce@ By default, if the text is too long, #INTRODUCTION will end with 3 dots (an ellipsis): <html>"&amp;nbsp;(…)"</html>. You can change this to a customised string which indicates that there is more text available.
 
 [[%suite_introduction%]]
 
@@ -604,6 +610,7 @@ N.B. This tool requires the {Round Corners} jQuery plugin in order to function. 
 	'label:terminaison_urls_page' => 'URL endings (e.g.: .html):',
 	'label:titre_travaux' => 'Message title:',
 	'label:titres_etendus' => 'Activate the extended use of the tags #TITRE_XXX:',
+	'label:tout_rub' => 'Afficher en public tous les objets suivants :', # NEW
 	'label:url_arbo_minuscules' => 'Preserve the case of titles in URLs:',
 	'label:url_arbo_sep_id' => 'Separation character for \'title-id\', used in the event of homonyms:<br />(do not use \'/\')',
 	'label:url_glossaire_externe2' => 'Link to external glossary:',
@@ -958,6 +965,7 @@ The SPIP PHP function used is: <code>_T(\'a_text\')</code> (with no parameters),
 Do not forget to check that the variable used <code>\'a_text\'</code> is defined in the language files.', # MODIF
 	'toutmulti:nom' => 'Multilingual blocks',
 	'travaux_masquer_avert' => 'Hide the frame indicating on the public site that maintenance is currently being carried out',
+	'travaux_nocache' => 'Désactiver également le cache de SPIP', # NEW
 	'travaux_nom_site' => '@_CS_NOM_SITE@',
 	'travaux_prochainement' => 'This site will be back online soon.
 

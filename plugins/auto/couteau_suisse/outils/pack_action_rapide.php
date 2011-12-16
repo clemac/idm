@@ -5,7 +5,7 @@
 
 include_spip('inc/actions');
 
-// Compatibilite SPIP < 2.0
+// Compatibilite avec SPIP 1.92
 if(!defined('_SPIP19300')) {
 	function redirige_action_post($action, $arg, $ret, $gra, $corps, $att='') {
 		$r = _DIR_RESTREINT_ABS . generer_url_ecrire($ret, $gra, true, true);
@@ -24,9 +24,11 @@ function pack_action_rapide() {
 	if($n) {
 		$exec = _request('exec');
 		$fin_delete = _T('couteauprive:pack_delete');
-		$fin_delete = "\" class='pack_delete' title=\"$fin_delete\"><img src=\""._DIR_IMG_PACK."poubelle.gif\" width='12' height='12' alt=\"$fin_delete\" /></a>&nbsp; <a href=\"";
+		$img = defined('_SPIP30000')?chemin_image('poubelle.png'):_DIR_IMG_PACK.'poubelle.gif';
+		$fin_delete = "\" class='pack_delete' title=\"$fin_delete\"><img src=\"$img\" width='12' height='12' alt=\"$fin_delete\" /></a>&nbsp; <a href=\"";
 		$fin_install = _T('couteauprive:pack_installe');
-		$fin_install = "\" class='pack_install' title=\"$fin_install\"><img src=\""._DIR_IMG_PACK."secteur-12.gif\" width='12' height='12' alt=\"$fin_install\" /></a>&nbsp; ";
+		$img = defined('_SPIP30000')?chemin_image('secteur-12.png'):_DIR_IMG_PACK.'secteur-12.gif';
+		$fin_install = "\" class='pack_install' title=\"$fin_install\"><img src=\"$img\" width='12' height='12' alt=\"$fin_install\" /></a>&nbsp; ";
 		foreach(array_keys($GLOBALS['cs_installer']) as $pack) {
 			$u = urlencode($pack);
 			$liste .= "\n-* <a href=\"" 

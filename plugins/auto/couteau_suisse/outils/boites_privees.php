@@ -6,7 +6,7 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 include_spip('inc/presentation');
 include_spip('inc/layer');
 
-// compatibilite SPIP SQL < 2.0
+// compatibilite SQL pour SPIP 1.92
 if(!defined('_SPIP19300')) {
 	include_spip('base/abstract_sql');
 	if(!function_exists('sql_select')) { function sql_select($s=array(),$f=array(),$w=array(),$g=array(),$o=array(),$l='',$h=array(),$sv='') {
@@ -68,7 +68,7 @@ function boites_privees_affiche_droite($flux) {
 /*
  fonction appelant une liste de fonctions qui permettent :
  - d'ajouter facilement des boites privees perso
- - voire de modifier les boites "officielles"
+ - voire de modifier les boites fournies par le plugin
  par exemple : 
 	$GLOBALS['boites_privees_gauche'][] = 'ma_boite_privee';
 	function ma_boite_privee($flux, $exec) { 
@@ -82,6 +82,27 @@ function cs_pipeline_boite_privee(&$flux, $endroit) {
 	foreach($liste as $f)
 		if (function_exists($f)) $flux['data'] = $f($flux['data'], $flux['args']['exec']);
 	return $flux;
+}
+
+// pipeline utilise sous SPIP>=3, histoire de respecter l'ordre de stockage des auteurs d'objets
+function boites_privees_pre_boucle($flux) {
+	if(defined('boites_privees_TRI_AUTEURS') && $flux->type_requete=='auteurs' 
+			&& count($L1 = $flux->join) && count($w = &$flux->where)>1 && $w[0][0]=="'='" && $w[1][0]=="'='") {
+		$L1 = array_keys($L1); // alias de la jointure
+		$flux->order[] = 'sqlfield_auteurs_objet('.$w[0][2].','.$w[1][2].','._q($L1[0]).','._q($flux->serveur).')';
+	}
+	return $flux;
+}
+
+function sqlfield_auteurs_objet($id_objet, $type_objet, $alias, $serveur) {
+	static $res = array();
+	if(!isset($r[$i = "$id_objet,$type_objet,$serveur"])) {
+		$t = sql_allfetsel('*','spip_auteurs_liens', "objet=$type_objet", '','','','',$serveur);
+		// hack qui conserve l'ordre de la table malgre les cles primaires
+		$r = array(); foreach($t as $e) if($e['id_objet'] == $id_objet) $r[] = $e["id_auteur"];
+		$r[$i] = count($r)?'FIELD('.$alias.'.id_auteur,'.join($r, ',').')':''; 
+	}
+	return $r[$i];
 }
 
 function cs_boite_rss() {
@@ -115,7 +136,7 @@ function cs_formatspip($id_article){
 	include_spip('public/assembler');
 	if(!$txt = recuperer_fond('fonds/format_spip', array('id_article'=>$id_article))) return '';
 	$txt = explode('@TITRE@=', $txt, 2);
-	// compatibilite SPIP < 2.0
+	// compatibilite avec SPIP 1.92
 	$compat = function_exists('bouton_block_depliable');
 	$bouton = $compat?bouton_block_depliable(cs_div_configuration().$txt[1], 'invisible', "formatspip")
 		:bouton_block_invisible("formatspip").cs_div_configuration().$txt[1];
@@ -138,7 +159,7 @@ function cs_urls_propres($type, $id) {
 		$now = date('Y-m-d H:i:s');
 		$info = ' ('._T('couteau:url_verrouillee').')';
 		while ($t = sql_fetch($s)) $res .= ($res?'<br />':'').'&bull;&nbsp;'.$t['url'].($t[date]>$now?$info:'')."\n";
-	// SPIP < 2.0
+	// SPIP 1.92
 	} else {
 		// impossible de calculer l'url publique d'ici.
 		$table = $type.($type=='syndic'?'':'s');
@@ -175,11 +196,12 @@ function cs_urls_propres($type, $id) {
 function cs_div_configuration() {
 	include_spip('inc/autoriser');
 	if(!autoriser('configurer', 'cs')) return '';
-	return '<div style="float:right; top:4px; right:-4px; position:relative;" ><a title="'._T('couteau:configurer').'" href="'.generer_url_ecrire('admin_couteau_suisse','cmd=descrip&outil=boites_privees#cs_infos').'"><img alt="'._T('couteau:configurer').'" src="'._DIR_IMG_PACK.'secteur-12.gif"/></a></div>';
+	$img = defined('_SPIP30000')?chemin_image('secteur-12.png'):_DIR_IMG_PACK.'secteur-12.gif';
+	return '<div style="float:right; top:4px; right:-4px; position:relative;" ><a title="'._T('couteau:configurer').'" href="'.generer_url_ecrire('admin_couteau_suisse','cmd=descrip&outil=boites_privees#cs_infos').'"><img alt="'._T('couteau:configurer').'" src="'.$img.'"/></a></div>';
 }
 
 function cs_cadre_depliable($titre, $id, $texte) {
-	// SPIP < 2.0
+	// SPIP 1.92
 	if(!defined('_SPIP19300')) return debut_cadre_relief(find_in_path('img/couteau-24.gif'), true)
 		. cs_div_configuration()
 		. "<div class='verdana1' style='text-align: left;'>"

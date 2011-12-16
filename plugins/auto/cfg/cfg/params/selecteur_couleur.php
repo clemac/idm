@@ -9,7 +9,7 @@
  * @category   outils
  * @copyright  (c) toggg, marcimat 2007-2008
  * @link       http://www.spip-contrib.net/
- * @version    $Id: selecteur_couleur.php 53409 2011-10-13 21:00:48Z root $
+ * @version    $Id: selecteur_couleur.php 53409 2011-10-13 20:42:57Z yffic@lefourneau.com $
  *
  */
 if (!defined("_ECRIRE_INC_VERSION")) return;

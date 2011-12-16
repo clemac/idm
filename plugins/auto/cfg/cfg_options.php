@@ -9,7 +9,7 @@
  * @category   outils
  * @copyright  (c) toggg, marcimat 2007-2008
  * @link       http://www.spip-contrib.net/
- * @version    $Id: cfg_options.php 42949 2010-12-16 00:00:02Z root $
+ * @version    $Id: cfg_options.php 42949 2010-12-15 23:15:53Z marcimat@rezo.net $
  */
 
 if (!defined("_ECRIRE_INC_VERSION")) return;

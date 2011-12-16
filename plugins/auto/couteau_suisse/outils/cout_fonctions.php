@@ -29,11 +29,7 @@ function cs_introduire($texte) {
 // Fonction propre() sans paragraphage
 function cs_propre($texte) {
 	include_spip('inc/texte');
-	$mem = $GLOBALS['toujours_paragrapher'];
-	$GLOBALS['toujours_paragrapher'] = false;
-	$texte = propre($texte);
-	$GLOBALS['toujours_paragrapher'] = $mem;
-	return $texte;
+	return trim(PtoBR(propre($texte)));
 }
 
 // Filtre creant un lien <a> sur un texte
@@ -105,7 +101,9 @@ function cs_liste_contribs($coupe = 999, $join = "</li><li>") {
 	foreach($metas_outils as $o=>$v) if(isset($v['contrib']) && isset($v['actif']) && $v['actif'])
 		$contribs[] =  '[' . couper(couteauprive_T($o.':nom'), $coupe) . '->' . (is_numeric($v['contrib']) ?_URL_CONTRIB.$v['contrib']:$v['contrib']) . ']';
 	sort($contribs);
-	return '[{{' . _T('couteau:titre') . '}}->' . _URL_CONTRIB . '2166]' . $join . join($join, $contribs);
+	return '[{{' . couteauprive_T('docgen') . '}}->' . _URL_CONTRIB . '2166]' 
+		. $join . '[{{' . couteauprive_T('docwiki') . '}}->' . _URL_CONTRIB . '2793]'
+		. $join . join($join, $contribs);
 }
 
 // renvoie un champ d'un objet en base

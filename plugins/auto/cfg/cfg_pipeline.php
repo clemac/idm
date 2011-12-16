@@ -9,7 +9,7 @@
  * @category   outils
  * @copyright  (c) toggg, marcimat 2007-2008
  * @link       http://www.spip-contrib.net/
- * @version    $Id: cfg_pipeline.php 42730 2010-12-07 22:00:24Z root $
+ * @version    $Id: cfg_pipeline.php 42730 2010-12-07 21:25:45Z cedric@yterium.com $
  */
 
 if (!defined("_ECRIRE_INC_VERSION")) return;

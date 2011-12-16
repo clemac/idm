@@ -90,7 +90,7 @@ function description_outil_une_variable($index, &$outil, &$variable, &$label, &$
 	if(!$actif)
 		return $label.'<html>'.(strlen($valeur)?nl2br(echapper_tags($valeur)):'&nbsp;'._T('couteauprive:variable_vide')).'</html>';
 	$len = $nombre?6:0;
-	$width = $len?'':'style="width:100%;" ';
+	$width = $len?'':'style="width:98.8%;" ';
 	$lignes = !isset($cs_variable['lignes']) || $nombre?0:strval($cs_variable['lignes']);
 	return $label .
 		( $lignes < 2
@@ -136,7 +136,7 @@ function description_outil_label_callback($matches) {
 }
 
 function cs_input_variable_callback($matches) {
-	$a = " valeur_{$matches[1]}_";
+	$a = ' valeur_'.$matches[1].'_';
 	$tmp = str_replace('/',$a, $matches[3]);
 	return "<div class='groupe_{$matches[1]} $a$tmp'>";
 }
@@ -158,7 +158,8 @@ function inc_description_outil_dist($outil_, $url_self, $modif=false) {
 	$descrip = isset($outil['description'])?$outil['description']:couteauprive_T($outil['id'].':description');
 	// ajout des variables liees a la barre typo
 	if(defined('_DIR_PLUGIN_PORTE_PLUME') 
-	 && ( isset($outil['pipeline:porte_plume_barre_pre_charger']) || isset($outil['pipeline:porte_plume_cs_pre_charger']))
+	 && ( isset($outil['pipeline:porte_plume_barre_pre_charger']) || isset($outil['pipeline:porte_plume_cs_pre_charger'])
+	 	|| isset($outil['pipelinecode:porte_plume_barre_pre_charger']) || isset($outil['pipelinecode:porte_plume_cs_pre_charger']))
 	 && count($barres = cs_pp_liste_barres())) {
 		$descrip .= "\n\n@puce@ "._T('couteauprive:barres_typo_intro');
 		$i=0;

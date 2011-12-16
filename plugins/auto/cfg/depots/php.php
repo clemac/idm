@@ -9,7 +9,7 @@
  * @category   outils
  * @copyright  (c) toggg, marcimat 2007-2008
  * @link       http://www.spip-contrib.net/
- * @version    $Id: php.php 43371 2011-01-07 11:00:22Z root $
+ * @version    $Id: php.php 43371 2011-01-07 10:44:03Z alexis.pellicier@nds.k12.tr $
  */
 
 if (!defined("_ECRIRE_INC_VERSION")) return;

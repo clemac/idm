@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -41,6 +41,10 @@ El valor de 1~000~000 píxels sembla correcte per una configuració amb poca mem
 	'action_rapide' => 'Acció ràpida, només si sabeu què us feu! ',
 	'action_rapide_non' => 'Acció ràpida, disponible un cop aquesta eina siga activada :',
 	'admins_seuls' => 'Només els administradors',
+	'aff_tout:description' => 'Il parfois utile d\'afficher toutes les rubriques ou tous les auteurs de votre site sans tenir compte de leur statut (pendant la période de développement par exemple). Par défaut, SPIP n\'affiche en public que les auteurs et les rubriques ayant au moins un élément publié.
+
+Bien qu\'il soit possible de contourner ce comportement à l\'aide du critère [<html>{tout}</html>->http://www.spip.net/fr_article4250.html], cet outil automatise le processus et vous évite d\'ajouter ce critère à toutes les boucles RUBRIQUES et/ou AUTEURS de vos squelettes.', # NEW
+	'aff_tout:nom' => 'Affiche tout', # NEW
 	'attente' => 'Espera...',
 	'auteur_forum:description' => 'Incita a tots els autors de missatges públics a omplir (amb una lletra com a mínim!) un nom i/o un correu electrònic per tal d\'evitar les contribucions totalment anònimes. Fixeu-vos que aquesta eina fa una verificació del JavaScript al lloc del visitant.[[%auteur_forum_nom%]][[->%auteur_forum_email%]][[->%auteur_forum_deux%]]
 {Alerta: Escollir la tercera opció anul·la les 2 primeres. És important verificar que els formularis del vostre esquelet són compatibles completament amb aquesta eina.}',
@@ -111,12 +115,12 @@ Exemples: <code>#SET{x,1}#SET_PLUS{x,2}</code> o <code>#SET{x,avions}#SET_REPLAC
 	'boites_privees:nom' => 'Requadres privats',
 	'bp_tri_auteurs' => 'Les classificacions d\'autors',
 	'bp_urls_propres' => 'Els URLs propis',
-	'brouteur:description' => '@puce@ {{Selector de secci&oacute; (cercador)}}. Utilitzeu el selector de secci&oacute; en AJAX a partir de %rubrique_brouteur% secci&oacute;(ons).
+	'brouteur:description' => '@puce@ {{Selector de secció (cercador)}}. Utilitzeu el selector de secció en AJAX a partir de %rubrique_brouteur% secció(ons).
 
-@puce@ {{Selecci&oacute; de paraules clau}}. Utilitzeu un camp de cerca en lloc d\'una llista de selecci&oacute; a partir de %select_mots_clefs% mot(s)-clef(s).
+@puce@ {{Selecció de paraules clau}}. Utilitzeu un camp de cerca en lloc d\'una llista de selecció a partir de %select_mots_clefs% mot(s)-clef(s).
 
-@puce@ {{Selecci&oacute; d\'autors}}. L\'afegit d\'un autor es fa per mini-navegador a dins de la forquilla seg&uuml;ent:
-<q1>• Una llista de selecci&oacute; per menys de %select_min_auteurs% autor(s).
+@puce@ {{Selecció d\'autors}}. L\'afegit d\'un autor es fa per mini-navegador a dins de la forquilla següent:
+<q1>• Una llista de selecció per menys de %select_min_auteurs% autor(s).
 _ • Un camp de cerca a partir de %select_max_auteurs% autor(s).</q1>',
 	'brouteur:nom' => 'Regulació dels selectors',
 
@@ -189,15 +193,15 @@ Fixeu-vos-hi bé: modificant aquest segon estil, també perdeu els estils estàn
 	'corbeille_objets_vider' => 'Suprimir els objectes seleccionats',
 	'corbeille_vider' => 'Buidar la paperera:',
 	'couleurs:aide' => 'Acolorir el text: <b>[coul]text[/coul]</b>@fond@ amb <b>coul</b> = @liste@',
-	'couleurs:description' => 'Permet aplicar f&agrave;cilment colors a tots els textos del lloc (articles, breus, t&iacute;tols, f&ograve;rum, …) utilitzant etiquetes entre claud&agrave;tors en dreceres: <code>[couleur]texte[/couleur]</code>.
+	'couleurs:description' => 'Permet aplicar fàcilment colors a tots els textos del lloc (articles, breus, títols, fòrum, …) utilitzant etiquetes entre claudàtors en dreceres: <code>[couleur]texte[/couleur]</code>.
 
-Dos exemples id&egrave;ntics per canviar el color del text:@_CS_EXEMPLE_COULEURS2@
+Dos exemples idèntics per canviar el color del text:@_CS_EXEMPLE_COULEURS2@
 
-&Iacute;dem per canviar el fons, si la opci&oacute; de m&eacute;s avall ho permet:@_CS_EXEMPLE_COULEURS3@
+Ídem per canviar el fons, si la opció de més avall ho permet:@_CS_EXEMPLE_COULEURS3@
 
 [[%couleurs_fonds%]]
 [[%set_couleurs%]][[-><set_couleurs valeur="1">%couleurs_perso%</set_couleurs>]]
-@_CS_ASTER@El format d\'aquestes etiquetes personalitzades ha de llistar colors existents o definir parelles &laquo;balise=couleur&raquo;, separats tots per comes. Exemples: &laquo;gris, vermell&raquo;, &laquo;fluix=groc, fort=vermell&raquo;, &laquo;baix=#99CC11, alt=marr&oacute;&raquo; o fins i tot &laquo;gris=#DDDDCC, vermell=#EE3300&raquo;. Pel primer i l\'&uacute;ltim exemple, les etiquetes autoritzades s&oacute;n: <code>[gris]</code> i <code>[rouge]</code> (<code>[fond gris]</code> i <code>[fond rouge]</code> si els fons estan permesos).',
+@_CS_ASTER@El format d\'aquestes etiquetes personalitzades ha de llistar colors existents o definir parelles «balise=couleur», separats tots per comes. Exemples: «gris, vermell», «fluix=groc, fort=vermell», «baix=#99CC11, alt=marró» o fins i tot «gris=#DDDDCC, vermell=#EE3300». Pel primer i l\'últim exemple, les etiquetes autoritzades són: <code>[gris]</code> i <code>[rouge]</code> (<code>[fond gris]</code> i <code>[fond rouge]</code> si els fons estan permesos).',
 	'couleurs:nom' => 'Tot en colors',
 	'couleurs_fonds' => ', <b>[fond coul]text[/coul]</b>, <b>[bg coul]text[/coul]</b>',
 	'cs_comportement:description' => '@puce@ {{Logs.}} Podeu obtenir molta informació sobre el funcionament del Ganivet Suís als fitxers {spip.log} que es poden trobar a dins del directori: {<html>@_CS_DIR_TMP@</html>}[[%log_couteau_suisse%]]
@@ -279,20 +283,22 @@ Aquesta eina es pot acompanyar amb « [.->sommaire] ».',
 	'distant_echoue' => 'Error en la càrrega distant, aquesta eina té el risc de no funcionar!',
 	'distant_inactif' => 'Fitxer introbable )eina inactiva).',
 	'distant_present' => 'Fitxer present a la llibreria a partir del @date@.',
+	'docgen' => 'Documentation générale', # NEW
+	'docwiki' => 'Carnet d\'idées', # NEW
 	'dossier_squelettes:description' => 'Modifica la carpeta de l\'esquelet utilitzat. Per exemple: "esquelets/elmeuesquelet". Podeu inscriure diverses carpetes separant-les pels dos punts <html>« : »</html>. Deixar buida la caixa que segueix (o teclejant "dist"), és l\'esquelet original "dist" subministrat per SPIP el que es farà servir.[[%dossier_squelettes%]]',
 	'dossier_squelettes:nom' => 'Carpeta de l\'esquelet',
 
 	// E
 	'ecran_activer' => 'Activar la pantalla de seguretat',
 	'ecran_conflit' => 'Atenció: el fitxer «@file@» entra en conflicte i s\'ha de suprimir!',
-	'ecran_conflit2' => 'Nota: s\'ha detectat i activat un fitxer estàtic «@file@». El Ganivet Suís no podrà ni actualitzar-lo ni configurar-lo.',
+	'ecran_conflit2' => 'Nota: s\'ha detectat i activat un fitxer estàtic «@file@». El Ganivet Suís no podrà ni actualitzar-lo ni configurar-lo.', # MODIF
 	'ecran_ko' => 'Pantalla inactiva!',
 	'ecran_maj_ko' => 'Hi ha disponible la versió {{@n@}} de la pantalla de seguretat. Actualitzeu el fitxer distant d\'aquesta eina.',
 	'ecran_maj_ko2' => 'La versió @n@ de la pantalla de seguretat està disponible. Podeu actualitzar el fitxer distant de l\'eina « [.->ecran_securite] ».',
 	'ecran_maj_ok' => '(sembla actualitzat).',
 	'ecran_securite:description' => 'La pantalla de seguretat és un fitxer PHP que es pot descarregar directament del lloc oficial d\'SPIP, que protegeix els vostres llocs bloquejant certs atacs lligats a forats de seguretat. Aquest sistema permet reaccionar molt ràpidament quan es descobreix un problema de seguretat, tapant el forat sense necessitat d\'actualitzar tot el lloc ni aplicar un « patch » complexe.
 
-A tenir en compte: la pantalla tanca algunes variables. D\'aquesta manera, per exemple, les  variables anomenades <code>id_xxx</code> estan totes controlades com si fossin obligatòriament valors numèrics sencers, per tal d\'evitar qualsevol injecció de codi SQL via aquest tipus de variable molt corrent. Alguns connectors no són compatibles amb amb totes les regles de la pantalla, utilitzant per exemple <code>&amp;id_x=new</code> per crear un objecte {x}.
+A tenir en compte: la pantalla tanca algunes variables. D\'aquesta manera, per exemple, les  variables anomenades <code>id_xxx</code> estan totes controlades com si fossin obligatòriament valors numèrics sencers, per tal d\'evitar qualsevol injecció de codi SQL via aquest tipus de variable molt corrent. Alguns connectors no són compatibles amb amb totes les regles de la pantalla, utilitzant per exemple <code>&id_x=new</code> per crear un objecte {x}.
 
 A més a més de la seguretat, aquesta pantalla té la capacitat de modular els accessos dels robots d\'infaccès des robots  d\'indexació als scripts PHP, per tal de dir-los-hi de « tornar més tard » quan el servidor està saturat.[[ %ecran_actif%]][[->
 @puce@ Regular la protecció anti-robots quan la càrrega del servidor (load) excedeix el valor: %ecran_load%
@@ -305,7 +311,7 @@ En cas d\'actualització oficial, actualitzeu el fitxer distant associat (clique
 	'effaces' => 'Esborrats',
 	'en_travaux:description' => 'Durant un període de manteniment, permet mostrar un missatge personalitzat a tot el lloc públic, eventualment la part privada.
 
-[[%message_travaux%]][[%titre_travaux%]][[%admin_travaux%]][[-><admin_travaux valeur="1">%avertir_travaux%</admin_travaux>]][[%prive_travaux%]]',
+[[%message_travaux%]][[%titre_travaux%]][[%admin_travaux%]][[-><admin_travaux valeur="1">%avertir_travaux%</admin_travaux>]][[%prive_travaux%]]', # MODIF
 	'en_travaux:nom' => 'Lloc en manteniment',
 	'erreur:bt' => '<span style="color:red;">Atenció:</span> la barra tipogràfica (versió @version@) sembla antiga.<br />El Ganivet Suís és compatible amb una versió igual o superior a @mini@.',
 	'erreur:description' => 'id absent en la definició de l\'eina!',
@@ -391,13 +397,13 @@ Per definir aquest logotip, dirigiu-vos a la pàgina «<:titre_configuration:>»
 	'insertions:description' => 'ATENCIÓ: eina en curs de desenvolupament!! [[%insertions%]]',
 	'insertions:nom' => 'Correccions automàtiques',
 	'introduction:description' => 'Aquesta etiqueta que cal posar a dins dels esquelets serveix, en general a la pàgina principal o a les seccions, per fer un resum dels articles, de les notes breus, etc..</p>
-<p>{{Atenció}}: Abans d\'activar aquesta funcionalitat, verifiqueu b&amp;eacute; que no existeix ja cap funci&amp;oacute; {balise_INTRODUCTION()} al vostre esquelet o als vostres plugins. La sobrec&amp;agrave;rrega produ&amp;iuml;ra un error de compilaci&amp;oacute;.</p>
-@puce@ Podeu precisar (en percentatge per relaci&amp;oacute; al valor utilitzat per defecte) la llargada del text a retornar per l\'etiqueta #INTRODUCTION. Cap valor o igual a 100 no modifica l\'aspecte de la introducci&amp;oacute; i utilitza, per tant, els valors per defecte seg&amp;uuml;ents: 500 car&amp;agrave;cters pels articles, 300 per les notes breus i 600 pels f&amp;ograve;rums i les seccions.
-[[%lgr_introduction%&amp;nbsp;%]]
+<p>{{Atenció}}: Abans d\'activar aquesta funcionalitat, verifiqueu b&eacute; que no existeix ja cap funci&oacute; {balise_INTRODUCTION()} al vostre esquelet o als vostres plugins. La sobrec&agrave;rrega produ&iuml;ra un error de compilaci&oacute;.</p>
+@puce@ Podeu precisar (en percentatge per relaci&oacute; al valor utilitzat per defecte) la llargada del text a retornar per l\'etiqueta #INTRODUCTION. Cap valor o igual a 100 no modifica l\'aspecte de la introducci&oacute; i utilitza, per tant, els valors per defecte seg&uuml;ents: 500 car&agrave;cters pels articles, 300 per les notes breus i 600 pels f&ograve;rums i les seccions.
+[[%lgr_introduction%&nbsp;%]]
 
-@puce@ Per defecte, els punts de continuaci&amp;oacute; afegits al resultat de l\'etiqueta #INTRODUCTION si el text &amp;eacute;s massa llarg s&amp;oacute;n: <html>«&amp;nbsp;(…)»</html>. Aqu&amp;iacute; podeu precisar la vostra pr&amp;ograve;pia cadena de car&amp;agrave;cters que indiqui al lector que el text tallat t&amp;eacute; una continuaci&amp;oacute;.
+@puce@ Per defecte, els punts de continuaci&oacute; afegits al resultat de l\'etiqueta #INTRODUCTION si el text &eacute;s massa llarg s&oacute;n: <html>«&nbsp;(…)»</html>. Aqu&iacute; podeu precisar la vostra pr&ograve;pia cadena de car&agrave;cters que indiqui al lector que el text tallat t&eacute; una continuaci&oacute;.
 [[%suite_introduction%]]
-@puce@ Si l\'etiqueta #INTRODUCTION es fa servir per resumir un article, llavors el Ganivet Su&amp;iacute;s pot fabricar un hipervincle al damunt dels punts de continuaci&amp;oacute; definits m&amp;eacute;s amunt per tal portar al lector cap al text original. Per exemple: &amp;laquo;Llegir la continuaci&amp;oacute; de l\'article…&amp;raquo;
+@puce@ Si l\'etiqueta #INTRODUCTION es fa servir per resumir un article, llavors el Ganivet Su&iacute;s pot fabricar un hipervincle al damunt dels punts de continuaci&oacute; definits m&eacute;s amunt per tal portar al lector cap al text original. Per exemple: &laquo;Llegir la continuaci&oacute; de l\'article…&raquo;
 [[%lien_introduction%]]
 ',
 	'introduction:nom' => 'Etiqueta #INTRODUCTION',
@@ -510,6 +516,7 @@ Atenció, aquesta eina necessita per funcionar el plugin {jQuery}: {Round Corner
 	'label:terminaison_urls_page' => 'Terminacions dels URls (ex : « .html ») :',
 	'label:titre_travaux' => 'Títol del missatge:',
 	'label:titres_etendus' => 'Activar la utilització àmplia d\'etiquetes #TITRE_XXX :',
+	'label:tout_rub' => 'Afficher en public tous les objets suivants :', # NEW
 	'label:url_arbo_minuscules' => 'Conservar els tipus dels títols en els URLs:',
 	'label:url_arbo_sep_id' => 'Caràcter de separació \'titre-id\' en cas de doublon:<br />(no utilitzar \'/\')',
 	'label:url_glossaire_externe2' => 'Enllaç al glossari extern:',
@@ -728,7 +735,7 @@ _ • {Memòria cau permanent}: els terminis d\'invalidació de la memòria cau 
 _ • {Sense memòria cau}: desactivar temporalment la memòria cau pot ajudar al desenvolupament del lloc Web. Aquí, no s\'emmagatzema res al disc.
 _ • {Control de la memòria cau}: opció idèntica a l\'anterior, amb una escriptura al disc de tots els resultats per tal de poder, eventualment, controlar-los.</q1>[[%radio_desactive_cache4%]]',
 	'spip_cache:description3' => '@puce@ L\'extensió «Compressor» present a SPIP permet compactar els diferents elements CSS i Javascript de les vostres pàgines i situar-los a dins d\'una memòria cau estàtica. Això accelera la visualització del lloc, i limita el número de crides al servidor i la mida dels fitxer a obtenir. ',
-	'spip_cache:nom' => 'SPIP i la mem&ograve;ria cau…',
+	'spip_cache:nom' => 'SPIP i la memòria cau…',
 	'spip_ecran:description' => 'Determina l\'amplada de la pantalla imposada a tots a la part privada. Una pantalla estreta presentarà dues columnes i una pantalla ampla en presentarà tres. ésentera trois. La configuració per defecta deixa que l\'usuari trii, emmagatzemant en una galeta la tria feta.[[%spip_ecran%]]',
 	'spip_ecran:nom' => 'Amplada de pantalla',
 	'stat_auteurs' => 'Els autors en stat',
@@ -752,7 +759,7 @@ Per exemple, en un bucle sobre (ARTICLES), #TITRE_SECTEUR donarà el títol del 
 
 La sintaxi <html>#TITRE_XXX{yy}</html> se suporta igualment. Exemple: <html>#TITRE_ARTICLE{10}</html> retornarà el títol de l\'article #10.[[%titres_etendus%]]',
 	'titre_parent:nom' => 'Etiqueta #TITRE_PARENT/OBJET',
-	'titre_tests' => 'El Ganivet Su&iacute;s - P&agrave;gina de proves…',
+	'titre_tests' => 'El Ganivet Suís - Pàgina de proves…',
 	'titres_typo:description' => 'Transforma tots els subtítols <html>«{{{El meu subtítol}}}»</html> en imatge tipogràfica amb paràmetres.[[%i_taille% pt]][[%i_couleur%]][[%i_police%
 
 Fonts disponibles : @_CS_FONTS@]][[%i_largeur% px]][[%i_hauteur% pt]][[%i_padding% px]][[%i_align%]]
@@ -773,6 +780,7 @@ La funció SPIP utilitzada en PHP és <code>_T(\'chaine\')</code> sense argument
 Per tant, no oblideu verificar que la clau  <code>\'chaine\'</code> està ben definida en els fitxers de llengües. ',
 	'toutmulti:nom' => 'Blocs multilingües',
 	'travaux_masquer_avert' => 'Amagar el requadre indicant al lloc públic que s\'està fent un manteniment.',
+	'travaux_nocache' => 'Désactiver également le cache de SPIP', # NEW
 	'travaux_nom_site' => '@_CS_NOM_SITE@',
 	'travaux_prochainement' => 'Aquest lloc es restablirà ben aviat.
 _ Gràcies per la vostra comprensió.',

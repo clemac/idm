@@ -6,6 +6,8 @@ if (!defined("_ECRIRE_INC_VERSION")) return; // securiser
 include_spip('inc/actions');
 include_spip('inc/distant');
 include_spip('inc/presentation');
+if(version_compare(PHP_VERSION, '5.0.0', '>='))	
+	include_spip('outils/maj_auto_php5'); else { function cs_svn17($dir) { return false; } }
 
 define('_MAJ_SVN_FILE', 'file:///home/svn/repository/spip-zone/');
 define('_MAJ_SVN_DEBUT', 'svn://zone.spip.org/spip-zone/');
@@ -133,12 +135,13 @@ function maj_auto_action_rapide() {
 		${$actif?'html_actifs':($extension?'html_extensions':'html_inactifs')}[] = "|$bouton|$nom|$rev|";
 	}
 	
+	$sep = " class='cs_hidden'> (...)</span>}}|<|<|\n";
 	$html1 = "\n<div $style id='maj_auto_div'>$html1<fieldset><legend $style>"
 		. _T('couteau:maj_liste').'</legend>'
 		. propre(
-			(count($html_actifs)? "\n|{{" . _T('couteau:plug_actifs') . "}}|<|<|\n" . join("\n",$html_actifs) . "\n" : '')
-			. (count($html_extensions)? "\n|{{" . _T('plugins_liste_extensions') . "}}|<|<|\n" . join("\n",$html_extensions) . "\n" : '')
-			. (count($html_inactifs)? "\n|{{" . _T('couteau:plug_inactifs') . "}}|<|<|\n" . join("\n",$html_inactifs) . "\n" : '')
+			(count($html_actifs)? "\n|{{" . _T('couteau:plug_actifs') . "<span id='maj_1'" . $sep . join("\n",$html_actifs) . "\n" : '')
+			. (count($html_extensions)? "\n|{{" . _T('plugins_liste_extensions') . "<span id='maj_2'". $sep . join("\n",$html_extensions) . "\n" : '')
+			. (count($html_inactifs)? "\n|{{" . _T('couteau:plug_inactifs') . "<span id='maj_3'". $sep . join("\n",$html_inactifs) . "\n" : '')
 		  )
 		. "<div style='text-align: right;'><input class='fondo' type='submit' value=\""
 		. attribut_html(_T('couteau:maj_maj'))
@@ -152,12 +155,31 @@ jQuery(document).ready(function() {
 		jQuery('#maj_auto_div :submit').parent().remove();
 		jQuery('#maj_auto_div :radio').attr('disabled','disabled');
 	}
-	if(!jQuery('#maj_auto_div :radio:checked').length)
+	if(!jQuery('#maj_auto_div :radio:checked').length && jQuery('#maj_auto_div :radio').length)
 		jQuery('#maj_auto_div :radio:first')[0].checked = true;
 	re.click(function() {
 		cs_href_click(jQuery('#maj_auto')[0], true);
 		return false;
 	});
+	jQuery('#maj_auto_div thead').click( function() {
+		jQuery(this).next().toggleClass('cs_hidden');
+		span = jQuery('span', this);
+		cs_EcrireCookie(span[0].id, '+'+span[0].className, dixans);
+		span.toggleClass('cs_hidden');
+		// annulation du clic
+		return false;
+	}).each(maj_lire_cookie);
+
+function maj_lire_cookie(i,e){
+	jQuery(this).attr('style', 'cursor:pointer;')
+	var span = jQuery('span', this);
+	var c = cs_LireCookie(span[0].id);
+	if(c!==null && c.match('cs_hidden')) {
+		jQuery(this).next().addClass('cs_hidden');
+		span.removeClass('cs_hidden');
+	}
+}
+
 });");
 	$html2 = "\n<div class='cs_sobre'><input class='cs_sobre' type='submit' value=\"["
 		. attribut_html(_T('couteau:maj_actu'))	. ']" /></div>';
@@ -199,7 +221,7 @@ function plugin_get_infos_maj($p, $timeout=false, $DIR_PLUGINS=_DIR_PLUGINS) {
 		$get_infos = charger_fonction('get_infos','plugins');
 		$infos = $get_infos($p, false, $DIR_PLUGINS);
 	} else $infos = plugin_get_infos($p);
-	// fichier svn.revision
+	// fichier svn.revision fourni par SPIP
 	$ok = lire_fichier($svn_rev = $DIR_PLUGINS.$p.'/svn.revision', $svn);
 	$lastmodified = @file_exists($svn_rev)?@filemtime($svn_rev):0;
 	if($ok && preg_match(',<origine>(.+)</origine>,', $svn, $regs)) {
@@ -209,15 +231,18 @@ function plugin_get_infos_maj($p, $timeout=false, $DIR_PLUGINS=_DIR_PLUGINS) {
 	} else $url_origine = '';
 	$infos['commit'] = ($ok && preg_match(',<commit>(.+)</commit>,', $svn, $regs))?$regs[1]:'';
 	$rev_local = (strlen($svn) && preg_match(',<revision>(.+)</revision>,', $svn, $regs))
-		?intval($regs[1]):version_svn_courante($DIR_PLUGINS.$p);
-	if($infos['svn'] = $rev_local<0) { 
-		// fichier SVN
-		if (lire_fichier($DIR_PLUGINS.$p.'/.svn/entries', $svn) 
-				&& preg_match(',(?:'.preg_quote(_MAJ_SVN_TRAC).'|'.preg_quote(_MAJ_SVN_DEBUT).')[^\n\r]+,ms', $svn, $regs)) {
-			$url_origine = str_replace(array(_MAJ_SVN_TRAC,_MAJ_SVN_DEBUT), _MAJ_LOG_DEBUT, $regs[0]);
-			// prise en compte du recent demenagement de la Zone...
-			$url_origine = preg_replace(',/_plugins_/_(?:stable|dev|test)_/,','/_plugins_/', $url_origine);
-		}
+		?intval($regs[1]):version_svn_courante2($DIR_PLUGINS.$p);
+	if($infos['svn'] = is_array($rev_local) || $rev_local<0) { 
+		// systeme SVN en place
+		if (is_array($rev_local)) // version SVN >= 1.7 ?
+			list($rev_local, $url_origine) = $rev_local;	
+		// version SVN anterieure
+		elseif (lire_fichier($DIR_PLUGINS.$p.'/.svn/entries', $svn) 
+				&& preg_match(',(?:'.preg_quote(_MAJ_SVN_TRAC).'|'.preg_quote(_MAJ_SVN_DEBUT).')[^\n\r]+,ms', $svn, $regs))
+			$url_origine = $regs[0];
+		$url_origine = str_replace(array(_MAJ_SVN_TRAC,_MAJ_SVN_DEBUT), _MAJ_LOG_DEBUT, $url_origine);
+		// prise en compte du recent demenagement de la Zone...
+		$url_origine = preg_replace(',/_plugins_/_(?:stable|dev|test)_/,','/_plugins_/', $url_origine);
 		//$infos['zip_trac'] = 'SVN';
 	}
 	$infos['url_origine'] = strlen($url_origine)?$url_origine._MAJ_LOG_FIN:'';
@@ -249,6 +274,23 @@ function maj_auto_maj_auto_forcer_action() {
 	// forcer la lecture des revisions distantes de plugins
 	ecrire_meta('tweaks_maj_auto', serialize(array()));
 	ecrire_metas();
+}
+
+function version_svn_courante2($dir) {
+	// recherche de la base de donnee
+	if(!$db = @file_exists($dir2 = realpath($dir . '/.svn/wc.db'))) {
+		// version <1.7 de Subversion (reconnue par SPIP)
+		if(@file_exists($dir.'/.svn/entries')) return version_svn_courante($dir);
+		// trunk et extensions
+		$db = @file_exists($dir2 = realpath($dir . '/../.svn/wc.db'));
+		if(!$db) {
+			// branches
+			$db = @file_exists($dir2 = realpath($dir . '/../../.svn/wc.db'));
+			if($db) $b = basename(dirname($dir)).'/'.basename($dir);
+		} else $b = basename($dir);
+	} else $b = '';
+	// version 1.7 de Subversion
+	return cs_svn17($dir2);
 }
 
 ?>
