@@ -21,17 +21,25 @@ This is done in Git, and there are 4 branches to keep track of (plus
 temporary ones for experimental features, if needed). That can change if
 we end up working in a team but so far:
 - =spip3= is tracking the SVN version of the SPIP core (without
-  extensions)
+  extensions). This is not expected to work, because the extensions
+  are not part of that tree and so far the bare SPIP core is not self
+  sufficient.
 - =upstream= incorporates the extensions, and merges =spip3=
-  periodically (meaning whenever a bug is fixed there)
-- =idm= is the current status of the website, and merges =upstream= when
-  needed
+  periodically (meaning whenever a bug is fixed there). It should do both
+  at the same time, meaning that a =spip3/upstream= merge is an
+  "official" SPIP snapshot.
+- =idm= is the current status of the website, with the IdM template,
+  and merges =upstream= when needed
 - =test= is for development of new but "easy" features, and is typically
   merged into =idm= the same day
 
 * Issues
 *** Urgent
+- Solve the forum bug
+- Allow for several articles per referee [0%]
+  - [ ] Do not free a referee completely when an article is published
 *** In progress
+- Podcasts
 - [CSS] Merge =div.plan= and =div.lexique=
 - Overhaul of the search engine [33%]
   - [X] Accents, this is done by SPIP3
