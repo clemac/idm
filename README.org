@@ -39,7 +39,7 @@ we end up working in a team but so far:
   - [ ] Do not free a referee completely when an article is published
 *** In progress
 - Podcasts
-- [CSS] Merge =div.plan= and =div.lexique=
+- Merge =div.plan= and =div.lexique=
 - Overhaul of the search engine [33%]
   - [X] Accents, this is done by SPIP3
   - [ ] Sort, classify etc by theme
@@ -53,13 +53,9 @@ we end up working in a team but so far:
   - [X] Create the page, basic functionality
   - [ ] Merge it with =sommaire.html= for maintainability
   - [ ] Merge the system with the color filtering ?
-- Partenariats [50%]
-  - [X] Add keywords, display the logo on relevant articles
-  - [ ] Make the phrase customizable by keyword
 *** Next
 - CC per article
 - Loop videos
-- Make the billets visually different
 - Upgrade Mathjax [0%]
   - [ ] Wait for label/ref to be in mainline mathjax
   - [ ] Wait for it to be in a stable release
@@ -84,15 +80,6 @@ we end up working in a team but so far:
   elsewhere, the rest should go
 *** Geekeries and SPIPeries
 - In a loop, =#_parent:TITRE=
-- Refactor uses of =idm_notify= [75%]
-  - [X] Accept an array as recipient
-  - [X] Call it with an array when possible
-  - [X] Store recipient lists in a config file
-  - [ ] Solve the problem that =config/mes_options.html= is not read
-    during AJAX calls - fixed (it was read but the variable was not
-    global) but now the point is moot, we do something else
-- =prive/squelettes/contenu/idm_relecteur.html=
-  - Make the relecteur an "objet éditorial" ?
 - Files which are patched versions of upstream (store as a patch for upgrades)
   - =.htaccess= (from =htaccess.txt=)
   - =formulaires/inc-forum_previsu.html=
