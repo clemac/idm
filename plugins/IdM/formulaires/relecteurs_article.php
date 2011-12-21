@@ -4,35 +4,13 @@ include_spip('base/abstract_sql');
 
 function notify_user ($id_auteur, $id_article) {
   $titre = sql_getfetsel ("titre", "spip_articles", "id_article = $id_article");
-  $titre = utf8_decode ($titre);
 
   $subject = "Relecture d'un article pour Images des Maths";
 
-  $texte = "Un article vient d'être proposé pour publication dans \"Images des\n" .
-    "Mathématiques\". Il s'intitule :\n" .
-    "\n" .
-    "  « $titre »\n" .
-    "\n" .
-    "Comme vous avez manifesté votre intérêt à participer à notre\n" .
-    "processus éditorial, nous vous invitons à en être un des relecteurs,\n" .
-    "et à nous faire part de vos commentaires. Pour ce faire, après vous\n" .
-    "être identifié(e) sur le site, il vous suffit de vous rendre à\n" .
-    "l'adresse suivante :\n" .
-    "\n" .
-    "  http://images.math.cnrs.fr/spip.php?page=propose&id_article=$id_article\n" .
-    "\n" .
-    "Vous y trouverez l'article dans son état actuel, un forum de discussion\n" .
-    "vous permettant de déposer vos commentaires et de dialoguer avec les\n" .
-    "autres relecteurs ainsi qu'avec l'auteur de l'article, et enfin un\n" .
-    "formulaire de vote pour donner votre avis sur sa publication.\n" .
-    "\n" .
-    "Nous souhaiterions pouvoir publier cet article dans les 15 jours qui\n" .
-    "viennent. Si vous n'avez pas le temps de le relire d'ici là, ça n'est\n" .
-    "pas grave - mais nous le publierons peut-être sans vous attendre ...\n".
-    "\n" .
-    "Merci pour votre aide !";
+  $texte = _T('idm:mail_rel_article', array('titre'      => $titre,
+                                        'id_article' => $id_article));
 
-  idm_notify ($id_auteur, utf8_encode($texte), $subject);
+  idm_notify ($id_auteur, $texte, $subject);
 }
 
 function nettoie () {

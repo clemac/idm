@@ -44,14 +44,9 @@ function formulaires_forum_relecture_traiter ($id_article, $id_parent) {
   }
   
   $subject = "Un nouveau message de relecture soumis sur IdM";
-  $message = <<< END
-Un nouveau commentaire a été posté dans un forum de relecture du site
-"Images des Mathématiques". Il faut maintenant le valider ici :
+  $message = _T('idm:mail_rel_forum_soumis');
 
-  http://images.math.cnrs.fr/ecrire/?exec=idm_moderation
-END;
-
-  idm_notify ('relecture', utf8_encode($message), $subject);
+  idm_notify ('relecture', $message, $subject);
 
   return array ('message_ok' => "done");
 }
