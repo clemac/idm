@@ -11,27 +11,15 @@ function notify_comite ($id_auteur, $id_article, $titre, $date) {
   $gars = $idm_team_billets [$today];
 
   $qui = sql_getfetsel ("nom", "spip_auteurs", "id_auteur = $id_auteur");
-  $qui = utf8_decode ($qui);
-  $titre = utf8_decode ($titre);
 
   $subject = "Un nouveau billet pour Images des Maths";
 
-  $texte = "Un nouveau billet vient d'être validé pour Images des Maths.\n" .
-    "\n" .
-    "  Auteur : $qui\n" .
-    "\n" .
-    "  Titre : « $titre »\n" .
-    "\n" .
-    "Sans action de la part du comité éditorial, il sera publié à\n" .
-    "la date suivante :\n" .
-    "\n" .
-    "  $date\n" .
-    "\n" .
-    "En attendant, il est accessible aux administrateurs ici :\n" .
-    "\n" .
-    "  http://images.math.cnrs.fr/ecrire/?exec=articles&action=redirect&type=article&id=$id_article&var_mode=preview";
+  $texte = _T('idm:mail_billet_valide', array('auteur'     => $qui,
+                                              'titre'      => $titre,
+                                              'date'       => $date,
+                                              'id_article' => $id_article));
 
-  idm_notify (array(0,$gars), utf8_encode($texte), $subject);
+  idm_notify (array(0,$gars), $texte, $subject);
 }
 
 function formulaires_billet_charger () {

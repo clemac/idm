@@ -2,7 +2,7 @@
 
 <BOUCLE_eq(IDM_TEAMS) {par team}>
   <B_gars>
-    #BOITE_OUVRIR{Équipe “#TEAM” :, simple, titrem}
+    [(#BOITE_OUVRIR{<:idm:equipe{nom=#TEAM}:>, simple, titrem})]
       <ul>
   <BOUCLE_gars(IDM_TEAMS) {team} {doublons}>
         <li>#INFO_NOM{auteur,#ID_AUTEUR}</li>

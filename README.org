@@ -35,7 +35,6 @@ we end up working in a team but so far:
 
 * Issues
 *** Urgent
-- Solve the forum bug
 - Allow for several articles per referee [0%]
   - [ ] Do not free a referee completely when an article is published
 *** In progress
@@ -101,3 +100,4 @@ we end up working in a team but so far:
 - Use the =|unique= filter instead of doing it by hand
   - =squelettes/iphone.html=
   - =squelettes/lexique.html=
+- Use language strings as much as possible (transfer in passing)

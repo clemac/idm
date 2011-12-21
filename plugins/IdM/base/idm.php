@@ -7,21 +7,6 @@ function idm_declarer_tables_interfaces ($interfaces) {
 
   $interfaces['table_des_traitements']['NOM'][0] = str_replace ('%s', 'idm_prenom_nom(%s)', $interfaces['table_des_traitements']['NOM'][0]);
 
-  /*
-   * $interfaces['table_date']['syndication'] = 'date';
-   *
-   * $interfaces['tables_jointures']['spip_syndic_articles'][]= 'syndic';
-   *
-   * // Articles syndiques : passage des donnees telles quelles, sans traitement typo
-   * // la securite et conformite XHTML de ces champs est assuree par safehtml()
-   * foreach(array('DESCRIPTIF','SOURCE','URL','URL_SOURCE','LESAUTEURS','TAGS') as $balise)
-   *   if (!isset($interfaces['table_des_traitements'][$balise]['syndic_articles']))
-   *     $interfaces['table_des_traitements'][$balise]['syndic_articles'] = 'safehtml(%s)';
-   *   else
-   *     if (strpos($interfaces['table_des_traitements'][$balise]['syndic_articles'],'safehtml')==false)
-   *       $interfaces['table_des_traitements'][$balise]['syndic_articles'] = 'safehtml('.$interfaces['table_des_traitements'][$balise]['syndic_articles'].')';
-   */
-
   return $interfaces;
 }
 
