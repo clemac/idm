@@ -53,8 +53,11 @@ function queue_add_job($function, $description, $arguments = array(), $file = ''
 	$md5args = md5($arguments);
 
 	// si pas de date programee, des que possible
-	if (!$time)
+	$duplicate_where = 'status='.intval(_JQ_SCHEDULED).' AND ';
+	if (!$time){
 		$time = time();
+		$duplicate_where = ""; // ne pas dupliquer si deja le meme job en cours d'execution
+	}
 	$date = date('Y-m-d H:i:s',$time);
 
 	$set_job = array(
@@ -74,7 +77,7 @@ function queue_add_job($function, $description, $arguments = array(), $file = ''
 		AND
 			$id_job = sql_getfetsel('id_job','spip_jobs',
 				$duplicate_where =
-					'status='.intval(_JQ_SCHEDULED).' AND fonction='.sql_quote($function)
+					$duplicate_where . 'fonction='.sql_quote($function)
 				.(($no_duplicate==='function_only')?'':
 				 ' AND md5args='.sql_quote($md5args).' AND inclure='.sql_quote($file)))
 		)
@@ -411,10 +414,6 @@ function queue_update_next_job_time($next_time=null){
 	static $deja_la = false;
 	// prendre le min des $next_time que l'on voit passer ici, en cas de reentrance
 	static $next = null;
-	if (!is_null($next_time)){
-		if (is_null($next) OR $next>$next_time)
-			$next = $next_time;
-	}
 	// queue_close_job peut etre reentrant ici
 	if ($deja_la) return;
 	$deja_la = true;
@@ -435,7 +434,11 @@ function queue_update_next_job_time($next_time=null){
 		$date = sql_getfetsel('date','spip_jobs',"status=".intval(_JQ_SCHEDULED),'','date','0,1');
 		$next = strtotime($date);
 	}
-	else {
+	if (!is_null($next_time)){
+		if (is_null($next) OR $next>$next_time)
+			$next = $next_time;
+	}
+
 		if ($next){
 			if (is_null($nb_jobs_scheduled))
 				$nb_jobs_scheduled = sql_countsel('spip_jobs',"status=".intval(_JQ_SCHEDULED)." AND date<".sql_quote(date('Y-m-d H:i:s',$time)));
@@ -446,7 +449,6 @@ function queue_update_next_job_time($next_time=null){
 			if ($nb_jobs_scheduled>defined('_JQ_NB_JOBS_OVERFLOW')?_JQ_NB_JOBS_OVERFLOW:10000)
 				define('_DIRECT_CRON_FORCE',true);
 		}
-	}
 
 	queue_set_next_job_time($next);
 	$deja_la = false;

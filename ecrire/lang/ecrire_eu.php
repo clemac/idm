@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -294,7 +294,7 @@ Seguritate hobetzeko, konfigurazio hau aldatu behar zenuke, edo @constantes@ kon
 'info_classement_2' => '.@zerrendan@',
 'info_code_acces' => 'Zure sarbide kodeak ezahaztu !',
 'info_compatibilite_html' => 'Segitu beharreko HTML normak',
-'info_compresseur_gzip' => '<b>N. B. :</b> Aterbetazileak ez dituenez jadanik php script-ak konprimitzen baieztatzea gomendatua da ; horretarako serbitsu hau erabiltzen ahal dezakezu : @testgzip@',
+'info_compresseur_gzip' => '<b>N. B. :</b> Aterbetazileak ez dituenez jadanik php script-ak konprimitzen baieztatzea gomendatua da ; horretarako serbitsu hau erabiltzen ahal dezakezu : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Zure sareburuak ez baditu automatikoki html orrialdeak konprimitzen erabiltzaileari igortzeko, konpresioa bortxatzen entsegatzen ahal zira deskargatutako orrien pisua ttipitzeko.<b>Kontuz</b> : teknika hunek zoinbeit sareburu zinez moteltzen ahal ditu.',
 'info_config_suivi' => 'Helbide hau korreo lista bati baldin ba dagokio, hemen azpian bere bitartez tokiarenparte-hartzaileek inskripzioa egin dezaketen helbidea jar dezakezu. Helbide hau URLbat izan daiteke ( adibidez web-aren bitartez izena emateko orria), edo e-mail helbidebat gai zehatz batekin (adibidez: @adresse_suivi@?subject=subscribe):',
 'info_config_suivi_explication' => 'Gune honetako posta-zerrendan harpidetza egindezakezu. Argitalpenerako proposaturiko artikuluen eta berri laburren iragarpenakjasoko dituzu posta elektronikoz.',
@@ -327,7 +327,7 @@ Seguritate hobetzeko, konfigurazio hau aldatu behar zenuke, edo @constantes@ kon
 'info_ecrire_article' => 'Artikuluak idatzi aurretik, atal bat sortu behar duzu.',
 'info_email_envoi' => 'Bidalketarako posta-helbidea (aukeran)',
 'info_email_envoi_txt' => 'Adierazi hemen emailak bidaltzeko erabili behar den helbidea (bestela, helbide hartzailea erabiliko da bidalketa-helbide gisa) :',
-'info_email_webmestre' => 'Webmaster-aren posta elektronikoko helbidea (aukerazkoa)',
+'info_email_webmestre' => 'Webmaster-aren posta elektronikoko helbidea (aukerazkoa)', # MODIF
 'info_entrer_code_alphabet' => 'Sar ezazu erabiliko den alfabetoaren kodea',
 'info_envoi_email_automatique' => 'Mezu elektronikoen bidalketa automatikoa',
 'info_envoyer_maintenant' => 'Orain bidali',
@@ -363,7 +363,7 @@ Kasu honetan, SPIP-eko hurrengo funtzinalitateak ez dute funtzionatuko.',
 'info_historique_texte' => 'Berrikuspenen jarraipenak artikulu baten edukiari egindako aldaketa guztien historia gordetzen eta geroko bertsioen arteko desberdintasunak bistaratzen uzten du.',
 'info_identification_publique' => 'Zurenortasun publikoa...',
 'info_image_process' => 'Mesedez aukeratu biñetak egitekomodurik onena dagokion irudian klikatuz.',
-'info_image_process2' => '<b>N.B.</b> Ez bada irudirik agertzen, orduan zure gunea ostatatzen duen zerbitzaria ez dago konfiguratuta tresna horiek erabiltzeko. Funtzio horiek erabili nahi badituzu, arduradun teknikoarekin kontaktatu eta «GD» edo «Imagick» luzapenak eskatu.',
+'info_image_process2' => '<b>N.B.</b> Ez bada irudirik agertzen, orduan zure gunea ostatatzen duen zerbitzaria ez dago konfiguratuta tresna horiek erabiltzeko. Funtzio horiek erabili nahi badituzu, arduradun teknikoarekin kontaktatu eta «GD» edo «Imagick» luzapenak eskatu.', # MODIF
 'info_images_auto' => 'Automatikoki kalkulatutako irudiak',
 'info_informations_personnelles' => 'Bosgarren etapa : Datu pertsonalak',
 'info_inscription_automatique' => 'Pertsona berrien izen-emate automatikoa',
@@ -504,7 +504,7 @@ Ostapen zuzkitzaile batzuek mail-bidalketa desaktibatzen dute bere zerbitzarieta
 'info_site_2' => 'tokia :',
 'info_site_min' => 'tokia',
 'info_site_reference_2' => 'Toki erreferientziatua',
-'info_site_web' => 'WEB GUNEA :', # MODIF
+'info_site_web' => 'WEB GUNEA :',
 'info_sites' => 'guneak',
 'info_sites_lies_mot' => 'Gako-hitz honi lotutako gune erreferientziatuak',
 'info_sites_proxy' => 'Proxy bat erabili',
@@ -739,6 +739,7 @@ Itzulpenak originalari asoziatuta daude, bere egoera adierazten duten kolore bat
 'plugin_titre_automatique' => 'Instalazio automatikoa',
 'plugin_titre_automatique_ajouter' => 'Plugin batzu gehitu',
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Aktibatzeko, segitu',
 'plugin_zip_adresse' => 'Hemen zehaz eazu deskargatu nahi duzun plugin  baten zip fitxategiaren helbidea, edo plugin zerrenda baten helbidea.',
 'plugin_zip_adresse_champ' => 'pluginaren edo zerrendaren helbidea ',
@@ -750,7 +751,7 @@ Itzulpenak originalari asoziatuta daude, bere egoera adierazten duten kolore bat
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugin aktibatuak.',
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugin',
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugin erabilgarriak',
@@ -758,6 +759,7 @@ Itzulpenak originalari asoziatuta daude, bere egoera adierazten duten kolore bat
 'plugins_liste' => 'Pluginen zerrenda',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hierarkia',
 'plugins_vue_liste' => 'Zerrenda',
 'protocole_ldap' => 'Protokoloaren bersioa :',

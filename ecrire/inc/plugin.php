@@ -20,7 +20,8 @@ include_spip('plugins/installer');
 
 // lecture des sous repertoire plugin existants
 // $dir_plugins pour forcer un repertoire (ex: _DIR_EXTENSIONS)
-// _DIR_PLUGINS_SUPPL pour aller en chercher ailleurs (separes par des ":")
+// _DIR_PLUGINS_SUPPL pour aller en chercher ailleurs
+// (chemins relatifs a la racine du site, separes par des ":")
 // http://doc.spip.org/@liste_plugin_files
 function liste_plugin_files($dir_plugins = null){
 	static $plugin_files=array();
@@ -32,21 +33,31 @@ function liste_plugin_files($dir_plugins = null){
 		foreach (fast_find_plugin_dirs($dir_plugins) as $plugin) {
 			$plugin_files[$dir_plugins][] = substr($plugin,strlen($dir_plugins));
 		}
-		// hack affreux pour avoir le bon chemin pour les repertoires
-		// supplementaires ; chemin calcule par rapport a _DIR_PLUGINS.
-		if (isset($dir_plugins_suppl)) {
+
+		// traitement des repertoires de plugins supplementaires (mutu)
+		// avec un hack affreux pour avoir le bon chemin
+		// puisqu'il est calcule par rapport a _DIR_PLUGINS.		
+		if ($dir_plugins == _DIR_PLUGINS AND defined('_DIR_PLUGINS_SUPPL')) {
+			$dir_plugins_suppl = array_filter(explode(':',_DIR_PLUGINS_SUPPL));
 			foreach($dir_plugins_suppl as $suppl) {
+				$suppl = _DIR_RACINE.$suppl.(substr($suppl, -1) != '/' ? '/' : '');
 				foreach (fast_find_plugin_dirs($suppl) as $plugin) {
-					$plugin_files[$dir_plugins][] = (_DIR_RACINE ?'': '../') .$plugin;
+					if (!in_array($plugin, $plugin_files[$dir_plugins]))
+						$plugin_files[$dir_plugins][] = $plugin;
 				}
 			}
 		}
+		
 		sort($plugin_files[$dir_plugins]);
+		// et on lit le XML de tous les plugins pour le mettre en cache
+		// et en profiter pour nettoyer ceux qui n'existent plus du cache
+		$get_infos = charger_fonction('get_infos','plugins');
+		$get_infos($plugin_files[$dir_plugins],false,$dir_plugins,true);
 	}
 	return $plugin_files[$dir_plugins];
 }
 
-function fast_find_plugin_dirs($dir,$max_prof=100) {
+function fast_find_plugin_dirs($dir, $max_prof=100) {
 	$fichiers = array();
 	// revenir au repertoire racine si on a recu dossier/truc
 	// pour regarder dossier/truc/ ne pas oublier le / final
@@ -355,11 +366,12 @@ function plugin_controler_necessite($liste, $nom, $version)
 
 function plugin_controler_lib($lib, $url)
 {
-	if ($url) {
+	/* Feature sortie du core, voir STP
+	 * if ($url) {
 		include_spip('inc/charger_plugin');
 		$url = '<br />'	. bouton_telechargement_plugin($url, 'lib');
-	}
-	return _T('plugin_necessite_lib', array('lib'=>$lib)) . $url;
+	}*/
+	return _T('plugin_necessite_lib', array('lib'=>$lib)) . " <a href='$url'>$url</a>";
 }
 
 // Pour compatibilite et lisibilite du code
@@ -421,7 +433,8 @@ function ecrire_plugin_actifs($plugin,$pipe_recherche=false,$operation='raz') {
 	}
 	if ($err) plugins_erreurs($err, '', $infos, $msg);
 
-	effacer_meta('message_crash_plugins');
+	if (isset($GLOBALS['meta']['message_crash_plugins']))
+		effacer_meta('message_crash_plugins');
 	ecrire_meta('plugin',serialize($plugin_valides));
 	$liste = array_diff_assoc($liste,$plugin_valides);
 	ecrire_meta('plugin_attente',serialize($liste));
@@ -465,8 +478,10 @@ function plugins_precompile_chemin($plugin_valides, $ordre)
 				$contenu .= "define('_DIR_PLUGIN_$prefix',$dir);\n";
 				foreach($info['chemin'] as $chemin){
 					if (!isset($chemin['version']) OR plugin_version_compatible($chemin['version'],$GLOBALS['spip_version_branche'])){
-						$dir = $chemin['dir'];
+						$dir = $chemin['path'];
 						if (strlen($dir) AND $dir{0}=="/") $dir = substr($dir,1);
+						if (strlen($dir) AND $dir=="./") $dir = '';
+						if (strlen($dir)) $dir = rtrim($dir,'/').'/';
 						if (!isset($chemin['type']) OR $chemin['type']=='public')
 							$chemins['public'][]="_DIR_PLUGIN_$prefix".(strlen($dir)?".'$dir'":"");
 						if (!isset($chemin['type']) OR $chemin['type']=='prive')

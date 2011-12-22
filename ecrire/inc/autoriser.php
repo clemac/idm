@@ -201,14 +201,8 @@ function autoriser_dater_dist($faire, $type, $id, $qui, $opt) {
 	return false;
 }
 
-function autoriser_article_instituer_dist($faire, $type, $id, $qui, $opt) {
-	if (!$row = sql_fetsel('statut,id_rubrique','spip_articles','id_article='.intval($id)))
-		return false;
-
-	if ($opt['statut']=='publie' OR $row['statut']=='publie')
-		return autoriser('publierdans','rubrique',$row['id_rubrique']);
-
-	return true;
+function autoriser_instituer_dist($faire, $type, $id, $qui, $opt) {
+	return autoriser('modifier',$type,$id,$qui,$opt);
 }
 
 // Autoriser a publier dans la rubrique $id
@@ -279,11 +273,15 @@ function autoriser_article_modifier_dist($faire, $type, $id, $qui, $opt) {
 
 	return
 		$r
-		AND autoriser('publierdans', 'rubrique', $r['id_rubrique'], $qui, $opt)
-		OR (
-			in_array($qui['statut'], array('0minirezo', '1comite'))
-			AND in_array($r['statut'], array('prop','prepa', 'poubelle'))
-			AND auteurs_article($id, "id_auteur=".$qui['id_auteur'])
+		AND
+		(
+			autoriser('publierdans', 'rubrique', $r['id_rubrique'], $qui, $opt)
+			OR (
+				(!isset($opt['statut']) OR $opt['statut']!=='publie')
+				AND in_array($qui['statut'], array('0minirezo', '1comite'))
+				AND in_array($r['statut'], array('prop','prepa', 'poubelle'))
+				AND auteurs_article($id, "id_auteur=".$qui['id_auteur'])
+			)
 		);
 }
 /**
@@ -590,6 +588,17 @@ function autoriser_queue_purger_dist(){
 	return autoriser('webmestre');
 }
 
+/*
+ * Autoriser l'echaffaudage de squelettes en Z
+ * dans l'espace prive : oui si on est identifie
+ * sinon il faut etre webmestre (pas de fuite d'informations publiees)
+ */
+function autoriser_echaffauder_dist($faire, $type, $id, $qui, $opts){
+	if (test_espace_prive())
+		return intval($qui['id_auteur'])?true:false;
+	else
+		return autoriser('webmestre','',$id,$qui,$opts);
+}
 
 
 /**

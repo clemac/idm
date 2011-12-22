@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -50,10 +50,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'barre_e_accent_aigu' => 'Mä  jach\'aptata E jach\'at arsuriyimpi uchantaña',
 'barre_eo' => 'Mä E O ukana uchantaña',
 'barre_eo_maj' => 'Mä E O jach\'aptat ukana uchantaña',
-'barre_euro' => 'Chimpu uchantaña &amp;#8364,',
+'barre_euro' => 'Chimpu uchantaña &#8364,',
 'barre_gras' => '{{Ch\'iyaritat}} uskuña',
 'barre_guillemets' => '«comillas»kama uskuña',
-'barre_guillemets_simples' => '&amp;#8220kama uskuña; comillas de segundo nivel&amp;#65533',
+'barre_guillemets_simples' => '&#8220kama uskuña; comillas de segundo nivel&#65533',
 'barre_intertitre' => '{inter título} ukan mayjt\'ayaña',
 'barre_italic' => '{K\'umtat} uskuña',
 'barre_lien' => 'Mayjt\'ayañan [chinu jach\'a sawu-http://...]',
@@ -230,6 +230,8 @@ Uk lurasinsti jutir imañ q\'ipinaka jikitawa.&lt;/p&gt;
 'envoi_via_le_site' => 'Qamawitkam apayaña',
 'erreur' => 'Pantjawi',
 'erreur_balise_non_fermee' => 'Qhipir markhax jan jist\'antata:',
+'erreur_technique_enregistrement_champs' => 'Une erreur technique a empêché l\'enregistrement correct du champ @champs@.', # NEW
+'erreur_technique_enregistrement_impossible' => 'Une erreur technique a empêché l\'enregistrement.', # NEW
 'erreur_texte' => 'Pantjawinaka',
 'etape' => 'Étape', # NEW
 
@@ -601,6 +603,7 @@ Sitix uka arunak ajlltax.Walja sapa mayanaka jach\'a qamawita (urunaka, phuqañ 
 'suivant' => 'arkiri',
 
 // T
+'taille_go' => '@taille@ Go', # NEW
 'taille_ko' => '@taille@ KB',
 'taille_mo' => '@taille@ MB',
 'taille_octets' => '@taille@ bytes',

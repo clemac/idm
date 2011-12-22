@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -299,7 +299,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => ' dari @liste@',
 'info_code_acces' => 'Jangan lupa kode akses anda!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => 'Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'Jika alamat ini berkaitan dengan suatu daftar surat, anda dapat mengindikasikan di bawah alamat di mana pengunjung situs dapat mendaftarkan diri. Alamat ini dapat berupa URL (sebagai contoh halaman registrasi daftar surat melalui web), atau alamat e-mail dengan subyek yang spesifik (contoh: <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'Anda dapat berlangganan daftar surat situs ini. Anda akan menerima melalui e-mail secara otomatis, pengumuman-pengumuman yang berkenaan dengan artikel-artikel dan berita-berita yang dikirim untuk publikasi.',
@@ -332,7 +332,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'Sebelum dapat menulis artikel, anda harus membuat paling tidak satu bagian.',
 'info_email_envoi' => 'Alamat e-mail pengirim (opsional)',
 'info_email_envoi_txt' => 'Masukkan alamat e-mail pengirim yang digunakan untuk mengirim e-mail (secara standar, alamat penerima digunakan sebagai alamat pengirim) :',
-'info_email_webmestre' => 'Alamat e-mail webmaster (opsional)',
+'info_email_webmestre' => 'Alamat e-mail webmaster (opsional)', # MODIF
 'info_entrer_code_alphabet' => 'Masukkan kode set karakter yang akan digunakan:',
 'info_envoi_email_automatique' => 'Pengiriman otomatis',
 'info_envoyer_maintenant' => 'Kirim sekarang',
@@ -371,7 +371,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => 'Pelacakan revisi mengizinkan anda untuk melihat perubahan dan penambahan yang dibuat pada sebuah artikel dan menampilkan perbedaan di antara versi-versi yang ada.',
 'info_identification_publique' => 'Identitas umum anda...',
 'info_image_process' => 'Pilih metode terbaik untuk membuat gambar kecil dengan mengklik gambar yang terkait.',
-'info_image_process2' => '<b>Catatan:</b> <i>Jika anda tidak dapat melihat gambar, berarti server anda tidak dikonfigurasi untuk menggunakan peralatan yang ada. Jika anda ingin menggunakan fitur-fitur ini, hubungi bagian teknis penyedia hosting anda dan minta ekstensi «GD» atau «Imagick» diinstal.</i>',
+'info_image_process2' => '<b>Catatan:</b> <i>Jika anda tidak dapat melihat gambar, berarti server anda tidak dikonfigurasi untuk menggunakan peralatan yang ada. Jika anda ingin menggunakan fitur-fitur ini, hubungi bagian teknis penyedia hosting anda dan minta ekstensi «GD» atau «Imagick» diinstal.</i>', # MODIF
 'info_images_auto' => 'Gambar secara otomatis dikalkulasi',
 'info_informations_personnelles' => 'Langkah kelima: <b>Informasi pribadi</B>',
 'info_inscription_automatique' => 'Registrasi otomatis editor-editor baru',
@@ -491,7 +491,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_question_utilisation_moteur_recherche' => 'Apakah anda ingin mengunakan mesin pencari yang terintegrasi dengan SPIP?
 	(Menonaktifkannya akan meningkatkan kinerja sistem.)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # NEW
 'info_racine_site' => 'Root situs',
 'info_recharger_page' => 'Silakan buka kembali halaman ini beberapa saat lagi.',
 'info_recherche_auteur_a_affiner' => 'Terlalu banyaj hasil untuk "@cherche_auteur@"; silakan perbaiki pencarian anda.',
@@ -758,6 +758,7 @@ dalam warna yang menunjukkan statusnya:',
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -769,7 +770,7 @@ dalam warna yang menunjukkan statusnya:',
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -777,6 +778,7 @@ dalam warna yang menunjukkan statusnya:',
 'plugins_liste' => 'Daftar plugin',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Versi protokol:',

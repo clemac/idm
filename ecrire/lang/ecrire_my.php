@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -63,7 +63,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'bouton_modifier' => 'ပြန်လည်ပြုပြင်မွမ်းမံသည်',
 'bouton_pense_bete' => 'ကိုယ်ပိုင်မှတ်တမ်း',
 'bouton_radio_activer_messagerie' => 'အတွင်းစာစောင် ပေးပို့နိုင်သည်',
-'bouton_radio_activer_messagerie_interne' => 'အတွင်းစာစောင် ပေးပို့နိုင်သည်',
+'bouton_radio_activer_messagerie_interne' => 'အတွင်းစာစောင် ပေးပို့နိုင်သည',
 'bouton_radio_activer_petition' => 'တောင်းဆိုမှုကို အသက်ဝင်စေသည်',
 'bouton_radio_afficher' => 'ပြပါ',
 'bouton_radio_apparaitre_liste_redacteurs_connectes' => 'ဆက်သွယ်သော စာတည်းများကို ပြပါ',
@@ -287,7 +287,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => ' out of @liste@',
 'info_code_acces' => 'သင့်ကိုယ်ပိုင်ကုတ်ကို မမေ့ပါနှင့်',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => 'Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'ဤလိပ်စာသည် အများစာပို့လိပ်စာနှင့် ပတ်သက်မှုရှိလျှင် ဆိုက်တွင်ပါဝင်​သူများ မှတ်ပုံတင်နိုင်မည့် နေရာကို သိသာရန် လိပ်စာကိုဖော်ပြနိုင်သည်။ ဝက်ဘ်ဆိုက်မှတဆင့် မှတ်ပုံတင်နိုင်ရန် လိပ်စာသည် ဝက်ဘ်လိပ်စာဖြစ်သင့်သည်။ သို့မဟုတ် အကြောင်းအရာ သတ်မှတ်ဖော်ပြထားပြီးသား အီးမေးလ်လိပ်စာဖြစ်သင့်သည်<tt>@adresse_suivi@?subject=subscribe</tt>)',
 'info_config_suivi_explication' => 'အများစာပို့လိပ်စာကို သင်လည်း ရယူပါဝင်နိုင်သည်။ ထုတ်ဝေရန် တင်သွင်းသည့် ဆောင်းပါးနှင့် သတင်းများ၏ အကြောင်းကြားချက်များကို ​အီးမေးလ်မှတဆင့် အလိုအလျှောက်​ ရောက်လာပါလိမ့်မည်',
@@ -320,7 +320,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'ဆောင်းပါးများမရေးမီ အနည်းဆုံး အခန်းကဏ္ဍတစ်ခုကို အရင်ဖန်တီးပါ',
 'info_email_envoi' => 'ပေးပို့သူ၏လိပ်စာ (ဖြစ်နိုင်လျှင်)',
 'info_email_envoi_txt' => 'စာပို့သူ၏ အီးမေးလ်လိပ်စာကိုထည့်ပြီး စာပို့နေစဉ်တွင် အသုံးပြုပါ၊ (သတ်မှတ်ချက်- လက်ခံသူလိပ်စာကို ပေးပို့သူလိပ်စာအဖြစ်သုံးသည်)',
-'info_email_webmestre' => 'ဝက်ဘ်ဆိုက်အုပ်ချုပ်သူ၏ အီးမေးလ်လိပ်စာ',
+'info_email_webmestre' => 'ဝက်ဘ်ဆိုက်အုပ်ချုပ်သူ၏ အီးမေးလ်လိပ်စာ', # MODIF
 'info_entrer_code_alphabet' => 'အသုံးပြုမည့် အက္ခရာကုတ်ကို ထည့်ပါ',
 'info_envoi_email_automatique' => 'အလိုအလျောက်စာပို့ခြင်း',
 'info_envoyer_maintenant' => 'အခုပို့လိုက်ပါ',
@@ -353,7 +353,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => 'ပြန်လည်မွမ်းမံမှုခြေရာက အောင်မြင်စွာ တည်းဖြတ်ခြင်းနှင့် ထပ်ပေါင်းခြင်း ပြုလုပ်ထားသော ဆောင်းပါးတွင် ပြုပြင်ချက် ကွဲပြားမှုများကို မြင်သာစေရန် လုပ်ဆောင်​ပေးနိုင်သည်။',
 'info_identification_publique' => 'အများသုံး အမှတ်အသား',
 'info_image_process' => 'ဆက်သွယ်ထားသောပုံပေါ်တွင်နှိပ်လိုက်သောအခါ ရုပ်ပုံမြင်နိုင်ရန်အတွက် အကောင်းဆုံးဖန်တီးမှုနည်းလမ်းကိုရွေးပါ',
-'info_image_process2' => '<b>N.B.</b> <i>ပုံရိပ်တခုမှ မတွေ့ရလျှင်၊ သင့်ဆာဗာသည် အဲဒီအတွက် တပ်ဆင်ထားခြင်း မရှိလို့ဖြစ်ပါမည်။ ဤလုပ်ဆောင်မှုကို သင်အလိုရှိတယ်ဆိုရင် ဝက်ဘ်ဝန်ဆောင်မှုကို ဆက်သွယ်ပြီးတော့ «GD» သို့မဟုတ် «Imagick» extensions ကို ထည့်သွင်းပေးပါရန် တောင်းဆိုပါ။</i>',
+'info_image_process2' => '<b>N.B.</b> <i>ပုံရိပ်တခုမှ မတွေ့ရလျှင်၊ သင့်ဆာဗာသည် အဲဒီအတွက် တပ်ဆင်ထားခြင်း မရှိလို့ဖြစ်ပါမည်။ ဤလုပ်ဆောင်မှုကို သင်အလိုရှိတယ်ဆိုရင် ဝက်ဘ်ဝန်ဆောင်မှုကို ဆက်သွယ်ပြီးတော့ «GD» သို့မဟုတ် «Imagick» extensions ကို ထည့်သွင်းပေးပါရန် တောင်းဆိုပါ။</i>', # MODIF
 'info_images_auto' => 'ပုံများကို အလိုအလျောက်တွက်ချက်သည်',
 'info_informations_personnelles' => 'ပဉ္စမအဆင့် <b>ကိုယ်ရေးကိုယ်တာအချက်လက်</b>',
 'info_inscription_automatique' => 'စာတည်များကို ​အလိုအလျေက်မှတ်ပုံတင်ခြင်း',
@@ -457,7 +457,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_question_inscription_nouveaux_redacteurs' => 'စာတည်းအသစ်များ မှတ်ပုံတင်ခွင့်ကို အများဆိုင်နေရာမှ လုပ်ဆောင်ခွင့် ပေးလိုပါသလား? သင်ခွင့်ပြုမည်ဆိုလျှင် လာလည်သူများသည်လည်း အလိုအလျှောက် ဖောင်ကိုအသုံးပြု၍ မှတ်ပုံတင်နိုင်မည်ဖြစ်သည်။ သူတို့ဖန်တီးထားသော ဆောင်းပါးများကို တိုက်ရိုက်မွမ်းမံ နိုင်မည်ဖြစ်သဖြင့် နှစ်သက်ပါလိမ့်မည်။<blockquote><i> မှတ်ပုံတင်ခြင်းလုပ်ဆောင်နေစဉ် ကိုယ်ပိုင်ကန့်သတ်နေရာသို့ ဝင်ရောက်နိုင်ရန် လိုအပ်သော အချက်အလက်များကို အလိုအလျှောက်အီးမေးလ်မှ ရောက်လာပါလိမ့်မည်။ တချို့သော ဝက်ဘ်ဝန်ဆောင်မှုလုပ်ငန်းများသည် ဤအလိုအလျှောက် စာပို့ခြင်းကို လက်မခံကြပေ၊ ဤသို့ဖြစ်နေလျှင် ဤစာပို့ခြင်းသည် အ​ဆင်ပြေမည်မဟုတ်ပါ။', # MODIF
 'info_question_utilisation_moteur_recherche' => 'SPIP သို့ ရှာဖွေမှုအင်ဂျင်ကို အသုံးပြုချင်ပါသလား။ (စစ်စတမ် အရှိန်ကို မြှင့်တင်၍မရနိုင်ပါ)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # NEW
 'info_racine_site' => 'ဝက်ဘ်ဆိုက် ပင်မဇစ်မြစ်',
 'info_recharger_page' => 'မိနစ်အနည်းငယ်အတွင်း ဤစာမျက်နှာကို ပြန်ဖွင့်ပါ',
 'info_recherche_auteur_a_affiner' => '\\"@cherche_auteur@\\"အတွက်ရလာဒ်များ များလွန်းသည်။ ရှာဖွေမှုကို ပြန်လုပ်ပါ',
@@ -722,6 +722,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -733,7 +734,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -741,6 +742,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_liste' => 'ထပ်ပေါင်းပရိုဂရမ်ငယ်စာရင်း',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Protocol မူကွဲ',

@@ -641,10 +641,20 @@ function renseigner_table_objet_sql($table_sql,&$infos){
  * @return array
  */
 function renseigner_table_objet_interfaces($table_sql,&$infos){
-	if (!isset($infos['titre']))
-		$infos['titre'] = isset($GLOBALS['table_titre'][$infos['table_objet']]) ? $GLOBALS['table_titre'][$infos['table_objet']] : '';
-	if (!isset($infos['date']))
-		$infos['date'] = isset($GLOBALS['table_date'][$infos['table_objet']]) ? $GLOBALS['table_date'][$infos['table_objet']] : '';
+	if (!isset($infos['titre'])){
+		if (isset($GLOBALS['table_titre'][$infos['table_objet']]))
+			$infos['titre'] = $GLOBALS['table_titre'][$infos['table_objet']];
+		else {
+			$infos['titre'] = ((isset($infos['field']['titre']))?"titre,":"'' as titre,");
+			$infos['titre'] .= ((isset($infos['field']['lang']))?"lang":"'' as lang");
+		}
+	}
+	if (!isset($infos['date'])){
+		if (isset($GLOBALS['table_date'][$infos['table_objet']]))
+			$infos['date'] = $GLOBALS['table_date'][$infos['table_objet']];
+		else
+			$infos['date'] = ((isset($infos['field']['date']))?"date":'');
+	}
 	if (!isset($infos['statut']))
 		$infos['statut'] = isset($GLOBALS['table_statut'][$table_sql]) ? $GLOBALS['table_statut'][$table_sql] : '';
 	if (!isset($infos['tables_jointures']))
@@ -679,7 +689,9 @@ function lister_tables_auxiliaires(){
  */
 function lister_tables_objets_surnoms(){
 	static $surnoms = null;
-	if (!$surnoms){
+	static $md5 = null;
+	if (!$surnoms
+	  OR $md5 != lister_tables_objets_sql('::md5')){
 		// passer dans un pipeline qui permet aux plugins de declarer leurs exceptions
 		// pour compatibilite, car il faut dorenavent utiliser
 		// declarer_table_objets_sql
@@ -705,12 +717,7 @@ function lister_tables_objets_surnoms(){
 						$surnoms[$surnom] = $infos['table_objet'];
 			}
 		}
-		// si init pas fini, ne pas memoriser
-		if (!defined('_init_tables_objets_sql')){
-			$res = $surnoms;
-			$surnoms = null;
-			return $res;
-		}
+		$md5 = lister_tables_objets_sql('::md5');
 	}
 	return $surnoms;
 }
@@ -721,7 +728,9 @@ function lister_tables_objets_surnoms(){
  */
 function lister_types_surnoms(){
 	static $surnoms = null;
-	if (!$surnoms){
+	static $md5 = null;
+	if (!$surnoms
+	  OR $md5 != lister_tables_objets_sql('::md5')){
 		// passer dans un pipeline qui permet aux plugins de declarer leurs exceptions
 		// pour compatibilite, car il faut dorenavent utiliser
 		// declarer_table_objets_sql
@@ -739,12 +748,7 @@ function lister_types_surnoms(){
 						$surnoms[$surnom] = $infos['type'];
 			}
 		}
-		// si init pas fini, ne pas memoriser
-		if (!defined('_init_tables_objets_sql')){
-			$res = $surnoms;
-			$surnoms = null;
-			return $res;
-		}
+		$md5 = lister_tables_objets_sql('::md5');
 	}
 	return $surnoms;
 }

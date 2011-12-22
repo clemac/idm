@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -297,7 +297,7 @@ SPIP dokumentációja (franciául)</a>.', # MODIF
 'info_classement_2' => '<sup>.-dik</sup> összesen @liste@',
 'info_code_acces' => 'Ne felejtse el a saját hozzáférési kódjait !',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'Ha ez a cím egy levelező listahoz tartozik, lejjebb azt a címet jelezheti, ahova a résztvevők beíratkozhatnak. Ez a cím akár URL lehet (pl. a beíratkozási oldal a Weben), vagy egy specifikus tárgyat tartalmazó email cím (pl.<tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'Beíratkozhat a honlap levelező listájához. Ilyenkor emailben fogja kapni ezeket a cikkeket, híreket, melyeket javasoltak publikálásra.',
@@ -330,7 +330,7 @@ SPIP dokumentációja (franciául)</a>.', # MODIF
 'info_ecrire_article' => 'Mielőbb írjon cikkeket, legalább egy rubrikát kell létrehozni.',
 'info_email_envoi' => 'Email cím küldésre (opció)',
 'info_email_envoi_txt' => 'Itt jelezze a használandó feladó címet az email küldésére (ennek híján, a címzett címét használjuk, mint feladói) :',
-'info_email_webmestre' => 'A Webmester email címe (opció)',
+'info_email_webmestre' => 'A Webmester email címe (opció)', # MODIF
 'info_entrer_code_alphabet' => 'Írja be a használandó abécé kódját :',
 'info_envoi_email_automatique' => 'Automatikus email küldés',
 'info_envoyer_maintenant' => 'Azonnali küldés',
@@ -365,7 +365,7 @@ a törölt szerzők pedig kukával vannak jelölve.',
 'info_historique_texte' => 'A felülvizsgalatok megfigyelése egy cikk tartalmához nyújtott összes módosításokről tárolja az előzményeket, és megjeleníti az egymást követő változatok eltéréseket.',
 'info_identification_publique' => 'Az Ön nyilvános azonosítása...',
 'info_image_process' => 'Válasszon a bélyegképek legjobb készítesi modszerét azzal, hogy kattintson a megfelelő képre.',
-'info_image_process2' => '<b>Megjegyzés</b> <i>Ha egyetlen kép sem jelenik meg, akkor ez azt jelenti, hogy a honlapját tároló szervert nem konfigurálták olyan eszkőzök használására. Ha mégis akarja használni ezeket a funkciókat, keresse a rendszergazdát, és a «GD» vagy «Imagick» kiegészítéseket kérje.</i>',
+'info_image_process2' => '<b>Megjegyzés</b> <i>Ha egyetlen kép sem jelenik meg, akkor ez azt jelenti, hogy a honlapját tároló szervert nem konfigurálták olyan eszkőzök használására. Ha mégis akarja használni ezeket a funkciókat, keresse a rendszergazdát, és a «GD» vagy «Imagick» kiegészítéseket kérje.</i>', # MODIF
 'info_images_auto' => 'Automatikusan kalkulált képek',
 'info_informations_personnelles' => 'Ötödik lépés : <b>Személyes adatok</b>', # MODIF
 'info_inscription_automatique' => 'Új szerzők automatikus beiratkozása',
@@ -477,7 +477,7 @@ a felhasználók automatikus emailt kapnak,
 'info_question_utilisation_moteur_recherche' => 'Kivánja-e használni az SPIP integrált kereső motorját ?
  (annak inaktiválása gyorsítja a rendszer működését.)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # NEW
 'info_racine_site' => 'Honlap teteje',
 'info_recharger_page' => 'Legyen szíves újratölteni ezt az oldalt egy kis idő múlva.',
 'info_recherche_auteur_a_affiner' => 'Túl sok eredmény erre "@cherche_auteur@" ; legyen szíves szükíteni a keresést.',
@@ -508,7 +508,7 @@ a felhasználók automatikus emailt kapnak,
 'info_site_2' => 'honlap :',
 'info_site_min' => 'honlap',
 'info_site_reference_2' => 'Felvett honlap',
-'info_site_web' => 'HONLAP :', # MODIF
+'info_site_web' => 'HONLAP  :', # MODIF
 'info_sites' => 'honlapok',
 'info_sites_lies_mot' => 'A kulcsszóhoz kötött felvett honlapok',
 'info_sites_proxy' => 'Proxy használata',
@@ -744,6 +744,7 @@ ami állapotát jelzi :',
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -755,7 +756,7 @@ ami állapotát jelzi :',
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -763,6 +764,7 @@ ami állapotát jelzi :',
 'plugins_liste' => 'plugin lista',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

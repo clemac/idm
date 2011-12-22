@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -299,7 +299,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => '<sup>e</sup> z @liste@',
 'info_code_acces' => 'Nezapomeňte své přístupové kódy!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => 'It is advisable to first check if the service provider systematically compresses PHP scripts. To do this you can, for example, use the following service: @testgzip@', # NEW
+'info_compresseur_gzip' => 'It is advisable to first check if the service provider systematically compresses PHP scripts. To do this you can, for example, use the following service: @testgzip@', # MODIF
 'info_compresseur_texte' => 'If your server does not automatically compress HTML pages when sending them, you can attempt to force the compression in order to reduce the size of the pages transmitted.<b>Warning</b>: this can have a noticeable adverse effect on the performance of some servers, ', # NEW
 'info_config_suivi' => 'Jedná-li se o adresu diskusní skupiny, můžete zde uvést adresu, na které se mohou účastníci webu přihlásit. Může se jednat o adresu URL (například webová stránka pro přihlášení do skupiny) nebo o elektronickou adresu s uvedením specifického předmětu (např.: <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'Můžete se přihlásit na mailing-list tohoto webu. Potom budete dostávat oznámení o článcích a novinkách připravených k publikování.',
@@ -332,7 +332,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'Články můžete psát teprve, když vytvoříte alespoň jednu sekci.',
 'info_email_envoi' => 'Email pro zprávy (volitelný údaj)',
 'info_email_envoi_txt' => 'Zde uveďte adresu pro zasílání emailů (standardně se jako tato adresa použije email příjemce):',
-'info_email_webmestre' => 'Email správce webu (volitelný údaj)',
+'info_email_webmestre' => 'Email správce webu (volitelný údaj)', # MODIF
 'info_entrer_code_alphabet' => 'Zadejte kód znakové sady, která se má používat:',
 'info_envoi_email_automatique' => 'Automatické zasílání emailů',
 'info_envoyer_maintenant' => 'Odeslat nyní',
@@ -375,7 +375,7 @@ pro technickou údržbu. Některé z nich spouští autentifikaci, jež vyžaduj
 'info_historique_texte' => 'Sledování revizí umožňuje zachovat historii všech změn obsahu článku a zobrazit změny mezi jeho jednotlivými verzemi.',
 'info_identification_publique' => 'Vaše veřejná identita...',
 'info_image_process' => 'Nejlepší metodu tvorby náhledů zvolíte klepnutím na příslušný obrázek.',
-'info_image_process2' => '<b>Pozn.:</b> <i>Neobjeví-li se žádný obrázek, není hostitelský server vašeho webu nastaven k používání těchto nástrojů. Chcete-li je používat, spojete se s příslušnou technickou podporou a požádejte o rozšíření "GD" nebo "Imagick".</i>',
+'info_image_process2' => '<b>Pozn.:</b> <i>Neobjeví-li se žádný obrázek, není hostitelský server vašeho webu nastaven k používání těchto nástrojů. Chcete-li je používat, spojete se s příslušnou technickou podporou a požádejte o rozšíření "GD" nebo "Imagick".</i>', # MODIF
 'info_images_auto' => 'Automaticky vypočtěné obrázky',
 'info_informations_personnelles' => 'Pátý krok: <b>Osobní údaje</b>', # MODIF
 'info_inscription_automatique' => 'Automatický zápis nových redaktorů',
@@ -494,7 +494,7 @@ pro technickou údržbu. Některé z nich spouští autentifikaci, jež vyžaduj
 'info_question_utilisation_moteur_recherche' => 'Chcete používat vyhledávač, který je součástí systému SPIP?
  (je-li vyhledávač vypnut, zrychluje to chod systému.)',
 'info_question_vignettes_referer_non' => 'Do not show the screenshots of the originating sites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # NEW
 'info_racine_site' => 'Kořenový adresář webu',
 'info_recharger_page' => 'Za okamžik zkuste stránku znovu nahrát.',
 'info_recherche_auteur_a_affiner' => 'Pro "@cherche_auteur@" bylo nalezeno příliš mnoho výsledků. Upřesněte vyhledávací kritéria.',
@@ -543,7 +543,7 @@ pro technickou údržbu. Některé z nich spouští autentifikaci, jež vyžaduj
 'info_statut_utilisateurs_2' => 'Zadejte statut, který mají osoby uvedené v adresáři LDAP, když se poprvé připojí. Tuto hodnotu můžete u každého jednotlivého autora následně změnit.',
 'info_suivi_activite' => 'Sledování redaktorské činnosti',
 'info_surtitre' => 'Nadřízený nadpis:',
-'info_syndication_integrale_1' => 'V&aacute;&#353; web nab&iacute;z&iacute; soubory pro syndikaci (viz &#147;<a href="@url@">@titre@</a>”).',
+'info_syndication_integrale_1' => 'Váš web nabízí soubory pro syndikaci (viz <a href="@url@">@titre@</a>”).',
 'info_syndication_integrale_2' => 'Chcete poslat celé články, nebo jen prvních pár set znaků jako shrnutí?',
 'info_table_prefix' => 'It is possible to change the prefix of the names of the database tables. (you need to do this if you are installing several sites in the same database). The prefix must be written in unaccented, lower-case letters without any spaces.', # NEW
 'info_taille_maximale_images' => 'SPIP is going to test the maximum size of image (in millions of pixels) which it can treat.<br /> Images bigger than this will not be reduced.', # NEW
@@ -761,6 +761,7 @@ ukazuje jejich stav:',
 'plugin_titre_automatique' => 'Automatic installation', # NEW
 'plugin_titre_automatique_ajouter' => 'Add plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continue in order to activate', # NEW
 'plugin_zip_adresse' => 'Below, give the address of a zip file of a plugin to be loaded, or else the address of a list of plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Address of the plugin or of the list ', # NEW
@@ -772,7 +773,7 @@ ukazuje jejich stav:',
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ active plugins.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ available plugins.', # NEW
@@ -780,6 +781,7 @@ ukazuje jejich stav:',
 'plugins_liste' => 'Seznam pluginů',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hierarchy', # NEW
 'plugins_vue_liste' => 'List', # NEW
 'protocole_ldap' => 'Protocol version:', # NEW

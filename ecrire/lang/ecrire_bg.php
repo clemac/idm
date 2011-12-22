@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -299,7 +299,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => '<sup>th</sup> от общо @liste@',
 'info_code_acces' => 'Не забравяйте личния си код за достъп!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => 'Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'Ако адресът отговаря а даден пощенски списък, можете да окажете отдолу адресът, където участниците на сайта биха могли да се регистрират. Този адрес може да бъде URL (наример страницата, където се прави регистрация през Интернет страница), или електронен адрес, заедно с определена тема на писмото (например: <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'Можете да се абонирате за пощенския списък на сайта. За целта ще получите автоматично електронно съобщение с обявленията, свързани с новините и статиите, изпратени за публикуване.',
@@ -332,7 +332,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'Преди да започнете за пишете статии, трябва да създадете поне една рубрика.',
 'info_email_envoi' => 'Електронен адрес на изпращача (по желание)',
 'info_email_envoi_txt' => 'Впишете електронния адрес на изпращача, който използвате (по подразбиране, адресът на получателя ще се използва за адрес на изпращача):',
-'info_email_webmestre' => 'Електронен адрес на уеб-администратора (незадължителен)',
+'info_email_webmestre' => 'Електронен адрес на уеб-администратора (незадължителен)', # MODIF
 'info_entrer_code_alphabet' => 'Въвеждане на кода на азбуката, която ще бъде използвана:',
 'info_envoi_email_automatique' => 'Автоматично изпращане на съобщение',
 'info_envoyer_maintenant' => 'Изпращане',
@@ -377,7 +377,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => 'Проследяването на корекциите позволява да се прави справка на всички промени, направени на статията и да показва различията между последващите версии.',
 'info_identification_publique' => 'Публична самоличност...',
 'info_image_process' => 'Изберете най-удобният начин да създавате миниатюри, чрез натискане въру съответната картинка.',
-'info_image_process2' => '<b>N.B.</b> <i>Ако не можете да видите никакво изображение, следователно сървърът Ви не е конфигуриран да използва такива инструменти. Ако искате да ползвате това свойство, трябва да се свържете с доставчика си и да поискате да ви инсталират разширения от типа "GD" или "Imagick"</i>',
+'info_image_process2' => '<b>N.B.</b> <i>Ако не можете да видите никакво изображение, следователно сървърът Ви не е конфигуриран да използва такива инструменти. Ако искате да ползвате това свойство, трябва да се свържете с доставчика си и да поискате да ви инсталират разширения от типа "GD" или "Imagick"</i>', # MODIF
 'info_images_auto' => 'Автоматично изчислени изображения',
 'info_informations_personnelles' => 'Стъпка пет: <b>Лични данни</b>',
 'info_inscription_automatique' => 'Автоматична регистрация на нови редактори',
@@ -497,7 +497,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_question_utilisation_moteur_recherche' => 'Желаете ли да използвате търсещата машина под СПИП?
  (при отказване действието й увеличавате скоростта на действие на системата.)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # NEW
 'info_racine_site' => 'Схема на сайта',
 'info_recharger_page' => 'Моля, презаредете страницата след малко.',
 'info_recherche_auteur_a_affiner' => 'Твърде много намерени резултати за @cherche_auteur@; моля, прецизирайте търсенето си.',
@@ -763,6 +763,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -774,7 +775,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -782,6 +783,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_liste' => 'Списък с плъгини',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

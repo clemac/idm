@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -302,7 +302,7 @@ ou da rede',
 'info_classement_2' => '<sup>e</sup> no @liste@',
 'info_code_acces' => 'Não se esqueça dos seus próprios códigos de acesso !',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'Se este endereço corresponder a uma mailing-list, pode indicar, a seguir, o endereço no qual os participantes no sítio podem inscrever-se. Este endereço pode ser uma URL (por exemplo a página de inscrição na lista pela Web), ou um endereço email com um assunto específico (por exemplo: <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => ' Pode assinar a  mailing-list deste sítio. Receberá então, por correio electrónico, os anúncios de artigos e de notícias propostos para publicação.',
@@ -335,7 +335,7 @@ ou da rede',
 'info_ecrire_article' => 'Antes de poder escrever artigos, deve criar pelo menos uma rubrica.',
 'info_email_envoi' => 'Endereço de email de envio (opcional)',
 'info_email_envoi_txt' => 'Indique aqui o endereço a utilizar para mandar os emails (se não for o caso, o endereço do destinatário será utilizado como endereço de envio) :',
-'info_email_webmestre' => 'Endereço e-mail do webmestre (opcional)',
+'info_email_webmestre' => 'Endereço e-mail do webmestre (opcional)', # MODIF
 'info_entrer_code_alphabet' => 'Insira o código do alfabeto a utilizar :',
 'info_envoi_email_automatique' => 'Envio automático de mails',
 'info_envoyer_maintenant' => 'Enviar agora',
@@ -376,7 +376,7 @@ Os estatuto dos autores é indicado pela cor dos ícones (administrador = verde;
 'info_historique_texte' => 'O acompanhamento das revisões permite conservar um histórico de todas as  alterações realizadas ao conteúdo dum artigo, e visualizar as diferenças entre as sucessivas versões',
 'info_identification_publique' => 'A sua identidade pública...',
 'info_image_process' => 'Seleccione o melhor método de criar as vinhetas clicando sobre a imagem correspondente.',
-'info_image_process2' => '<b>N.B.</b> <i> Se nenhuma imagem aparece, então o servidor que alberga o seu sítio não foi configurado para utilizar tais ferramentas. Se deseja utilizar essas funções, contacte o responsavel técnico e peça as extensões  «GD» ou «Imagick».</i>',
+'info_image_process2' => '<b>N.B.</b> <i> Se nenhuma imagem aparece, então o servidor que alberga o seu sítio não foi configurado para utilizar tais ferramentas. Se deseja utilizar essas funções, contacte o responsavel técnico e peça as extensões  «GD» ou «Imagick».</i>', # MODIF
 'info_images_auto' => 'Imagens calculadas automaticamente',
 'info_informations_personnelles' => 'Quinta etapa : <b>Informações pessoais<b>', # MODIF
 'info_inscription_automatique' => 'Inscrição automática de novos redactores',
@@ -496,7 +496,7 @@ serviços de hospedagem desactivam o envio de mails a partir dos seus
 'info_question_utilisation_moteur_recherche' => 'Deseja utilizar o motor integrado de pesquisa a SPIP ?
 (desactivá-lo acelera o funcionamento do sistema)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # NEW
 'info_racine_site' => 'Raiz do sítio',
 'info_recharger_page' => 'Favor voltar a carregar esta página daqui a pouco.',
 'info_recherche_auteur_a_affiner' => 'Demasiados resultados para "@cherche_auteur@" ; favor afinar a pesquisa.',
@@ -577,7 +577,7 @@ numa cor que indica o seu estado:',
 'info_un_site' => 'um sítio',
 'info_une_rubrique' => 'uma rubrica,',
 'info_une_rubrique_02' => '1 rubrica',
-'info_url' => 'URL :', # MODIF
+'info_url' => 'URL :', # MODIF
 'info_url_proxy' => 'URL du proxy', # NEW
 'info_url_site' => 'URL DO SÍTIO :', # MODIF
 'info_url_test_proxy' => 'URL de test', # NEW
@@ -763,6 +763,7 @@ numa cor que indica o seu estado:',
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -774,7 +775,7 @@ numa cor que indica o seu estado:',
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Plugins actifs', # MODIF
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -782,6 +783,7 @@ numa cor que indica o seu estado:',
 'plugins_liste' => 'Liste des plugins', # NEW
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

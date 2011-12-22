@@ -465,7 +465,7 @@ function textebrut($texte) {
 // Remplace les liens SPIP en liens ouvrant dans une nouvelle fenetre (target=blank)
 // http://doc.spip.org/@liens_ouvrants
 function liens_ouvrants ($texte) {
-	return preg_replace(",<a ([^>]*https?://[^>]*class=[\"']spip_(out|url)\b[^>]+)>,",
+	return preg_replace(",<a\s+([^>]*https?://[^>]*class=[\"']spip_(out|url)\b[^>]+)>,",
 		"<a \\1 target=\"_blank\">", $texte);
 }
 
@@ -532,9 +532,11 @@ function majuscules($texte) {
 function taille_en_octets ($taille) {
 	if ($taille < 1024) {$taille = _T('taille_octets', array('taille' => $taille));}
 	else if ($taille < 1024*1024) {
-		$taille = _T('taille_ko', array('taille' => ((floor($taille / 102.4))/10)));
+		$taille = _T('taille_ko', array('taille' => round($taille/1024, 1)));
+	} else if ($taille < 1024*1024*1024) {
+		$taille = _T('taille_mo', array('taille' => round($taille/1024/1024, 1)));
 	} else {
-		$taille = _T('taille_mo', array('taille' => ((floor(($taille / 1024) / 102.4))/10)));
+		$taille = _T('taille_go', array('taille' => round($taille/1024/1024/1024, 2)));
 	}
 	return $taille;
 }
@@ -1960,14 +1962,14 @@ function url_absolue_css ($css) {
 // permet de recuperer la valeur d'un tableau pour une cle donnee
 // prend en entree un tableau serialise ou non (ce qui permet d'enchainer le filtre)
 // ou un objet
-// Si la cle est de la forme a.b, on renvoie $table[a][b]
+// Si la cle est de la forme a/b, on renvoie $table[a][b]
 // http://doc.spip.org/@table_valeur
 function table_valeur($table,$cle,$defaut=''){
-	foreach (explode('/', $cle) as $k) if ($k !== "") {
+	foreach (explode('/', $cle) as $k) {
 		$table= is_string($table) ? unserialize($table) : $table;
 
 		if (is_object($table))
-			$table = isset($table->$k) ? $table->$k : $defaut;
+			$table =  (($k !== "") and isset($table->$k)) ? $table->$k : $defaut;
 		else if (is_array($table))
 			$table = isset($table[$k]) ? $table[$k] : $defaut;
 		else
@@ -2567,19 +2569,35 @@ function tri_protege_champ($t){
  * pour la clause order
  * 'multi xxx' devient simplement 'multi' qui est calcule dans le select
  * @param string $t
+ * @param array $from
  * @return string
  */
-function tri_champ_order($t){
-	if (strncmp($t,'num ',4)==0){
-		$t = substr($t,4);
-		$t = preg_replace(',\s,','',$t);
-		$t = "0+$t";
-		return $t;
-	}
-	elseif(strncmp($t,'multi ',6)==0){
+function tri_champ_order($t, $from=null){
+	if(strncmp($t,'multi ',6)==0){
 		return "multi";
 	}
-	return preg_replace(',\s,','',$t);
+
+	$champ = $t;
+
+	if (strncmp($t,'num ',4)==0)
+		$champ = substr($t,4);
+	// enlever les autres espaces non evacues par tri_protege_champ
+	$champ = preg_replace(',\s,','',$champ);
+
+	if (is_array($from)){
+		$trouver_table = charger_fonction('trouver_table','base');
+		foreach($from as $idt=>$table_sql){
+			if ($desc = $trouver_table($table_sql)
+				AND isset($desc['field'][$champ])){
+				$champ = "$idt.$champ";
+				break;
+			}
+		}
+	}
+	if (strncmp($t,'num ',4)==0)
+		return "0+$champ";
+	else
+		return $champ;
 }
 
 /**
@@ -2587,6 +2605,7 @@ function tri_champ_order($t){
  * pour la clause select
  * 'multi xxx' devient select "...." as multi
  * les autres cas ne produisent qu'une chaine vide '' en select
+ * 'hasard' devient 'rand() AS hasard' dans le select
  *
  * @param string $t
  * @return string
@@ -2597,6 +2616,9 @@ function tri_champ_select($t){
 		$t = preg_replace(',\s,','',$t);
 		$t = sql_multi($t,$GLOBALS['spip_lang']);
 		return $t;
+	}
+	if(trim($t)=='hasard'){
+		return 'rand() AS hasard';
 	}
 	return "''";
 }

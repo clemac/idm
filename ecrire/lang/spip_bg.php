@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -53,7 +53,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'barre_euro' => 'Добавяне на символа €',
 'barre_gras' => 'Вмъкване на {{удебелен шрифт}}',
 'barre_guillemets' => 'Поставяне в "кавички"',
-'barre_guillemets_simples' => '&#1055;&#1086;&#1089;&#1090;&#1072;&#1074;&#1103;&#1085;&#1077; &#1074; ‘&#1077;&#1076;&#1080;&#1085;&#1080;&#1095;&#1085;&#1080; &#1082;&#1072;&#1074;&#1080;&#1095;&#1082;&#1080;’',
+'barre_guillemets_simples' => 'Поставяне в ‘единични кавички’',
 'barre_intertitre' => 'Включване режим на {{{подзаглавие}}}',
 'barre_italic' => 'Поставяне в {наклонени букви (italics)}',
 'barre_lien' => 'Превръщане в [препратка->http://...]',
@@ -229,6 +229,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'envoi_via_le_site' => 'Изпращане през сайта',
 'erreur' => 'Erreur', # NEW
 'erreur_balise_non_fermee' => 'dernière balise non refermée :', # NEW
+'erreur_technique_enregistrement_champs' => 'Une erreur technique a empêché l\'enregistrement correct du champ @champs@.', # NEW
+'erreur_technique_enregistrement_impossible' => 'Une erreur technique a empêché l\'enregistrement.', # NEW
 'erreur_texte' => 'erreur(s)', # NEW
 'etape' => 'Étape', # NEW
 
@@ -615,6 +617,7 @@ sera ignorée) :
 'suivant' => 'следващ',
 
 // T
+'taille_go' => '@taille@ Go', # NEW
 'taille_ko' => '@taille@ KB',
 'taille_mo' => '@taille@ MB',
 'taille_octets' => '@taille@ байта',

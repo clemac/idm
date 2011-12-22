@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -53,7 +53,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'barre_euro' => 'Zadejte symbol €',
 'barre_gras' => 'Zadejte {{tučné písmo}}',
 'barre_guillemets' => 'Umístěte znaky do dvojitých uvozovek (")',
-'barre_guillemets_simples' => 'Um&iacute;st&#283;te znaky do jednoduch&yacute;ch uvozovek (‘)',
+'barre_guillemets_simples' => 'Umístěte znaky do jednoduchých uvozovek (‘)',
 'barre_intertitre' => 'Změňte na {{{podzáhlaví}}}',
 'barre_italic' => 'Zadejte {kurzívou}',
 'barre_lien' => 'Změnit na [hypertextový odkaz->http://...]',
@@ -227,6 +227,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'envoi_via_le_site' => 'Odeslat pomocí webu',
 'erreur' => 'Error', # NEW
 'erreur_balise_non_fermee' => 'last tag not closed:', # NEW
+'erreur_technique_enregistrement_champs' => 'Une erreur technique a empêché l\'enregistrement correct du champ @champs@.', # NEW
+'erreur_technique_enregistrement_impossible' => 'Une erreur technique a empêché l\'enregistrement.', # NEW
 'erreur_texte' => 'error(s)', # NEW
 'etape' => 'Stage', # NEW
 
@@ -609,6 +611,7 @@ a znovu se ke stránkám připojíte.
 'suivant' => 'další',
 
 // T
+'taille_go' => '@taille@ Go', # NEW
 'taille_ko' => '@taille@ kb',
 'taille_mo' => '@taille@ Mb',
 'taille_octets' => '@taille@ bytů',

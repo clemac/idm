@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -295,7 +295,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => '<sup>th</sup> 出了 @liste@',
 'info_code_acces' => '不要忘记你的访问码!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => 'Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => '如果地址对应邮件列表, 你可以简要说明以下地址(从这儿能注册参与). 地址可以是URL (例如通过页面注册), 或通过电子邮件给一个特殊的标题(例如: <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => '你可以订阅站点的邮件列表. 随后你将接到自动邮件,关于文章和新闻的声明将提交发表.',
@@ -328,7 +328,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => '在能够发表文章之前,您必须建立至少一个专栏.',
 'info_email_envoi' => '发送者电子邮件地址 (可选)',
 'info_email_envoi_txt' => '输入发送者电子邮件地址,发送电子邮件将用这个地址, 接收者的地址将做为发送者的地址 :',
-'info_email_webmestre' => 'Web站点管理员的电子邮件地址 (可选)',
+'info_email_webmestre' => 'Web站点管理员的电子邮件地址 (可选)', # MODIF
 'info_entrer_code_alphabet' => '输入要用的字符集:',
 'info_envoi_email_automatique' => '自动邮寄',
 'info_envoyer_maintenant' => '现在发送',
@@ -372,7 +372,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => '修订跟踪功能可以保存对一篇文章内容所做的所有的修改，并且显示前后不同版本之间的区别。',
 'info_identification_publique' => '你的公开标识...',
 'info_image_process' => '点击相关图片选取最佳的标志制作方法.',
-'info_image_process2' => '<b>注意</b> <i>如果没有任何图片显示，那么储存您的网站的服务器不支持该工具。如果您希望使用这些功能，请联系您的服务器的技术支持，请他们安装《GD》或者《Imagick》扩展。</i>',
+'info_image_process2' => '<b>注意</b> <i>如果没有任何图片显示，那么储存您的网站的服务器不支持该工具。如果您希望使用这些功能，请联系您的服务器的技术支持，请他们安装《GD》或者《Imagick》扩展。</i>', # MODIF
 'info_images_auto' => 'Images calculées automatiquement', # NEW
 'info_informations_personnelles' => '第五步: <b>个人信息</b>', # MODIF
 'info_inscription_automatique' => '新编辑自动注册系统',
@@ -492,7 +492,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_question_utilisation_moteur_recherche' => '你希望SPIP集成搜索引擎吗?
  (使它不可用能加速系统的性能.)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # NEW
 'info_racine_site' => '站点根',
 'info_recharger_page' => '请重新载入该页.',
 'info_recherche_auteur_a_affiner' => '太多结果"@cherche_auteur@"; 请重定义搜索.',
@@ -759,6 +759,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -770,7 +771,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -778,6 +779,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_liste' => 'Liste des plugins', # NEW
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

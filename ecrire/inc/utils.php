@@ -198,7 +198,7 @@ function spip_log($message=NULL, $name=NULL) {
 	preg_match('/^([a-z_]*)\.?(\d)?$/iS', (string) $name, $regs);
 	if (!$logname = $regs[1])
 		$logname = null;
-	if (!$niveau = $regs[2])
+	if (!isset($regs[2]) OR !$niveau = $regs[2])
 		$niveau = _LOG_INFO;
 
 	if ($niveau <= 
@@ -463,7 +463,7 @@ function test_plugin_actif($plugin){
  */
 function _T($texte, $args=array(), $options=array()) {
 	static $traduire=false ;
-	$o = array('class'=>'','force'=>true);
+	$o = array('class'=>'', 'force'=>true);
 	if ($options){
 		// support de l'ancien argument $class
 		if (is_string($options))
@@ -494,12 +494,14 @@ function _T($texte, $args=array(), $options=array()) {
 			return '';
 
 		$text = $texte;
+
 		// pour les chaines non traduites, assurer un service minimum
-		if (!isset($GLOBALS['test_i18n']))
+		if (!$GLOBALS['test_i18n'])
 			$text = str_replace('_', ' ',
 				 (($n = strpos($text,':')) === false ? $texte :
 					substr($texte, $n+1)));
-		$class=null;
+		$o['class'] = null;
+
 	}
 
 	return _L($text, $args, $o['class']);
@@ -565,7 +567,7 @@ function spip_timer($t='rien', $raw = false) {
 			$s = sprintf("%d ", $x = floor($p/1000));
 			$p -= ($x*1000);
 		}
-		return $s . sprintf("%.3f ms", $p);
+		return $s . sprintf($s?"%07.3f ms":"%.3f ms", $p);
 	}
 }
 
@@ -1133,13 +1135,16 @@ function urls_connect_dist($i, &$entite, $args='', $ancre='', $public=null) {
 
 // Transformer les caracteres utf8 d'une URL (farsi par ex) selon la RFC 1738
 function urlencode_1738($url) {
-	$uri = '';
-	for ($i=0; $i < strlen($url); $i++) {
-		if (ord($a = $url[$i]) > 127)
-			$a = rawurlencode($a);
-		$uri .= $a;
+	if (preg_match(',[^\x00-\x7E],sS', $url)){
+		$uri = '';
+		for ($i=0; $i < strlen($url); $i++) {
+			if (ord($a = $url[$i]) > 127)
+				$a = rawurlencode($a);
+			$uri .= $a;
+		}
+		$url = $uri;
 	}
-	return quote_amp($uri);
+	return quote_amp($url);
 }
 
 // http://doc.spip.org/@generer_url_entite_absolue
@@ -1187,6 +1192,13 @@ function url_de_base() {
 		    test_valeur_serveur($_SERVER['HTTPS']))
 	) ? 'https' : 'http';
 	# note : HTTP_HOST contient le :port si necessaire
+	$host = $_SERVER['HTTP_HOST'];
+	if (isset($_SERVER['SERVER_PORT'])
+		AND $port=$_SERVER['SERVER_PORT']
+		AND strpos($host,":")==false){
+		if ($http=="http" AND $port!=80) $host.=":$port";
+		if ($http=="https" AND $port!=443) $host.=":$port";
+	}
 	if (!$GLOBALS['REQUEST_URI']){
 		if (isset($_SERVER['REQUEST_URI'])) {
 			$GLOBALS['REQUEST_URI'] = $_SERVER['REQUEST_URI'];
@@ -1198,7 +1210,7 @@ function url_de_base() {
 		}
 	}
 
-	$url[$GLOBALS['profondeur_url']] = url_de_($http,$_SERVER['HTTP_HOST'],$GLOBALS['REQUEST_URI'],$GLOBALS['profondeur_url']);
+	$url[$GLOBALS['profondeur_url']] = url_de_($http,$host,$GLOBALS['REQUEST_URI'],$GLOBALS['profondeur_url']);
 
 	return $url[$GLOBALS['profondeur_url']];
 }

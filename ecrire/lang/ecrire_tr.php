@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -296,7 +296,7 @@ yaratabilir. Bu da otomatik olarak bir galeri
 'info_classement_2' => '@liste@\'den     inci',
 'info_code_acces' => 'Kendi erişim şifrelerinizi unutmayınız !',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Önce, barındırma servisinin php skriptlerini sistematik olarak sıkıştırıp sıkıştırmadığının kontrol edilmesi önerilir ; bunun için, örneğin şu hizmeti kullanabilirsiniz : @testgzip@',
+'info_compresseur_gzip' => '<b>N. B. :</b> Önce, barındırma servisinin php skriptlerini sistematik olarak sıkıştırıp sıkıştırmadığının kontrol edilmesi önerilir ; bunun için, örneğin şu hizmeti kullanabilirsiniz : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Eğer sunucunuz html sayfaları otomatik olarak sıkıştırmıyorsa, yüklenen sayfa ağırlıklarını düşürmek için bu işlemi yapmaya zorlayabilirsiniz. <b>Dikkat</b> : bu işlem bazı sunucuları gözle görülür şekilde yavaşlatabilir.',
 'info_config_suivi' => 'Eğer bu adres bir gönderi listesi (mailing-list)\'ne karşı düşüyorsa, aşağıya site katılımcılarının hangi adrese kaydolabileceklerini yazabilirsiniz. Bu adres URL (örneğin listeye Web ile kaydolma sayfası), veya özel bir konu içeren (örneğin: @adresse_suivi@?subject=subscribe) bir e-posta adresi olabilir:',
 'info_config_suivi_explication' => 'Bu sitenin gönderi listesi (mailing-list)\'ne abone olabilirsiniz. O takdirde yayınlanması önerilen makale ve haber ilanları e-posta yoluyla elinize geçecektir. ',
@@ -329,7 +329,7 @@ yaratabilir. Bu da otomatik olarak bir galeri
 'info_ecrire_article' => 'Makale yazmadam önce en az bir bölüm yaratmanız gerekir.',
 'info_email_envoi' => 'Gönderi e-posta adresi (seçimlik)',
 'info_email_envoi_txt' => 'E-postaları göndermek için kullanılacak adresi burada belirtiniz (yoksa, gönderi adresi olarak alıcı adresi kullanılacaktır) :',
-'info_email_webmestre' => 'Ağ Yöneticisinin e-posta adresi (seçimlik)',
+'info_email_webmestre' => 'Ağ Yöneticisinin e-posta adresi (seçimlik)', # MODIF
 'info_entrer_code_alphabet' => 'Kullanılacak alfabenin kodunu giriniz :',
 'info_envoi_email_automatique' => 'Otomatik e-posta gönderme',
 'info_envoyer_maintenant' => 'Şimdi gönder',
@@ -367,7 +367,7 @@ yaratabilir. Bu da otomatik olarak bir galeri
 'info_historique_texte' => 'Gözden geçirmeleri izleme bir makalenin içeriğine getirilen tüm değişikliklerin bir tarihçesini saklamaya yarar ve de birbirini izleyen uyarlamalar arasındaki farkları gösterir. ',
 'info_identification_publique' => 'Kamu kimliğiniz ...',
 'info_image_process' => 'Lütfen, uygun resme tıklayarak en iyi ikon üretim yöntemini seçiniz. ',
-'info_image_process2' => '<b>NOT:</b> <i> Hiç resim çıkmıyorsa, sitenizi yayınlayan sunucu bu tür araçlar kullanmak için konfifüre edilmemiş demektir. Eğer bu işlevleri kullanmak istiyorsanız teknik yetkiliye başvurun ve «GD» ya da «Imagick» aksesuarlarını isteyin.</i>',
+'info_image_process2' => '<b>NOT:</b> <i> Hiç resim çıkmıyorsa, sitenizi yayınlayan sunucu bu tür araçlar kullanmak için konfifüre edilmemiş demektir. Eğer bu işlevleri kullanmak istiyorsanız teknik yetkiliye başvurun ve «GD» ya da «Imagick» aksesuarlarını isteyin.</i>', # MODIF
 'info_images_auto' => 'Otomatik olarak hesaplanan resimler',
 'info_informations_personnelles' => 'Kişisel bilgiler',
 'info_inscription_automatique' => 'Yeni yazarların otomatik kaydı',
@@ -485,7 +485,7 @@ yaratabilir. Bu da otomatik olarak bir galeri
 'info_question_utilisation_moteur_recherche' => 'SPIP\'in entegre arama motorunu kullanmak istiyor musunuz ?
                (onu durdurmak sistemin işleyişini hızlandırır)',
 'info_question_vignettes_referer_non' => 'Ziyaretlerin yapıldığı kaynak sitelerden alıntıları gösterme',
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # NEW
 'info_racine_site' => 'Sitenin kökü',
 'info_recharger_page' => 'Lütfen bu sayfayı az sonra tekrar yükleyiniz.',
 'info_recherche_auteur_a_affiner' => '"@cherche_auteur@" için çok fazla sonuç alındı ; lütfen aramayı ayrıntılayınız.',
@@ -752,6 +752,7 @@ yaratabilir. Bu da otomatik olarak bir galeri
 'plugin_titre_automatique' => 'Otomatik kurulum',
 'plugin_titre_automatique_ajouter' => 'Eklenti ekleyiniz',
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Aktive etmek için devam ediniz',
 'plugin_zip_adresse' => 'aşağıda indirilecek eklentiye ait zip dosyasının adresini veya bir çok eklentinin adres listesini belirtiniz.',
 'plugin_zip_adresse_champ' => 'Eklentinin veya listenin adresi ',
@@ -763,7 +764,7 @@ yaratabilir. Bu da otomatik olarak bir galeri
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ eklenti etkinleştirildi.',
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ eklenti',
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ eklenti kullanılabilir durumda.',
@@ -771,6 +772,7 @@ yaratabilir. Bu da otomatik olarak bir galeri
 'plugins_liste' => 'Plugin listesi',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiyerarşi',
 'plugins_vue_liste' => 'Liste',
 'protocole_ldap' => 'Protokol sürümü :',

@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -301,7 +301,7 @@ Tout informasyon-nan,  komandèr-sistèm ou komandèr-rézo li dwa donn a w.',
 'info_classement_2' => '<sup>em</sup> sou @liste@',
 'info_code_acces' => 'Oubliy pa kod laksè w-a, pou w mèm !',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'Si ladrès-la ap koresponn yon lis-limèl, w kap enskri isit anba ladès tout patisapan sou sit-la yon ke kap enskri a y. Ladrès-la pétèt se yon URL (pa egsanp lapaj lenskrisyon sou lalis-limèl pa Web-la), osnon yon ladrès limèl ki gen yon sijé spécifik (pa egsanp: <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'W kap enskri w pou ou gen lalis-limèl sit-la. Ou ke gen alò yon limèl pou rankont tout anons pou atik-la ek tinouvèl nan sit-la ki pwopozé pou piblikasyon.',
@@ -334,7 +334,7 @@ Tout informasyon-nan,  komandèr-sistèm ou komandèr-rézo li dwa donn a w.',
 'info_ecrire_article' => 'Ou dwa dabò kreye yon premyé ribrik avan ekri yon atik.',
 'info_email_envoi' => 'Adrès limèl pour voye yon mesaj (pa oblijé)',
 'info_email_envoi_txt' => 'Ann enskri isit ladrès fòk limèl yo ke rive sou (osnon  ladrès destinatè ke itilise konsa yon ladrès pou lanvwa) :',
-'info_email_webmestre' => 'Ladrès limèl wèbmèt(pa oblije)',
+'info_email_webmestre' => 'Ladrès limèl wèbmèt(pa oblije)', # MODIF
 'info_entrer_code_alphabet' => 'Rantre kòd lalfabe w vle sit-la li itilize :',
 'info_envoi_email_automatique' => 'Pou voye kèk limèl otomatikman',
 'info_envoyer_maintenant' => 'Voye kounye-a touswit',
@@ -374,7 +374,7 @@ Koulè imaj rannkont stati yo (komandè = vèr; redaktè = jon).',
 'info_historique_texte' => 'Swivi tout chanjman ran w kapab sere yon istorik pou tout bagay ki ap chanje nan kontni yon atik. Li afich kisa ki chanje ant kèk vèsyon sa-yo.',
 'info_identification_publique' => 'Ou lidantité piblik...',
 'info_image_process' => 'Tanpri chwazi mèyè métod pou lakreyasyon viyèt yo. Pou sa-a mèsi klike sou imaj la ki koresponn.',
-'info_image_process2' => '<b>N.B.</b> <i>Si oken imaj ki parèt, pètèt se sèvè ki ebèj sit ou ki pa konfigire pou itilize outiy sa-yo. Fòk w kontak responsab teknik sèvè an pou domann tout ektansyon «GD» ou «Imagick» sa-yo.</i>',
+'info_image_process2' => '<b>N.B.</b> <i>Si oken imaj ki parèt, pètèt se sèvè ki ebèj sit ou ki pa konfigire pou itilize outiy sa-yo. Fòk w kontak responsab teknik sèvè an pou domann tout ektansyon «GD» ou «Imagick» sa-yo.</i>', # MODIF
 'info_images_auto' => 'Imaj kalkilé otomatikman',
 'info_informations_personnelles' => 'Sinkyèm etap : <b>Enfòmasyon pèsonel yo</b>', # MODIF
 'info_inscription_automatique' => 'Enskrisyon otomatik pou nouvo redaktè yo',
@@ -494,7 +494,7 @@ Si wi ka aksepte, vizité yo ke enskri azot depi
 'info_question_utilisation_moteur_recherche' => 'Eske w vle itilize motè pou chèche de SPIP ?
  (enlèv ali ke rann sistèm pli rapid ek soup.)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # NEW
 'info_racine_site' => 'Rasin sit-la',
 'info_recharger_page' => 'Tapri rochaj paj la nan kèk minit.',
 'info_recherche_auteur_a_affiner' => 'Genyen trò rezilta pou "@cherche_auteur@" ; tanpri souple fè yon nouvo chèche pli prési.',
@@ -761,6 +761,7 @@ nan yon koulè ki bay lestati ali :',
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -772,7 +773,7 @@ nan yon koulè ki bay lestati ali :',
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -780,6 +781,7 @@ nan yon koulè ki bay lestati ali :',
 'plugins_liste' => 'Liste des plugins', # NEW
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

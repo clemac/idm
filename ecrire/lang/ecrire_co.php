@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -306,7 +306,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_code_acces' => 'Ùn vi scurdate di i vostri còdici d\'accessu !',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
 'info_compresseur_gzip' => '<b>N. B. :</b> Arricumandemu di verificà capunanzu sì l\'òspite cumpressa digià in autumàticu i script php;. Pè sapè la, 
-		pudete aduprà per esempiu stu serviziu : @testgzip@',
+		pudete aduprà per esempiu stu serviziu : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Sì u vostru servore ùn cumpressa micca in autumàticu e pàgine HTML da mandà le à i visitori, pruvate puru à furzà a cumpressione da 
 		sminuì u pesu di e pàgine da scaricà. <b>Attenti</b> : Quessa pò ralentisce assai certi servori.',
 'info_config_suivi' => 'Sì st\'indirizzu currisponde à una mailing-list, rinsignate puru quì sottu l\'indirizzu cù chì i participanti di u situ si ponu iscrive. 
@@ -345,7 +345,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_email_envoi' => 'Indirizzu email di chì manda (micca ubbligatoriu)',
 'info_email_envoi_txt' => 'Indettà quì l\'indirizzu da aduprà per mandà l\'email (da predefinita, l\'indirizzu di u destinatariu serà usatu da indirizzu 
 		d\'inviu) :',
-'info_email_webmestre' => 'Indirizzu email di u webmaestru (micca ubbligatoriu)',
+'info_email_webmestre' => 'Indirizzu email di u webmaestru (micca ubbligatoriu)', # MODIF
 'info_entrer_code_alphabet' => 'Indettà u còdice di u santacroce da aduprà :',
 'info_envoi_email_automatique' => 'Inviu autumàticu d\'email',
 'info_envoyer_maintenant' => 'Mandà avà',
@@ -391,7 +391,7 @@ U so statutu hè signalatu da u culore di l\'icona (scrittore = giallu; amminist
 'info_identification_publique' => 'A vostra identità pùbblica...',
 'info_image_process' => 'Sceglite puru u mètudu preferitu per a creazione di e figurette clicchendu nant\'à l\'imàgine currispundente.',
 'info_image_process2' => '<b>N.B.</b> <i>S\'ella ùn vene nisun\'imàgine, vole dì chì a cunfigurazione di u vostru servore ùn permette l\'usu di tale 
-	funzioni gràfiche. Sè vo vulete aduprà le quantunque, cuntattate u rispunsèvule tècnicu, dumandendu li di stallà l\'estensioni "GD" o "Imagick".</i>',
+	funzioni gràfiche. Sè vo vulete aduprà le quantunque, cuntattate u rispunsèvule tècnicu, dumandendu li di stallà l\'estensioni "GD" o "Imagick".</i>', # MODIF
 'info_images_auto' => 'Imàgini create in autumàticu',
 'info_informations_personnelles' => 'Infurmazioni persunale',
 'info_inscription_automatique' => 'Iscrizzione autumàtica di nuvelli scrittori',
@@ -507,7 +507,7 @@ U so statutu hè signalatu da u culore di l\'icona (scrittore = giallu; amminist
 'info_question_utilisation_moteur_recherche' => 'vulete aduprà u mutore di ricerca integratu di SPIP ?
 	(disattivu vene acceleratu u funziunamentu di u sistema)',
 'info_question_vignettes_referer_non' => 'Ùn vede micca a cattura di screnu di i siti d\'orìgine di e vìsite',
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # NEW
 'info_racine_site' => 'Ràdica di u situ',
 'info_recharger_page' => 'Aghjurnate sta pàgina da quì à un minutu.',
 'info_recherche_auteur_a_affiner' => 'Troppu risultati per "@cherche_auteur@"; precisate puru a ricerca.',
@@ -780,6 +780,7 @@ U so statutu hè signalatu da u culore di l\'icona (scrittore = giallu; amminist
 'plugin_titre_automatique' => 'Stallazione autumàtica',
 'plugin_titre_automatique_ajouter' => 'Aghjunghje plugins',
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuà per attivà lu',
 'plugin_zip_adresse' => 'rinsignate quì sottu l\'indirizzu di un schedariu-zip d\'un plugin da scaricà, o puru l\'indirizzu d\'una lista di plugins.',
 'plugin_zip_adresse_champ' => 'Indirizzu di u plugin o di a lista ',
@@ -791,7 +792,7 @@ U so statutu hè signalatu da u culore di l\'icona (scrittore = giallu; amminist
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins attivati.',
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins',
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugin dispunìbuli.',
@@ -799,6 +800,7 @@ U so statutu hè signalatu da u culore di l\'icona (scrittore = giallu; amminist
 'plugins_liste' => 'Lista di i plugins',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Ierarchia',
 'plugins_vue_liste' => 'Lista',
 'protocole_ldap' => 'Versione di u protocollu :',

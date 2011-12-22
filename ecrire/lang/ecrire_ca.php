@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -290,7 +290,7 @@ desactivada per raons de seguretat (cosa normal en molts proveïdors d\'hostatge
 'info_classement_2' => '<sup>n</sup> a la @liste@',
 'info_code_acces' => 'No oblideu els vostres codis d\'accés!',
 'info_compatibilite_html' => 'Norma HTML a seguir',
-'info_compresseur_gzip' => '<b>N. B. :</b> Recomanem que verifiqueu prèviament si l\'hostatjador ja comprimeix sistemàticament els scripts php ; per això, podeu utilitzar, per exemple, el següent servei: @testgzip@',
+'info_compresseur_gzip' => '<b>N. B. :</b> Recomanem que verifiqueu prèviament si l\'hostatjador ja comprimeix sistemàticament els scripts php ; per això, podeu utilitzar, per exemple, el següent servei: @testgzip@', # MODIF
 'info_compresseur_texte' => 'Si el vostre servidor no comprimeix automàticament les pàgines html per enviar-les als internautes, podeu provar forçar aquesta compressió per disminuir el pes de les pàgines baixades. <b>Atenció</b>: això pot reduir considerablement la velocitat d\'alguns servidors. ',
 'info_config_suivi' => 'Si aquesta adreça correspon a una llista de correu, podeu indicar més avall l\'adreça a la que els participants es poden registrar. Aquesta adreça pot ser una URL (per exemple la pàgina de registre a la llista per la Web), o un correu electrònic amb un assumpte específic: <tt>@adresse_suivi@?assumpte=subscriure\'s</tt>):',
 'info_config_suivi_explication' => 'Us podeu subscriure a la llista de correu d\'aquest lloc. Si ho feu, rebreu per correu electrònic els anuncis dels articles i de les breus que es proposen per ser publicats.',
@@ -323,7 +323,7 @@ desactivada per raons de seguretat (cosa normal en molts proveïdors d\'hostatge
 'info_ecrire_article' => 'Abans de poder escriure un article, heu de crear com a mínim una secció.',
 'info_email_envoi' => 'L\'adreça electrònica del remitent (opcional)',
 'info_email_envoi_txt' => 'Introduiu aquí l\'adreça a fer servir per enviar els correus electrònics (per defecte, l\'adreça del destinatari serà utilitzada com a adreça del remitent):',
-'info_email_webmestre' => 'Adreça electrònica del webmestre (opcional)',
+'info_email_webmestre' => 'Adreça electrònica del webmestre (opcional)', # MODIF
 'info_entrer_code_alphabet' => 'Entreu el codi del joc de caràcters a fer servir:',
 'info_envoi_email_automatique' => 'Enviament automàtic de correus electrònics',
 'info_envoyer_maintenant' => 'Envia-ho ara',
@@ -359,7 +359,7 @@ desactivada per raons de seguretat (cosa normal en molts proveïdors d\'hostatge
 'info_historique_texte' => 'El seguiment de les revisions permet conservar un històric de totes les modificacions fetes al contingut d\'un article, i mostrar les diferències entre les versions successives. ',
 'info_identification_publique' => 'La vostra identitat pública...',
 'info_image_process' => 'Vulgueu seleccionar el millor mètode de fabricació de vinyetes fent un clic damunt de la imatge corresponent. ',
-'info_image_process2' => '<b>N.B.</b> <i>Si no apareix cap imatge, aleshores és que el servidor que allotja la vostra web no ha estat configurat per utilitzar aquestes eines. Si desitgeu emprar aquestes funcions, poseu-vos en contacte amb el responsable tècnic i demaneu les extensions «GD» o «Imagick».</i>',
+'info_image_process2' => '<b>N.B.</b> <i>Si no apareix cap imatge, aleshores és que el servidor que allotja la vostra web no ha estat configurat per utilitzar aquestes eines. Si desitgeu emprar aquestes funcions, poseu-vos en contacte amb el responsable tècnic i demaneu les extensions «GD» o «Imagick».</i>', # MODIF
 'info_images_auto' => 'Imatges calculades automàticament',
 'info_informations_personnelles' => 'Informacions personals',
 'info_inscription_automatique' => 'Inscripció automàtica dels nous redactors',
@@ -464,7 +464,7 @@ desactivada per raons de seguretat (cosa normal en molts proveïdors d\'hostatge
 'info_question_accepter_visiteurs' => 'Si a les plantilles (esquelets) del vostre lloc Web es preveu l\'enregistrament de visitants sense accés a l\'espai privat, vulgueu activar la següent opció:',
 'info_question_inscription_nouveaux_redacteurs' => 'Accepteu les inscripcions de nous redactors a partir del lloc públic? Si ho accepteu, els visitants es podran inscriure
  mitjançant un formulari  automatitzat i llavors accediran a l\'espai privat per proposar els seus propis articles.<blockquote><i>Durant el procés d\'inscripció, els usuaris reben un correu electrònic automàtic en el que se\'ls dóna els seus codis d\'accés al lloc privat. Alguns proveïdors d\'hostatge desactiven l\'enviament de correus electrònics des dels seus servidors: en aquest
- cas, la inscripció automàtica és impossible.</i></blockquote>',
+ cas, la inscripció automàtica és impossible.</i></blockquote>', # MODIF
 'info_question_utilisation_moteur_recherche' => 'Voleu fer servir el motor de cerca integrat a l\'SPIP?
  (inhabilitar-lo accelera el funcionament del sistema.)',
 'info_question_vignettes_referer_non' => 'No mostrar les captures dels llocs d\'origen de les visites',
@@ -480,8 +480,8 @@ desactivada per raons de seguretat (cosa normal en molts proveïdors d\'hostatge
 'info_redacteurs' => 'Redactors',
 'info_redaction_en_cours' => 'En procés de redacció',
 'info_redirection' => 'Redireccionament',
-'info_redirection_activee' => 'La redirection est activée.', # NEW
-'info_redirection_desactivee' => 'La redirection a été supprimée.', # NEW
+'info_redirection_activee' => 'La redirecció està activada.',
+'info_redirection_desactivee' => 'S\'ha suprimit la redirecció.',
 'info_refuses' => 'Els vostres articles rebutjats',
 'info_reglage_ldap' => 'Opcions: <b>Posta a punt de la importació LDAP</b>',
 'info_renvoi_article' => '<b>Redirecció.</b> Aquest article et porta a la pàgina:',
@@ -735,6 +735,7 @@ amb un color que indica el seu estat:',
 'plugin_titre_automatique' => 'Instal·lació automàtica',
 'plugin_titre_automatique_ajouter' => 'Afegir plugins',
 'plugin_titre_installation' => 'Instal·lació del connector @plugin@',
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continueu per activar-lo',
 'plugin_zip_adresse' => 'indiqueu més avall l\'adreça d\'un fitxer zip de plugin a baixar, o fins i tot l\'adreça d\'una llista de plugins.',
 'plugin_zip_adresse_champ' => 'Adreça del plugin o de la llista ',
@@ -746,7 +747,7 @@ amb un color que indica el seu estat:',
 'plugins_actif_aucun' => 'No hi ha cap connector activat.',
 'plugins_actif_un' => 'Un connector activat.',
 'plugins_actifs' => '@count@ plugins actius.',
-'plugins_actifs_liste' => 'Connectors actius',
+'plugins_actifs_liste' => 'Connectors actius', # MODIF
 'plugins_compte' => '@count@ plugins',
 'plugins_disponible_un' => 'Un connector disponible.',
 'plugins_disponibles' => '@count@ plugins disponibles.',
@@ -754,6 +755,7 @@ amb un color que indica el seu estat:',
 'plugins_liste' => 'Llista dels connectors',
 'plugins_liste_extensions' => 'Extensions',
 'plugins_recents' => 'Connectors recents.',
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Jerarquia',
 'plugins_vue_liste' => 'Llista',
 'protocole_ldap' => 'Versió del protocol:',

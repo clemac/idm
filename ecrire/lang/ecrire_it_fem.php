@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -297,7 +297,7 @@ immagini inserite. Ciò permette ad esempio di creare in automatico una galleria
 'info_classement_2' => '<sup>o</sup> su @liste@',
 'info_code_acces' => 'Non dimenticare i tuoi codici d\'accesso!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Si raccomanda di verificare preventivamente se il provider comprime già in maniera sistematica gli script php; a tal fine è possibile utilizzare, per esempio,  il seguente servizio: @testgzip@',
+'info_compresseur_gzip' => '<b>N. B. :</b> Si raccomanda di verificare preventivamente se il provider comprime già in maniera sistematica gli script php; a tal fine è possibile utilizzare, per esempio,  il seguente servizio: @testgzip@', # MODIF
 'info_compresseur_texte' => 'Se il proprio server non comprime automaticamente le pagine HTML per inviarle ai visitatori, è possibile tentare di forzare la compressione per diminuire il peso delle pagine da scaricare. <b>Attenzione</b>: ciò può rallentare notevolmente alcuni server.',
 'info_config_suivi' => 'Se questo indirizzo corrisponde a una mailing-list, è possibile indicare qui sotto l\'indirizzo al quale i partecipanti del sito possono iscriversi. Questo indirizzo può essere una URL (per esempio la pagina di iscrizione via Web alla lista), oppure un indirizzo email che contiene un Oggetto specifico (per esempio: <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'È possibile abbonarsi alla mailing-list di questo sito. Verranno spedite per email le notifiche degli articoli e delle brevi proposte per la pubblicazione.',
@@ -330,7 +330,7 @@ immagini inserite. Ciò permette ad esempio di creare in automatico una galleria
 'info_ecrire_article' => 'Prima di poter scrivere degli articoli, devi creare almeno una rubrica.',
 'info_email_envoi' => 'Indirizzo email del mittente (opzionale)',
 'info_email_envoi_txt' => 'Indicare qui l\'indirizzo da utilizzare per l\'invio degli email (come impostazione predefinita l\'indirizzo del destinatario sarà utilizzato come indirizzo del mittente):',
-'info_email_webmestre' => 'Indirizzo email della webmistress (opzionale)',
+'info_email_webmestre' => 'Indirizzo email della webmistress (opzionale)', # MODIF
 'info_entrer_code_alphabet' => 'Inserisci il codice dell\'alfabeto da utilizzare:',
 'info_envoi_email_automatique' => 'Invio di email automatico',
 'info_envoyer_maintenant' => 'Invia adesso',
@@ -370,7 +370,7 @@ dai loro server. In questo caso, le funzionalità di SPIP di seguito riportate n
 'info_historique_texte' => 'La gestione delle revisioni permette di conservare traccia di tutte le modifiche effettuate su un articolo, mostrando le differenze fra le sue versioni successive.',
 'info_identification_publique' => 'La tua identità pubblica...',
 'info_image_process' => 'Seleziona il metodo migliore per la creazione delle anteprime cliccando sull\'immagine corrispondente.',
-'info_image_process2' => '<b>N.B.</b> <i>Se non appare alcuna immagine, ciò significa che la configurazione del server non permette l\'uso di alcune funzioni grafiche. Se si desidera utilizzarle, rivolgersi al responsabile tecnico chiedendo di installare le estensioni "GD" o "Imagick".</i>',
+'info_image_process2' => '<b>N.B.</b> <i>Se non appare alcuna immagine, ciò significa che la configurazione del server non permette l\'uso di alcune funzioni grafiche. Se si desidera utilizzarle, rivolgersi al responsabile tecnico chiedendo di installare le estensioni "GD" o "Imagick".</i>', # MODIF
 'info_images_auto' => 'Immagini elaborate automaticamente',
 'info_informations_personnelles' => 'Informazioni personali',
 'info_inscription_automatique' => 'Iscrizione automatica di nuove redattrici',
@@ -487,7 +487,7 @@ impossibile.', # MODIF
 'info_question_utilisation_moteur_recherche' => 'Desideri utilizzare il motore di ricerca integrato di SPIP?
 (disattivandolo viene velocizzato il funzionamento del sistema)',
 'info_question_vignettes_referer_non' => 'Non visualizzare la cattura dello schermo dei siti di origine delle visite',
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # NEW
 'info_racine_site' => 'Root del sito',
 'info_recharger_page' => 'Aggiorna questa pagina fra qualche istante.',
 'info_recherche_auteur_a_affiner' => 'Troppi risultati per "@cherche_auteur@"; restringi la ricerca.',
@@ -754,6 +754,7 @@ Le traduzioni sono associate all\'originale,
 'plugin_titre_automatique' => 'Installazione automatica',
 'plugin_titre_automatique_ajouter' => 'Aggiungere dei plug-in',
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuare per attivarlo',
 'plugin_zip_adresse' => 'indicate qui sotto l\'indirizzo di un file zip del plug-in da scaricare, oppure l\'indirizzo di un elenco di plug-in.',
 'plugin_zip_adresse_champ' => 'Indirizzo del plug-in o dell\'elenco ',
@@ -765,7 +766,7 @@ Le traduzioni sono associate all\'originale,
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plug-in attivati.',
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plug-in',
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plug-in disponibili.',
@@ -773,6 +774,7 @@ Le traduzioni sono associate all\'originale,
 'plugins_liste' => 'Elenco dei plugin',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Struttura gerarchica',
 'plugins_vue_liste' => 'Elenco',
 'protocole_ldap' => 'Versione del protocollo:',
