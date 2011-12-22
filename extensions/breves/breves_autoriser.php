@@ -10,6 +10,8 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 // pour le pipeline d'autorisation
 function breves_autoriser(){}
 
@@ -43,9 +45,11 @@ function autoriser_rubrique_creerbrevedans_dist($faire, $type, $id, $qui, $opt) 
 function autoriser_breve_modifier_dist($faire, $type, $id, $qui, $opt) {
 	$r = sql_fetsel("id_rubrique,statut", "spip_breves", "id_breve=".intval($id));
 	return
-		($r['statut'] == 'publie')
+		$r AND (
+		($r['statut'] == 'publie' OR (isset($opt['statut']) AND $opt['statut']=='publie'))
 			? autoriser('publierdans', 'rubrique', $r['id_rubrique'], $qui, $opt)
-			: in_array($qui['statut'], array('0minirezo', '1comite'));
+			: in_array($qui['statut'], array('0minirezo', '1comite'))
+		);
 }
 
 

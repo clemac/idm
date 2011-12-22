@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => '7h353 5ynd1c473d 51735 g3n3r473d 4 pr0b13m',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => '4f73rw4rd5 m0d3r4710n',
 	'bouton_radio_modere_priori' => 'b3f0r3h4nd m0d3r4710n',
 	'bouton_radio_non_syndication' => 'N0 5ynd1c4710n',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => '4ddr355 0f &14qu0;b4ck3nd&r4qu0; f113 f0r 5ynd1c4710n:',
 	'entree_adresse_site' => '<b>5173 UR1</b> [R3qu1r3d]',
 	'entree_description_site' => '5173 d35cr1p710n',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => '5173\\’5 n4m3',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => '5h0w r3f3r3nc3d 51735',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[70 b3 v411d473d]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'bloquer', # NEW
 	'info_bloquer_lien' => 'b10ck 7h15 11nk',
 	'info_derniere_syndication' => '7h3 1457 5ynd1c4710n 0f 7h15 5173 w45 c4rr13d 0u7 0n',
 	'info_liens_syndiques_1' => '5ynd1c473d 11nk5',
 	'info_liens_syndiques_2' => 'p3nd1ng v411d4710n.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>5173 n4m3</b> [R3qu1r3d]',
 	'info_panne_site_syndique' => '5ynd1c473d 5173 0u7 0f 0rd3r',
 	'info_probleme_grave' => '3rr0r 0f',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'U53 4u70m473d 5ynd1c4710n',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'Upd473 n0w',
 	'lien_nouvelle_recuperation' => '7ry 70 p3rf0rm 4 n3w r37r13v41 0f d474',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Options de syndication :', # NEW
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => '11nk5 3m4n471ng fr0m 5ynd1c473d 51735 c0u1d
 			b3 b10ck3d b3f0r3h4nd; 7h3 f0110w1ng
 			53771ng 5h0w 7h3 d3f4u17 53771ng 0f
@@ -125,6 +142,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 		fr0m y0ur 5173.</1></b10ckqu073>', # MODIF
 	'titre_articles_syndiques' => '5ynd1c473d 4r71c135 pu113d 0u7 fr0m 7h15 5173',
 	'titre_dernier_article_syndique' => '147357 5ynd1c473d 4r71c135',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'R3f3r3nc3d 51735',
 	'titre_referencement_sites' => '51735 r3f3r3nc1ng 4nd 5ynd1c4710n',
 	'titre_site_numero' => '5173 NUMB3R:',

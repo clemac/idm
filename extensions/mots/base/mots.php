@@ -10,6 +10,8 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 /**
  * Interfaces des tables mots et groupes de mots pour le compilateur
  *
@@ -71,7 +73,7 @@ function mots_declarer_tables_objets_sql($tables){
 		'texte_objet' => 'public:mots_clef',
 		'texte_modifier' => 'mots:icone_modifier_mot',
 		'texte_ajouter' => 'titre_ajouter_un_mot', // # A deplacer
-		'texte_creer' => 'icone_creer_mot_cle',
+		'texte_creer' => 'titre_ajouter_un_mot',
 		'texte_logo_objet' => 'mots:logo_mot_cle',
 		'texte_creer_associer' => 'mots:creer_et_associer_un_mot',
 		'info_aucun_objet'=> 'info_aucun_mot',
@@ -148,6 +150,15 @@ function mots_declarer_tables_objets_sql($tables){
 	// jointures sur les mots pour tous les objets
 	$tables[]['tables_jointures'][]= 'mots_liens';
 	$tables[]['tables_jointures'][]= 'mots';
+
+	// cas particulier des auteurs et mots : declarer explicitement mots_liens comme jointure privilegiee
+	// cf http://core.spip.org/issues/2329
+	$tables['spip_auteurs']['tables_jointures'][]= 'mots_liens';
+	$tables['spip_auteurs']['tables_jointures'][]= 'mots';
+	$tables['spip_mots']['tables_jointures'][]= 'mots_liens';
+	$tables['spip_mots']['tables_jointures'][]= 'mots';
+
+
 	// recherche jointe sur les mots pour tous les objets
 	$tables[]['rechercher_jointures']['mot'] = array('titre' => 3);
 	// versionner les jointures pour tous les objets

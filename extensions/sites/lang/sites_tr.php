@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Haber paylaşımlı şu sitelerde sorun çıktı',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'sonradan onayla yönetim',
 	'bouton_radio_modere_priori' => 'önceden onayla yönetim',
 	'bouton_radio_non_syndication' => 'Paylaşım (syndication) yok',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'Paylaşım dosyasının adresi :',
 	'entree_adresse_site' => '<b>Site adresi</b> [Zorunlu]',
 	'entree_description_site' => 'Sitenin tanımı',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'Sitenin ismi',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Atıfta bulunulan siteleri göster',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[onaylanacak]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'engelle',
 	'info_bloquer_lien' => 'bu bağlantıyı engelle',
 	'info_derniere_syndication' => 'Bu sitenin son paylaşım tarihi:',
 	'info_liens_syndiques_1' => 'paylaşılan bağlar :',
 	'info_liens_syndiques_2' => 'Onay bekliyor.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>Site adı</b> [zorunlu]',
 	'info_panne_site_syndique' => 'Paylaşımlı sitede arıza var',
 	'info_probleme_grave' => 'sorun',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Otomatik paylaşımı kullan',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'Şimdi güncelle',
 	'lien_nouvelle_recuperation' => 'Verilerin yeniden alınmasını dene',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Paylaşım seçenekleri :',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Paylaşımlı sitelerden gelen bağlar önceden engellenebilir ; aşağıdaki ayarlama yaratılmalarından sonra paylaşılan sitelerin varsayılan ayarlarını gösterir. Sonradan her bir bağın engelini tek tek kaldırmak ya da her site için gelecekteki bağları engellemeyi tek tek seçmek olanaklıdır.',
 	'texte_messages_publics' => 'Makalenin kamu mesajları : ',
 	'texte_non_fonction_referencement' => 'Bu otomatik işlevi kullanmamayı tercih edebilir, bu siteyle ilgili unsurları kendiniz belirtebilirsiniz.... ',
@@ -114,6 +131,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_syndication' => 'Bir Web sitesinin izin vermesi halinde yeniliklerinin listesini otomatik olarak listelemek olasıdır. Bunun için paylaşımı çalıştırmanız gerekir. Bazı servis sağlayıcılar bu işlevi engeller; böyle bir durumda, içerik paylaşımını kendi sitenizden kullanamazsınız.',
 	'titre_articles_syndiques' => 'Bu siteden alınan paylaşımlı makaleler',
 	'titre_dernier_article_syndique' => 'Son yayınlanan paylaşımlı makaleler',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'Atıfta bulunulan siteler ',
 	'titre_referencement_sites' => 'Sitelere atıf ve paylaşım',
 	'titre_site_numero' => 'SİTE NO :',

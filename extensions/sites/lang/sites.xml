@@ -1,9 +1,8 @@
-<traduction module="sites" gestionnaire="salvatore" reference="fr">
+<traduction module="sites" gestionnaire="salvatore" url="http://trad.spip.org" source="svn://zone.spip.org/spip-zone/_core_/plugins/sites/lang/" reference="fr">
 	<langue code="ar">
 		<traducteur nom="kandalaft" />
 	</langue>
 	<langue code="ast" />
-	<langue code="ay" />
 	<langue code="bg" />
 	<langue code="br" />
 	<langue code="bs" />
@@ -29,14 +28,11 @@
 	<langue code="fa">
 		<traducteur nom="davood" />
 	</langue>
-	<langue code="fi" />
 	<langue code="fon" />
 	<langue code="fr_tu">
 		<traducteur nom="beatnick" />
 	</langue>
 	<langue code="gl" />
-	<langue code="hac" />
-	<langue code="he" />
 	<langue code="hu" />
 	<langue code="id" />
 	<langue code="is" />
@@ -57,9 +53,7 @@
 	<langue code="oc_prv" />
 	<langue code="oc_va" />
 	<langue code="pl" />
-	<langue code="pt">
-		<traducteur nom="rporto" />
-	</langue>
+	<langue code="pt" />
 	<langue code="pt_br" />
 	<langue code="ro" />
 	<langue code="ru" />

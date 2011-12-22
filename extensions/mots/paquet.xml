@@ -1,11 +1,11 @@
 <paquet
 	prefix="mots"
 	categorie="edition"
-	version="2.2.1"
+	version="2.4.1"
 	etat="test"
 	compatibilite="[3.0.0-alpha2;["
 	logo="prive/themes/spip/images/mot-32.png"
-	schema="2.0.0"
+	schema="2.0.1"
 >	
 
 	<nom>Mots</nom>

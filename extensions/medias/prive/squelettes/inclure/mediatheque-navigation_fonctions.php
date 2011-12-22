@@ -10,23 +10,10 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) return;
 
-function formulaires_configurer_porte_plume_charger_dist(){
-	$valeurs = array();
-	$valeurs['barre_outils_public'] = $GLOBALS['meta']['barre_outils_public'];
-	return $valeurs;
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
+
+function liste_extensions_utilisees($media){
+	return $media?array_map('reset',sql_allfetsel('extension','spip_documents','media='.sql_quote($media))):array();
 }
-
-function formulaires_configurer_porte_plume_traiter_dist(){
-	include_spip('inc/config');
-	appliquer_modifs_config();
-	
-	if (version_compare($GLOBALS['spip_version_branche'], "2.1.0-dev", "<")) {
-		ecrire_config('barre_outils_public', _request('barre_outils_public'));
-	}
-			
-	return array('message_ok'=>_T('barreoutils:config_info_enregistree'));
-}
-
-?>

@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'pengunjung situs umum saat mereka mengirimkan sebuah pesan di forum.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => 'Buat sebuah kelompok kata kunci baru',
@@ -78,9 +78,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'Kata kunci baru',
 	'titre_config_groupe_mots_cles' => 'Konfigurasi kelompok kata kunci',
 	'titre_gauche_mots_edit' => 'NOMOR KATA KUNCI:',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
 	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Kata-kata kunci di forum situs umum',
 	'titre_mots_tous' => 'Kata kunci',
 	'titre_nouveau_groupe' => 'Kelompok baru',

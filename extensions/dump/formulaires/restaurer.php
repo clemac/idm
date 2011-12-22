@@ -35,7 +35,7 @@ function formulaires_restaurer_charger_dist(){
 
 /**
  * Verifier
- * @return <type>
+ * @return array
  */
 function formulaires_restaurer_verifier_dist() {
 	$erreurs = array();
@@ -97,6 +97,7 @@ function formulaires_restaurer_verifier_dist() {
 
 /**
  * Traiter
+ * @return array
  */
 function formulaires_restaurer_traiter_dist() {
 

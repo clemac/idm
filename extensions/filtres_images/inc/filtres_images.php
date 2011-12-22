@@ -16,6 +16,8 @@
  *  
  */
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 // prise en charge des renomage de fonction
 include_spip('inc/filtres_images_compat');
 

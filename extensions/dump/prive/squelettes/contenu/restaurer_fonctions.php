@@ -10,6 +10,8 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 include_spip('inc/dump');
 
 function dump_afficher_tables_restaurees_erreurs($status_file) {
@@ -25,7 +27,7 @@ function dump_afficher_tables_restaurees_erreurs($status_file) {
 	// lister les tables copiees aller verifier dans la base
 	// qu'on a le bon nombre de donnees
 	foreach($tables as $t=>$n) {
-		if (!sql_showtable($t) OR $n===0)
+		if (!sql_showtable($t,true) OR $n===0)
 			$erreurs[$t] = _T('dump:erreur_table_absente',array('table'=>"<strong>$t</strong>"));
 		else {
 			$n = abs(intval($n));

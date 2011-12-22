@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -70,9 +70,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_messages' => 'Supprimer ces messages', # NEW
 	'icone_valider_message' => 'Dëse Message validéieren',
 	'icone_valider_messages' => 'Valider ces messages', # NEW
-	'icone_valider_repondre_message' => 'Valider &amp; Répondre à ce message', # NEW
+	'icone_valider_repondre_message' => 'Valider & Répondre à ce message', # NEW
 	'info_1_message_forum' => '1 message de forum', # NEW
-	'info_activer_forum_public' => '<i>Fir déi öffentlëch Forum\'en anzeschalten, wielt d\'Default-Moderatiouns-Method:</i>',
+	'info_activer_forum_public' => '<i>Fir déi öffentlëch Forum\'en anzeschalten, wielt d\'Default-Moderatiouns-Method:</i>', # MODIF
 	'info_appliquer_choix_moderation' => 'Dës Moderatiouns-Method iwwerhuelen:',
 	'info_config_forums_prive' => 'Am privaten Deel kënnt dir e puer Forumen aktivéieren:',
 	'info_config_forums_prive_admin' => 'E reservéierte Forum fir d\'Administrateuren vum Site:',
@@ -94,8 +94,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_nb_messages_forum' => '@nb@ messages de forum', # NEW
 	'info_option_email' => 'Wann e Visiteur vum Site e neie Message an de Forum vun engem Artikel schéckt kennen d\'Auteuren vum Artikel via Email Bescheed kréien. Wëllt dir dës Optioun benotzen?',
 	'info_pas_de_forum' => 'keen Forum',
-	'info_question_visiteur_ajout_document_forum' => 'Wann dir de Visiteuren erlaabt Dokumenter (Biller, Toun...) bäi e Forum-Message ze setzen, da gitt hei un wéi eng Extensiounen am Forum erlaabt sin (z.B.: gif, jpg, png, mp3).',
-	'info_question_visiteur_ajout_document_forum_format' => 'Wann dir all Dokument-Formater als sëcher ukuckt, dann gitt e Stär an. Fir näischt ze erlaaben, gitt näischt an.',
+	'info_question_visiteur_ajout_document_forum' => 'Wann dir de Visiteuren erlaabt Dokumenter (Biller, Toun...) bäi e Forum-Message ze setzen, da gitt hei un wéi eng Extensiounen am Forum erlaabt sin (z.B.: gif, jpg, png, mp3).', # MODIF
+	'info_question_visiteur_ajout_document_forum_format' => 'Wann dir all Dokument-Formater als sëcher ukuckt, dann gitt e Stär an. Fir näischt ze erlaaben, gitt näischt an.', # MODIF
 	'interface_formulaire' => 'Interface formulaire', # NEW
 	'interface_onglets' => 'Interface avec onglets', # NEW
 	'item_activer_forum_administrateur' => 'De Forum vun den Adminstrateuren aschalten',
@@ -147,7 +147,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'text_article_propose_publication_forum' => 'Zëckt nët är Meenung am Forum vun dësem Artikel ofzeginn (ënnen op der Säit).',
 	'texte_en_cours_validation' => 'Les articles, brèves, forums ci dessous sont proposés à la publication.', # NEW
 	'texte_en_cours_validation_forum' => 'Gidd är Meenung am Forum deen dozou geheiert of.',
-	'texte_messages_publics' => 'Messages publics sur&nbsp;:', # NEW
+	'texte_messages_publics' => 'Messages publics sur :', # NEW
 	'titre_cadre_forum_administrateur' => 'Privat-Forum vun den Administrateuren',
 	'titre_cadre_forum_interne' => 'Internen Forum',
 	'titre_config_forums_prive' => 'Forumen vum privaten Deel',

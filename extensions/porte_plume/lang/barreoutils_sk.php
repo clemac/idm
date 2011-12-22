@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -58,9 +58,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'barre_guillemets' => 'Dať do "dvojitých úvodzoviek"',
 	'barre_guillemets_simples' => 'Dať do “jednoduchých úvodzoviek“',
 	'barre_indenter' => 'Vynechať riadok',
-	'barre_inserer_cadre' => 'Ins&eacute;rer un code preformat&eacute; (cadre)', # NEW
+	'barre_inserer_cadre' => 'Vložiť predformátovaný kód (rám)',
 	'barre_inserer_caracteres' => 'Vložiť špeciálne znaky',
-	'barre_inserer_code' => 'Ins&eacute;rer un code informatique (code)', # NEW
+	'barre_inserer_code' => 'Vložiť počítačový kód (kód)',
 	'barre_intertitre' => 'Zmeniť na {{{podnadpis}}}',
 	'barre_italic' => '{Kurzíva}',
 	'barre_langue' => 'Skratkový jzyk',

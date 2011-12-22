@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -77,10 +77,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_messages' => 'Supprimer ces messages', # NEW
 	'icone_valider_message' => 'Bericht goedkeuren',
 	'icone_valider_messages' => 'Valider ces messages', # NEW
-	'icone_valider_repondre_message' => 'Valider &amp; Répondre à ce message', # NEW
+	'icone_valider_repondre_message' => 'Valider & Répondre à ce message', # NEW
 	'info_1_message_forum' => '1 message de forum', # NEW
 	'info_activer_forum_public' => '<i>Om de openbare forums te activeren, dien je een standaardinstelling
- voor het modereren te kiezen :</i>',
+ voor het modereren te kiezen :</i>', # MODIF
 	'info_appliquer_choix_moderation' => 'Pas deze moderatievorm toe ::',
 	'info_config_forums_prive' => 'In de particuliere ruimte van de site, kunt u verschillende soorten forums activeren :',
 	'info_config_forums_prive_admin' => 'Een forum dat voor de beheerders van de site is gereserveerd :',
@@ -104,8 +104,8 @@ De publieke forums kunnen per artikel toegestaan worden
 	'info_nb_messages_forum' => '@nb@ messages de forum', # NEW
 	'info_option_email' => 'Wanneer een bezoeker van de site een nieuw bericht in het forum opstelt dat met een artikel wordt verenigd, kunnen de auteurs van het artikel van dit bericht per e-mail verwittigd worden. Voor elk soort forum aangeven als men deze keuze moet gebruiken.',
 	'info_pas_de_forum' => 'geen forum',
-	'info_question_visiteur_ajout_document_forum' => 'Als u de bezoekers wilt machtigen om documenten (beelden, klanken…) samen te voegen aan hun berichten van forum, de lijst van de uitbreidingen van documenten hieronder aangeven toegelaten voor de ex forums (: gif, jpg, png, mp3).',
-	'info_question_visiteur_ajout_document_forum_format' => 'Als u alle soorten documenten toestaan wilt die als betrouwbaar door SPIP, een ster worden beschouwd, zetten. Om niets toe te staan, niets aangeven.',
+	'info_question_visiteur_ajout_document_forum' => 'Als u de bezoekers wilt machtigen om documenten (beelden, klanken…) samen te voegen aan hun berichten van forum, de lijst van de uitbreidingen van documenten hieronder aangeven toegelaten voor de ex forums (: gif, jpg, png, mp3).', # MODIF
+	'info_question_visiteur_ajout_document_forum_format' => 'Als u alle soorten documenten toestaan wilt die als betrouwbaar door SPIP, een ster worden beschouwd, zetten. Om niets toe te staan, niets aangeven.', # MODIF
 	'interface_formulaire' => 'Interface formulaire', # NEW
 	'interface_onglets' => 'Interface avec onglets', # NEW
 	'item_activer_forum_administrateur' => 'Forum van beheerders activeren',
@@ -157,7 +157,7 @@ De publieke forums kunnen per artikel toegestaan worden
 	'text_article_propose_publication_forum' => 'Aarzelt niet om uw advies te geven dank zij het forum dat aan dit artikel wordt vastgemaakt (beneden van bladzijde).',
 	'texte_en_cours_validation' => 'Les articles, brèves, forums ci dessous sont proposés à la publication.', # NEW
 	'texte_en_cours_validation_forum' => 'Aarzelt niet om uw advies te geven dank zij de forums die hun worden vastgemaakt.',
-	'texte_messages_publics' => 'Messages publics sur&nbsp;:', # NEW
+	'texte_messages_publics' => 'Messages publics sur :', # NEW
 	'titre_cadre_forum_administrateur' => 'Privé-forum voor de beheerders',
 	'titre_cadre_forum_interne' => 'Intern forum',
 	'titre_config_forums_prive' => 'Forums van de particuliere ruimte',

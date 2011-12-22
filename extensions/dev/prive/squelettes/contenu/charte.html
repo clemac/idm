@@ -11,9 +11,19 @@
 <p>
 Ces pages donnent des exemples de structure HTML utilisées par les squelettes de l'espace privé	
 </p>
-<p>Le menu a onglet est généré par le code <tt>[(&#35;VAL{nomdelabarreonglet}|barre_onglets{pagecourante})]</tt></p>
+[(#VAL{charte}|barre_onglets{charte})]
+<p>Le menu a onglet est généré par le code <tt>[(&#35;VAL{nomdelabarreonglet}|barre_onglets{pagecourante})]</tt>
+<br />Ce menu n'a pas l'apparrence de vrais onglets car il constitue une navigation avec changement de page.
+Ce menu est extensible par les plugins car la liste des pages le constituant est decrite dans <tt>paquet.xml</tt>
+</p>
+
 
 <h3>Des onglets simples a deux niveaux</h3>
+<p>Les onglets simples sont utilisés preferentiellement pour de la navigation ou du filtrage
+au sein de la même page. Ils sont utilisés avec des liens ajax pour être plus réactifs,
+ce qui est attendu par les utilisateurs confrontés à un onglet.
+<br />
+Il n'y a pas de filtre pour les construire car leur structure HTML est très simple.</p>
 <div class='onglets_simple clearfix'>
 	<ul>
 		<li><strong>Onglet expos&eacute;</strong></li>

@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -79,12 +79,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_messages' => 'Supprimer ces messages',
 	'icone_valider_message' => 'Valider ce message',
 	'icone_valider_messages' => 'Valider ces messages',
-	'icone_valider_repondre_message' => 'Valider &amp; Répondre à ce message',
+	'icone_valider_repondre_message' => 'Valider & Répondre à ce message',
 	'info_1_message_forum' => '1 message de forum',
 	'info_activer_forum_public' => '<i>Pour activer les forums publics, choisis leur mode
- de modération par défaut:</i>',
+ de modération par défaut:</i>', # MODIF
 	'info_appliquer_choix_moderation' => 'Appliquer ce choix de modération :',
-	'info_config_forums_prive' => 'Dans l’espace priv&eacute; du site, tu peux activer plusieurs types de forums&nbsp;:',
+	'info_config_forums_prive' => 'Dans l’espace privé du site, tu peux activer plusieurs types de forums :',
 	'info_config_forums_prive_admin' => 'Un forum réservé aux administrateurs du site :',
 	'info_config_forums_prive_global' => 'Un forum global, ouvert à tous les rédacteurs :',
 	'info_config_forums_prive_objets' => 'Un forum sous chaque article, brève, site référencé, etc. :',
@@ -106,8 +106,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_nb_messages_forum' => '@nb@ messages de forum',
 	'info_option_email' => 'Lorsqu\'un visiteur du site poste un nouveau message dans le forum associé à un article, les auteurs de l\'article peuvent être prévenus de ce message par e-mail. Indiquer pour chaque type de forum s\'il faut utiliser cette option.',
 	'info_pas_de_forum' => 'pas de forum',
-	'info_question_visiteur_ajout_document_forum' => 'Si tu souhaites autoriser les visiteurs à joindre des documents (images, sons...) à leurs messages de forums, indique ci-dessous la liste des extensions de documents autorisés pour les forums (ex: gif, jpg, png, mp3).',
-	'info_question_visiteur_ajout_document_forum_format' => 'Si tu souhaites autoriser tous les types de documents considérés comme fiables par SPIP, mettre une étoile. Pour ne rien autoriser, ne rien indiquer',
+	'info_question_visiteur_ajout_document_forum' => 'Si tu souhaites autoriser les visiteurs à joindre des documents (images, sons...) à leurs messages de forums, indique ci-dessous la liste des extensions de documents autorisés pour les forums (ex: gif, jpg, png, mp3).', # MODIF
+	'info_question_visiteur_ajout_document_forum_format' => 'Si tu souhaites autoriser tous les types de documents considérés comme fiables par SPIP, mettre une étoile. Pour ne rien autoriser, ne rien indiquer', # MODIF
 	'interface_formulaire' => 'Interface formulaire',
 	'interface_onglets' => 'Interface avec onglets',
 	'item_activer_forum_administrateur' => 'Activer le forum des administrateurs',
@@ -162,7 +162,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_messages_publics' => 'Messages publics sur :',
 	'titre_cadre_forum_administrateur' => 'Forum privé des administrateurs',
 	'titre_cadre_forum_interne' => 'Forum interne',
-	'titre_config_forums_prive' => 'Forums de l’espace priv&eacute;',
+	'titre_config_forums_prive' => 'Forums de l’espace privé',
 	'titre_forum' => 'Forum',
 	'titre_forum_suivi' => 'Suivi des forums',
 	'titre_page_forum_suivi' => 'Suivi des forums',

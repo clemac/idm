@@ -10,7 +10,7 @@
 		[(#REM) un bouton submit pour enregistrer qui sera declenche par le return
 		il ne doit pas etre hidden pour marcher dans safari
 		]
-	  <div style="position:absolute;left:-10000px;"><input type='submit' class='submit' value='<:bouton_enregistrer:>' /></div>
+	  <div style="position:absolute;#LANG_LEFT:-10000px;"><input type='submit' class='submit' value='<:bouton_enregistrer:>' /></div>
 	  <ul>
 	    <li class="editer editer_titre[ (#ENV**{erreurs}|table_valeur{titre}|oui)erreur]">
 		    <label for="titre">[(#ENV{mode}|=={document}|?{<:medias:entree_titre_document:>,<:medias:entree_titre_image:>})]</label>[
@@ -47,7 +47,13 @@
 				</div>
 				[<a href='#ENV{apercu}'>(#ENV{apercu}|image_reduire{300,200})</a>]
 				]
-		  	[(#ENV{apercu}|non)[(#MODELE{doc,id_document=#ENV{id_document,''},hauteur=200,largeur=300}|extraire_balise{a})]]
+		  	[(#ENV{apercu}|non)
+					[(#ENV{_inclus}|=={embed}|?{
+						[(#MODELE{emb,id_document=#ENV{id_document,''},hauteur=200,largeur=300})]
+						,
+						[(#MODELE{doc,id_document=#ENV{id_document,''},hauteur=200,largeur=300}|extraire_balise{a})]
+						})]
+				]
 	  	</li>
 	  	<li class="editer editer_infos">
 		  	<label><:medias:label_caracteristiques:></label>
@@ -56,6 +62,7 @@
 				][(#TAILLE|taille_en_octets|texte_backend)]</span>
 				[(#ENV{_taille_modif}|oui)<div class='taille_modifiee'><:medias:fichier_modifie:><br />[(#ENV{_largeur_modif}|ou{#ENV{_hauteur_modif}}|oui)[(#VAL{info_largeur_vignette}|_T{#ARRAY{largeur_vignette,#ENV{_largeur_modif},hauteur_vignette,#ENV{_hauteur_modif}}})] -
 				][(#ENV{_taille_modif}|taille_en_octets|texte_backend)]</div>]
+				[(#PIPELINE{afficher_metas_document,#ARRAY{args,#ARRAY{'quoi','editer_document','id_document',#ENV{id_document}},data,''}})]
 	  	</li>
 			<li class="editer editer_descriptif[ (#ENV**{erreurs}|table_valeur{descriptif}|oui)erreur]">
 				<label for="descriptif"><:info_description:></label>[

@@ -13,7 +13,8 @@
 		<tr class='first_row'>
 			<th class='perma' scope='col'></th>
 			<th class='url principale' scope='col'>[(#TRI{url,<:urls:label_tri_url:>,ajax})]</th>
-			<th class='objet' scope='col'><:urls:info_objet:></th>
+			<th class='objet' scope='col'>[(#TRI{type,<:urls:info_objet:>,ajax})]</th>
+			<th class='id' scope='col'><:info_numero_abbreviation:></th>
 			<th class='parent' scope='col'><:urls:info_id_parent:></th>
 			<th class='date secondaire' scope='col'>[(#TRI{date,<:date:>,ajax})]</th>
 			<th class="action"></th>
@@ -24,7 +25,8 @@
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class='perma'>[(#PERMA|?{#CHEMIN_IMAGE{cadenas-16.png}|balise_img})]</td>
 			<td class='url principale'>#URL</td>
-			<td class='objet'>[(#TYPE|objet_info{texte_objet}|_T)] #ID_OBJET</td>
+			<td class='objet'>[(#TYPE|objet_info{texte_objet}|_T)]</td>
+			<td class='id'>#ID_OBJET</td>
 			<td class='parent'>[(#ID_PARENT|?{#ID_PARENT})]</td>
 			<td class='date secondaire'>[(#DATE|affdate_jourcourt)]</td>
 			<td class='action'>[(#AUTORISER{modifier,#TYPE,#ID_OBJET})[(#BOUTON_ACTION{[(#CHEMIN_IMAGE{supprimer-12}|balise_img{<:urls:bouton_supprimer_url:>})],[(#URL_ACTION_AUTEUR{supprimer_url,[(#ID_PARENT)-#URL],#SELF})],ajax})]]</td>

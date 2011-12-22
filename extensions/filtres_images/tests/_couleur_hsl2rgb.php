@@ -7,7 +7,9 @@
  * le 
  */
 
-	$test = '_couleur_hsl2rgb';
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
+$test = '_couleur_hsl2rgb';
 	$remonte = "../";
 	while (!is_dir($remonte."ecrire"))
 		$remonte = "../$remonte";

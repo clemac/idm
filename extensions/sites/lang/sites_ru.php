@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Эти объединенные сайты вызвали проблему',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'пост-модерация',
 	'bouton_radio_modere_priori' => 'пре-модерация',
 	'bouton_radio_non_syndication' => 'Не объединятся',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'Адрес  файла  для объединения:',
 	'entree_adresse_site' => '<b>адрес сайта</b> [Необходимый]',
 	'entree_description_site' => 'Описание сайта',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'Название сайта',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Показать ссылающиеся сайты',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[на утверждении]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'блок',
 	'info_bloquer_lien' => 'блокировать эту ссылку',
 	'info_derniere_syndication' => 'Последний обмен этого сайта был проведен на',
 	'info_liens_syndiques_1' => 'объединенные ссылки',
 	'info_liens_syndiques_2' => 'ожидание утверждения.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>Название сайта</b> [Необходимо]',
 	'info_panne_site_syndique' => 'Синдикация сайта недоступна',
 	'info_probleme_grave' => 'ошибка',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Использовать автоматическое объединение',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'Обновить сейчас',
 	'lien_nouvelle_recuperation' => 'Попробывать выполнить новый поиск данных',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Опции объединения в синдикаты:',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Ссылки, поступающие от объединенных сайтов могли 
    быть блокированы заранее; следующее 
    урегулирование показа - урегулирование по умолчанию объединенных сайтов после их создания. Это 
@@ -124,6 +141,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
  обмен статьями и новостями с другими сайтами по RSS. </i> </blockquote>',
 	'titre_articles_syndiques' => 'Отправка статей с этого сайта',
 	'titre_dernier_article_syndique' => 'Последний обмен статей по RSS.',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'Ссылочные сайты',
 	'titre_referencement_sites' => 'Ссылочные и объединенные сайты ',
 	'titre_site_numero' => 'НОМЕР САЙТА:',

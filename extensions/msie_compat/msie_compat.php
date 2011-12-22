@@ -1,10 +1,10 @@
 <?php
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 function msie_compat_insert_head($flux) {
 
-
 	$iecompat = $GLOBALS['meta']["iecompat"];
-
 
 	if ($iecompat == "ifixpng") {
 	$flux .= "<!--[if lt IE 7]>

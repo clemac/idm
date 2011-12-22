@@ -47,8 +47,10 @@ function breves_edit_config($row)
 }
 
 function formulaires_editer_breve_verifier_dist($id_breve='new', $id_rubrique=0, $retour='', $lier_trad=0, $config_fonc='breves_edit_config', $row=array(), $hidden=''){
-	
-	$erreurs = formulaires_editer_objet_verifier('breve',$id_breve,array('titre','id_parent'));
+	// auto-renseigner le titre si il n'existe pas
+	titre_automatique('titre',array('texte'));
+	// on ne demande pas le titre obligatoire : il sera rempli a la volee dans editer_article si vide
+	$erreurs = formulaires_editer_objet_verifier('breve',$id_breve,array('id_parent'));
 	return $erreurs;
 }
 

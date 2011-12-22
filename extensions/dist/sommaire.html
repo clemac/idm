@@ -17,7 +17,6 @@
 
 	<INCLURE{fond=inclure/header}{home=oui} />
 	<INCLURE{fond=inclure/nav,env} />
-	#FORMULAIRE_RECHERCHE
 	
 	<div class="main">
 		<div class="wrapper hfeed">
@@ -74,7 +73,7 @@
 		</div><!--.aside-->
 	</div><!--.main-->
 	
-	<INCLURE{fond=inclure/footer} />
+	<INCLURE{fond=inclure/footer,self=#SELF} />
 	
 </div><!--.page-->
 </body>

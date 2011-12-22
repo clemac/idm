@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'gblogbloji yé  ma é lɔ lɛ̂ yé klɛn afɔ ɖé lɛ̂',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'mi dalɔ wu ',
 	'bouton_radio_modere_priori' => 'mi dalɔ wu ',
 	'bouton_radio_non_syndication' => 'mima ɖē tin a ',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'gési gbètà tɔn nú nà ɖó bló mimá',
 	'entree_adresse_site' => 'gési gblògblòjí ɔ dodo',
 	'entree_description_site' => 'tinmɛ gblògblòjí ɔ tɔn ',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'gblogblojí nyíkɔ',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Mi kpɔn gblogblojí yè ná àcɛ ɔ',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[sɔ kɛn ná]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'bloquer', # NEW
 	'info_bloquer_lien' => 'mi ján cácádó é lɔ',
 	'info_derniere_syndication' => 'Miná gùdó tɔn ɔ',
 	'info_liens_syndiques_1' => 'càcàdó mimámɛ',
 	'info_liens_syndiques_2' => 'yé bónú yé ní sɔ kɛn ná.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => 'gblogblojí  sín nyíkɔ[dòdò]',
 	'info_panne_site_syndique' => 'mimámɛ gblogblojí ɔ tɔn kú àfɔ',
 	'info_probleme_grave' => 'xótɛ',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'mi zán xó kléwún lɛ',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'mi lɛ vó bló ɖìn',
 	'lien_nouvelle_recuperation' => 'mi lɛvɔ jɛ bíblójí',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Options de syndication :', # NEW
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'mi sɔ ɖidé ɖó wěmà lɛ mɛsùpípù tɔn nú mi ná tò wěmà mi tɔn gànjí ɔ mi síwú zán kwín é lɔ lɛmi kó mɔ mi àmɔ mi sɔ ɖò xóxòkplégbàví ɔ mɛ ámi lɛ vɔ yí kànjí',
 	'texte_messages_publics' => 'wɛn wékpá tɔn yé sɔ xlɛ :',
 	'texte_non_fonction_referencement' => 'mi hɛn mi ná zán wàlɔ càcàcà ɔ ámi ɖé sú mi bló jɛ xá myɔ  ...',
@@ -114,6 +131,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_syndication' => 'wékwín é lɔ ɖò wěmámɛyé mɔ wěmà ɖé ɖò gbè é lɔ mɛ áwékwín ɖê yé mà tùn à lɛ ɔ ɖò vɔvɔmɛ. Zìn yé bó kpɔn àyì é yè b ɖó yèwú ɔbló wékwín ɔ ɖómi kpɔn winwlán fɔ ɖìɖéBɛ wékwín sín wěmámɛVlɛ mi klɛn àfɔ súkpɔ ɖò wěmà mi tɔn mɛ Mi jɛ wěmà lɛ blóɖó jí nú mi má wá wàzɔ gɔná óMi sɔ càvì ɖévóklɛn àfɔ ɖò fí ámi sɔ yí gblogblo é lɔ jí áyé hùn fí nú mɛ bí ámi byɔ ɖɔ é mi ná ɖɔ xó ɖò kplékplé ɔ mɛmi sɔ e-mailú mi tɔn xlɛ Wɛn é lɔ wɛn càcà wɛ Nú mi ná ɖó mɔ nɔtɛn gblogblojí  é lɔ tɔn  mi yìwàlɔ bìbɛ tɔnsɔ ɖémɛ ɖê ɖé gbɔn ɔ gbètá ɔ kló ɖín', # MODIF
 	'titre_articles_syndiques' => 'wékpá ɖê yé má sín gblogblo é lɔ jí',
 	'titre_dernier_article_syndique' => 'wékpá gùdó tɔn ê má ɔ',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'gblogblojí yé ɖó àcɛ ná',
 	'titre_referencement_sites' => 'àcɛ yíyí ɖò gblogblojí kpó mìmámɛ',
 	'titre_site_numero' => 'númɛló gblogblojí ɔ tɔn :',

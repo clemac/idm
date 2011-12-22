@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -78,9 +78,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_messages' => 'Supprimer ces messages', # NEW
 	'icone_valider_message' => 'Schváliť príspevok',
 	'icone_valider_messages' => 'Valider ces messages', # NEW
-	'icone_valider_repondre_message' => 'Valider &amp; Répondre à ce message', # NEW
+	'icone_valider_repondre_message' => 'Valider & Répondre à ce message', # NEW
 	'info_1_message_forum' => '1 message de forum', # NEW
-	'info_activer_forum_public' => '<i>Ak chcete povoliť verejné diskusné fóra, prosím, uveďte typ ich riadenia:</i>',
+	'info_activer_forum_public' => '<i>Ak chcete povoliť verejné diskusné fóra, prosím, uveďte typ ich riadenia:</i>', # MODIF
 	'info_appliquer_choix_moderation' => 'Použiť tento výber riadenia:',
 	'info_config_forums_prive' => 'V súkromnej zóne môžete aktivovať rôzne typy diskusných fór:',
 	'info_config_forums_prive_admin' => 'Diskusné fórum vyhradené pre administrátorov:',
@@ -104,8 +104,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_nb_messages_forum' => '@nb@ messages de forum', # NEW
 	'info_option_email' => 'Keď návštevník pošle príspevok do diskusného fóra článku, autor článku môže byť o tom informovaný e-mailom. Pre každý typ diskusného fóra uveďte, či sa má táto možnosť aktivovať.',
 	'info_pas_de_forum' => 'žiadne diskusné fórum',
-	'info_question_visiteur_ajout_document_forum' => 'Ak chcete povoliť návštevníkom pripájať dokumenty (a obrázky, zvukové súbory,...) k diskusným príspevkom, určte, ktoré prípony súborov budú akceptované (napr. gif, jpg, png, mp3).',
-	'info_question_visiteur_ajout_document_forum_format' => 'Ak chcete povoliť dokumenty všetkých typov, ktoré SPIP považuje za bezpečné, použite hviezdičku. Ak chcete všetky zablokovať, nechajte pole prázdne.',
+	'info_question_visiteur_ajout_document_forum' => 'Ak chcete povoliť návštevníkom pripájať dokumenty (a obrázky, zvukové súbory,...) k diskusným príspevkom, určte, ktoré prípony súborov budú akceptované (napr. gif, jpg, png, mp3).', # MODIF
+	'info_question_visiteur_ajout_document_forum_format' => 'Ak chcete povoliť dokumenty všetkých typov, ktoré SPIP považuje za bezpečné, použite hviezdičku. Ak chcete všetky zablokovať, nechajte pole prázdne.', # MODIF
 	'interface_formulaire' => 'Interface formulaire', # NEW
 	'interface_onglets' => 'Interface avec onglets', # NEW
 	'item_activer_forum_administrateur' => 'Povoliť diskusné fórum administrátorov',
@@ -157,7 +157,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'text_article_propose_publication_forum' => 'K tomuto článku môžete napísať komentár v diskusnom fóre, ktoré sa nachádza pod ním.',
 	'texte_en_cours_validation' => 'Les articles, brèves, forums ci dessous sont proposés à la publication.', # NEW
 	'texte_en_cours_validation_forum' => 'V pripojených diskusných fórach môžete smelo napísať komentár.',
-	'texte_messages_publics' => 'Messages publics sur&nbsp;:', # NEW
+	'texte_messages_publics' => 'Messages publics sur :', # NEW
 	'titre_cadre_forum_administrateur' => 'Súkromné diskusné fórum administrátorov',
 	'titre_cadre_forum_interne' => 'Interné diskusné fórum',
 	'titre_config_forums_prive' => 'Diskusné fóra v súkromnej zóne',

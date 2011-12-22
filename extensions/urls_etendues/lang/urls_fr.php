@@ -6,13 +6,14 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'actualiser_toutes' => 'Mettre &agrave; jour toutes les urls',
+	'actualiser_toutes' => 'Mettre à jour toutes les urls',
 
 	// B
 	'bouton_supprimer_url' => 'Supprimer cette URL',
 
 	// E
 	'erreur_arbo_2_segments_max' => 'Vous ne pouvez pas utiliser plus de deux segments d\'URL pour un objet',
+	'explication_editer' => 'La gestion avancée des urls vous permet d\'éditer l\'url des pages de chaque objet éditorial, et de gérer l\'historique de leur évolution.',
 
 	// I
 	'icone_configurer_urls' => 'Configurer les URLs',
@@ -29,7 +30,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'label_url' => 'Nouvelle URL',
 	'label_url_minuscules_0' => 'Conserver la casse du titre',
 	'label_url_minuscules_1' => 'Forcer les urls en minuscules',
-	'label_url_permanente' => 'Verrouiller cette URL (pas de mise a jour apr&egrave;s edition de l\'objet)',
+	'label_url_permanente' => 'Verrouiller cette URL (pas de mise a jour après edition de l\'objet)',
 	'label_url_sep_id' => 'Caractère pour séparer le numéro ajouté en cas de doublon',
 	'label_urls_activer_controle_oui' => 'Activer la gestion avancée des URLs',
 	'label_urls_nb_max_car' => 'Nombre maximum de caractères',
@@ -57,10 +58,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// U
 	'url_ajout_impossible' => 'Une erreur est survenue. Il n\'a pas &t& possible d\'enregistrer cette URL',
-	'url_ajoutee' => 'L\'URL a &eacute;t&eacute; ajout&eacute;e',
+	'url_ajoutee' => 'L\'URL a été ajoutée',
 
 	// V
-	'verifier_url_nettoyee' => 'L\'URL a &eacute;t&eacute; corrig&eacute;e, vous pouvez verifier avant de l\'enregistrer.',
+	'verifier_url_nettoyee' => 'L\'URL a été corrigée, vous pouvez verifier avant de l\'enregistrer.',
 	'verrouiller_url' => 'Verrouiller'
 );
 

@@ -1,4 +1,4 @@
-<traduction module="mediabox" gestionnaire="salvatore" reference="fr">
+<traduction module="mediabox" gestionnaire="salvatore" url="http://trad.spip.org" source="svn://zone.spip.org/spip-zone/_core_/plugins/mediabox/lang/" reference="fr">
 	<langue code="ar">
 		<traducteur nom="kandalaft" />
 	</langue>
@@ -9,6 +9,9 @@
 		<traducteur nom="paolo2" />
 	</langue>
 	<langue code="es" />
+	<langue code="fa">
+		<traducteur nom="davood" />
+	</langue>
 	<langue code="sk">
 		<traducteur nom="jaro" />
 	</langue>

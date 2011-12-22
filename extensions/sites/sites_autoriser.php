@@ -10,6 +10,9 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 // fonction pour le pipeline
 function sites_autoriser() {}
 
@@ -64,12 +67,13 @@ function autoriser_site_modifier_dist($faire, $type, $id, $qui, $opt) {
 	if ($qui['statut'] == '0minirezo' AND !$qui['restreint'])
 		return true;
 
-	$t = sql_fetsel("id_rubrique,statut", "spip_syndic", "id_syndic=".intval($id));
-	return ($t
-		AND autoriser('voir','rubrique',$t['id_rubrique'])
-		AND ($t['statut'] == 'prop'
-			OR autoriser('modifier', 'rubrique', $t['id_rubrique'])
-		)
+	$r = sql_fetsel("id_rubrique,statut", "spip_syndic", "id_syndic=".intval($id));
+	return ($r
+		AND autoriser('voir','rubrique',$r['id_rubrique'])
+		AND
+		($r['statut'] == 'publie' OR (isset($opt['statut']) AND $opt['statut']=='publie'))
+			? autoriser('publierdans', 'rubrique', $r['id_rubrique'], $qui, $opt)
+			: in_array($qui['statut'], array('0minirezo', '1comite'))
 	);
 }
 // Autoriser a voir un site $id_syndic

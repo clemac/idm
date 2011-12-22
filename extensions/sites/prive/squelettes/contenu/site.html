@@ -15,7 +15,7 @@
 ],simple fiche_objet})]
 
 <div id="wysiwyg">
-	<INCLURE{fond=prive/objets/contenu/site,id=#ID_SYNDIC} />
+	<INCLURE{fond=prive/objets/contenu/site,id=#ID_SYNDIC,id_syndic=#ID_SYNDIC} />
 </div>
 [(#STATUT|=={prop}|oui)
 	<p class='site_prop'><:sites:info_site_propose:> <b>[(#DATE|affdate)]&nbsp;</b></p>

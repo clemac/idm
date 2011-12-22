@@ -9,6 +9,8 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 function urls_autoriser($f){return $f;}
 
 function autoriser_url_administrer($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
@@ -27,7 +29,8 @@ function urls_afficher_fiche_objet($flux){
 	if (isset($GLOBALS['meta']['urls_activer_controle'])
 		AND $GLOBALS['meta']['urls_activer_controle']=='oui'
 		AND $objet = $flux['args']['type']
-		AND $id_objet = $flux['args']['id']){
+		AND $id_objet = $flux['args']['id']
+	  AND objet_info($objet,'page')){
 		$p = strpos($flux['data'],'fiche_objet');
 		$p = strpos($flux['data'],'</div>',$p);
 

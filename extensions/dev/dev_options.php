@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 define('_LOG_FILTRE_GRAVITE',8);
 $GLOBALS['test_i18n'] = true; // signaler les trads manquantes
 

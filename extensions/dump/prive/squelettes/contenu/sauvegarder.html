@@ -1,3 +1,4 @@
+[(#AUTORISER{sauvegarder}|sinon_interdire_acces)]
 #SET{fin,#ENV{status}|dump_verifie_sauvegarde_finie}
 [(#GET{fin}|non)
 	<h1 class="grostitre"><:dump:texte_sauvegarde:></h1>
@@ -16,7 +17,7 @@
 	</div>
 
 	[
-		(#INCLURE{fond=formulaires/inc-lister-sauvegardes,env,ajax,name='',id=sauvegarde,titre=<:dump:sauvegardes_existantes:>})
+		(#INCLURE{fond=formulaires/inc-lister-sauvegardes,env,ajax,name='',id=sauvegarde,titre=<:dump:sauvegardes_existantes:>,download=#AUTORISER{webmestre}})
 	]
 ]
 [(#GET{fin}|oui)

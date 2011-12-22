@@ -185,10 +185,10 @@ function dump_end($status_file, $action=''){
 		return;
 	
 	switch($action) {
-		#case 'restaurer':
+		case 'restaurer':
 			// supprimer la structure qui etait stockee dans le dump
-		#	sql_delete('spip_meta',"nom='dump_structure_temp'");
-		#	break;
+			sql_delete('spip_meta',"nom='dump_structure_temp'");
+			break;
 		case 'sauvegarder':
 			// stocker dans le dump la structure de la base source
 			$structure = array();
@@ -196,6 +196,7 @@ function dump_end($status_file, $action=''){
 				$structure[$t] = sql_showtable($t,true);
 			dump_serveur($status['connect']);
 			spip_connect('dump');
+			sql_delete('spip_meta',"nom='dump_structure_temp'",'dump'); #enlever une vieille structure deja la, au cas ou
 			sql_insertq('spip_meta',array('nom'=>'dump_structure_temp','valeur'=>serialize($structure),'impt'=>'non'),array(),'dump');
 			break;
 	}

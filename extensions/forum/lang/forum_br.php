@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -72,9 +72,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_messages' => 'Supprimer ces messages', # NEW
 	'icone_valider_message' => 'Asantiñ d\'ar gemennadenn-mañ',
 	'icone_valider_messages' => 'Valider ces messages', # NEW
-	'icone_valider_repondre_message' => 'Valider &amp; Répondre à ce message', # NEW
+	'icone_valider_repondre_message' => 'Valider & Répondre à ce message', # NEW
 	'info_1_message_forum' => '1 message de forum', # NEW
-	'info_activer_forum_public' => '<i>Evit enaouiñ ar foromoù foran, dibabit un doare da habaskaat dre ziouer:</i>',
+	'info_activer_forum_public' => '<i>Evit enaouiñ ar foromoù foran, dibabit un doare da habaskaat dre ziouer:</i>', # MODIF
 	'info_appliquer_choix_moderation' => 'Lakaat an dibab habaskaat-mañ e pleustr :',
 	'info_config_forums_prive' => 'E lodenn brevez al lec\'hienn e c\'hellit ober gant seurtoù foromoù disheñvel :',
 	'info_config_forums_prive_admin' => 'Ur forom miret evit merourien al lec\'hienn hepken :',
@@ -98,8 +98,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   e c\'hell skridaozerien ar pennad bezañ kelaouet eus kement-se dre bostel.
   Ret eo deoc\'h lavarout evit pep doare forom daoust ha fellout a ra deoc\'h e vefe graet pe get.',
 	'info_pas_de_forum' => 'forom ebet',
-	'info_question_visiteur_ajout_document_forum' => 'M\'hoc\'h eus c\'hoant da aotren ar weladennerien da stagañ restroù (skeudennoù, son, ...) ouzh o c\'hemennadennoù war ar foromoù, neuze eo dav skrivañ amañ peseurt astennoù teulioù a vo aotreet war ar foromoù (da skouer : gif, png, jpg, mp3).',
-	'info_question_visiteur_ajout_document_forum_format' => 'M\'hoc\'h eus c\'hoant da aotren an holl seurtoù restroù en deus SPIP fiziañs enno, neuze lakait ur steredennig. Kuit da aotren tra ebet, na lakait netra !',
+	'info_question_visiteur_ajout_document_forum' => 'M\'hoc\'h eus c\'hoant da aotren ar weladennerien da stagañ restroù (skeudennoù, son, ...) ouzh o c\'hemennadennoù war ar foromoù, neuze eo dav skrivañ amañ peseurt astennoù teulioù a vo aotreet war ar foromoù (da skouer : gif, png, jpg, mp3).', # MODIF
+	'info_question_visiteur_ajout_document_forum_format' => 'M\'hoc\'h eus c\'hoant da aotren an holl seurtoù restroù en deus SPIP fiziañs enno, neuze lakait ur steredennig. Kuit da aotren tra ebet, na lakait netra !', # MODIF
 	'interface_formulaire' => 'Interface formulaire', # NEW
 	'interface_onglets' => 'Interface avec onglets', # NEW
 	'item_activer_forum_administrateur' => 'Gweredekaat forom ar verourien',
@@ -151,7 +151,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'text_article_propose_publication_forum' => 'Gallout a rit reiñ hoc\'h ali war ar forom stag ouzh ar pennad-mañ (e traoñ ar bajenn)',
 	'texte_en_cours_validation' => 'Les articles, brèves, forums ci dessous sont proposés à la publication.', # NEW
 	'texte_en_cours_validation_forum' => 'Gallout a rit reiñ hoc\'h ali er foromoù stag outo.',
-	'texte_messages_publics' => 'Messages publics sur&nbsp;:', # NEW
+	'texte_messages_publics' => 'Messages publics sur :', # NEW
 	'titre_cadre_forum_administrateur' => 'Forom prevez ar verourien',
 	'titre_cadre_forum_interne' => 'Forom diabarzh',
 	'titre_config_forums_prive' => 'Foromoù al lodenn brevez',

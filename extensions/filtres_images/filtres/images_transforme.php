@@ -16,6 +16,8 @@
  *  - sont chainables les unes derrieres les autres dans toutes les combinaisons possibles
  */
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 // librairie de base du core
 include_spip('inc/filtres_images_mini');
 

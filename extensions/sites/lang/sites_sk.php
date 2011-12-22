@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'These syndicated sites generated a problem',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'Kontrola po publikovaní',
 	'bouton_radio_modere_priori' => 'Kontrola pred publikovaním',
 	'bouton_radio_non_syndication' => 'Žiadna syndikácia',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'Adresa syndikačného súboru:',
 	'entree_adresse_site' => '<b>Adresa stránky</b> [Povinné]',
 	'entree_description_site' => 'Popis stránky',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'Názov stránky',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Schváliť tento článok',
 	'icone_valider_articles' => 'Schváliť tieto články',
 	'icone_voir_sites_references' => 'Zobraziť linky',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[čaká na schválenie]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'zablokovať',
 	'info_bloquer_lien' => 'Zablokovať tento odkaz',
 	'info_derniere_syndication' => 'The last syndication of this site was carried out on',
 	'info_liens_syndiques_1' => 'syndicated links',
 	'info_liens_syndiques_2' => 'čaká na schválenie.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>Názov stránky</b> [Povinné]',
 	'info_panne_site_syndique' => 'Syndicated site out of order',
 	'info_probleme_grave' => 'chyba u',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Používať automatickú syndikáciu',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'Update now',
 	'lien_nouvelle_recuperation' => 'Try to perform a new retrieval of data',
 	'lien_purger_syndication' => 'Odstrániť všetky syndikované články',
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Syndication options:',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Links emanating from syndicated sites could
 			be blocked beforehand; the following
 			setting show the default setting of
@@ -125,6 +142,9 @@ Na to musíte aktivovať syndikáciu.
    zo svojej stránky.</i></blockquote>',
 	'titre_articles_syndiques' => 'Syndicated articles pulled out from this site',
 	'titre_dernier_article_syndique' => 'Latest syndicated articles',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'Odkazované stránky',
 	'titre_referencement_sites' => 'Sites referencing and syndication',
 	'titre_site_numero' => 'ČÍSLO STRÁNKY:',

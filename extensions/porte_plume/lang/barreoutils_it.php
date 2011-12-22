@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -30,7 +30,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'barre_encadrer' => '[(Riquadra)] il paragrafo',
 	'barre_eo' => 'Inserisci una E con legatura alla O minuscola', # MODIF
 	'barre_eo_maj' => 'Inserisci una E con legatura alla O maiuscola', # MODIF
-	'barre_euro' => 'Inserisci il simbolo &euro;', # MODIF
+	'barre_euro' => 'Inserisci il simbolo €', # MODIF
 	'barre_exposant' => 'Metti il testo in &lt;sup&gt;esponente&lt;/sup&gt;',
 	'barre_formatages_speciaux' => 'Formattazioni speciali', # MODIF
 	'barre_galerie' => 'Apri la galleria',
@@ -55,12 +55,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'barre_gestion_taille' => 'DImensione fissa',
 	'barre_glossaire' => 'Voce di [?glossario] (Wikipedia)', # MODIF
 	'barre_gras' => 'Converti in {{grassetto}}',
-	'barre_guillemets' => 'Racchiudi tra &laquo; virgolette &raquo;', # MODIF
-	'barre_guillemets_simples' => 'Racchiudi tra &ldquo;virgolette di secondo livello&rdquo;', # MODIF
+	'barre_guillemets' => 'Racchiudi tra « virgolette »', # MODIF
+	'barre_guillemets_simples' => 'Racchiudi tra “virgolette di secondo livello”', # MODIF
 	'barre_indenter' => 'Indenta la lista',
-	'barre_inserer_cadre' => 'Ins&eacute;rer un code preformat&eacute; (cadre)', # NEW
+	'barre_inserer_cadre' => 'Insérer un code preformaté (cadre)', # NEW
 	'barre_inserer_caracteres' => 'Inserisci dei caratteri speciali', # MODIF
-	'barre_inserer_code' => 'Ins&eacute;rer un code informatique (code)', # NEW
+	'barre_inserer_code' => 'Insérer un code informatique (code)', # NEW
 	'barre_intertitre' => 'Trasforma in {{{titolo}}}',
 	'barre_italic' => 'Converti in {corsivo}',
 	'barre_langue' => 'Acronimo lingua', # MODIF
@@ -72,7 +72,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'barre_lorem_ipsum' => 'Inserisci un paragrafo di prova (lorem ipsum)', # MODIF
 	'barre_lorem_ipsum_3' => 'Inserisci 3 paragrafi di prova (lorem ipsum)', # MODIF
 	'barre_miseenevidence' => 'Metti il testo in [*evidenza*]', # MODIF
-	'barre_note' => 'Trasforma in [[nota a pi&egrave; pagina]]',
+	'barre_note' => 'Trasforma in [[nota a piè pagina]]',
 	'barre_paragraphe' => 'Crea un paragrafo', # MODIF
 	'barre_petitescapitales' => 'metti il testo in &lt;sc&gt;maiuscoletto&lt;/sc&gt;',
 	'barre_poesie' => 'Impagina come una &lt;poesie&gt;poesia&lt;/poesie&gt;', # MODIF
@@ -94,7 +94,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'explication_barre_outils_public_2' => 'Puoi scegliere di non caricare
 	questi script al fine di allegerire il peso delle pagine pubbliche.
   Qualunque sia la configurazione dei forum, pennarelli o plugin,
-  nessuna barra di testo di Prote Pplume potr&agrave; essere
+  nessuna barra di testo di Prote Pplume potrà essere
 	inserita automaticamente nello spazio pubblico.', # MODIF
 
 	// I

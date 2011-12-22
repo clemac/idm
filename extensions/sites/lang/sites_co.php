@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -24,6 +24,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Ci sò stati i prublemi durante a sindicazione di sti siti',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'Muderazione dopu',
 	'bouton_radio_modere_priori' => 'muderazione in antìcipu',
 	'bouton_radio_non_syndication' => 'Nisuna sindicazione',
@@ -36,6 +38,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'Indirizzu di u schedariu di sindicazione :',
 	'entree_adresse_site' => '<b>Indirizzu di u situ</b> [Ubbligatoriu]',
 	'entree_description_site' => 'Discrizzione di u situ',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'Nome di u situ',
@@ -52,12 +56,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Vede i siti riferiti',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[Da cunvalidà]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'bluccà',
 	'info_bloquer_lien' => 'bluccà sta lea',
 	'info_derniere_syndication' => 'L\'ùltima <em>sindicazione</em> di stu situ hè stata fatta ',
 	'info_liens_syndiques_1' => 'lee sindicate',
 	'info_liens_syndiques_2' => 'stanu in attesa di cunvalidazione.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>Nome di u situ</b> [Ubbligatoriu]',
 	'info_panne_site_syndique' => 'Situ sindicatu for\'d\'adopru',
 	'info_probleme_grave' => 'prublemu di',
@@ -85,6 +92,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Attivà a sindicazione autumàtica',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'Aghjurnà avà',
 	'lien_nouvelle_recuperation' => 'Pruvà torna di ricuarà i dati',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -107,6 +120,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Paràmetri per a sindicazione :',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'E lee chì venenu da siti sindicati 
 			ponu esse bluccati; l\'opzione quì sottu face vede i paràmetri predefiniti di i siti sindicati dopu creati.
 			Ferma quantunque pussìbule di sbluccà ogni sìngula lea, o di sceglie di bluccà e lee d\'ogni sìngulu situ.',
@@ -121,6 +138,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 		da u vostru situ.</i></blockquote>',
 	'titre_articles_syndiques' => 'Artìculi sindicati racolti da stu situ',
 	'titre_dernier_article_syndique' => 'Ùltimi artìculi sindicati',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'I siti riferiti',
 	'titre_referencement_sites' => 'Riferimentu di siti è sindicazione',
 	'titre_site_numero' => 'SITU NÙMERU :',

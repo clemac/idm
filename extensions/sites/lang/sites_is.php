@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => '<NEW> Ces sites syndiqués ont posé un problème',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => '<NEW> modéré à posteriori',
 	'bouton_radio_modere_priori' => '<NEW> modéré à priori',
 	'bouton_radio_non_syndication' => '<NEW> Pas de syndication',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => '<NEW> Adresse du fichier « backend » pour la syndication :',
 	'entree_adresse_site' => '<NEW> <b>Adresse du site</b> [Obligatoire]',
 	'entree_description_site' => 'Lýsing á síðunni',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => '<NEW> Nom du site',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => '<NEW> Voir les sites référencés',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[staðfesta]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'bloquer', # NEW
 	'info_bloquer_lien' => '<NEW> bloquer ce lien',
 	'info_derniere_syndication' => '<NEW> La dernière syndication de ce site a été effectuée le',
 	'info_liens_syndiques_1' => '<NEW> liens syndiqués',
 	'info_liens_syndiques_2' => '<NEW> sont en attente de validation.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<NEW> <b>Nom du site</b> [Obligatoire]',
 	'info_panne_site_syndique' => '<NEW> Site syndiqué en panne',
 	'info_probleme_grave' => '<NEW> problème de',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => '<NEW> Utiliser la syndication automatique',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => '<NEW> Mettre à jour maintenant',
 	'lien_nouvelle_recuperation' => '<NEW> Tenter une nouvelle récupération des données',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Options de syndication :', # NEW
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => '<NEW> Les liens issus des sites syndiqués peuvent
 			être bloqués a priori ; le réglage
 			ci-dessous indique le réglage par défaut des
@@ -125,6 +142,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 		depuis votre site.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => '<NEW> Articles syndiqués tirés de ce site',
 	'titre_dernier_article_syndique' => '<NEW> Derniers articles syndiqués',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => '<NEW> Les sites référencés',
 	'titre_referencement_sites' => '<NEW> Référencement de sites et syndication',
 	'titre_site_numero' => '<NEW> SITE NUMÉRO :',

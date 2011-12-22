@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => '这些联合站点出现问题',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => '预存后', # MODIF
 	'bouton_radio_modere_priori' => '预存前', # MODIF
 	'bouton_radio_non_syndication' => '没有联合',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => '联合所用的«引用»文件地址:', # MODIF
 	'entree_adresse_site' => '<b>站点地址</b> [必须的]',
 	'entree_description_site' => '站点描述',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => '站点名',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => '查看参考站点',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[使有效]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'bloquer', # NEW
 	'info_bloquer_lien' => '阻止这个连接',
 	'info_derniere_syndication' => '站点的最近联合己移出',
 	'info_liens_syndiques_1' => '联合连接',
 	'info_liens_syndiques_2' => '未确认.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>站点名</b> [必须]',
 	'info_panne_site_syndique' => '联合站点次序颠倒',
 	'info_probleme_grave' => '错误',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => '使用自动联合',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => '现在更新',
 	'lien_nouvelle_recuperation' => '试着重新获取数据',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Options de syndication :', # NEW
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => '从联合站点发出的连接能
    被预先阻止; 以下
    设置允许联合站点创建后
@@ -125,6 +142,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   你站点的内容联合.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => '剔除站点的联合文章',
 	'titre_dernier_article_syndique' => '最后联合的文章',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => '参考站点',
 	'titre_referencement_sites' => '参考站点和联合组织',
 	'titre_site_numero' => '站点号:',

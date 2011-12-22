@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Aceste site-uri sindicalizate au avut o problemă',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'moderare ulterioară',
 	'bouton_radio_modere_priori' => 'moderare à priori',
 	'bouton_radio_non_syndication' => 'Fără sindicalizare',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'Adresa fişierului pentru sindicalizare :',
 	'entree_adresse_site' => '<b>Adresa site-ului</b> [Obligatorie]',
 	'entree_description_site' => 'Descrierea site-ului',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'Numele site-ului',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Vedeţi site-urile referenţiate',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[de validat]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'blocaţi',
 	'info_bloquer_lien' => 'blocaţi această legătură',
 	'info_derniere_syndication' => 'Ultima sindicalizare a acestui site a fost făcuta la data de',
 	'info_liens_syndiques_1' => 'legăturile sindicalizate',
 	'info_liens_syndiques_2' => ' sunt în aşteptarea validării.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>Nume site</b> [Obligatoriu]',
 	'info_panne_site_syndique' => 'Site sidicalizat în pană',
 	'info_probleme_grave' => 'problemă de',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Utilizaţi sindicalizarea automatică',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'Aduceţi la zi acum',
 	'lien_nouvelle_recuperation' => 'Încercaţi încă o dată recuperarea datelor',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Opţiuni de syndicalizare :',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Legăturile provenind de la site-urile sindicalizate pot
    fi blocate à priori ; reglajul
    de mai jos indică setarea implicită aplicată
@@ -122,6 +139,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   în acest caz, nu veţi putea folosi sindicalizarea conţinutului în site-ul dumneavoastră.</i></blockquote>',
 	'titre_articles_syndiques' => 'Articole sindicalizate luate de pe acest site',
 	'titre_dernier_article_syndique' => 'Ultimele articole sindicalizate',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'Site-urile referenţiate',
 	'titre_referencement_sites' => 'Referenţierea de site-uri şi sindicalizarea',
 	'titre_site_numero' => 'SITE NUMĂRUL :',

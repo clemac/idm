@@ -1,7 +1,7 @@
 <paquet
 	prefix="dump"
 	categorie="maintenance"
-	version="1.5.0"
+	version="1.6.2"
 	etat="stable"
 	compatibilite="[3.0.0-dev;["
 	logo="prive/themes/spip/images/base-backup-32.png"

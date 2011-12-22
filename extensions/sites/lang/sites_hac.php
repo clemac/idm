@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Ces sites syndiqués ont posé un problème', # NEW
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'modération à posteriori', # NEW
 	'bouton_radio_modere_priori' => 'modération à priori', # NEW
 	'bouton_radio_non_syndication' => 'Pas de syndication', # NEW
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'Adresse du fichier de syndication :', # NEW
 	'entree_adresse_site' => '<b>Adresse du site</b> [Obligatoire]', # NEW
 	'entree_description_site' => 'Description du site', # NEW
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'نام سايت',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Voir les sites référencés', # NEW
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[معتبر شود]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'bloquer', # NEW
 	'info_bloquer_lien' => 'اين پيوند را مسدود كنيد',
 	'info_derniere_syndication' => 'La dernière syndication de ce site a été effectuée le', # NEW
 	'info_liens_syndiques_1' => 'liens syndiqués', # NEW
 	'info_liens_syndiques_2' => 'sont en attente de validation.', # NEW
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>Nom du site</b> [Obligatoire]', # NEW
 	'info_panne_site_syndique' => 'سايت پيوندى خراب است',
 	'info_probleme_grave' => 'نقص در',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Utiliser la syndication automatique', # NEW
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'Mettre à jour maintenant', # NEW
 	'lien_nouvelle_recuperation' => 'Tenter une nouvelle récupération des données', # NEW
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Options de syndication :', # NEW
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Les liens issus des sites syndiqués peuvent
 			être bloqués a priori ; le réglage
 			ci-dessous indique le réglage par défaut des
@@ -125,6 +142,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 		depuis votre site.</i></blockquote>', # NEW
 	'titre_articles_syndiques' => 'Articles syndiqués tirés de ce site', # NEW
 	'titre_dernier_article_syndique' => 'Derniers articles syndiqués', # NEW
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'Les sites référencés', # NEW
 	'titre_referencement_sites' => 'Référencement de sites et syndication', # NEW
 	'titre_site_numero' => 'SITE NUMÉRO :', # NEW

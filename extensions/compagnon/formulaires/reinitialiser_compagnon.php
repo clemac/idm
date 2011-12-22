@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 function formulaires_reinitialiser_compagnon_charger() {
 	return array('qui' => 'moi');
 }

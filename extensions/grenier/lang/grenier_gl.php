@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_forum_petition' => 'FORO &amp; PETICIÓN',
+	'bouton_forum_petition' => 'FORO & PETICIÓN',
 	'bouton_radio_sauvegarde_compressee' => 'copia de seguridade comprimida en @fichier@',
 	'bouton_radio_sauvegarde_non_compressee' => 'copia de seguridade sen comprimir en @fichier@',
 
@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_forum_ouvert' => 'Dentro do espazo privado do web, hai un foro aberto
   a toda os usuarios rexistrados. Aquí abaixo pode activar un foro
   complementar, reservado ao equipo de xestión.',
-	'info_gauche_suivi_forum' => 'A p&amp;aacute;xina de <i>seguimento dos foros</i> &amp;eeacute; unha ferramenta de xesti&amp;oacute;n do web (e non un espazo de discusi&amp;oacute;n ou de redacci&amp;oacute;n). Mostra todas as contribuci&amp;oacute;ns no foro p&amp;uacute;blico deste artigo e permite xestionar estas contribuci&amp;oacute;ns.',
+	'info_gauche_suivi_forum' => 'A p&aacute;xina de <i>seguimento dos foros</i> &eeacute; unha ferramenta de xesti&oacute;n do web (e non un espazo de discusi&oacute;n ou de redacci&oacute;n). Mostra todas as contribuci&oacute;ns no foro p&uacute;blico deste artigo e permite xestionar estas contribuci&oacute;ns.',
 	'info_modifier_breve' => 'Modificar a breve:',
 	'info_nombre_breves' => '@nb_breves@ breves,',
 	'info_option_ne_pas_faire_suivre' => 'Non enviar avisos das mensaxes dos foros',

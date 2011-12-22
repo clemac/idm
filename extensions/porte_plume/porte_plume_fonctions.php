@@ -5,6 +5,7 @@
  * Auteur Matthieu Marcillaud
  */
 
+if (!defined("_ECRIRE_INC_VERSION")) return;
 
 /**
  * La class Barre_outils est un objet contenant les differents
