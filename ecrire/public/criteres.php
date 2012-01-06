@@ -982,9 +982,11 @@ function calculer_critere_DEFAUT_dist($idb, &$boucles, $crit){
 		return calculer_critere_parties($idb, $boucles, $crit);
 
 	$r = calculer_critere_infixe($idb, $boucles, $crit);
-
 	if (!$r){
-		return (array('zbug_critere_inconnu', array('critere' => $crit->op)));
+	#	// on produit une erreur seulement si le critere n'a pas de '?'
+	#	if (!$crit->cond) {
+			return (array('zbug_critere_inconnu', array('critere' => $crit->op)));
+	#	}
 	} else calculer_critere_DEFAUT_args($idb, $boucles, $crit, $r);
 }
 
@@ -1079,7 +1081,8 @@ function calculer_critere_infixe($idb, &$boucles, $crit){
 	else if (preg_match('/^(.*)\.(.*)$/', $col, $r)){
 		list(, $table, $col) = $r;
 		$col_alias = $col;
-		$table = calculer_critere_externe_init($boucle, array($table), $col, $desc, ($crit->cond OR $op!='='), true);
+		$table = trouver_jointure_champ($col, $boucle, array($table), ($crit->cond OR $op!='='));
+		#$table = calculer_critere_externe_init($boucle, array($table), $col, $desc, ($crit->cond OR $op!='='), true);
 		if (!$table) return '';
 	}
 	elseif (@!array_key_exists($col, $desc['field'])
@@ -1177,8 +1180,9 @@ function calculer_critere_infixe_externe($boucle, $crit, $op, $desc, $col, $col_
 	}
 
 	// et sinon on cherche parmi toutes les jointures declarees
-	if (!$table)
+	if (!$table) {
 		$table = $calculer_critere_externe($boucle, $boucle->jointures, $col, $desc, ($crit->cond OR $op!='='), $t);
+	}
 
 	if (!$table) return '';
 
@@ -1225,7 +1229,6 @@ function primary_doublee($decompose, $table){
  * @return mixed|string
  */
 function calculer_critere_externe_init(&$boucle, $joints, $col, $desc, $cond, $checkarrivee = false){
-
 	// si on demande un truc du genre spip_mots
 	// avec aussi spip_mots_liens dans les jointures dispo
 	// et qu'on est la
@@ -1235,8 +1238,9 @@ function calculer_critere_externe_init(&$boucle, $joints, $col, $desc, $cond, $c
 	    AND $a = table_objet($checkarrivee)
 	        AND in_array($a.'_liens', $joints)
 	){
-		if ($res = calculer_lien_externe_init($boucle, $joints, $col, $desc, $cond, $checkarrivee))
+		if ($res = calculer_lien_externe_init($boucle, $joints, $col, $desc, $cond, $checkarrivee)) {
 			return $res;
+		}
 	}
 	foreach ($joints as $joint){
 		if ($arrivee = trouver_champ_exterieur($col, array($joint), $boucle, $checkarrivee)){
@@ -1256,8 +1260,9 @@ function calculer_critere_externe_init(&$boucle, $joints, $col, $desc, $cond, $c
 				}
 				if (!$joindre) return $t;
 			}
-			if ($res = calculer_jointure($boucle, array($boucle->id_table, $desc), $arrivee, $cols, $cond, 1))
+			if ($res = calculer_jointure($boucle, array($boucle->id_table, $desc), $arrivee, $cols, $cond, 1)) {
 				return $res;
+			}
 		}
 	}
 	return '';

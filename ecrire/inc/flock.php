@@ -291,17 +291,17 @@ function spip_unlink($f) {
  */
 function supprimer_repertoire($dir) {
 	if (!file_exists($dir)) return true;
-	if (!is_dir($dir) || is_link($dir)) return unlink($dir);
+	if (!is_dir($dir) || is_link($dir)) return @unlink($dir);
 	
 	foreach (scandir($dir) as $item) {
 		if ($item == '.' || $item == '..') continue;
 		if (!supprimer_repertoire($dir . "/" . $item)) {
-			chmod($dir . "/" . $item, 0777);
+			@chmod($dir . "/" . $item, 0777);
 			if (!supprimer_repertoire($dir . "/" . $item)) return false;
 		};
 	}
 	
-	return rmdir($dir);
+	return @rmdir($dir);
 }
 
 	

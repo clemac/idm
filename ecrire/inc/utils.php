@@ -1414,6 +1414,9 @@ function spip_initialisation_core($pi=NULL, $pa=NULL, $ti=NULL, $ta=NULL) {
 	// le nom du repertoire des extensions/ permanentes du core, toujours actives
 	if (!defined('_DIR_EXTENSIONS')) define('_DIR_EXTENSIONS', _DIR_RACINE . "extensions/");
 
+	// le nom du repertoire des librairies
+	if (!defined('_DIR_LIB')) define('_DIR_LIB', _DIR_RACINE . "lib/");
+	
 	if (!defined('_DIR_IMG')) define('_DIR_IMG', $pa);
 	if (!defined('_DIR_LOGOS')) define('_DIR_LOGOS', $pa);
 	if (!defined('_DIR_IMG_ICONES')) define('_DIR_IMG_ICONES', _DIR_LOGOS . "icones/");
@@ -1448,7 +1451,7 @@ function spip_initialisation_core($pi=NULL, $pa=NULL, $ti=NULL, $ta=NULL) {
 
 	# attention .php obligatoire pour ecrire_fichier_securise
 	if (!defined('_FILE_META')) define('_FILE_META', $ti . 'meta_cache.php');
-	if (!defined('_DIR_LOG')) define('_DIR_LOG', _DIR_TMP);
+	if (!defined('_DIR_LOG')) define('_DIR_LOG', _DIR_TMP . 'log/');
 	if (!defined('_FILE_LOG')) define('_FILE_LOG', 'spip');
 	if (!defined('_FILE_LOG_SUFFIX')) define('_FILE_LOG_SUFFIX', '.log');
 
@@ -1947,15 +1950,22 @@ function spip_session($force = false) {
 	return $session;
 }
 
-//
-// Aide, aussi depuis l'espace prive a present.
-//  Surchargeable mais pas d'ereur fatale si indisponible.
-//
 
+/**
+ * Aide, aussi depuis l'espace prive a present.
+ * Surchargeable mais pas d'erreur fatale si indisponible.
+ * 
+ * @param string $aide
+ * 		Cle d'identification de l'aide desiree
+ * @param bool $distante
+ * 		Generer une url locale (par defaut)
+ * 		ou une url distante [directement sur spip.net]
+ * @return Lien sur une icone d'aide
+**/
 // http://doc.spip.org/@aide
-function aide($aide='') {
-	$aider = charger_fonction('aider', 'inc', true);
-	return $aider ?  $aider($aide) : '';
+function aide($aide='', $distante = false) {
+		$aider = charger_fonction('aider', 'inc', true);
+	return $aider ?  $aider($aide, '', array(), $distante) : '';
 }
 
 // normalement il faudrait creer exec/info.php, mais pour mettre juste ca:
