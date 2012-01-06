@@ -15,7 +15,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// E
 	'erreur_arbo_2_segments_max' => 'لا يمكن استخدام اكثر من قطعتي عنوان URL لاي عنصر',
-	'explication_editer' => 'La gestion avancée des urls vous permet d\'éditer l\'url des pages de chaque objet éditorial, et de gérer l\'historique de leur évolution.', # NEW
+	'explication_editer' => 'تتيح لك إدارة عناوين URL المتطورة تحرير عناوين صفحات اي عنصر تحريري وإنتاج سرد لتطورها', # NEW
 
 	// I
 	'icone_configurer_urls' => 'إعداد عناوين URL',
@@ -49,7 +49,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_type_arbo' => 'عناوين هرمية',
 	'titre_type_html' => 'عناوين عناصر HTML',
 	'titre_type_libres' => 'عناوين حرة',
-	'titre_type_page' => 'عناوين Page',
+	'titre_type_page' => 'عناوين صفحة',
 	'titre_type_propres' => 'عناوين نظيفة',
 	'titre_type_propres2' => 'عناوين نظيفة+<tt>.html</tt>',
 	'titre_type_propres_qs' => 'عناوين نظيفة باستفسار query-string',

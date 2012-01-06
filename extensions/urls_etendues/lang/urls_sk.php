@@ -11,50 +11,50 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'actualiser_toutes' => 'Aktualizovať všetky adresy',
 
 	// B
-	'bouton_supprimer_url' => 'Supprimer cette URL', # NEW
+	'bouton_supprimer_url' => 'Odstrániť túto internetovú adresu',
 
 	// E
-	'erreur_arbo_2_segments_max' => 'Vous ne pouvez pas utiliser plus de deux segments d\'URL pour un objet', # NEW
-	'explication_editer' => 'La gestion avancée des urls vous permet d\'éditer l\'url des pages de chaque objet éditorial, et de gérer l\'historique de leur évolution.', # NEW
+	'erreur_arbo_2_segments_max' => 'Pre objekt nemôžete použiť viac ako dve zložky adresy',
+	'explication_editer' => 'Pokročilé riadenie internetových adries vám umožňuje upravovať internetové adresy redakčných stránok každého objektu a spravovať históriu ich vývoja.',
 
 	// I
-	'icone_configurer_urls' => 'Configurer les URLs', # NEW
+	'icone_configurer_urls' => 'Nastaviť internetové adresy',
 	'icone_controler_urls' => 'Zmysluplné adresy',
-	'info_1_url' => '1 URL', # NEW
-	'info_id_parent' => '#parent', # NEW
-	'info_nb_urls' => '@nb@ URLs', # NEW
-	'info_objet' => 'Objet', # NEW
+	'info_1_url' => '1 adresa',
+	'info_id_parent' => '#parent',
+	'info_nb_urls' => '@nb@ internetových adries',
+	'info_objet' => 'Objekt',
 
 	// L
 	'label_tri_date' => 'Dátum',
 	'label_tri_id' => 'ID',
 	'label_tri_url' => 'Adresa',
 	'label_url' => 'Nová adresa',
-	'label_url_minuscules_0' => 'Conserver la casse du titre', # NEW
-	'label_url_minuscules_1' => 'Forcer les urls en minuscules', # NEW
+	'label_url_minuscules_0' => 'Nechať veľké/malé písmená podľa nadpisu',
+	'label_url_minuscules_1' => 'V internetových adresách používať malé písmená',
 	'label_url_permanente' => 'Zamknúť túto adresu (žiadne aktualizácie po úprave objektu)',
-	'label_url_sep_id' => 'Caractère pour séparer le numéro ajouté en cas de doublon', # NEW
-	'label_urls_activer_controle_oui' => 'Activer la gestion avancée des URLs', # NEW
-	'label_urls_nb_max_car' => 'Nombre maximum de caractères', # NEW
-	'label_urls_nb_min_car' => 'Nombre minimum de caractères', # NEW
+	'label_url_sep_id' => 'Znak na oddelenie čísla, ktoré sa pridá v prípade duplikátu',
+	'label_urls_activer_controle_oui' => 'Aktivovať pokročilé riadenie internetových adries',
+	'label_urls_nb_max_car' => 'Maximálny počet znakov',
+	'label_urls_nb_min_car' => 'Minimálny počet znakov',
 	'liberer_url' => 'Potvrdiť',
 	'liste_des_urls' => 'Všetky internetové adresy',
 
 	// T
 	'texte_type_urls' => 'Môžete si vybrať, ako sa vytvoria adresy stránky.',
 	'texte_type_urls_attention' => 'Varovanie: toto nastavenie bude fungovať, iba ak je súbor @htaccess@ správne nainštalovaný v koreňovom adresári stránky.',
-	'texte_urls_nb_max_car' => 'Si le titre est plus long, il sera coupé.', # NEW
-	'texte_urls_nb_min_car' => 'Si le titre est plus court, c\'est son Numéro identifiant qui sera utilisé.', # NEW
-	'titre_gestion_des_urls' => 'Gestion des URLs', # NEW
-	'titre_type_arbo' => 'Stromovité', # MODIF
-	'titre_type_html' => 'Objekty HTML', # MODIF
-	'titre_type_libres' => 'Potvrdené', # MODIF
-	'titre_type_page' => 'Stránka', # MODIF
-	'titre_type_propres' => 'Propres', # MODIF
-	'titre_type_propres2' => 'Propres +<tt>.html</tt>', # MODIF
-	'titre_type_propres_qs' => 'Propres v požiadavke', # MODIF
-	'titre_type_simple' => 'Jednoduché', # MODIF
-	'titre_type_standard' => 'Historický', # MODIF
+	'texte_urls_nb_max_car' => 'Ak bude názov dlhší, bude skrátený.',
+	'texte_urls_nb_min_car' => 'Ak bude názov kratší, použije sa jeho identifikačné číslo.',
+	'titre_gestion_des_urls' => 'Riadenie internetových adries',
+	'titre_type_arbo' => 'Stromovité adresy',
+	'titre_type_html' => 'Adresy z objektov HTML',
+	'titre_type_libres' => 'Voľné adresy',
+	'titre_type_page' => 'Adresy podľa stránky',
+	'titre_type_propres' => 'Čisté adresy',
+	'titre_type_propres2' => 'Čisté adresy +<tt>.html</tt>',
+	'titre_type_propres_qs' => 'Čisté adresy v požiadavke',
+	'titre_type_simple' => 'Jednoduché internetové adresy',
+	'titre_type_standard' => 'Historické internetové adresy',
 	'titre_type_urls' => 'Typ internetových adries',
 	'tout_voir' => 'Zobraziť všetky internetové adresy',
 
