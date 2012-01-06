@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'návštevníci verejnej stránky, keď pošlú príspevok do diskusného fóra.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Vytvoriť a priradiť kľúčové slovo',
+	'creer_et_associer_un_mot' => 'Vytvoriť a pripojiť kľúčové slovo',
 
 	// I
 	'icone_creation_groupe_mots' => 'Vytvoriť novú skupinu klúčových slov',

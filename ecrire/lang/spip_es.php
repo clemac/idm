@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -53,7 +53,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'barre_euro' => 'Insertar el símbolo €',
 'barre_gras' => 'Poner en {{negrita}}',
 'barre_guillemets' => 'Poner entre «comillas»',
-'barre_guillemets_simples' => 'Poner entre &#147;comillas de segundo nivel”',
+'barre_guillemets_simples' => 'Poner entre comillas de segundo nivel”',
 'barre_intertitre' => 'Transformar en {{{inter-título}}}',
 'barre_italic' => 'Poner en {cursiva}',
 'barre_lien' => 'Transformar en [enlace hipertexto->http://...]',
@@ -226,6 +226,8 @@ de las carpetas mencionadas. El procedimiento se explica detalladamente en la gu
 'envoi_via_le_site' => 'Envío a través del sitio',
 'erreur' => 'Error',
 'erreur_balise_non_fermee' => 'última baliza no cerrada:',
+'erreur_technique_enregistrement_champs' => 'Une erreur technique a empêché l\'enregistrement correct du champ @champs@.', # NEW
+'erreur_technique_enregistrement_impossible' => 'Une erreur technique a empêché l\'enregistrement.', # NEW
 'erreur_texte' => 'error(es)',
 'etape' => 'Etapa',
 
@@ -601,6 +603,7 @@ volver a conectarte al sitio.
 'suivant' => 'siguiente',
 
 // T
+'taille_go' => '@taille@ Go', # NEW
 'taille_ko' => '@taille@ KB',
 'taille_mo' => '@taille@ MB',
 'taille_octets' => '@taille@ bytes',

@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -287,7 +287,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => '@listù@',
 'info_code_acces' => 'Mi mà wɔn gbètɛn mi tɔn lɛ ó!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => 'Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => '<Nɛ̌ ná xà àtɛ é lɔ gbɔn 	',
 'info_config_suivi_explication' => 'Mi hɛn ɔ mi ná á nyíkɔ ɖò fi',
@@ -320,7 +320,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'có hwɛ mi nɛ nú wlán jí ɔ, mi ɖó ná ɖè àkpáxwé tɔn hwɛ',
 'info_email_envoi' => 'e-mailù',
 'info_email_envoi_txt' => 'mi dó gesi bó ná sɛ e-mailù lɛ ɖó:',
-'info_email_webmestre' => 'tìtòtì sín e-mailù',
+'info_email_webmestre' => 'tìtòtì sín e-mailù', # MODIF
 'info_entrer_code_alphabet' => 'mi sɔ gbètákɛn ê mi ján zán ɔ:',
 'info_envoi_email_automatique' => 'sɛ e-mailù ɖó àzɔn ɖókpó',
 'info_envoyer_maintenant' => 'sɛɖó ɖìn',
@@ -353,7 +353,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => 'mi zé ɖìdyɔ sín àfɔ ɖìɖè xlɛ.',
 'info_identification_publique' => 'Nyíkɔ mi tɔn tòbítùn...',
 'info_image_process' => 'Mi cyán wàlɔ ɖàgbè lɛ.',
-'info_image_process2' => 'Mi cyán wàlɔ ɖàgbè lɛ',
+'info_image_process2' => 'Mi cyán wàlɔ ɖàgbè lɛ', # MODIF
 'info_images_auto' => 'Images calculées automatiquement', # NEW
 'info_informations_personnelles' => 'Tɛnnɔtɛn àtɔ̂n gɔ̂',
 'info_inscription_automatique' => 'nyíkɔníná nyɔwlántɔ lɛ tɔn',
@@ -457,7 +457,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_question_inscription_nouveaux_redacteurs' => 'Mi yí gbè nú nyɔwántɔ yɔyɔ lɛ à.', # MODIF
 'info_question_utilisation_moteur_recherche' => 'mi jló ná zán mɔbìbàtɔ supipù tɔn à',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'gblogblojí ɔ sín dɔ',
 'info_recharger_page' => 'mi lɛ vɔ jlɔ wémà é lɔ ɖò cɛjú ywɛywɛmɛ.',
 'info_recherche_auteur_a_affiner' => 'xókwìn lɛ súkpɔ ɖí"@cherche_auteur@" ; mi lɛ vɔ bà',
@@ -537,7 +537,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_un_site' => 'Gblògblòjí ,',
 'info_une_rubrique' => 'àkpáxwé,',
 'info_une_rubrique_02' => 'àkpáxwé',
-'info_url' => 'URL :',
+'info_url' => 'URL :',
 'info_url_proxy' => 'URL du proxy', # NEW
 'info_url_site' => 'URL Gblògblòjí ɔ tɔn :',
 'info_url_test_proxy' => 'URL de test', # NEW
@@ -723,6 +723,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -734,7 +735,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -742,6 +743,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_liste' => 'Liste des plugins', # NEW
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

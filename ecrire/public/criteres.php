@@ -417,12 +417,36 @@ function critere_parinverse($idb, &$boucles, $crit, $sens = ''){
 			$par = $par->texte;
 			// par multi champ
 			if (preg_match(",^multi[\s]*(.*)$,", $par, $m)){
-				$texte = $boucle->id_table.'.'.trim($m[1]);
+				$champ = trim($m[1]);
+				// par multi L1.champ
+				if (strpos($champ, '.')) {
+					$cle = '';
+				// par multi champ (champ sur une autre table)
+				} elseif (!array_key_exists($champ, $boucle->show['field'])){
+					$cle = trouver_jointure_champ($champ, $boucle);
+				// par multi champ (champ dans la table en cours)
+				} else {
+					$cle = $boucle->id_table;
+				}
+				if ($cle) { $cle .= '.'; }
+				$texte = $cle.$champ;
 				$boucle->select[] = "\".sql_multi('".$texte."', \$GLOBALS['spip_lang']).\"";
 				$order = "'multi'";
 				// par num champ(, suite)
-			} else if (preg_match(",^num (.*)$,m", $par, $m)){
-				$texte = '0+'.$boucle->id_table.'.'.trim($m[1]);
+			} else if (preg_match(",^num (.*)$,m", $par, $m)) {
+				$champ = trim($m[1]);
+				// par num L1.champ
+				if (strpos($champ, '.')) {
+					$cle = '';
+				// par num champ (champ sur une autre table)
+				} elseif (!array_key_exists($champ, $boucle->show['field'])){
+					$cle = trouver_jointure_champ($champ, $boucle);
+				// par num champ (champ dans la table en cours)
+				} else {
+					$cle = $boucle->id_table;
+				}
+				if ($cle) { $cle .= '.'; }
+				$texte = '0+'. $cle . $champ;
 				$suite = calculer_liste($tri, array(), $boucles, $boucle->id_parent);
 				if ($suite!=="''")
 					$texte = "\" . ((\$x = $suite) ? ('$texte' . \$x) : '0')"." . \"";
@@ -946,7 +970,7 @@ function critere_tri_dist($idb, &$boucles, $crit){
 	};
 	";
 	$boucle->select[] = "\".tri_champ_select(\$tri).\"";
-	$boucle->order[] = "tri_champ_order(\$tri).\$senstri";
+	$boucle->order[] = "tri_champ_order(\$tri,\$command['from']).\$senstri";
 }
 
 # Criteres de comparaison
@@ -958,9 +982,11 @@ function calculer_critere_DEFAUT_dist($idb, &$boucles, $crit){
 		return calculer_critere_parties($idb, $boucles, $crit);
 
 	$r = calculer_critere_infixe($idb, $boucles, $crit);
-
 	if (!$r){
-		return (array('zbug_critere_inconnu', array('critere' => $crit->op)));
+	#	// on produit une erreur seulement si le critere n'a pas de '?'
+	#	if (!$crit->cond) {
+			return (array('zbug_critere_inconnu', array('critere' => $crit->op)));
+	#	}
 	} else calculer_critere_DEFAUT_args($idb, $boucles, $crit, $r);
 }
 
@@ -1049,13 +1075,14 @@ function calculer_critere_infixe($idb, &$boucles, $crit){
 	}
 		// Cas particulier : expressions de date
 	else if ($c = calculer_critere_infixe_date($idb, $boucles, $col)){
-		$col = $c;
+		list($col,$date) = $c;
 		$table = '';
 	}
 	else if (preg_match('/^(.*)\.(.*)$/', $col, $r)){
 		list(, $table, $col) = $r;
 		$col_alias = $col;
-		$table = calculer_critere_externe_init($boucle, array($table), $col, $desc, ($crit->cond OR $op!='='), true);
+		$table = trouver_jointure_champ($col, $boucle, array($table), ($crit->cond OR $op!='='));
+		#$table = calculer_critere_externe_init($boucle, array($table), $col, $desc, ($crit->cond OR $op!='='), true);
 		if (!$table) return '';
 	}
 	elseif (@!array_key_exists($col, $desc['field'])
@@ -1153,8 +1180,9 @@ function calculer_critere_infixe_externe($boucle, $crit, $op, $desc, $col, $col_
 	}
 
 	// et sinon on cherche parmi toutes les jointures declarees
-	if (!$table)
+	if (!$table) {
 		$table = $calculer_critere_externe($boucle, $boucle->jointures, $col, $desc, ($crit->cond OR $op!='='), $t);
+	}
 
 	if (!$table) return '';
 
@@ -1197,21 +1225,22 @@ function primary_doublee($decompose, $table){
  * @param  $col
  * @param  $desc
  * @param  $cond
- * @param bool $checkarrivee
+ * @param bool|string $checkarrivee
  * @return mixed|string
  */
 function calculer_critere_externe_init(&$boucle, $joints, $col, $desc, $cond, $checkarrivee = false){
-
 	// si on demande un truc du genre spip_mots
 	// avec aussi spip_mots_liens dans les jointures dispo
 	// et qu'on est la
 	// il faut privilegier la jointure directe en 2 etapes spip_mots_liens, spip_mots
 	if ($checkarrivee
+		AND is_string($checkarrivee)
 	    AND $a = table_objet($checkarrivee)
 	        AND in_array($a.'_liens', $joints)
 	){
-		if ($res = calculer_lien_externe_init($boucle, $joints, $col, $desc, $cond, $checkarrivee))
+		if ($res = calculer_lien_externe_init($boucle, $joints, $col, $desc, $cond, $checkarrivee)) {
 			return $res;
+		}
 	}
 	foreach ($joints as $joint){
 		if ($arrivee = trouver_champ_exterieur($col, array($joint), $boucle, $checkarrivee)){
@@ -1231,8 +1260,9 @@ function calculer_critere_externe_init(&$boucle, $joints, $col, $desc, $cond, $c
 				}
 				if (!$joindre) return $t;
 			}
-			if ($res = calculer_jointure($boucle, array($boucle->id_table, $desc), $arrivee, $cols, $cond, 1))
+			if ($res = calculer_jointure($boucle, array($boucle->id_table, $desc), $arrivee, $cols, $cond, 1)) {
 				return $res;
+			}
 		}
 	}
 	return '';
@@ -1467,7 +1497,7 @@ function calculer_critere_infixe_date($idb, &$boucles, $col){
 			       $date_orig.")";
 			break;
 	}
-	return $col;
+	return array($col,$regs);
 }
 
 // http://doc.spip.org/@calculer_param_date

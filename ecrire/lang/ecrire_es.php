@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -132,7 +132,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'entree_contenu_rubrique' => '(Contenido de la sección, en pocas palabras)',
 'entree_identifiants_connexion' => 'Tus identificadores de conexión...',
 'entree_identifiants_connexion_2' => 'Identifiants de connexion', # NEW
-'entree_informations_connexion_ldap' => 'Escriba en este formulario los datos de conexi&amp;oacute;n a tu directorio LDAP. Tales informaciones te serán transmitidas por el administrador del sistema o de la red.',
+'entree_informations_connexion_ldap' => 'Escriba en este formulario los datos de conexi&oacute;n a tu directorio LDAP. Tales informaciones te serán transmitidas por el administrador del sistema o de la red.',
 'entree_infos_perso' => '¿Quién eres?',
 'entree_infos_perso_2' => 'Qui est l\'auteur ?', # NEW
 'entree_interieur_rubrique' => 'En el interior de la sección...',
@@ -292,7 +292,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => '<sup>o</sup> sobre @liste@',
 'info_code_acces' => '¡No olvides tus códigos de acceso!',
 'info_compatibilite_html' => '¿Qué norma HTML seguir?',
-'info_compresseur_gzip' => '<b>N. B. :</b> Se recomienda verificar previamente si el proveedor comprime sistemáticamente los scripts php ; para ello, se puede, por ejemplo, utilizar el servicio siguiente : @testgzip@',
+'info_compresseur_gzip' => '<b>N. B. :</b> Se recomienda verificar previamente si el proveedor comprime sistemáticamente los scripts php ; para ello, se puede, por ejemplo, utilizar el servicio siguiente : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Si tu servidor no comprime automáticamente las páginas html para enviarlas a los internautas, puedes intentar forzar la compresión para disminuir el tamaño de las páginas enviadas. <b>Atención:</b> esto puede ralentizar considerablemente ciertos servidores.',
 'info_config_suivi' => 'Si esta dirección corresponde a una lista de correo, puedes indicar aquí abajo la dirección en la cual los participantes al sitio pueden inscribirse. Esta dirección puede ser una URL (por ejemplo la página de inscripción a la lista por la web), o una dirección e-mail con un asunto específico (por ejemplo: <tt>@direccion_abonar@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'Puedes suscribirte a la lista de correo de este sitio. Recibirás por correo electrónico los anuncios de artículos y de bereves propuestas a la publicación.',
@@ -325,7 +325,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'Antes de escribir artículos, debes crear una sección.',
 'info_email_envoi' => 'Dirección de correo de envío (opcional)',
 'info_email_envoi_txt' => 'Indica aqui la dirección que se utiliza como expeditor al mandar los correos electrónicos (por omisión, se utiliza la dirección del destinatario como dirección de envío) :',
-'info_email_webmestre' => 'Dirección de correo electrónico del/la webmaster (opcional)',
+'info_email_webmestre' => 'Dirección de correo electrónico del/la webmaster (opcional)', # MODIF
 'info_entrer_code_alphabet' => 'Introduce el código del alfabeto a utilizar',
 'info_envoi_email_automatique' => 'Envío automático de correos electrónicos',
 'info_envoyer_maintenant' => 'Enviar ahora',
@@ -359,7 +359,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => 'El seguimiento de revisiones permite conservar un historial de todas las modificaciones hechas en el contenido de un artículo, y mostrar las diferencias entre las sucesivas versiones.',
 'info_identification_publique' => 'Tu identidad pública...',
 'info_image_process' => 'Por favor selecciona el mejor método de fabricación de viñetas pinchando en la imágen correspondiente. ',
-'info_image_process2' => '<b>N.B.</b> <i>Si no aparece ninguna imagen, se debe a que el servidor que alberga su sitio web no está configurado para usar estas funciones. Si necesita utilizarlas, contacte con el responsable técnico y solicite las extensiones «GD» o «Imagick».</i>',
+'info_image_process2' => '<b>N.B.</b> <i>Si no aparece ninguna imagen, se debe a que el servidor que alberga su sitio web no está configurado para usar estas funciones. Si necesita utilizarlas, contacte con el responsable técnico y solicite las extensiones «GD» o «Imagick».</i>', # MODIF
 'info_images_auto' => 'Imágenes calculadas automáticamente',
 'info_informations_personnelles' => 'Informaciones personales',
 'info_inscription_automatique' => 'Inscripcción automática de nuevas personas',
@@ -462,10 +462,10 @@ Los idiomas que ya se utilizan en el sitio (al principio de la lista) no pueden 
 'info_publier' => 'publicar',
 'info_publies' => 'Tus artículos publicados',
 'info_question_accepter_visiteurs' => 'Si en los esqueletos de tu sitio está previsto el registro de visitantes sin acceso al espacio privado, tendrás que activar la opción siguiente:',
-'info_question_inscription_nouveaux_redacteurs' => '¿Se aceptan inscripciones de nuevas redactoras y redactores a partir del sitio público? Si se acepta, las personas que visitan el sitio podrán inscribirse desde un formulario automatizado y accederán entonces al espacio privado para proponer sus propios artículos. <blockquote><i>Durante la fase de inscripción, reciben un correo electrónico automático que les indica sus códigos de acceso al sitio privado. Ciertos proveedores de hospedaje desactivan el envío de correos electrónicos desde sus servidores: en tal caso, se hace imposible la inscripción automática. ',
+'info_question_inscription_nouveaux_redacteurs' => '¿Se aceptan inscripciones de nuevas redactoras y redactores a partir del sitio público? Si se acepta, las personas que visitan el sitio podrán inscribirse desde un formulario automatizado y accederán entonces al espacio privado para proponer sus propios artículos. <blockquote><i>Durante la fase de inscripción, reciben un correo electrónico automático que les indica sus códigos de acceso al sitio privado. Ciertos proveedores de hospedaje desactivan el envío de correos electrónicos desde sus servidores: en tal caso, se hace imposible la inscripción automática. ', # MODIF
 'info_question_utilisation_moteur_recherche' => '¿Deseas utilizar el motor de búsqueda integrado de SPIP? (desactivarlo agiliza el sitio)',
 'info_question_vignettes_referer_non' => 'No mostrar las capturas de los sitios de origen de las visitas',
-'info_qui_edite' => '@nom_auteur_modif@ trabajó sobre este contenido hace @date_diff@ minutos',
+'info_qui_edite' => '@nom_auteur_modif@ trabajó sobre este contenido hace @date_diff@ minutos', # MODIF
 'info_racine_site' => 'Raíz del sitio',
 'info_recharger_page' => 'Por favor recargue esta página dentro de un momento',
 'info_recherche_auteur_a_affiner' => 'Hay demasiados resultados para "@cherche_auteur@", por favor restrinja los criterios.',
@@ -496,7 +496,7 @@ Los idiomas que ya se utilizan en el sitio (al principio de la lista) no pueden 
 'info_site_2' => 'sitio:',
 'info_site_min' => 'sitio',
 'info_site_reference_2' => 'Sitio referenciado',
-'info_site_web' => 'Sitio Web:', # MODIF
+'info_site_web' => 'Sitio Web:',
 'info_sites' => 'sitios',
 'info_sites_lies_mot' => 'Los sitios referenciados ligados a esta palabra clave',
 'info_sites_proxy' => 'Utilizar un proxy',
@@ -731,6 +731,7 @@ Las traducciones están asociadas al original, en un color que indica su estado:
 'plugin_titre_automatique' => 'Instalación automática',
 'plugin_titre_automatique_ajouter' => 'Añadir plugins',
 'plugin_titre_installation' => 'Instalación del plugin @plugin@',
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continúa para activarlo',
 'plugin_zip_adresse' => 'indica aquí la dirección de un archivo zip de plugin a descargar, o también la dirección de una lista de plugins.',
 'plugin_zip_adresse_champ' => 'Dirección del plugin o de la lista ',
@@ -742,7 +743,7 @@ Las traducciones están asociadas al original, en un color que indica su estado:
 'plugins_actif_aucun' => 'Ningún plugin activado.',
 'plugins_actif_un' => 'Un plugin activado.',
 'plugins_actifs' => '@count@ plugins activados.',
-'plugins_actifs_liste' => 'Plugins activos',
+'plugins_actifs_liste' => 'Plugins activos', # MODIF
 'plugins_compte' => '@count@ plugins',
 'plugins_disponible_un' => 'Un plugin disponible.',
 'plugins_disponibles' => '@count@ plugins disponibles.',
@@ -750,6 +751,7 @@ Las traducciones están asociadas al original, en un color que indica su estado:
 'plugins_liste' => 'Lista de plugins',
 'plugins_liste_extensions' => 'Extensiones',
 'plugins_recents' => 'Plugins recientes.',
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Jerarquía',
 'plugins_vue_liste' => 'Lista',
 'protocole_ldap' => 'Versión del protocolo:',

@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -299,7 +299,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => '<sup>e</sup> na @liste@',
 'info_code_acces' => 'Zapamiętaj swoje kody dostępu!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'Jeśli ten adres odpowiada liście subskrypcyjnej, możecie wpisać poniżej adres, za któego pomocą uczestnicy serwisu mogą się zapisać. Adres ten może być URL-em (np. stroną służącą do zapisywania się na listę przez internet), albo adresem e-mail opatrzonym stosownym tematem (np.: <tt>@dany_adres@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'Możesz automatycznie, za pomocą poczty elektronicznej otrzymywać ogłoszenia dotyczące aktywności redakcyjnej tego serwisu. W tym celu powinnieneś się zapisać na listę mailową.',
@@ -332,7 +332,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'Aby móc pisać artykuły, musisz utworzyć przynajmniej jeden dział.',
 'info_email_envoi' => 'Adres e-mail nadawcy (nieobowiązkowo)',
 'info_email_envoi_txt' => 'Wpisz adres e-maila, który będzie używany do wywyłania wiadomości (domyślnie adres odbiorcy będzie jednocześnie adresem wysyłkowym) :',
-'info_email_webmestre' => 'Adres e-mail webmastera (nieobowiązkowo)',
+'info_email_webmestre' => 'Adres e-mail webmastera (nieobowiązkowo)', # MODIF
 'info_entrer_code_alphabet' => 'Wpisz kodowanie alfabetu :',
 'info_envoi_email_automatique' => 'Automatyczna wysyłka maili',
 'info_envoyer_maintenant' => 'Wyślij teraz',
@@ -375,7 +375,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => 'Zarządzanie poprawkami artykułu pozwala zachować historię wszystkich zmian dokonanych w treści artykułu i wyświetlić różnice pomiędzy kolejnymi wersjami.',
 'info_identification_publique' => 'Twoja nazwa publiczna',
 'info_image_process' => 'Wybierz najlepsza metode przygotowania miniaturek kilkając na odpowiednim obrazku.',
-'info_image_process2' => '<b>N.B.</b> <i>Jeśli nie wyświetlił się żaden obrazek, Twój serwer nie został skonfugurowany tak, aby skorzystać z tego narzędzia. Jeśli jednak chcesz skorzystać z tych funkcji, skontaktuj się z osobą odpowiedzialną za sprawy techniczne Twojego serwisu i poproś o włączenie rozszerzeń "GD" lub "Imagick".</i>',
+'info_image_process2' => '<b>N.B.</b> <i>Jeśli nie wyświetlił się żaden obrazek, Twój serwer nie został skonfugurowany tak, aby skorzystać z tego narzędzia. Jeśli jednak chcesz skorzystać z tych funkcji, skontaktuj się z osobą odpowiedzialną za sprawy techniczne Twojego serwisu i poproś o włączenie rozszerzeń "GD" lub "Imagick".</i>', # MODIF
 'info_images_auto' => 'Automatycznie obliczane rozmiary obrazka',
 'info_informations_personnelles' => 'Informacje o użytkowniku',
 'info_inscription_automatique' => 'Automatyczna rejestracja nowych redaktorów',
@@ -495,7 +495,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_question_utilisation_moteur_recherche' => 'Czy życzysz sobie skorzystać z wyszukiwarki wewnętrznej SPIP ?
  (jej wyłączenie przyspiesza funkcjonowanie systemu.)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'Rdzeń strony',
 'info_recharger_page' => 'Proszę za chwilę ponownie załadować tę stronę.',
 'info_recherche_auteur_a_affiner' => 'Zbyt dużo rezultatów w "@cherche_auteur@" ; spróbuj sprecyzować poszukiwania.',
@@ -761,6 +761,7 @@ Przekłady są połączone z oryginałem, za pomocą koloru wskazującego na ich
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -772,7 +773,7 @@ Przekłady są połączone z oryginałem, za pomocą koloru wskazującego na ich
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Plugins actifs', # MODIF
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -780,6 +781,7 @@ Przekłady są połączone z oryginałem, za pomocą koloru wskazującego na ich
 'plugins_liste' => 'Lista rozszerzeń',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Wersja protokołu:',

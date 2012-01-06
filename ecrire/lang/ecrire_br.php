@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -295,7 +295,7 @@ ar skeudennoù enframmet. Evel-se e c\'heller krouiñ, da skouer,
 'info_classement_2' => '<sup>vet</sup> war @liste@',
 'info_code_acces' => 'N\'ankouait ket ho kodoù moned !',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Aliet eo gwiriañ mat en a-raok ha gwasket e vez dija en a-raok ar restroù php ent emgefre gant an herberc\'hier pe get. Evit se e c\'hellit implijout ar servij-mañ : @testgzip@',
+'info_compresseur_gzip' => '<b>N. B. :</b> Aliet eo gwiriañ mat en a-raok ha gwasket e vez dija en a-raok ar restroù php ent emgefre gant an herberc\'hier pe get. Evit se e c\'hellit implijout ar servij-mañ : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Ma ne vez ket gwasket ent emgefre ar pajennoù HTML gant ho servijer evit o c\'has d\'al lennerien e c\'hellit klask gwaskañ dre ret evit bihanaat ment ar pajennoù pellgarget.  <b>Diwallit</b> : gallout a ra kement-se gorrekaat servijerioù zo.',
 'info_config_suivi' => 'Ma\'z eo ar chomlec\'h-mañ hini ur roll-skignañ e c\'hellit skrivañ amañ ar chomlec\'h evit en em enrollañ. Gallout a ra ar chomlec\'h-se bezañ un URL (hini ar bajenn Web m\'en em enroller warni), pe ur postel diwar-benn un danvez bennak (da skouer : <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'Gallout a rit en em enrollañ war roll-skignañ al lec\'hienn-mañ. Degaset e vo deoc\'h kemennoù dre bostel pa vo kinniget pennadoù pe berrskridoù nevez neuze.',
@@ -328,7 +328,7 @@ ar skeudennoù enframmet. Evel-se e c\'heller krouiñ, da skouer,
 'info_ecrire_article' => 'A-benn gallout skrivañ pennadoù e rankit bezañ krouet ur rubrikenn da nebeutañ.',
 'info_email_envoi' => 'Postel kas (diret)',
 'info_email_envoi_txt' => 'Skrivit amañ chomlec\'h kas ar postelioù (ma ne skrivit netra e vo implijet chomlec\'h an degemererien) :',
-'info_email_webmestre' => 'Postel ar webmestr (diret)',
+'info_email_webmestre' => 'Postel ar webmestr (diret)', # MODIF
 'info_entrer_code_alphabet' => 'Merkit kod al lizherenneg da implijout :',
 'info_envoi_email_automatique' => 'Kas postelioù emgefre',
 'info_envoyer_maintenant' => 'Kas bremañ',
@@ -365,7 +365,7 @@ ar skeudennoù enframmet. Evel-se e c\'heller krouiñ, da skouer,
 'info_historique_texte' => 'En ur heuliañ an adweladennoù e c\'heller rollaén an holl gemmoù bet degaset d\'ar pennad, ha gwelet an diforc\'hioù etre an stummoù disheñvel.',
 'info_identification_publique' => 'Hoc\'h anv foran...',
 'info_image_process' => 'Diuzit an hentenn wellañ da sevel skeudennoùigoù o klikañ war ar skeudenn a zere.',
-'info_image_process2' => '<b>Evezh.</b> <i>Ma ne weler skeudenn ebet e talvez n\'eo ket bet kefluniet ar servijer a ro bod deoc\'h evit ober gant seurt binvioù. Mar fell deoc\'h implijout ar servijoù-se, kit e darempred gant an dud e-karg, ha goulennit war-lerc\'h an astennoù «GD» pe «Imagick».</i>',
+'info_image_process2' => '<b>Evezh.</b> <i>Ma ne weler skeudenn ebet e talvez n\'eo ket bet kefluniet ar servijer a ro bod deoc\'h evit ober gant seurt binvioù. Mar fell deoc\'h implijout ar servijoù-se, kit e darempred gant an dud e-karg, ha goulennit war-lerc\'h an astennoù «GD» pe «Imagick».</i>', # MODIF
 'info_images_auto' => 'Skeudennoù jedet ent emgefre',
 'info_informations_personnelles' => 'Titouroù personel',
 'info_inscription_automatique' => 'Enskrivadur emgefreek ar skridaozerien nevez.',
@@ -476,11 +476,11 @@ Riskloù zo e vefe distrujet ho tiaz titouroù pe ne\'z afe ket en-dro ken.<br /
   <blockquote><i>Da vare an enrollañ e vez kaset ur postel emgefreek d\'ar skridaozerien
   ennañ ar c\'hodoù da c\'hallout dont tre el lec\'hienn.
   Gant herberc\'herien zo e vez difennet kas postelioù adalek o servijerioù,
-  en degouezh-se ne vo ket posupl en em enrollañ ent emgefre.</i></blockquote>',
+  en degouezh-se ne vo ket posupl en em enrollañ ent emgefre.</i></blockquote>', # MODIF
 'info_question_utilisation_moteur_recherche' => 'Ha c\'hoant hoc\'h eus da ober gant lusker enklask diabarzh SPIP ?
  (diweredekaat anezhañ a laka ar reizhiad da vont buanoc\'h.)',
 'info_question_vignettes_referer_non' => 'Chom hep diskouez skeudennoùigoù lec\'hiennoù orin ar weladennerien',
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'Gwrizienn al lec\'hienn',
 'info_recharger_page' => 'Adkargit ar-bajenn-mañ a-raok pell, mar plij.',
 'info_recherche_auteur_a_affiner' => 'Re a zisoc\'hoù zo evit "@cherche_auteur@" ; resisait hoc\'h enklask mar plij.',
@@ -747,6 +747,7 @@ diskouezet en ul liv disheñvel, diouzh o stad :',
 'plugin_titre_automatique' => 'Staliadur emgefre',
 'plugin_titre_automatique_ajouter' => 'Ouzhpennañ adveziantoù',
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Kendalc\'hit evit e weredekaat',
 'plugin_zip_adresse' => 'merkit amañ a-is chomlec\'h restr zip un adveziant da bellgargañ, pe hini ul rollad adveziantoù.',
 'plugin_zip_adresse_champ' => 'Chomlec\'h an adveziant pe hini ar roll ',
@@ -758,7 +759,7 @@ diskouezet en ul liv disheñvel, diouzh o stad :',
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ adveziant gweredekaet.',
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ adveziant',
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ adveziant hegerz.',
@@ -766,6 +767,7 @@ diskouezet en ul liv disheñvel, diouzh o stad :',
 'plugins_liste' => 'Roll an adveziantoù',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Urzhaz',
 'plugins_vue_liste' => 'Roll',
 'protocole_ldap' => 'Stumm ar protokol :',

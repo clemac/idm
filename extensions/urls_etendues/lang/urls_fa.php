@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -11,49 +11,50 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'actualiser_toutes' => 'به هنگام سازي تمام يو.آر.ال ها',
 
 	// B
-	'bouton_supprimer_url' => 'Supprimer cette URL', # NEW
+	'bouton_supprimer_url' => 'حذف اين يو.آر.ال',
 
 	// E
-	'erreur_arbo_2_segments_max' => 'Vous ne pouvez pas utiliser plus de deux segments d\'URL pour un objet', # NEW
+	'erreur_arbo_2_segments_max' => 'نمي‌توانيد براي يك چيز بيش دو قطعه‌ از يو.آر.ال استفاده كنيد',
+	'explication_editer' => 'La gestion avancée des urls vous permet d\'éditer l\'url des pages de chaque objet éditorial, et de gérer l\'historique de leur évolution.', # NEW
 
 	// I
-	'icone_configurer_urls' => 'Configurer les URLs', # NEW
+	'icone_configurer_urls' => 'پيكربندي يو.آر.آل‌‌ها',
 	'icone_controler_urls' => 'يو.آر.ال هاي صحيح',
-	'info_1_url' => '1 URL', # NEW
-	'info_id_parent' => '#parent', # NEW
-	'info_nb_urls' => '@nb@ URLs', # NEW
-	'info_objet' => 'Objet', # NEW
+	'info_1_url' => 'يو.آر.ال 1',
+	'info_id_parent' => '#parent',
+	'info_nb_urls' => '@nb@ يو.آر.ال',
+	'info_objet' => 'چيز',
 
 	// L
 	'label_tri_date' => 'تاريخ',
 	'label_tri_id' => 'آي.دي (شناشه)',
 	'label_tri_url' => 'يو.آر.ال',
 	'label_url' => 'يو.آر.ال جديد',
-	'label_url_minuscules_0' => 'Conserver la casse du titre', # NEW
-	'label_url_minuscules_1' => 'Forcer les urls en minuscules', # NEW
+	'label_url_minuscules_0' => 'حفظ شكستگي تيتر',
+	'label_url_minuscules_1' => 'اعمال قواعد در جزئيات',
 	'label_url_permanente' => 'حفظ اين يو.آر.ال (بعد از ويرايش اوبژه به هنگام سازي نشود)',
-	'label_url_sep_id' => 'Caractère pour séparer le numéro ajouté en cas de doublon', # NEW
-	'label_urls_activer_controle_oui' => 'Activer la gestion avancée des URLs', # NEW
-	'label_urls_nb_max_car' => 'Nombre maximum de caractères', # NEW
-	'label_urls_nb_min_car' => 'Nombre minimum de caractères', # NEW
+	'label_url_sep_id' => 'كاراكتر براي جدا كردن شماره‌ي افزوده شده در مورد جفت',
+	'label_urls_activer_controle_oui' => 'فعال سازي مديريت پيشرفته‌ي يو.آر.ال‌ها',
+	'label_urls_nb_max_car' => 'بيشترين تعداد كاراكتر‌ها',
+	'label_urls_nb_min_car' => 'كم‌ترين تعداد كاراركتر‌ها',
 	'liberer_url' => 'آزادسازي',
 	'liste_des_urls' => 'تمام يو.آر.ال‌ ها',
 
 	// T
 	'texte_type_urls' => 'در زير مي‌توانيد حالت محاسبه‌ي نشاني صفحه‌ها را گزينش كنيد.',
 	'texte_type_urls_attention' => 'توجه! اين تنظيم فقط هنگامي كار خواهد كرد كه فايل @htaccess@ در ريشه‌ي سايت نصب شده باشد.',
-	'texte_urls_nb_max_car' => 'Si le titre est plus long, il sera coupé.', # NEW
-	'texte_urls_nb_min_car' => 'Si le titre est plus court, c\'est son Numéro identifiant qui sera utilisé.', # NEW
-	'titre_gestion_des_urls' => 'Gestion des URLs', # NEW
-	'titre_type_arbo' => 'شجره‌ها (درخت‌‌ مانندها)', # MODIF
-	'titre_type_html' => 'اوبژه‌هاي اچ‌تي‌ام‌ال', # MODIF
-	'titre_type_libres' => 'آزاد‌', # MODIF
-	'titre_type_page' => 'صفحه', # MODIF
-	'titre_type_propres' => 'صحيح', # MODIF
-	'titre_type_propres2' => 'صحيح+<tt>.html</tt>', # MODIF
-	'titre_type_propres_qs' => 'زنجيره‌ي جستجوي صحيح', # MODIF
-	'titre_type_simple' => 'ساده', # MODIF
-	'titre_type_standard' => 'تاريخي', # MODIF
+	'texte_urls_nb_max_car' => 'اگر تيتر زياد بزرگ باشد، شكسته خواهد شد.',
+	'texte_urls_nb_min_car' => 'اگر تيتر خيلي كوتاه باشد، شماره‌ي شناسه‌ي آن مورد استفاده قرار خواهد گرفت.',
+	'titre_gestion_des_urls' => 'مديريت يو.آر.ال‌ها',
+	'titre_type_arbo' => 'يو.آر.ال‌هاي درختي',
+	'titre_type_html' => 'يو.ار.ال چيزهاي اچ‌تي‌ام‌ال',
+	'titre_type_libres' => 'يو.ار.ال‌هاي آزاد',
+	'titre_type_page' => 'صفحه‌ي يو.آر.ال‌ها',
+	'titre_type_propres' => 'يو.آر.ال‌هاي صحيح',
+	'titre_type_propres2' => 'يو.آر.ال‌هاي پيشنهادي +<tt>.html</tt>',
+	'titre_type_propres_qs' => 'يو.آر.ال‌هاي پيشنهادي در زنجيره‌ي پرسشنامه',
+	'titre_type_simple' => 'يو.آر.ال‌هاي ساده',
+	'titre_type_standard' => 'يو.آر.ال‌هاي تاريخي',
 	'titre_type_urls' => 'نوع نشاني‌هاي URL',
 	'tout_voir' => 'تمام يو.آر.ال‌ها را بنگريد',
 

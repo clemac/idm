@@ -39,11 +39,15 @@ function plugins_infos_paquet($desc, $plug = '', $dir_plugins = _DIR_PLUGINS) {
 		// compatibilite avec l'existant:
 		$tree = $vxml->versions['0'];
 
+		// l'arbre renvoie parfois un tag vide... etrange. Pas la peine de garder ca.
+		if (isset($tree['']) and !strlen($tree['']))
+			unset($tree['']);
+
 		$tree['slogan'] = $tree['prefix']."_slogan";
 		$tree['description'] = $tree['prefix']."_description";
 		paquet_readable_files($tree, "$dir_plugins$plug/");
 		if (!$tree['chemin'])
-			$tree['chemin'] = array(array('dir' => '')); // initialiser par defaut
+			$tree['chemin'] = array(array('path' => '')); // initialiser par defaut
 
 		// On verifie qu'il existe des balises spip qu'il faudrait rajouter dans
 		// la structure d'infos du paquet en fonction de la version spip courante
@@ -52,7 +56,7 @@ function plugins_infos_paquet($desc, $plug = '', $dir_plugins = _DIR_PLUGINS) {
 			foreach ($vxml->versions as $_compatibilite => $_version) {
 				if (($_version['balise'] == 'spip')
 				AND (plugin_version_compatible($_compatibilite, $vspip))) {
-					// on merge les sous-balises de la balise spip avec celles de la
+					// on merge les sous-balises de la balise spip compatible avec celles de la
 					// balise paquet
 					foreach ($_version as $_index => $_balise) {
 						if ($_index AND $_index != 'balise')
@@ -88,9 +92,7 @@ function paquet_readable_files(&$tree, $dir){
 	$prefix = $tree['prefix'];
 
 	$tree['options'] = (is_readable($dir.$f = ($prefix.'_options.php'))) ? array($f) : array();
-
 	$tree['fonctions'] = (is_readable($dir.$f = ($prefix.'_fonctions.php'))) ? array($f) : array();
-
 	$tree['install'] = (is_readable($dir.$f = ($prefix.'_administrations.php'))) ? array($f) : array();
 }
 
@@ -114,7 +116,6 @@ function paquet_debutElement($phraseur, $name, $attrs) {
 		if ($name=='spip'){
 			$n = $attrs['compatibilite'];
 			$attrs = array();
-//			$attrs['compatibilite'] = $n;
 		}
 		else {
 			$n = '0';
@@ -127,11 +128,6 @@ function paquet_debutElement($phraseur, $name, $attrs) {
 			$attrs['procure'] = array();
 			$attrs['pipeline'] = array();
 			$attrs['utilise'] = array();
-//			$attrs['auteur'] = array();
-//			$attrs['credit'] = array();
-//			$attrs['licence'] = array();
-//			$attrs['copyright'] = array();
-//			$attrs['traduire'] = array();
 		}
 		$phraseur->contenu['compatible'] = $n;
 		$phraseur->versions[$phraseur->contenu['compatible']] = $attrs;
@@ -202,6 +198,25 @@ function info_paquet_licence($phraseur, $attrs, $texte) {
 	$n = $phraseur->contenu['compatible'];
 	$phraseur->versions[$n]['licence'][] = array('nom' => $texte, 'url' => $lien);
 }
+
+/**
+ * Cas particulier de la balise chemin :
+ * stocker un tableau
+ *
+ * @param object $phraseur
+ * @param array $attrs
+ * @param string $texte
+ */
+function info_paquet_chemin($phraseur, $attrs, $texte) {
+	$n = $phraseur->contenu['compatible'];
+	if (isset($attrs['path'])){
+		if (isset($attrs['type']))
+			$phraseur->versions[$n]['chemin'][] = array('path' => $attrs['path'], 'type' => $attrs['type']);
+		else
+			$phraseur->versions[$n]['chemin'][] = array('path' => $attrs['path']);
+	}
+}
+
 
 /**
  * Cas particulier de la balise auteur

@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -298,7 +298,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => '<sup>.</sup> af @liste@',
 'info_code_acces' => 'Glem ikke dine egne adgangsoplysninger!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => 'Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'Hvis denne adresse svarer til en postliste, kan du nedefor angive, hvor webstedets besøgende kan lade sig registrere. Denne adresse kan være en  URL (f.eks. siden med tilmelding til listen via web), eller en e-mail adresse med et særligt emne tilknyttet (f.eks.: <tt>@adresse_suivi@?subject=abonner</tt>):',
 'info_config_suivi_explication' => 'Du kan abonnere på dette websteds postliste. Du vil så via e-mail modtage annonceringer vedrørende artikler og nyheder, der er indsendt til offentliggørelse.',
@@ -331,7 +331,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'Før du kan lave artikler, skal du oprette mindst et afsnit.',
 'info_email_envoi' => 'Afsenderens e-mail adresse (valgfri)',
 'info_email_envoi_txt' => 'Indtast afsenderens e-mail adresse ved afsendelse af e-mails (som standard bruges modtagerens adresse som afsenderadresse) :',
-'info_email_webmestre' => 'E-mail-adresse på webmaster (valgfrit)',
+'info_email_webmestre' => 'E-mail-adresse på webmaster (valgfrit)', # MODIF
 'info_entrer_code_alphabet' => 'Indtast koden for det tegnsæt, der skal benyttes:',
 'info_envoi_email_automatique' => 'Automatisk e-mail-forsendelse',
 'info_envoyer_maintenant' => 'Send nu',
@@ -365,7 +365,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => 'Revisions follow-up allows you to keep track of every modifications added to an article and displays the differences between successive versions.', # NEW
 'info_identification_publique' => 'Din offentlige identitet...',
 'info_image_process' => 'Vælg den bedste metode til at skabe miniaturebilleder ved at klikke på det korresponderende billede.',
-'info_image_process2' => '<b>N.B.</b> <i>If you can\'t see any image, then your server is not configured to use such tools. If you want to use these features, contact your provider\'s technical support and ask for the «GD» or «Imagick» extensions to be installed.</i>', # NEW
+'info_image_process2' => '<b>N.B.</b> <i>If you can\'t see any image, then your server is not configured to use such tools. If you want to use these features, contact your provider\'s technical support and ask for the «GD» or «Imagick» extensions to be installed.</i>', # MODIF
 'info_images_auto' => 'Images calculées automatiquement', # NEW
 'info_informations_personnelles' => 'Femte trin: <b>Personlig information</b>',
 'info_inscription_automatique' => 'Automatisk registrering af nye redaktører',
@@ -478,7 +478,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_question_utilisation_moteur_recherche' => 'Ønsker du at anvende den søgefunktion, der findes i SPIP?
 	(At fravælge søgefunktionen gør webstedet hurtigere.)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'Top',
 'info_recharger_page' => 'Vær venlig at genindlæse denne side om et øjeblik.',
 'info_recherche_auteur_a_affiner' => 'For mange resultater fundet til "@cherche_auteur@"; vær venlig at afgrænse søgningen mere.',
@@ -745,6 +745,7 @@ i en farve, der angiver deres status:',
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -756,7 +757,7 @@ i en farve, der angiver deres status:',
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -764,6 +765,7 @@ i en farve, der angiver deres status:',
 'plugins_liste' => 'Liste des plugins', # NEW
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

@@ -47,17 +47,21 @@ function vertebrer_form($fields)
 		$s = sql_test_int($t) ? 11
 		  :  (preg_match('/char\s*\((\d)\)/i', $t, $r) ? $r[1] : '');
 
-		$res .= "\n\t\t<td>
-			[(#ENV{".$n."}|non)
-			<a href='#' onclick=\"jQuery(this).toggle('fast').siblings('form').toggle('fast');return false;\">[(#CHEMIN_IMAGE{rechercher-20.png}|balise_img)]</a>
-			]
-			<form class='[(#ENV{".$n."}|non)none-js]' action='./' method='get'>"
-		 . "<div>"
-		 . "\n\t\t\t<input name='$n'"
-		 . ($s ? " size='$s'" : '')
-		 . "value=\"[(#ENV{".$n."}|entites_html)]\""
-		 . " />\n\t\t\t[($url|\n\t\t\tform_hidden)]"
-		 . "\n\t\t</div></form></td>";
+		if (!in_array($n, array('date', 'date_redac', 'lang'))){
+			$res .= "\n\t\t<td>
+				[(#ENV{".$n."}|non)
+				<a href='#' onclick=\"jQuery(this).toggle('fast').siblings('form').toggle('fast');return false;\">[(#CHEMIN_IMAGE{rechercher-20.png}|balise_img)]</a>
+				]
+				<form class='[(#ENV{".$n."}|non)none-js]' action='./' method='get'>"
+			 . "<div>"
+			 . "\n\t\t\t<input name='$n'"
+			 . ($s ? " size='$s'" : '')
+			 . "value=\"[(#ENV{".$n."}|entites_html)]\""
+			 . " />\n\t\t\t[($url|\n\t\t\tform_hidden)]"
+			 . "\n\t\t</div></form></td>";
+		}
+		else
+			$res .= "<td></td>";
 	}
 	return $res;
 }
@@ -67,9 +71,12 @@ function vertebrer_form($fields)
 // http://doc.spip.org/@vertebrer_crit
 function vertebrer_crit($v)
 {
-	 $res = "";
-	 foreach($v as $n => $t) {  $res .= "\n\t\t{" . $n .  " ?}"; }
-	 return $res;
+	$res = "";
+	foreach($v as $n => $t) {
+		if (!in_array($n, array('date', 'date_redac', 'lang')))
+			$res .= "\n\t\t{" . $n .  " ?}";
+	}
+	return $res;
 }
 
 

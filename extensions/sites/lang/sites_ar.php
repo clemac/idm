@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'ظهرت مشاكل في هذه المواقع المرخصة',
 
 	// B
+	'bouton_exporter' => 'نقل',
+	'bouton_importer' => 'جلب',
 	'bouton_radio_modere_posteriori' => 'مراقبة بعدية',
 	'bouton_radio_modere_priori' => 'مراقبة استباقية',
 	'bouton_radio_non_syndication' => 'عدم ترخيص',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'عنوان ملف الترخيص:',
 	'entree_adresse_site' => '<b>عنوان الموقع</b> [إجباري]',
 	'entree_description_site' => 'وصف الموقع',
+	'erreur_fichier_format_inconnu' => 'تنسيق الملف @fichier@ غير مدعوم.',
+	'erreur_fichier_incorrect' => 'لا يمكن قراءة الملف.',
 
 	// F
 	'form_prop_nom_site' => 'اسم الموقع',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'التصديق على هذا المقال',
 	'icone_valider_articles' => 'التصديق على هذه المقالات',
 	'icone_voir_sites_references' => 'عرض المواقع المبوبة',
+	'info_1_site_importe' => 'تم جلب موقع واحد',
 	'info_a_valider' => '[بانتظار التصديق]',
+	'info_aucun_site_importe' => 'لم يتم جلب اي موقع',
 	'info_bloquer' => 'إيقاف',
 	'info_bloquer_lien' => 'صد هذه الوصلة',
 	'info_derniere_syndication' => 'تم تنفيذ آخر ترخيص لهذا الموقع في',
 	'info_liens_syndiques_1' => 'وصلة مرخصة',
 	'info_liens_syndiques_2' => 'تنتظر التصديق.',
+	'info_nb_sites_importes' => 'تم جلب @nb@ موقع',
 	'info_nom_site_2' => '<b>إسم الموقع</b> [إجباري]',
 	'info_panne_site_syndique' => 'موقع مرخص معطل',
 	'info_probleme_grave' => 'مشكلة',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'إستخدام الترخيص الآلي',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'نقل المفاتيح على شكل علامات',
+	'label_exporter_id_parent' => 'نقل مواقع القسم',
+	'label_exporter_publie_seulement_1' => 'نقل المواقع المنشورة فقط',
+	'label_fichier_import' => 'ملف HTML',
+	'label_importer_les_tags_1' => 'جلب العلامات على شكل مفاتيح',
+	'label_importer_statut_publie_1' => 'نشر المواقع آلياً',
 	'lien_mise_a_jour_syndication' => 'تحديث الآن',
 	'lien_nouvelle_recuperation' => 'محاولة تنفيذ إسترجاع جديد للبيانات',
 	'lien_purger_syndication' => 'حذف كل المقالات المرخصة',
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'خيارات الترخيص:',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'يمكنك نقل لائحة بالمواقع بتنسيق مرجعيات HTML،
+لتتمكن لاحقاً من جلبها في برنامج التصفح او في اي خدمة على النسيج',
+	'texte_expliquer_import_bookmarks' => 'يمكنك جلب لائحة بالمواقع بتنسيق مرجعيات HTML،
+من برنامج التصفح او من اي خدمة إدارة مرجعيات على النسيج.',
 	'texte_liens_sites_syndiques' => 'يمكن صد الوصلات الآتية من المواقع المرخصة
 استباقياً؛ ويعرض الخيار
    التالي الإعداد الافتراضي
@@ -125,6 +142,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 من موقعك. </blockquote>',
 	'titre_articles_syndiques' => 'المقالات المرخصة المسحوبة من هذا الموقع',
 	'titre_dernier_article_syndique' => 'أحدث المقالات المرخصة',
+	'titre_exporter_bookmarks' => 'نقل مرجعيات',
+	'titre_importer_bookmarks' => 'جلب مرجعيات',
+	'titre_importer_exporter_bookmarks' => 'جلب ونقل مرجعيات',
 	'titre_page_sites_tous' => 'المواقع المبوبة',
 	'titre_referencement_sites' => 'تبويب وترخيص المواقع',
 	'titre_site_numero' => 'موقع رقم:',

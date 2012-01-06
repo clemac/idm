@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'Besucher der Website die einen Beitrag in ein Forum geschrieben haben.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Schlagwort anlegen und zuordnen',
+	'creer_et_associer_un_mot' => 'Schlagwort anlegen und zuordnen', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => 'Neue Schlagwort-Kategorie anlegen',

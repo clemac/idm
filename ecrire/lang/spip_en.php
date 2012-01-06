@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -227,6 +227,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'envoi_via_le_site' => 'Sent via the site',
 'erreur' => 'Error',
 'erreur_balise_non_fermee' => 'last tag not closed:',
+'erreur_technique_enregistrement_champs' => 'A technical error prevented the right registration of the field @champs@.',
+'erreur_technique_enregistrement_impossible' => 'A technical error prevented the registration.',
 'erreur_texte' => 'error(s)',
 'etape' => 'Step',
 
@@ -608,6 +610,7 @@ and log in to the site.
 'suivant' => 'next',
 
 // T
+'taille_go' => '@taille@ Gb',
 'taille_ko' => '@taille@ kb',
 'taille_mo' => '@taille@ Mb',
 'taille_octets' => '@taille@ bytes',

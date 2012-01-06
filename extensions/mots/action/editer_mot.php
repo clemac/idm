@@ -42,9 +42,15 @@ function action_editer_mot_dist($arg=null)
  */
 function mot_inserer($id_groupe) {
 
-	$champs = array(
-		'id_groupe' => $id_groupe,
-	);
+	$champs = array();
+	$row = sql_fetsel("titre", "spip_groupes_mots", "id_groupe=".intval($id_groupe));
+	if ($row) {
+		$champs['id_groupe'] = $id_groupe;
+		$champs['type'] = $row['titre'];
+	}
+	else
+		return false;
+
 
 	// Envoyer aux plugins
 	$champs = pipeline('pre_insertion',
@@ -78,8 +84,6 @@ function mot_inserer($id_groupe) {
  * @return string
  */
 function mot_modifier($id_mot, $set=null) {
-	$err = '';
-
 	include_spip('inc/modifier');
 	$c = collecter_requests(
 		// white list
@@ -92,11 +96,12 @@ function mot_modifier($id_mot, $set=null) {
 		$set
 	);
 	
-	modifier_contenu('mot', $id_mot,
+	if ($err = objet_modifier_champs('mot', $id_mot,
 		array(
 			'nonvide' => array('titre' => _T('info_sans_titre'))
 		),
-		$c);
+		$c))
+		return $err;
 
 	$c = collecter_requests(array('id_groupe', 'type'),array(),$set);
 	$err = mot_instituer($id_mot, $c);

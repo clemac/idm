@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -74,7 +74,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_admin_tech_04' => 'Com o objetivo de fusão com outra base de dados, você pode limitar a cópia de segurança à seção: ',
 	'texte_sauvegarde_compressee' => 'A cópia de segurança da base será feita no arquivo não compactado @fichier@.',
 	'titre_nouvelle_breve' => 'Nova nota',
-	'titre_page_breves_edit' => 'Editar a nota: &amp;laquo;@titre@&amp;raquo;',
+	'titre_page_breves_edit' => 'Editar a nota: &laquo;@titre@&raquo;',
 	'titre_page_forum' => 'Fórum dos administradore',
 	'titre_page_forum_envoi' => 'Enviar uma mensagem',
 	'titre_page_statistiques_messages_forum' => 'Mensagens de fórum'

@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -73,7 +73,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'bouton_radio_non_envoi_liste_nouveautes' => 'နောက်ဆုံးရ သတင်းစာရင်း မပို့ရန်',
 'bouton_recharger_page' => 'ဤစာမျက်နှာကို ပြန်ဖွင့်ရန်',
 'bouton_telecharger' => 'ထည့်သွင်းရန်',
-'bouton_upload' => 'ထည့်သွင်းရန်', # MODIF
+'bouton_upload' => 'ထည့်သွင်းရန်', # MODIF
 'bouton_valider' => 'တင်သွင်းရန်',
 
 // C
@@ -221,6 +221,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'envoi_via_le_site' => 'ဝက်ဘ်ဆိုက်မှတဆင့် ပေးပို့ပါ',
 'erreur' => 'အမှားအယွင်း',
 'erreur_balise_non_fermee' => 'နောက်ဆုံး တေးမှတ်ချက် ပိတ်မထားပါ',
+'erreur_technique_enregistrement_champs' => 'Une erreur technique a empêché l\'enregistrement correct du champ @champs@.', # NEW
+'erreur_technique_enregistrement_impossible' => 'Une erreur technique a empêché l\'enregistrement.', # NEW
 'erreur_texte' => 'အမှား(များ)',
 'etape' => 'Étape', # NEW
 
@@ -364,7 +366,7 @@ sera ignorée) :
 'info_documents_un' => '1 document', # NEW
 'info_ecire_message_prive' => 'ကိုယ်ရေးကိုတာ သတင်းစကား',
 'info_email_invalide' => 'မရှိသေးသော အီးမေးလ်လိပ်စာ',
-'info_en_cours_validation' => 'သင့်ဆောင်းပါးများသည် ပြင်ဆင်နေဆဲဖြစ်သည်',
+'info_en_cours_validation' => 'သင့်ဆောင်းပါးများသည် ပြင်ဆင်နေဆဲဖြစ်သည်',
 'info_en_ligne' => 'အွန်လိုင်းတွင်ရှိနေတယ်',
 'info_envoyer_message_prive' => 'ကိုယ်ရေးကိုတာ အချက်အလက်များကို ဤစာရေးသူထံသို့ ပေးပို့ရန်',
 'info_erreur_requete' => 'ဆက်သွယ်မှု အမှားအယွင်း',
@@ -580,6 +582,7 @@ sera ignorée) :
 'suivant' => '​နောက်တစ်ခု',
 
 // T
+'taille_go' => '@taille@ Go', # NEW
 'taille_ko' => '@taille@ kb',
 'taille_mo' => '@taille@ Mb',
 'taille_octets' => '@taille@ bytes',

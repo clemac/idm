@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -291,7 +291,7 @@ Dës Informatiounen kritt dir vum Administrateur vum System oder vum Netzwierk.'
 'info_classement_2' => '. an @liste@',
 'info_code_acces' => 'Vergiesst är Login-Informatiounen nët!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N.B.:</b> Kontrolléiert op ären Hebergeur PHP-Skripter kompriméiert; dir kënnt dofir dësen Service benotzen: @testgzip@',
+'info_compresseur_gzip' => '<b>N.B.:</b> Kontrolléiert op ären Hebergeur PHP-Skripter kompriméiert; dir kënnt dofir dësen Service benotzen: @testgzip@', # MODIF
 'info_compresseur_texte' => 'Wann äre Server d\'HTML-Säiten nët automatësch kompriméiert, kënnt dir probéieren eng Kompressioun ze forcéieren. <b>Opgepasst</b>: dat kann verschidde Serveren méi lues maachen.',
 'info_config_suivi' => 'Wann dës Adress eng Mailing-Lëscht ass, da kënnt dier hei d\'Adress uginn wou d\'Matarbechter vun dësem Site sech aschreiwen kënnen. Dës Adress kann eng URL sinn (z.B. d\'Internetsäit wou een sëch aschreiwen kann), oder eng Email-Adress mat engem extra Sujet (z.B.: <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'Dir kënnt Iech un d\'Mailing-Lëscht vun dësem Site abonnéieren. Dir kritt dann per Email d\'Annoncen vun den Artikelen a Kuerzmeldungen déi fir d\'Publikatioun proposéiert goufen.',
@@ -324,7 +324,7 @@ Dës Informatiounen kritt dir vum Administrateur vum System oder vum Netzwierk.'
 'info_ecrire_article' => 'Ier dier kënnt en Artikel schreiwen, musst dier op manst eng Rubrik derbäi setzen.',
 'info_email_envoi' => 'Adress vum Expediteur (optionnel)',
 'info_email_envoi_txt' => 'Gitt d\'Adress un fir Email\'en ze schécken (als Default gët d\'Adress vum Destinataire benotzt):',
-'info_email_webmestre' => 'Email-Adress vum Webmaster (optionnel)',
+'info_email_webmestre' => 'Email-Adress vum Webmaster (optionnel)', # MODIF
 'info_entrer_code_alphabet' => 'Kode vum Alphabet dat benotzt soll ginn:',
 'info_envoi_email_automatique' => 'Automatëscht Schécken vun Email\'en',
 'info_envoyer_maintenant' => 'Elo schécken',
@@ -358,7 +358,7 @@ Hiren Zoustand ass duerch d\'Faarw ugewisen (Administrateur = gréng; Redakter =
 'info_historique_texte' => 'De Versioning erlaabt den Historique vun allen Ännerungen vun engem Artikel an d\'Uweisen vun den Ënnerscheeder tëschent de Versiounen.',
 'info_identification_publique' => 'Är öffentlëch Identitéit...',
 'info_image_process' => 'Wielt déi bescht Method fir Vignetten ze maachen an deem dier op d\'Bild klickt.',
-'info_image_process2' => '<b>N.B.</b> <i>Wan dier kee Bild gesidd, dann ass de Server nët fir dës Fonktionnalitéit konfiguréiert. Wann dir se wëllt benotzen, kontaktéiert een Techniker a froot fir d\'Extensiounen "GD" oder "Imagick".</i>',
+'info_image_process2' => '<b>N.B.</b> <i>Wan dier kee Bild gesidd, dann ass de Server nët fir dës Fonktionnalitéit konfiguréiert. Wann dir se wëllt benotzen, kontaktéiert een Techniker a froot fir d\'Extensiounen "GD" oder "Imagick".</i>', # MODIF
 'info_images_auto' => 'Automatësch berechend Biller',
 'info_informations_personnelles' => 'Perséinlëch Informatiounen',
 'info_inscription_automatique' => 'Nei Redakteren automatësch aschreiwen',
@@ -464,7 +464,7 @@ Déi schons gebrauchten Sproochen (als éischt ugewisen) kënnen nët ausgeschal
 'info_question_utilisation_moteur_recherche' => 'Wëllt dir de Sich-Motor vu SPIP benotzen?
 (ausschalten mëcht de System méi séier.)',
 'info_question_vignettes_referer_non' => 'D\'Preview vun den Ausgangs-Site nët weisen',
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'Wuerzel vum Site',
 'info_recharger_page' => 'Lued dës Säit an e puer Sekonnen nei.',
 'info_recherche_auteur_a_affiner' => 'Zevill Resultater fir "@cherche_auteur@"; verbessert är Sich.',
@@ -729,6 +729,7 @@ Déi schons gebrauchten Sproochen (als éischt ugewisen) kënnen nët ausgeschal
 'plugin_titre_automatique' => 'Automatësch Installatioun',
 'plugin_titre_automatique_ajouter' => 'Plugin\'e derbäi setzen',
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Fuert weider fir ze aktivéieren',
 'plugin_zip_adresse' => 'gidd hei d\'Adress vun engem Plugin-Zip-Fichier un, oder d\'Adress vun enger Lëscht vu Plugin\'e.',
 'plugin_zip_adresse_champ' => 'Adress vum Plugin oder vun der Lëscht ',
@@ -740,7 +741,7 @@ Déi schons gebrauchten Sproochen (als éischt ugewisen) kënnen nët ausgeschal
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ aktivéiert Plugin\'e.',
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ Plugin\'e',
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ Plugin\'e verfügbar.',
@@ -748,6 +749,7 @@ Déi schons gebrauchten Sproochen (als éischt ugewisen) kënnen nët ausgeschal
 'plugins_liste' => 'Lëscht vun de Plugin\'en',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie',
 'plugins_vue_liste' => 'Lëscht',
 'protocole_ldap' => 'Versioun vum Protokol:',

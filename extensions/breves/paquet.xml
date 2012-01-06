@@ -1,7 +1,7 @@
 <paquet
 	prefix="breves"
 	categorie="edition"
-	version="1.3.1"
+	version="1.3.3"
 	etat="test"
 	compatibilite="[3.0.0-dev;["
 	logo="prive/themes/spip/images/breve-32.png"
@@ -33,5 +33,5 @@
 	<utilise nom="mots" />
 
 	<menu nom="breves" titre="breves:icone_breves" parent="menu_edition" icone="images/breve-16.png" />
-	<menu nom="breve_creer" titre="breves:icone_nouvelle_breve" parent="outils_rapides" icone="images/breve-new-16.png" action="breve_edit" parametres="new=oui&amp;id_rubrique=@id_rubrique@" />
+	<menu nom="breve_creer" titre="breves:icone_nouvelle_breve" parent="outils_rapides" icone="images/breve-new-16.png" action="breve_edit" parametres="new=oui&amp;id_rubrique=@id_secteur@" />
 </paquet>

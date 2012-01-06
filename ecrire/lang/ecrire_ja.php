@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -298,7 +298,7 @@ SPIPドキュメント</a>をご覧ください。</p>', # MODIF
 'info_classement_2' => '  @liste@ 外',
 'info_code_acces' => 'あなたの所有するアクセスコードを忘れないで下さい！',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => 'Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'もしもこのアドレスがメーリングリストのものと一致する場合、サイト参加者が登録可能なアドレスを下記に表示することができます。記すべきアドレスは、URL（例えばWeb経由の登録ページなど）、サブジェクトを特定してあるメールアドレス (たとえば: <tt>@adresse_suivi@?subject=subscribe</tt>)がいいでしょう。',
 'info_config_suivi_explication' => 'あなたはこのサイトに関するメーリングリストに加入することが出来ます。あなたは自動送信メールによって、公表するために提出された記事、ニュースに関するアナウンスを受け取るでしょう。(訳注：フランス語？だらけ）',
@@ -331,7 +331,7 @@ SPIPドキュメント</a>をご覧ください。</p>', # MODIF
 'info_ecrire_article' => '記事を書く前に、あなたは最低１つのセクションを作らなければなりません。',
 'info_email_envoi' => '送り主のe-mailアドレス（任意）',
 'info_email_envoi_txt' => 'e-mailを送るのに使っている送り主のe-mailアドレスを入力してください（デフォルトで、受信者のアドレスは送信者のアドレスが入力してあります :',
-'info_email_webmestre' => 'ウェブマスターのe-mailアドレス（任意）',
+'info_email_webmestre' => 'ウェブマスターのe-mailアドレス（任意）', # MODIF
 'info_entrer_code_alphabet' => '使っている文字セットのコードを入力してください:',
 'info_envoi_email_automatique' => 'メールを自動送信',
 'info_envoyer_maintenant' => '今送る',
@@ -365,7 +365,7 @@ SPIPドキュメント</a>をご覧ください。</p>', # MODIF
 'info_historique_texte' => '改訂（リビジョン）の追跡で、あなたが記事のすべての変更を記録・追跡することが可能になります。前後バージョンとの記事の変更点を表示することができます。',
 'info_identification_publique' => 'あなたの公開ID...',
 'info_image_process' => 'ミニチュアを作る最も良い方法を、対応する写真の上を、クリックして選んでください。',
-'info_image_process2' => '<b>付記</b> <i>もし画像を見ることが出来なかったら、あなたのサーバーではソフトが使えるように設定してありません。もしあなたがそれらの機能を使いたいなら、プロバイダの技術サポートに«GD»か«Imagick»拡張をインストールしてもらって下さい。</i>',
+'info_image_process2' => '<b>付記</b> <i>もし画像を見ることが出来なかったら、あなたのサーバーではソフトが使えるように設定してありません。もしあなたがそれらの機能を使いたいなら、プロバイダの技術サポートに«GD»か«Imagick»拡張をインストールしてもらって下さい。</i>', # MODIF
 'info_images_auto' => '画像自動管理',
 'info_informations_personnelles' => '５番目のステップ: <b>個人情報</b>',
 'info_inscription_automatique' => '新しいエディターの登録の自動化',
@@ -474,7 +474,7 @@ SPIPドキュメント</a>をご覧ください。</p>', # MODIF
 'info_question_utilisation_moteur_recherche' => 'SPIPに結合された検索エンジンを使いたいですか?
  (無効にするとシステムが早くなります。)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'サイトのルート',
 'info_recharger_page' => 'ちょっとしてからこのページを再読込してください。',
 'info_recherche_auteur_a_affiner' => '"@cherche_auteur@"の検索結果が多すぎます; もうちょっとキーワードをひねって検索して下さい。',
@@ -523,7 +523,7 @@ SPIPドキュメント</a>をご覧ください。</p>', # MODIF
 'info_statut_utilisateurs_2' => '始めて接続したときにLDAPディレクトリに存在・属している人たちの状態を選択してください。後で、それぞれの著者ごとにケースバイケースで値を変更できます。',
 'info_suivi_activite' => '編集活動の手伝い',
 'info_surtitre' => 'トップタイトル:',
-'info_syndication_integrale_1' => 'Your site offers syndication files (see &#147;<a href="@url@">@titre@</a>”).', # NEW
+'info_syndication_integrale_1' => 'Your site offers syndication files (see <a href="@url@">@titre@</a>”).', # NEW
 'info_syndication_integrale_2' => 'Do you wish to send whole articles or only a summary of a few hundred characters?', # NEW
 'info_table_prefix' => 'Vous pouvez modifier le préfixe du nom des tables de données (ceci est indispensable lorsque l\'on souhaite installer plusieurs sites dans la même base de données). Ce préfixe s\'écrit en lettres minuscules, non accentuées, et sans espace.', # NEW
 'info_taille_maximale_images' => 'SPIP va tester la taille maximale des images qu\'il peut traiter (en millions de pixels).<br /> Les images plus grandes ne seront pas réduites.', # NEW
@@ -741,6 +741,7 @@ SPIPドキュメント</a>をご覧ください。</p>', # MODIF
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -752,7 +753,7 @@ SPIPドキュメント</a>をご覧ください。</p>', # MODIF
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -760,6 +761,7 @@ SPIPドキュメント</a>をご覧ください。</p>', # MODIF
 'plugins_liste' => 'Plugin list', # NEW
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

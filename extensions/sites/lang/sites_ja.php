@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'それらは問題を生じるサイトを配給しました',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'コメントを投稿後に検査',
 	'bouton_radio_modere_priori' => '検査したコメントのみ表示',
 	'bouton_radio_non_syndication' => '供給（シンジケート）しない',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => '配給のための «backend» ファイルのアドレス:',
 	'entree_adresse_site' => '<b>URL</b> [必須]',
 	'entree_description_site' => 'サイトの解説',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'サイトの名前',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => '参照したサイトの表示',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[検査済み]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'ブロック',
 	'info_bloquer_lien' => 'このリンクをブロック',
 	'info_derniere_syndication' => 'このサイトの最後の供給（シンジケーション）が実行されたのは',
 	'info_liens_syndiques_1' => '供給（シンジケート）リンク',
 	'info_liens_syndiques_2' => '適正検査前。',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>サイトの名前</b> [必須]',
 	'info_panne_site_syndique' => '故障中のサイトを供給している',
 	'info_probleme_grave' => 'エラー',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => '自動的に供給（シンジケート）する',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => '今アップデート',
 	'lien_nouvelle_recuperation' => 'データの新しい検索を開始',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => '供給機能(Syndication)オプション:',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => '供給（シンジケート）サイトから生じるリンクをあらかじめ排除しておけます; 次の設定はそれらを作った後供給（シンジケート）サイトのデフォルト設定を表示します。それは、そのとき、とにかく可能なそれぞれの個別のリンクを排除するか、それぞれのサイトに、特定のサイトから来ているリンクを排除する。',
 	'texte_messages_publics' => '記事の公開メッセージ:',
 	'texte_non_fonction_referencement' => 'あなたはこの自動化機能を使わず、そのサイトに関する要素を手作業で入力することができます...',
@@ -115,6 +132,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   <blockquote><i>若干のホストではこの機能は無効です。そういう場合、あなたはあなたのサイトから内容を供給（シンジケート）することは出来ないでしょう。</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'このサイトで成功した記事を配給しました。',
 	'titre_dernier_article_syndique' => '最新の配給された記事',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => '参照されたサイト',
 	'titre_referencement_sites' => 'サイトを参照しているのと、配給',
 	'titre_site_numero' => 'サイト番号:',

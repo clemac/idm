@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 function choisir_form_configuration($type_url){
 	if (include_spip("urls/$type_url")
 	  AND defined($c='URLS_'.strtoupper($type_url).'_CONFIG'))
@@ -7,3 +9,4 @@ function choisir_form_configuration($type_url){
 
 	return '';
 }
+?>

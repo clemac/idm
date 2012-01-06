@@ -13,7 +13,7 @@
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 function inc_log_dist($message, $logname=NULL, $logdir=NULL, $logsuf=NULL) {
-
+	static $test_repertoire = array();
 	static $compteur = array();
 	global $nombre_de_logs, $taille_des_logs;
 
@@ -33,8 +33,13 @@ function inc_log_dist($message, $logname=NULL, $logdir=NULL, $logsuf=NULL) {
 	  . ($logname)
 	  . ($logsuf===NULL ? _FILE_LOG_SUFFIX : $logsuf);
 
-	// si spip_log() dans mes_options, poser dans spip.log
-	if (!defined('_DIR_LOG'))
+	if (!isset($test_repertoire[$d = dirname($logfile)])) {
+		$test_repertoire[$d] = false; // eviter une recursivite en cas d'erreur de sous_repertoire
+		$test_repertoire[$d] = sous_repertoire($d, '', false, true);
+	}
+
+	// si spip_log() dans mes_options, ou repertoire log/ non present, poser dans tmp/
+	if (!defined('_DIR_LOG') OR !$test_repertoire[$d])
 		$logfile = _DIR_RACINE._NOM_TEMPORAIRES_INACCESSIBLES.$logname.'.log';
 
 	$rotate = 0;

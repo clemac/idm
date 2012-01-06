@@ -10,6 +10,8 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 function mots_autoriser(){}
 
 
@@ -17,7 +19,7 @@ function autoriser_mots_menu_dist($faire, $type, $id, $qui, $opt){
 	return 	($GLOBALS['meta']['articles_mots'] != 'non' OR sql_countsel('spip_groupes_mots'));
 }
 function autoriser_motcreer_menu_dist($faire, $type, $id, $qui, $opt){
-	return 	($GLOBALS['meta']['articles_mots'] != 'non');
+	return 	($GLOBALS['meta']['articles_mots'] != 'non' AND sql_countsel('spip_groupes_mots'));
 }
 
 // Voir un objet
@@ -139,6 +141,19 @@ function autoriser_associermots_dist($faire,$quoi,$id,$qui,$opts){
 	return false;
 }
 
+
+/**
+ * Autorisation pour verifier le droit d'afficher le selecteur de mots
+ * pour un groupe de mot donne, dans un objet / id_objet donne
+ *
+ * @return bool
+ */
+function autoriser_groupemots_afficherselecteurmots_dist($faire,$quoi,$id,$qui,$opts){
+	return true;
+}
+
+
+	
 // http://doc.spip.org/@autoriser_mot_iconifier_dist
 function autoriser_mot_iconifier_dist($faire,$quoi,$id,$qui,$opts){
  return (($qui['statut'] == '0minirezo') AND !$qui['restreint']);

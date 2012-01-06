@@ -58,12 +58,15 @@ function formulaires_instituer_objet_charger_dist($objet,$id_objet,$retour=""){
 	$v = formulaires_editer_objet_charger($objet,$id_objet,0,0,'','');
 
 	$publiable = true;
-	if (isset($v['id_rubrique'])
-		AND !autoriser('publierdans', 'rubrique', $v['id_rubrique'])) {
-		if ($v['statut'] == 'publie')
-			$editable = false;
-		else
-			$publiable = false;
+	$statuts = lister_statuts_proposes($desc);
+	// tester si on a le droit de publier, si un statut publie existe
+	if (isset($statuts['publie'])){
+		if (!autoriser('instituer', $objet, $id_objet, null, array('statut'=>'publie'))){
+			if ($v['statut'] == 'publie')
+				$editable = false;
+			else
+				$publiable = false;
+		}
 	}
 	$valeurs = array(
 		'editable' => $editable,
@@ -138,6 +141,8 @@ function formulaires_instituer_objet_traiter_dist($objet,$id_objet,$retour=""){
 		$res = array('message_ok'=>_T('info_modification_enregistree'));
 		if ($retour)
 			$res['redirect'] = $retour;
+		set_request('statut');
+		set_request('date_posterieure');
 	}
 
 	return $res;

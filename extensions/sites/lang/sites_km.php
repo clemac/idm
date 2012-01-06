@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'វ៉ែបសៃថ៍បញ្ជាប់ទាំងនេះ បានមានបញ្ហា',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'សំរបសំរួល ពេលបន្ទាប់',
 	'bouton_radio_modere_priori' => 'សំរបសំរួល ជាដំបូង',
 	'bouton_radio_non_syndication' => 'គ្មានបញ្ជាប់',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'អា​សយ​ដ្ឋាន នៃសំណុំឯកសារបញ្ជាប់ ៖',
 	'entree_adresse_site' => '<b>អាសយដ្ឋាន នៃសៃថ៍</b> [តំរូវ អោយ​ដាក់]',
 	'entree_description_site' => 'ការពិពណ៌នា នៃសៃថ៍',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'ឈ្មោះវ៉ែបសៃថ៍',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'មើល រាល់សៃថ៍យោង',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[​ត្រូវធ្វើ​អោយ​សុពលភាព​]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'រារាំង',
 	'info_bloquer_lien' => 'រាំងខ្ទប់ តំណភ្ជាប់នេះ',
 	'info_derniere_syndication' => 'បញ្ជាប់ចុងក្រោយ នៃសៃថ៍នេះ ត្រូវបានអនុវត្ត',
 	'info_liens_syndiques_1' => 'តំណភ្ជាប់ ត្រូវបានភ្ជាប់',
 	'info_liens_syndiques_2' => 'ការ​រង់ចាំ​ការ​បញ្ជាក់',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>ឈ្មោះសៃថ៍</b> [តំរូវ អោយដាក់]',
 	'info_panne_site_syndique' => 'វ៉ែបសៃថ៍ ​ដែល​បាន​ផ្សព្វផ្សាយ​ ខូច',
 	'info_probleme_grave' => 'បញ្ហា ​នៃ',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'ប្រើប្រាស់​ការ​បញ្ចូល​ដោយ​ស្វ័យប្រវត្ដិ',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'បន្ទាន់សម័យ ឥឡូវ',
 	'lien_nouvelle_recuperation' => 'ព្យាយាម​ដំណើរការ​ការ​សើរើ​ថ្មី​នូវ​ទិន្នន័យ',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'ជម្រើស​ក្នុង​ការ​បញ្ចូលៈ',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'ទំនាក់ទំនង​ចេញពី​ហ្វា​ល​ដែល​បាន​បញ្ចូល​អាច​ត្រូវ​កាត់​ផ្ដាច់​ជា​មុន​។ ការ​កំណត់​ខាងក្រោម​បង្ហាញ​នូវ​ការ​កំណត់​ដើម​នៃ​វ៉ិ​ប​សាយ​ដែល​បាន​បញ្ចូល​បន្ទាប់​ពី​ការ​បង្កើត​។ ដូច្នេះ អាច​មានការ​កាត់​ផ្ដាច់​នូវ​ទំនាក់ទំនង​មួយៗ ឬ​ជ្រើសរើស​កាត់​ផ្ដាច់ទំនាក់ទំនង​ចេញពី​វ៉ិ​ប​សាយ​ជាក់លាក់ សំរាប់​វ៉ិ​ប​សាយ​នីមួយៗ​។',
 	'texte_messages_publics' => 'សារ​សាធារណៈ​នៃ​អត្ថបទ​នេះៈ',
 	'texte_non_fonction_referencement' => 'Yលោក​អ្នក​អាច​ជ្រើសរើស​មិន​ប្រេ​ប្រាស់​លក្ខណៈ​ស្វ័យប្រវត្ដិ​នេះ និង​ចូល​ទៅ​ក្នុង​ធាតុ​ដែល​ទាក់ទិន​ទៅ​នឹង​វ៉ិ​ប​សាយ​នេះ​ដោយ​ការ​បញ្ជា​របស់​លោក​អ្នក​....',
@@ -115,6 +132,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   ក្នុងករណីនេះ, អ្នកគ្មានអាចប្រើប្រាស់ ការភ្ជាប់ខ្លឹមសារ ពីវ៉ែបសៃថ៍ របស់អ្នក។</i></blockquote>',
 	'titre_articles_syndiques' => 'អត្ថបទ​ដែល​បាន​បញ្ចូល​ត្រូវ​បាន​ទាញ​ចេញពី​វ៉ិ​ប​សាយ​នេះ​។',
 	'titre_dernier_article_syndique' => 'អត្ថបទ​ដែល​បាន​បញ្ចូល​ថ្មី​បំផុត',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'ពួកសៃថ៍យោង',
 	'titre_referencement_sites' => 'ការយោង នៃសៃថ៍ និងបញ្ជាប់',
 	'titre_site_numero' => 'សៃថ៍ លេខ ៖',

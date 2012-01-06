@@ -1,4 +1,4 @@
-<traduction module="compresseur" gestionnaire="salvatore" reference="fr">
+<traduction module="compresseur" gestionnaire="salvatore" url="http://trad.spip.org" source="svn://zone.spip.org/spip-zone/_core_/plugins/compresseur/lang/" reference="fr">
 	<langue code="ar">
 		<traducteur nom="kandalaft" />
 	</langue>
@@ -15,24 +15,25 @@
 		<traducteur nom="squonk" />
 		<traducteur nom="paolo2" />
 	</langue>
-	<langue code="eo" />
 	<langue code="es" />
 	<langue code="eu" />
 	<langue code="fa">
 		<traducteur nom="davood" />
 	</langue>
+	<langue code="fr" />
 	<langue code="fr_tu" />
 	<langue code="gl" />
 	<langue code="it" />
 	<langue code="it_fem" />
 	<langue code="lb" />
-	<langue code="nl" />
+	<langue code="nl">
+		<traducteur nom="michelpossoz" />
+	</langue>
 	<langue code="pt_br" />
 	<langue code="ro" />
 	<langue code="ru" />
 	<langue code="sk">
 		<traducteur nom="jaro" />
 	</langue>
-	<langue code="sv" />
 	<langue code="tr" />
 </traduction>

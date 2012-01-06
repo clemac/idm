@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -289,7 +289,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => 'pe @liste@',
 'info_code_acces' => 'Nu uitaţi propriile dumeavoastră coduri de acces !',
 'info_compatibilite_html' => 'Normă HTML de urmat',
-'info_compresseur_gzip' => '<b>N. B. :</b> Este recomandabil să verificaţi în prealabil dacă server-ul comprimă în mod sistematic scripturile php ; pentru a face acest test, puteţi să folosiţi de exemplu serviciul următor : @testgzip@',
+'info_compresseur_gzip' => '<b>N. B. :</b> Este recomandabil să verificaţi în prealabil dacă server-ul comprimă în mod sistematic scripturile php ; pentru a face acest test, puteţi să folosiţi de exemplu serviciul următor : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Dacă server-ul dumneavoastră nu comprimă în mod automat paginile html când acestea sunt trimise pe internet, puteţi încerca să forţaţi această compresie  pentru a diminua mărimea paginilor încărcate. <b>Atenţie</b> : această operaţie poate încetini considerabil anumite servere.',
 'info_config_suivi' => 'Dacă această adresă corespunde unei liste de email-uri, puteţi indica mai jos adresa la care participanţii la site se pot înscrie. Această adresă poate fi un URL (de exemplu adresa paginii de însriere la listă pe Web) sau o adresă de email dotată cu un subiect specific (de exemplu: <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'Puteţi să vă abonaţi la lista de email-uri a acestui site. Veţi primi ca urmare anunţuri de ştiri sau articole propuse spre publicare.',
@@ -322,7 +322,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'Înainte de a putea scrie articole, trebuie să creaţi cel puţin o rubrică.<br />',
 'info_email_envoi' => 'Adresa email de trimitere (opţional)',
 'info_email_envoi_txt' => 'Indicaţi aici adresa care va fi folosită pentru a trimite email-uri (dacă nu furnizaţi o adresă, este adresa destinatarului care va fi folosită în mod implicit) :',
-'info_email_webmestre' => 'Adresa de email a webmaster-ului (opţional)',
+'info_email_webmestre' => 'Adresa de email a webmaster-ului (opţional)', # MODIF
 'info_entrer_code_alphabet' => 'Introduceţi codul de alfabet care va fi utilizat :',
 'info_envoi_email_automatique' => 'Trimitere automată de email-uri',
 'info_envoyer_maintenant' => 'Trimiteţi acum',
@@ -360,7 +360,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => 'Urmărirea reviziilor permite să conservaţi un istoric al tuturor modificărilor aduse conţinutului unui articol şi să afişaţi diferenţele între versiunile succesive.',
 'info_identification_publique' => 'Identitatea dumneavoastră publică...',
 'info_image_process' => 'Vă rugăm să selecţionaţi cea mai bună metodă de generare a viniételor făcând click pe imaginea corespunzătoare.',
-'info_image_process2' => '<b>Nota Bene</b> <i> Dacă nici o imagine nu este afişată, înseamnă ca server-ul care găzduieşte site-ul dumneavoastră nu a fost configurat să folosească unelte de acest tip. Dacă doriţi să folosiţi aceste funcţii, vă rugăm să-l contactaţi pe responsabilul tehnic şi să îi cereţi instalarea extensiilor «GD» sau «Imagick».</i>',
+'info_image_process2' => '<b>Nota Bene</b> <i> Dacă nici o imagine nu este afişată, înseamnă ca server-ul care găzduieşte site-ul dumneavoastră nu a fost configurat să folosească unelte de acest tip. Dacă doriţi să folosiţi aceste funcţii, vă rugăm să-l contactaţi pe responsabilul tehnic şi să îi cereţi instalarea extensiilor «GD» sau «Imagick».</i>', # MODIF
 'info_images_auto' => 'Imagini calculate automat',
 'info_informations_personnelles' => 'Informaţii personale',
 'info_inscription_automatique' => 'Înscrierea automatică a noi redactori',
@@ -479,7 +479,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_question_utilisation_moteur_recherche' => 'Doriţi să utilizaţi motorul de căutare integrat în SPIP ?
  (funcţionarea sistemului este mai rapidă fără activarea motorului de căutare.)',
 'info_question_vignettes_referer_non' => 'Nu afişati capturile site-urilor de unde vin vizitele',
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'Rădăcina site-ului',
 'info_recharger_page' => 'Vă rugăm să reîncărcaţi această pagină în câteva momente.',
 'info_recherche_auteur_a_affiner' => 'Prea multe rezultate pentru "@cherche_auteur@" ; vă rugăm să rafinaţi termenii căutării.',
@@ -747,6 +747,7 @@ cu o culoare care le indică starea :',
 'plugin_titre_automatique' => 'Instalare automatică',
 'plugin_titre_automatique_ajouter' => 'Adăugaţi plug-in-uri',
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuaţi pentru a-l activa',
 'plugin_zip_adresse' => 'indicaţi mai jos adresa unui fişier zip conţinând plug-in-ul de descărcat, sau chiar adresa unei liste de plug-in-uri.',
 'plugin_zip_adresse_champ' => 'Adresa plug-uluiin sau a listei ',
@@ -758,7 +759,7 @@ cu o culoare care le indică starea :',
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plug-in-uri activate.',
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Plugins actifs', # MODIF
 'plugins_compte' => '@count@ plug-in-uri',
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plug-in-uri disponibile.',
@@ -766,6 +767,7 @@ cu o culoare care le indică starea :',
 'plugins_liste' => 'Lista plugin-urilor',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Ierarhie',
 'plugins_vue_liste' => 'Listă',
 'protocole_ldap' => 'Versiunea protocolului :',

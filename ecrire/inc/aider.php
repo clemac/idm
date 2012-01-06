@@ -51,8 +51,23 @@ $GLOBALS['aider_index'] = array(
 
 				);
 
-// http://doc.spip.org/@inc_aider_dist
-function inc_aider_dist($aide='', $skel='', $env=array()) {
+
+
+/**
+ * Generer un lien d'aide (icone + lien)
+ *
+ * @param string $aide
+ * 		cle d'identification de l'aide souhaitee
+ * @param strink $skel
+ * 		Nom du squelette qui appelle ce bouton d'aide
+ * @param array $env
+ * 		Environnement du squelette
+ * @param bool $aide_spip_directe
+ * 		false : Le lien genere est relatif a notre site (par defaut)
+ * 		true : Le lien est realise sur spip.net/aide/ directement ...
+ * @return 
+**/
+function inc_aider_dist($aide='', $skel='', $env=array(), $aide_spip_directe = false) {
 	global $spip_lang, $aider_index;
 
 	if (($skel = basename($skel))
@@ -60,9 +75,21 @@ function inc_aider_dist($aide='', $skel='', $env=array()) {
 	AND isset($aider_index[$skel][$aide]))
 		$aide = $aider_index[$skel][$aide];
 
-	$args = "aide=$aide&var_lang=$spip_lang";
+	if ($aide_spip_directe) {
+		// on suppose que spip.net est le premier present
+		// dans la liste des serveurs. C'est forcement le cas
+		// a l'installation tout du moins
+		$help_server = $GLOBALS['help_server'];
+		$url = array_shift($help_server) . '/';
+		$url = parametre_url($url, 'exec', 'aide');
+		$url = parametre_url($url, 'aide', $aide);
+		$url = parametre_url($url, 'var_lang', $spip_lang);
+	} else {
+		$args = "aide=$aide&var_lang=$spip_lang";
+		$url = generer_url_ecrire("aide", $args);
+	}
 	
-	return aider_icone(generer_url_ecrire("aide", $args));
+	return aider_icone($url);
 }
 
 function aider_icone($url)
@@ -91,7 +118,8 @@ define('_SECTIONS_AIDE', ',<h([12])(?:\s+class="spip")?'. '>([^/]+?)(?:/(.+?))?<
 
 function aide_fichier($path, $help_server) {
 
-	$fichier_aide = _DIR_AIDE . $path;
+	$md5 = md5(serialize($help_server));
+	$fichier_aide = _DIR_AIDE . substr($md5,0,16) . "-" . $path;
 	$lastm = @filemtime($fichier_aide);
 	$lastversion = @filemtime(_DIR_RESTREINT . 'inc_version.php');
 	$here = @(is_readable($fichier_aide) AND ($lastm >= $lastversion));
@@ -102,12 +130,17 @@ function aide_fichier($path, $help_server) {
 		return array($contenu, $lastm);
 	}
 
+	// mettre en cache (tant pis si echec)
+	sous_repertoire(_DIR_AIDE,'','',true);
 	$contenu = array();
 	include_spip('inc/distant');
 	foreach ($help_server as $k => $server) {
 		// Remplacer les liens aux images par leur gestionnaire de cache
 		$url = "$server/$path";
-		$page = recuperer_page($url);
+		$local = _DIR_AIDE.substr(md5($url),0,8)."-".preg_replace(",[^\w.]+,i","_",$url);
+		$local = _DIR_RACINE . copie_locale($url, 'modif', $local);
+
+		lire_fichier($local,$page);
 		$page = aide_fixe_img($page,$server);
 		// les liens internes ne doivent pas etre deguises en externes
 		$url = parse_url($url);
@@ -158,8 +191,6 @@ function aide_fichier($path, $help_server) {
 	$contenu = '<body>' . $contenu . '</body>';
 
 	if (strlen($contenu) <= 100) return array(false, false);
-	// mettre en cache (tant pis si echec)
-	sous_repertoire(_DIR_AIDE,'','',true);
 	ecrire_fichier ($fichier_aide, $contenu);
 	return array($contenu, time());
 }

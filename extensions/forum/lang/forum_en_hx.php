@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -79,9 +79,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_messages' => 'Supprimer ces messages', # NEW
 	'icone_valider_message' => 'V411d473 7h15 m3554g3',
 	'icone_valider_messages' => 'Valider ces messages', # NEW
-	'icone_valider_repondre_message' => 'Valider &amp; Répondre à ce message', # NEW
+	'icone_valider_repondre_message' => 'Valider & Répondre à ce message', # NEW
 	'info_1_message_forum' => '1 message de forum', # NEW
-	'info_activer_forum_public' => '<1>70 3n4b13 pub11c f0rum5, p13453 ch0053 7h31r d3f4u17 m0d3 0f m0d3r4710n:</1>',
+	'info_activer_forum_public' => '<1>70 3n4b13 pub11c f0rum5, p13453 ch0053 7h31r d3f4u17 m0d3 0f m0d3r4710n:</1>', # MODIF
 	'info_appliquer_choix_moderation' => '4pp1y 7h15 ch01c3 0f m0d3r4710n:',
 	'info_config_forums_prive' => 'Dans l’espace privé du site, vous pouvez activer plusieurs types de forums :', # NEW
 	'info_config_forums_prive_admin' => 'Un forum réservé aux administrateurs du site :', # NEW
@@ -107,8 +107,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 		4550c1473d w17h 4n 4r71c13, 7h3 4r71c13\'5 4u7h0r5 c4n b3
 		1nf0rm3d 0f 7h15 m3554g3 by 3-m411. D0 y0u w15h 70 u53 7h15 0p710n?', # MODIF
 	'info_pas_de_forum' => 'n0 f0rum',
-	'info_question_visiteur_ajout_document_forum' => 'Si vous souhaitez autoriser les visiteurs à joindre des documents (images, sons...) à leurs messages de forum, indiquer ci-dessous la liste des extensions de documents autorisés pour les forums (ex: gif, jpg, png, mp3).', # NEW
-	'info_question_visiteur_ajout_document_forum_format' => 'Si vous souhaitez autoriser tous les types de documents considérés comme fiables par SPIP, mettre une étoile. Pour ne rien autoriser, ne rien indiquer.', # NEW
+	'info_question_visiteur_ajout_document_forum' => 'Si vous souhaitez autoriser les visiteurs à joindre des documents (images, sons...) à leurs messages de forum, indiquez ci-dessous la liste des extensions de documents autorisés pour les forums (ex: gif, jpg, png, mp3).', # NEW
+	'info_question_visiteur_ajout_document_forum_format' => 'Si vous souhaitez autoriser tous les types de documents considérés comme fiables par SPIP, mettez une étoile. Pour ne rien autoriser, n\'indiquez rien.', # NEW
 	'interface_formulaire' => 'Interface formulaire', # NEW
 	'interface_onglets' => 'Interface avec onglets', # NEW
 	'item_activer_forum_administrateur' => '3n4b13 4dm1n157r470r5 f0rum',
@@ -160,7 +160,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'text_article_propose_publication_forum' => 'N\'hésitez pas à donner votre avis grâce au forum attaché à cet article (en bas de page).', # NEW
 	'texte_en_cours_validation' => 'Les articles, brèves, forums ci dessous sont proposés à la publication.', # NEW
 	'texte_en_cours_validation_forum' => 'N\'hésitez pas à donner votre avis grâce aux forums qui leur sont attachés.', # NEW
-	'texte_messages_publics' => 'Messages publics sur&nbsp;:', # NEW
+	'texte_messages_publics' => 'Messages publics sur :', # NEW
 	'titre_cadre_forum_administrateur' => '4dm1n157r470r5 pr1v473 f0rum',
 	'titre_cadre_forum_interne' => '1n73rn41 f0rum',
 	'titre_config_forums_prive' => 'Forums de l’espace privé', # NEW

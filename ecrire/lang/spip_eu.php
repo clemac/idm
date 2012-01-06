@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -227,6 +227,8 @@ Eragiketa hori egin eta gero, gauza izango zara',
 'envoi_via_le_site' => 'Gunearen bitartez egindako bidalpena',
 'erreur' => 'Errorea',
 'erreur_balise_non_fermee' => 'ez itxitako azken etiketa :',
+'erreur_technique_enregistrement_champs' => 'Une erreur technique a empêché l\'enregistrement correct du champ @champs@.', # NEW
+'erreur_technique_enregistrement_impossible' => 'Une erreur technique a empêché l\'enregistrement.', # NEW
 'erreur_texte' => 'errore',
 'etape' => 'Etapa',
 
@@ -595,6 +597,7 @@ Orduan pasahitza berri bat jarri eta gunera berriz konektatzen ahalko zara. ',
 'suivant' => 'hurrengoa',
 
 // T
+'taille_go' => '@taille@ Go', # NEW
 'taille_ko' => '@taille@ KB',
 'taille_mo' => '@taille@ MB',
 'taille_octets' => '@taille@ byte',

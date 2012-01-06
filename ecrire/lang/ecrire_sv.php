@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -12,7 +12,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'affichage' => 'Visa',
 'aide_non_disponible' => 'Den här delen av direkthjälpen finns inte i det aktuella språket',
 'auteur' => 'Redaktör',
-'avis_acces_interdit' => 'Tilltr&amp;auml;de f&amp;ouml;rbjudet.',
+'avis_acces_interdit' => 'Tilltr&auml;de f&ouml;rbjudet.',
 'avis_article_modifie' => 'Varning, @nom_auteur_modif@ har arbetat på den här artikeln för @date_diff@ minuter sen',
 'avis_aucun_resultat' => 'Hittade inga resultat',
 'avis_base_inaccessible' => 'Impossible de se connecter à la base de données @base@.', # NEW
@@ -297,7 +297,7 @@ om import.<p>För mer information se <a href="@spipnet@">SPIP-dokumentationen</a
 'info_classement_2' => '<sup>e</sup> sur @liste@', # NEW
 'info_code_acces' => 'Glöm inte ditt eget lösenord!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'Om den här adressen är en mailing lista, kan du under adressen visa var man kan registrera sig. Det kan vara en URL (till exempel en webbsida där man kan registrera sig), eller en e-postadress med en speciell ärenderad (till exempel: <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'Du kan anmäla dig till sajtens nyhetsbrev. Du kommer då att automatiskt få meddelanden om artiklar och nyheter som laddats upp för publicering.',
@@ -330,7 +330,7 @@ om import.<p>För mer information se <a href="@spipnet@">SPIP-dokumentationen</a
 'info_ecrire_article' => 'Innan du kan skriva artiklar, ymåste du skapa minst en avdelning.',
 'info_email_envoi' => 'Avsändaren mailadress (frivilligt)',
 'info_email_envoi_txt' => 'Skriv in avsändarens e-postadress som används när man sänder mejlen (som default används mottagarens adress som avsändaradress) :',
-'info_email_webmestre' => 'Webmasterns mejladress (frivillig)',
+'info_email_webmestre' => 'Webmasterns mejladress (frivillig)', # MODIF
 'info_entrer_code_alphabet' => 'Skriv in koden för teckenuppsättningen som skall användas:',
 'info_envoi_email_automatique' => 'Automatisk e-post',
 'info_envoyer_maintenant' => 'Skicka nu',
@@ -373,7 +373,7 @@ funktioner hos SPIP inte användas.',
 'info_historique_texte' => 'Versionshantering tillåter dig att se förändringar i och tillägg till en artikel och visar skillnader mellan versioner.',
 'info_identification_publique' => 'Din publika identitet...',
 'info_image_process' => 'Välj den bästa metoden för att skapa miniatyrer genom att klicka på motsvarande bild.',
-'info_image_process2' => '<b>OBS!.</b> <i>Om du inte kan se någon bild, så är din server inte konfigurerad för att använda sådana verktyg. Om du vill använda dessa finesser så kontakta din leverantörs tekniska support och be dem installera utökningarna för «GD» eller «Imagick».</i>',
+'info_image_process2' => '<b>OBS!.</b> <i>Om du inte kan se någon bild, så är din server inte konfigurerad för att använda sådana verktyg. Om du vill använda dessa finesser så kontakta din leverantörs tekniska support och be dem installera utökningarna för «GD» eller «Imagick».</i>', # MODIF
 'info_images_auto' => 'Images calculées automatiquement', # NEW
 'info_informations_personnelles' => 'Personlig information',
 'info_inscription_automatique' => 'Automatisk registreing av nya redaktörer',
@@ -493,7 +493,7 @@ funktioner hos SPIP inte användas.',
 'info_question_utilisation_moteur_recherche' => 'Vill du använda SPIPŽs integrerade sökfunktion?
  (Att stänga av den ökar systemets prestanda.)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'Sajtens bas',
 'info_recharger_page' => 'Var vänlig och uppdatera sidan om en liten stund.',
 'info_recherche_auteur_a_affiner' => 'För många resultat för "@cherche_auteur@"; Var vänlig och avgränsa sökningen mer.',
@@ -760,6 +760,7 @@ med en färg som visar deras status:',
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Fortsätt för att aktivera',
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -771,7 +772,7 @@ med en färg som visar deras status:',
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ aktiva plugins.',
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins',
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ tillgängliga plugins.',
@@ -779,6 +780,7 @@ med en färg som visar deras status:',
 'plugins_liste' => 'Lista över plugins',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

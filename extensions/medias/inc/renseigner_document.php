@@ -75,14 +75,14 @@ function renseigner_taille_dimension_image($fichier,$ext){
 		spip_log ("Echec copie du fichier $fichier");
 		return _T('medias:erreur_copie_fichier',array('nom'=> $fichier));
 	}
-
+	
 	// chercher une fonction de description
 	$meta = array();
 	if ($metadata = charger_fonction($ext,"metadata",true)){
 		$meta = $metadata($fichier);
 	}
   else {
-	  $media = sql_getfetsel('media','spip_types_documents','extension='.sql_quote($ext));
+	  $media = sql_getfetsel('media_defaut','spip_types_documents','extension='.sql_quote($ext));
 	  if ($metadata = charger_fonction($media,"metadata",true)){
 		  $meta = $metadata($fichier);
 	  }

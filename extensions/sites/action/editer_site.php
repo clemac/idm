@@ -133,13 +133,14 @@ function site_modifier($id_syndic, $set=false) {
 		$indexation = true;
 	}
 
-	modifier_contenu('site', $id_syndic,
+	if ($err = objet_modifier_champs('site', $id_syndic,
 		array(
 			'nonvide' => array('nom_site' => _T('info_sans_titre')),
 			'invalideur' => $invalideur,
 			'indexation' => $indexation
 		),
-		$c);
+		$c))
+		return $err;
 
 
 	if ($resyndiquer AND sql_getfetsel('syndication','spip_syndic',"id_syndic=".intval($id_syndic))!=='non') {

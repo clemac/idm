@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -79,10 +79,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_messages' => 'Supprimer ces messages', # NEW
 	'icone_valider_message' => 'Validar esti mensaxe',
 	'icone_valider_messages' => 'Valider ces messages', # NEW
-	'icone_valider_repondre_message' => 'Valider &amp; Répondre à ce message', # NEW
+	'icone_valider_repondre_message' => 'Valider & Répondre à ce message', # NEW
 	'info_1_message_forum' => '1 message de forum', # NEW
 	'info_activer_forum_public' => '<i>Pa activar los foros públicos, has d\'escoyer el tipu
- de moderación por omisión:</i>',
+ de moderación por omisión:</i>', # MODIF
 	'info_appliquer_choix_moderation' => 'Aplicar esta escoyeta pal llendamientu:',
 	'info_config_forums_prive' => 'Nel espaciu priváu del sitiu, puedes activar dellos tipos de foros:',
 	'info_config_forums_prive_admin' => 'Un foru acutáu pa los alministradores del sitiu:',
@@ -106,8 +106,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_nb_messages_forum' => '@nb@ messages de forum', # NEW
 	'info_option_email' => 'Cuando un visitante del sitiu unvía un mensaxe nuevu al foru venceyáu a un artículu, puede avisase a los o les autores del mesmu por e-mail. Escoyer pa cada tipu de foru si va emplegase esta opción.',
 	'info_pas_de_forum' => 'ensin foru',
-	'info_question_visiteur_ajout_document_forum' => 'Si quiés autorizar que los visitantes amesten documentos (imáxenes, sones...) nos sos mensaxes del foru, indica embaxo la llista d\'estensiones de documentu permitíes nos foros (p. ex: gif, jpg, png, mp3).',
-	'info_question_visiteur_ajout_document_forum_format' => 'Si quiés autorizar tolos tipos de documentu que SPIP considera fiables, pon un asteriscu. Pa nun autorizar na, déxalo en blancu,',
+	'info_question_visiteur_ajout_document_forum' => 'Si quiés autorizar que los visitantes amesten documentos (imáxenes, sones...) nos sos mensaxes del foru, indica embaxo la llista d\'estensiones de documentu permitíes nos foros (p. ex: gif, jpg, png, mp3).', # MODIF
+	'info_question_visiteur_ajout_document_forum_format' => 'Si quiés autorizar tolos tipos de documentu que SPIP considera fiables, pon un asteriscu. Pa nun autorizar na, déxalo en blancu,', # MODIF
 	'interface_formulaire' => 'Interface formulaire', # NEW
 	'interface_onglets' => 'Interface avec onglets', # NEW
 	'item_activer_forum_administrateur' => 'Activar el foru de los alministradores',
@@ -159,10 +159,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'text_article_propose_publication_forum' => 'Encamentamoste a dar la to opinión nel foru axuntu a esti artículu (embaxo de la páxina).',
 	'texte_en_cours_validation' => 'Les articles, brèves, forums ci dessous sont proposés à la publication.', # NEW
 	'texte_en_cours_validation_forum' => 'Encamentámoste que opines usando los foros que tien xuníos.',
-	'texte_messages_publics' => 'Messages publics sur&nbsp;:', # NEW
+	'texte_messages_publics' => 'Messages publics sur :', # NEW
 	'titre_cadre_forum_administrateur' => 'Foru privau de los alministradores',
 	'titre_cadre_forum_interne' => 'Foru internu',
-	'titre_config_forums_prive' => 'Foros de l’espaciu priv&aacute;u',
+	'titre_config_forums_prive' => 'Foros de l’espaciu priváu',
 	'titre_forum' => 'Foru',
 	'titre_forum_suivi' => 'Siguir foros',
 	'titre_page_forum_suivi' => 'Siguir los foros',

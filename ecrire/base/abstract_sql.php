@@ -75,8 +75,8 @@ function sql_set_charset($charset,$serveur='', $option=true){
 // - option peut avoir 3 valeurs : 
 //	false -> ne pas l'executer mais la retourner, 
 //	continue -> ne pas echouer en cas de serveur sql indisponible,
-//	autre -> executer la requete.
-// Le cas "autre" est, pour une requete produite par le compilateur,
+//	true|array -> executer la requete.
+// Le cas array est, pour une requete produite par le compilateur,
 // un tableau donnnant le contexte afin d'indiquer le lieu de l'erreur au besoin
 // Retourne false en cas d'erreur, apres l'avoir denoncee.
 // Les portages doivent retourner la requete elle-meme en cas d'erreur,
@@ -489,6 +489,41 @@ function sql_version($serveur='', $option=true) {
 	$row = sql_fetsel("version() AS n", '','','','','','',$serveur);
 	return ($row['n']);
 }
+
+/**
+ * Informe si le moteur SQL prefere utiliser des transactions
+ * (Utile pour sqlite)
+**/
+function sql_preferer_transaction($serveur='', $option=true) {
+	$f = sql_serveur('preferer_transaction', $serveur,  'continue');
+	if (!is_string($f) OR !$f) return false;
+	$r = $f($serveur, $option!==false);
+	if ($r === false) spip_sql_erreur($serveur);
+	return $r;
+};
+
+/**
+ * Demarre une transaction
+**/
+function sql_demarrer_transaction($serveur='', $option=true) {
+	$f = sql_serveur('demarrer_transaction', $serveur,  'continue');
+	if (!is_string($f) OR !$f) return false;
+	$r = $f($serveur, $option!==false);
+	if ($r === false) spip_sql_erreur($serveur);
+	return $r;
+};
+
+/**
+ * Termine une transaction
+**/
+function sql_terminer_transaction($serveur='', $option=true) {
+	$f = sql_serveur('terminer_transaction', $serveur,  'continue');
+	if (!is_string($f) OR !$f) return false;
+	$r = $f($serveur, $option!==false);
+	if ($r === false) spip_sql_erreur($serveur);
+	return $r;
+};
+
 
 // prend une chaine sur l'aphabet hexa
 // et retourne sa representation numerique:

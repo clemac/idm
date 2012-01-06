@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'barre_a_accent_grave' => 'Insert a capital A with grave accent: &Agrave;',
+	'barre_a_accent_grave' => 'Insert a capital A with grave accent: À',
 	'barre_adresse' => 'Address',
 	'barre_aide' => 'Use the typographic short cuts to refine your layout',
 	'barre_alignerdroite' => '[/Right align/] the paragraph',
@@ -23,14 +23,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'barre_clean' => 'Clean the code of all HTML tags',
 	'barre_code' => 'Edit a &lt;code&gt;computer code&lt;/code&gt;',
 	'barre_desindenter' => 'Unindent a line',
-	'barre_e_accent_aigu' => 'Insert a capital E with acute accent: &Eacute;',
+	'barre_e_accent_aigu' => 'Insert a capital E with acute accent: É',
 	'barre_e_accent_grave' => 'Insert capital E grave',
-	'barre_ea' => 'Insert &aelig;',
-	'barre_ea_maj' => 'Insert &AElig;',
+	'barre_ea' => 'Insert æ',
+	'barre_ea_maj' => 'Insert Æ',
 	'barre_encadrer' => '[(Frame)] the paragraph',
-	'barre_eo' => 'Insert an oe-ligature: &#339;',
-	'barre_eo_maj' => 'Insert a capital OE-ligature: &#338;',
-	'barre_euro' => 'Insert the &euro; symbol',
+	'barre_eo' => 'Insert an oe-ligature: œ',
+	'barre_eo_maj' => 'Insert a capital OE-ligature: Œ',
+	'barre_euro' => 'Insert the € symbol',
 	'barre_exposant' => 'Put the text in &lt;sup&gt;superscript&lt;/sup&gt;',
 	'barre_formatages_speciaux' => 'Special formating',
 	'barre_galerie' => 'Open gallery',
@@ -55,12 +55,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'barre_gestion_taille' => 'Fixed size',
 	'barre_glossaire' => '[?Glossary] reference (Wikipedia)',
 	'barre_gras' => '{{Bold}}',
-	'barre_guillemets' => 'Place between &laquo;double quotes&laquo;',
-	'barre_guillemets_simples' => 'Place between &ldquo;single quotes&ldquo;',
+	'barre_guillemets' => 'Place between «double quotes«',
+	'barre_guillemets_simples' => 'Place between “single quotes“',
 	'barre_indenter' => 'Indent a line',
-	'barre_inserer_cadre' => 'Ins&eacute;rer un code preformat&eacute; (cadre)', # NEW
+	'barre_inserer_cadre' => 'Insert a preformatted code (cadre)',
 	'barre_inserer_caracteres' => 'Insert special characters',
-	'barre_inserer_code' => 'Ins&eacute;rer un code informatique (code)', # NEW
+	'barre_inserer_code' => 'Insert a computer code (code)',
 	'barre_intertitre' => 'Turn into a {{{subheading}}}',
 	'barre_italic' => '{Italic}',
 	'barre_langue' => 'Abbreviated lnguage',

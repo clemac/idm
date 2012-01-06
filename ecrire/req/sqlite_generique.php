@@ -660,7 +660,7 @@ function spip_sqlite_error($query = '', $serveur = ''){
 		$s = '';
 		if (ltrim($errs[0],'0')){ // 00000 si pas d'erreur
 			foreach ($errs as $n => $e){
-				$s .= "\n$n : $e";
+				$s .= " | $n : $e";
 			}
 		}
 	} elseif ($link) {
@@ -900,6 +900,39 @@ function spip_sqlite_insertq_multi($table, $tab_couples = array(), $desc = array
 }
 
 
+/**
+ * Retourne si le moteur SQL prefere utiliser des transactions.
+ *
+ * @param 
+ * @return bool true / false
+**/
+function spip_sqlite_preferer_transaction($serveur = '', $requeter = true) {
+	return true;
+}
+
+/**
+ * Demarre une transaction.
+ * Pratique pour des sql_updateq() dans un foreach,
+ * parfois 100* plus rapide s'ils sont nombreux en sqlite ! 
+ *
+**/
+function spip_sqlite_demarrer_transaction($serveur = '', $requeter = true) {
+	if (!$requeter) return "BEGIN TRANSACTION";
+	spip_sqlite::demarrer_transaction($serveur);
+	return true;
+}
+
+/**
+ * Cloture une transaction.
+ *
+**/
+function spip_sqlite_terminer_transaction($serveur = '', $requeter = true) {
+	if (!$requeter) return "COMMIT";
+	spip_sqlite::finir_transaction($serveur);
+	return true;
+}
+
+
 // http://doc.spip.org/@spip_sqlite_listdbs
 function spip_sqlite_listdbs($serveur = '', $requeter = true){
 	_sqlite_init();
@@ -926,11 +959,7 @@ function spip_sqlite_listdbs($serveur = '', $requeter = true){
 
 // http://doc.spip.org/@spip_sqlite_multi
 function spip_sqlite_multi($objet, $lang){
-	$r = "PREG_REPLACE("
-	     .$objet
-	     .",'<multi>.*[\[]"
-	     .$lang
-	     ."[\]]([^\[]*).*</multi>', '$1') AS multi";
+	$r = "EXTRAIRE_MULTI(" . $objet . ", '" . $lang . "') AS multi";
 	return $r;
 }
 
@@ -1127,15 +1156,21 @@ function spip_sqlite_showtable($nom_table, $serveur = '', $requeter = true){
 				$namedkeys = "";
 
 			$fields = array();
+			$keys   = array();
+			
 			foreach (explode(",", $dec) as $v){
 				preg_match("/^\s*([^\s]+)\s+(.*)/", $v, $r);
 				// trim car 'Sqlite Manager' (plugin Firefox) utilise des guillemets
 				// lorsqu'on modifie une table avec cet outil.
 				// possible que d'autres fassent de meme.
 				$fields[trim(strtolower($r[1]), '"')] = $r[2];
+				// la primary key peut etre dans une des descriptions de champs
+				// et non en fin de table, cas encore decouvert avec Sqlite Manager
+				if (stripos($r[2], 'PRIMARY KEY') !== false) {
+					$keys['PRIMARY KEY'] = trim(strtolower($r[1]), '"');
+				}			
 			}
 			// key inclues dans la requete
-			$keys = array();
 			foreach (preg_split('/\)\s*,?/', $namedkeys) as $v){
 				if (preg_match("/^\s*([^(]*)\((.*)$/", $v, $r)){
 					$k = str_replace("`", '', trim($r[1]));
@@ -1636,6 +1671,9 @@ function _sqlite_ref_fonctions(){
 		'showtable' => 'spip_sqlite_showtable',
 		'update' => 'spip_sqlite_update',
 		'updateq' => 'spip_sqlite_updateq',
+		'preferer_transaction' => 'spip_sqlite_preferer_transaction',
+		'demarrer_transaction' => 'spip_sqlite_demarrer_transaction',
+		'terminer_transaction' => 'spip_sqlite_terminer_transaction',
 	);
 
 	// association de chaque nom http d'un charset aux couples sqlite 
@@ -1682,9 +1720,10 @@ function _sqlite_remplacements_definitions_table($query, $autoinc = false){
 		'/(big|small|medium|tiny)?int(eger)?'.$num.'/is' => 'INTEGER'
 	);
 
-	if ($autoinc OR (is_string($query) AND preg_match(',AUTO_INCREMENT,is',$query))){
+	if ($autoinc OR is_string($query)){
 		$query = preg_replace(array_keys($remplace), $remplace, $query);
-		$query = preg_replace(array_keys($remplace_autocinc), $remplace_autocinc, $query);
+		if ($autoinc OR preg_match(',AUTO_INCREMENT,is',$query))
+			$query = preg_replace(array_keys($remplace_autocinc), $remplace_autocinc, $query);
 	}
 	elseif(is_array($query))
 		foreach($query as $k=>$q) {
@@ -1822,6 +1861,7 @@ function spip_versions_sqlite(){
 
 class spip_sqlite {
 	static $requeteurs = array();
+	static $transaction_en_cours = array();
 
 	function spip_sqlite(){}
 
@@ -1839,6 +1879,7 @@ class spip_sqlite {
 
 	static function demarrer_transaction($serveur){
 		spip_sqlite::executer_requete("BEGIN TRANSACTION",$serveur);
+		spip_sqlite::$transaction_en_cours[$serveur] = true;
 	}
 
 	static function executer_requete($query, $serveur, $tracer=null){
@@ -1853,10 +1894,18 @@ class spip_sqlite {
 
 	static function annuler_transaction($serveur){
 		spip_sqlite::executer_requete("ROLLBACK",$serveur);
+		spip_sqlite::$transaction_en_cours[$serveur] = false;
 	}
 
 	static function finir_transaction($serveur){
+		// si pas de transaction en cours, ne rien faire et le dire
+		if (!isset (spip_sqlite::$transaction_en_cours[$serveur])
+		  OR spip_sqlite::$transaction_en_cours[$serveur]==false)
+			return false;
+		// sinon fermer la transaction et retourner true
 		spip_sqlite::executer_requete("COMMIT",$serveur);
+		spip_sqlite::$transaction_en_cours[$serveur] = false;
+		return true;
 	}
 }
 

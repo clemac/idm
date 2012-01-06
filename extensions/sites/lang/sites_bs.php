@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Sindikovane stranice su postavljale problem',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => '\\f1 post-moderation\\f0 ',
 	'bouton_radio_modere_priori' => '\\f1 pre-moderation\\f0 ',
 	'bouton_radio_non_syndication' => 'Bez sindikacije',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'Adresa dokumenta « backend » za sindikaciju:',
 	'entree_adresse_site' => '<b>Adresa stranice</b> [Obavezno]',
 	'entree_description_site' => 'OПИС СТРАНИЦЕ',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'Naziv stranice',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Pogledaj preporucene stranice',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[za ovjeriti]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'blokirati',
 	'info_bloquer_lien' => 'blokiraj ovaj link',
 	'info_derniere_syndication' => 'Posljednja sindikacija ove stranice je izvrsena',
 	'info_liens_syndiques_1' => 'sindikovani linkovi',
 	'info_liens_syndiques_2' => 'na cekanju za ovjeru.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>Ime stranice</b> [Obavezno]',
 	'info_panne_site_syndique' => 'Sindikovana stranica nije u funkciji',
 	'info_probleme_grave' => 'problem sa',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Koristi automatsku sindikaciju',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'Osvjezi sada',
 	'lien_nouvelle_recuperation' => 'Pokusaj ponovno dobavljanje podataka',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Opcije sindikacije:',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Linkovi izvedeni iz sindikovanih stranica mogu a priori biti blokirani; dole prikazana postavka  je standardna postavka sindikovanih stranica prije njihove kreacije. U svakom slucaju je moguce pojedinacno deblokirati  svaki link ili, stranicu po stranicu, blokirati linkove koji  dolaze sa odredjene lokacije.',
 	'texte_messages_publics' => 'Javne poruke clanka:',
 	'texte_non_fonction_referencement' => 'Mozete izabrati da ne koristite ovu automatsku funkciju i sami naznaciti elemente vezane za ovu stranicu...',
@@ -114,6 +131,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_syndication' => 'Moguce je automatsko otkrivanje spiska novosti, ako web stranica to dozvoljava. Zato trebate aktivirati sindikaciju\\tab <blockquote><i>Odredjeni hosting servisi dezaktiviraju tu funkciju; u tom slucaju ne mozete koristiti sindikaciju sadrzaja na vasoj stranici.</i></blockquote>', # MODIF
 	'titre_articles_syndiques' => 'Sindikovani clanci, izvuceni iz ove stranice',
 	'titre_dernier_article_syndique' => 'Posljednji sindikovani clanci',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'Preporucene stranice',
 	'titre_referencement_sites' => 'Sindikacija i preporucivanje stranica',
 	'titre_site_numero' => 'STRANICA BROJ:',

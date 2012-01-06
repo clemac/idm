@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Estes sites sindicados provocaram um problema',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'moderação à posteriori',
 	'bouton_radio_modere_priori' => 'moderação à priori',
 	'bouton_radio_non_syndication' => 'Sem sindicação',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'Endereço do arquivo de sindicação:',
 	'entree_adresse_site' => '<b>endereço do site</b> [Obrigatório]',
 	'entree_description_site' => 'Descrição do site',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'Nome do site',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Ver os sites referenciados',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[para validar]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'bloquear',
 	'info_bloquer_lien' => 'bloquear este link',
 	'info_derniere_syndication' => 'A última sindicação deste site foi efetuada em',
 	'info_liens_syndiques_1' => 'links sindicados',
 	'info_liens_syndiques_2' => 'aguardam validação.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>Nome do site</b> [Obrigatório]',
 	'info_panne_site_syndique' => 'Site sindicado com problemas',
 	'info_probleme_grave' => 'problema de',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Utilizar a sindicação automática',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'Atualizar agora',
 	'lien_nouvelle_recuperation' => 'Tentar uma nova recuperação dos dados',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Opções de sindicação:',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Os links gerados pelos sites sindicados podem ser bloqueados previamente; a configuração abaixo indica a opção padrão para os sites sindicados, após a sua inclusão. É possível, em seguida, desbloquear cada link individualmente, ou escolher, site a site, o bloqueio de links originados de um ou outro site.',
 	'texte_messages_publics' => 'Mensagens públicas da matéria:',
 	'texte_non_fonction_referencement' => 'Você pode preferir não usar esta função automática, e indicar você mesmo os elementos relativos a este site...',
@@ -116,6 +133,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 neste caso, você não poderá usar a sindicação de conteúdo no seu site.</i></blockquote>',
 	'titre_articles_syndiques' => 'Matérias sindicadas extraídas deste site',
 	'titre_dernier_article_syndique' => 'Últimas matérias sindicadas',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'Os sites referenciados',
 	'titre_referencement_sites' => 'Referenciamento de sites e sindicação',
 	'titre_site_numero' => 'SITE NÚMERO:',

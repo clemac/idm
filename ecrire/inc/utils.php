@@ -198,7 +198,7 @@ function spip_log($message=NULL, $name=NULL) {
 	preg_match('/^([a-z_]*)\.?(\d)?$/iS', (string) $name, $regs);
 	if (!$logname = $regs[1])
 		$logname = null;
-	if (!$niveau = $regs[2])
+	if (!isset($regs[2]) OR !$niveau = $regs[2])
 		$niveau = _LOG_INFO;
 
 	if ($niveau <= 
@@ -463,7 +463,7 @@ function test_plugin_actif($plugin){
  */
 function _T($texte, $args=array(), $options=array()) {
 	static $traduire=false ;
-	$o = array('class'=>'','force'=>true);
+	$o = array('class'=>'', 'force'=>true);
 	if ($options){
 		// support de l'ancien argument $class
 		if (is_string($options))
@@ -494,12 +494,14 @@ function _T($texte, $args=array(), $options=array()) {
 			return '';
 
 		$text = $texte;
+
 		// pour les chaines non traduites, assurer un service minimum
-		if (!isset($GLOBALS['test_i18n']))
+		if (!$GLOBALS['test_i18n'])
 			$text = str_replace('_', ' ',
 				 (($n = strpos($text,':')) === false ? $texte :
 					substr($texte, $n+1)));
-		$class=null;
+		$o['class'] = null;
+
 	}
 
 	return _L($text, $args, $o['class']);
@@ -565,7 +567,7 @@ function spip_timer($t='rien', $raw = false) {
 			$s = sprintf("%d ", $x = floor($p/1000));
 			$p -= ($x*1000);
 		}
-		return $s . sprintf("%.3f ms", $p);
+		return $s . sprintf($s?"%07.3f ms":"%.3f ms", $p);
 	}
 }
 
@@ -1133,13 +1135,16 @@ function urls_connect_dist($i, &$entite, $args='', $ancre='', $public=null) {
 
 // Transformer les caracteres utf8 d'une URL (farsi par ex) selon la RFC 1738
 function urlencode_1738($url) {
-	$uri = '';
-	for ($i=0; $i < strlen($url); $i++) {
-		if (ord($a = $url[$i]) > 127)
-			$a = rawurlencode($a);
-		$uri .= $a;
+	if (preg_match(',[^\x00-\x7E],sS', $url)){
+		$uri = '';
+		for ($i=0; $i < strlen($url); $i++) {
+			if (ord($a = $url[$i]) > 127)
+				$a = rawurlencode($a);
+			$uri .= $a;
+		}
+		$url = $uri;
 	}
-	return quote_amp($uri);
+	return quote_amp($url);
 }
 
 // http://doc.spip.org/@generer_url_entite_absolue
@@ -1187,6 +1192,13 @@ function url_de_base() {
 		    test_valeur_serveur($_SERVER['HTTPS']))
 	) ? 'https' : 'http';
 	# note : HTTP_HOST contient le :port si necessaire
+	$host = $_SERVER['HTTP_HOST'];
+	if (isset($_SERVER['SERVER_PORT'])
+		AND $port=$_SERVER['SERVER_PORT']
+		AND strpos($host,":")==false){
+		if ($http=="http" AND $port!=80) $host.=":$port";
+		if ($http=="https" AND $port!=443) $host.=":$port";
+	}
 	if (!$GLOBALS['REQUEST_URI']){
 		if (isset($_SERVER['REQUEST_URI'])) {
 			$GLOBALS['REQUEST_URI'] = $_SERVER['REQUEST_URI'];
@@ -1198,7 +1210,7 @@ function url_de_base() {
 		}
 	}
 
-	$url[$GLOBALS['profondeur_url']] = url_de_($http,$_SERVER['HTTP_HOST'],$GLOBALS['REQUEST_URI'],$GLOBALS['profondeur_url']);
+	$url[$GLOBALS['profondeur_url']] = url_de_($http,$host,$GLOBALS['REQUEST_URI'],$GLOBALS['profondeur_url']);
 
 	return $url[$GLOBALS['profondeur_url']];
 }
@@ -1402,6 +1414,9 @@ function spip_initialisation_core($pi=NULL, $pa=NULL, $ti=NULL, $ta=NULL) {
 	// le nom du repertoire des extensions/ permanentes du core, toujours actives
 	if (!defined('_DIR_EXTENSIONS')) define('_DIR_EXTENSIONS', _DIR_RACINE . "extensions/");
 
+	// le nom du repertoire des librairies
+	if (!defined('_DIR_LIB')) define('_DIR_LIB', _DIR_RACINE . "lib/");
+	
 	if (!defined('_DIR_IMG')) define('_DIR_IMG', $pa);
 	if (!defined('_DIR_LOGOS')) define('_DIR_LOGOS', $pa);
 	if (!defined('_DIR_IMG_ICONES')) define('_DIR_IMG_ICONES', _DIR_LOGOS . "icones/");
@@ -1436,7 +1451,7 @@ function spip_initialisation_core($pi=NULL, $pa=NULL, $ti=NULL, $ta=NULL) {
 
 	# attention .php obligatoire pour ecrire_fichier_securise
 	if (!defined('_FILE_META')) define('_FILE_META', $ti . 'meta_cache.php');
-	if (!defined('_DIR_LOG')) define('_DIR_LOG', _DIR_TMP);
+	if (!defined('_DIR_LOG')) define('_DIR_LOG', _DIR_TMP . 'log/');
 	if (!defined('_FILE_LOG')) define('_FILE_LOG', 'spip');
 	if (!defined('_FILE_LOG_SUFFIX')) define('_FILE_LOG_SUFFIX', '.log');
 
@@ -1935,15 +1950,22 @@ function spip_session($force = false) {
 	return $session;
 }
 
-//
-// Aide, aussi depuis l'espace prive a present.
-//  Surchargeable mais pas d'ereur fatale si indisponible.
-//
 
+/**
+ * Aide, aussi depuis l'espace prive a present.
+ * Surchargeable mais pas d'erreur fatale si indisponible.
+ * 
+ * @param string $aide
+ * 		Cle d'identification de l'aide desiree
+ * @param bool $distante
+ * 		Generer une url locale (par defaut)
+ * 		ou une url distante [directement sur spip.net]
+ * @return Lien sur une icone d'aide
+**/
 // http://doc.spip.org/@aide
-function aide($aide='') {
-	$aider = charger_fonction('aider', 'inc', true);
-	return $aider ?  $aider($aide) : '';
+function aide($aide='', $distante = false) {
+		$aider = charger_fonction('aider', 'inc', true);
+	return $aider ?  $aider($aide, '', array(), $distante) : '';
 }
 
 // normalement il faudrait creer exec/info.php, mais pour mettre juste ca:

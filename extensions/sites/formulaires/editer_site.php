@@ -73,8 +73,14 @@ function formulaires_editer_site_verifier_dist($id_syndic='new', $id_rubrique=0,
 			$erreurs['url_auto'] = _T('sites:avis_site_introuvable');
 		}
 	}
-	else
+	else{
+		// auto-renseigner le titre si il n'existe pas
+		// d'abord a partir du descriptif en coupant
+		titre_automatique('nom_site',array('descriptif'));
+		// et sinon l'url du site, sans couper
+		titre_automatique('nom_site',array('url_site'),255);
 		$erreurs = formulaires_editer_objet_verifier('site',$id_syndic,$oblis);
+	}
 	return $erreurs;
 }
 

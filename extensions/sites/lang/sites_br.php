@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Kudennoù zo savet gant al lec\'hiennoù sindikadet-se',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'gwiriañ goude an embann',
 	'bouton_radio_modere_priori' => 'gwiriañ a-raok embann',
 	'bouton_radio_non_syndication' => 'Sindikadur ebet',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'Chomlec\'h ar restr evit ar sindikadur :',
 	'entree_adresse_site' => '<b>Chomlec\'h al lec\'hienn</b> [Rekis]',
 	'entree_description_site' => 'Deskrivadenn al lec\'hienn',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'Anv al lec\'hienn',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Gwelet al lec\'hiennoù menegeret',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[da wiriañ]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'stankañ',
 	'info_bloquer_lien' => 'Stankañ al liamm-mañ',
 	'info_derniere_syndication' => 'Sindikadur diwezhañ al lec\'hienn-mañ a zo bet graet d\'an',
 	'info_liens_syndiques_1' => 'Liammoù sindikadet',
 	'info_liens_syndiques_2' => 'o c\'hortoz bezañ asantet.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>Anv al lec\'hienn</b> [Rekis]',
 	'info_panne_site_syndique' => 'Sac\'het eo al lec\'hienn sindikadet',
 	'info_probleme_grave' => 'kudenn a',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Implijout ar sindikadur emgefre',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'Hizivaat bremañ',
 	'lien_nouvelle_recuperation' => 'Klask adtapout an titouroù en-dro',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Dibarzhioù sindikadañ :',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Gallout a ra al liammoù deuet diwar lec\'hiennoù sindikadet bezañ stanket a-raok embann ;
    amañ dindan emañ diskouezet reizhadenn dre ziouer al lec\'hiennoù sindikadet goude dezho bezañ bet krouet.
    Goude e c\'hallit atav dibab distankañ pep liamm unan-hag-unan pe dibab, evit pep lec\'hienn, stankañ al liammoù a zeu eus lec\'hienn pe lec\'hienn.',
@@ -119,6 +136,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   neuze n\'hallit ket implijout ar sindikadur adalek ho lec\'hienn.</i></blockquote>',
 	'titre_articles_syndiques' => 'Pennadoù sindikadet tennet eus al lec\'hienn-mañ',
 	'titre_dernier_article_syndique' => 'Pennadoù sindikadet da ziwezhañ',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'Al lec\'hiennoù menegeret',
 	'titre_referencement_sites' => 'Menegeriñ lec\'hiennoù ha sindikadañ',
 	'titre_site_numero' => 'LEC\'HIENN NIVERENN :',

@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -296,7 +296,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => '<sup>a</sup> en @liste@',
 'info_code_acces' => 'Ne forgesu viajn proprajn alir-kodojn !',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Estas rekomendate antaŭfare kontroli, ĉu via retgastiganto jam ĉiufoje densigas la php-skriptojn; por tio, vi povas ekzemple uzi la jenan servon : @testgzip@',
+'info_compresseur_gzip' => '<b>N. B. :</b> Estas rekomendate antaŭfare kontroli, ĉu via retgastiganto jam ĉiufoje densigas la php-skriptojn; por tio, vi povas ekzemple uzi la jenan servon : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Se via servilo ne aŭtomate densigas la html-paĝojn por ilin sendi al interretanoj, vi povas provi trudi tiun densigon por malkreskigi la pezon de la elŝutitaj paĝoj. <b>Atentu</b> :  tio povas forte malrapidigi iujn servilojn.',
 'info_config_suivi' => 'Se tiu ĉi adreso estas tiu de dissendlisto, indiku ĉi-sube la adreson ĉe kiu la partoprenantoj de la retejo povos registriĝi. Tiu adreso povas esti retligilo (ekz. la paĝo por rete registriĝi en la listo), aŭ retpoŝtadreso kun specifa temo (ekz. <tt>@adresse_suivi@?subject=registrigxi</tt>):',
 'info_config_suivi_explication' => 'Vi povas aboni la dissendliston de tiu ĉi retejo. Aboninta, vi ricevos per retmesaĝoj la anoncojn pri artikoloj kaj pri fulm-informoj proponitaj por publikigo.',
@@ -329,7 +329,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'Antaŭ ol ekhavi la eblon skribi artikolojn, vi devas krei almenaŭ unu rubrikon.',
 'info_email_envoi' => 'retpoŝtadreso por sendo (nedeviga)',
 'info_email_envoi_txt' => 'Indiku ĉi tie la adreson uzotan por sendi poŝtmesaĝojn (defaŭlte, la ricev-adreso estos uzata) :',
-'info_email_webmestre' => 'Retpoŝtadreso de la retejestro (eventuale)',
+'info_email_webmestre' => 'Retpoŝtadreso de la retejestro (eventuale)', # MODIF
 'info_entrer_code_alphabet' => 'Entajpu la kodon de la uzenda alfabeto :',
 'info_envoi_email_automatique' => 'Aŭtomata retleteroj-dissendado',
 'info_envoyer_maintenant' => 'Sendu nun',
@@ -366,7 +366,7 @@ postulas disponi je FTP-alirrajto al la retejo.</p>', # MODIF
 'info_historique_texte' => 'La superrigardo de revizioj ebligas konservi historion de ĉiuj modifoj al la enhavo de artikolo, kaj afiŝi la diferencojn inter la sinsekvaj versioj.',
 'info_identification_publique' => 'Via publika identeco...',
 'info_image_process' => 'Bonvolu elekti la plej bonan metodon por fabriki vinjetojn musklakante laŭcele bildon.',
-'info_image_process2' => '<b>N.B.</b> <i>Se neniu bildo afiŝiĝas, tio signifas ke la servilo kiu gastigas vian retejon ne estas konfigurita por uzi tiajn ilojn. Se vi deziras uzi tiujn funkciojn, petu la «GD» aŭ «Imagick» modulojn al la teknika repondeculo.</i>',
+'info_image_process2' => '<b>N.B.</b> <i>Se neniu bildo afiŝiĝas, tio signifas ke la servilo kiu gastigas vian retejon ne estas konfigurita por uzi tiajn ilojn. Se vi deziras uzi tiujn funkciojn, petu la «GD» aŭ «Imagick» modulojn al la teknika repondeculo.</i>', # MODIF
 'info_images_auto' => 'Bildoj aŭtomate komputitaj',
 'info_informations_personnelles' => 'Personaj datenoj',
 'info_inscription_automatique' => 'Aŭtomata registriĝado de novaj redaktantoj',
@@ -481,7 +481,7 @@ postulas disponi je FTP-alirrajto al la retejo.</p>', # MODIF
 'info_question_utilisation_moteur_recherche' => 'Ĉu vi deziras uzi la SPIP-internan serĉilon ?
  (malaktivigi ĝin rapidigas la funkciadon de la sistemo.)',
 'info_question_vignettes_referer_non' => 'Ne vidigi de kiuj retejoj venas vizitantoj',
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'Radiko de la retejo',
 'info_recharger_page' => 'Bonvolu refreŝigi tiun ĉi paĝon post momento.',
 'info_recherche_auteur_a_affiner' => 'Tro da rezultoj por "@cherche_auteur@"; bonvolu fajnigi la serĉokriteriojn.',
@@ -747,6 +747,7 @@ La tradukoj estas kunligitaj al la originalo, kun koloro kiu indikas ties staton
 'plugin_titre_automatique' => 'Aŭtomata instalo',
 'plugin_titre_automatique_ajouter' => 'Aldoni kromprogramojn',
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Daŭrigu por ĝin aktivigi',
 'plugin_zip_adresse' => 'indiku ĉi-sube la retadreson de la maldensa dosiero de elŝutenda kromprogramo, aŭ la retadreson de kromprogramolisto.',
 'plugin_zip_adresse_champ' => 'Retadreso de la kromprogramo aŭ de la listo ',
@@ -758,7 +759,7 @@ La tradukoj estas kunligitaj al la originalo, kun koloro kiu indikas ties staton
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Plugins actifs', # MODIF
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -766,6 +767,7 @@ La tradukoj estas kunligitaj al la originalo, kun koloro kiu indikas ties staton
 'plugins_liste' => 'Listo de kromprogramoj',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Listo',
 'protocole_ldap' => 'Protokolversio :',

@@ -92,6 +92,8 @@ if (!defined('_url_arbo_minuscules')) define('_url_arbo_minuscules',isset($confi
 if (!defined('_URLS_ARBO_MAX')) define('_URLS_ARBO_MAX', isset($config_urls_arbo['URLS_ARBO_MAX'])?$config_urls_arbo['URLS_ARBO_MAX']:35);
 if (!defined('_URLS_ARBO_MIN')) define('_URLS_ARBO_MIN', isset($config_urls_arbo['URLS_ARBO_MIN'])?$config_urls_arbo['URLS_ARBO_MIN']:3);
 
+if (!defined('_url_sep_id')) define('_url_sep_id',_url_arbo_sep_id);
+
 // Ces chaines servaient de marqueurs a l'epoque ou les URL propres devaient
 // indiquer la table ou les chercher (articles, auteurs etc),
 // et elles etaient retirees par les preg_match dans la fonction ci-dessous.
@@ -236,14 +238,8 @@ function renseigner_url_arbo($type,$id_objet){
 	if (!$col_id) return false; // Quand $type ne reference pas une table
 	$id_objet = intval($id_objet);
 
-	// Auteurs : on prend le nom
-	if ($type == 'auteur')
-		$champ_titre = 'nom AS titre';
-	else if ($type == 'site' OR $type=='syndic')
-		$champ_titre = 'nom_site AS titre';
-	else
-		$champ_titre = 'titre';
-
+	$champ_titre = $desc['titre'] ? $desc['titre'] : 'titre';
+	
 	// parent
 	$champ_parent = url_arbo_parent($type);
 	$sel_parent = ', 0 as parent';

@@ -10,6 +10,7 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
 
 function boucle_SITES_dist($id_boucle, &$boucles) {
 	$boucle = &$boucles[$id_boucle];

@@ -10,6 +10,8 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 /**
  * Chargement des donnees du formulaire
  *
@@ -75,7 +77,10 @@ function formulaires_editer_url_objet_traiter($type,$id){
 		AND isset($r['parent']))
 		$set['id_parent'] = $r['parent'];
 
-	if (url_insert($set,false,",")) {
+	$separateur = "-";
+	if (defined('_url_sep_id')) $separateur = _url_sep_id;
+
+	if (url_insert($set,false,$separateur)) {
 		set_request('url');
 		$valeurs['message_ok'] = _T("urls:url_ajoutee");
 	}

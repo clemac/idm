@@ -8,6 +8,9 @@
 			<th scope='col'>[(#SELF|parametre_url{tri,nom}|ancre_url{##ENV{id,sauvegardes}}|lien_ou_expose{<:info_nom:>,#ENV{tri,nom}|=={nom},ajax})]</th>
 			<th scope='col'>[(#SELF|parametre_url{tri,taille}|ancre_url{##ENV{id,sauvegardes}}|lien_ou_expose{<:label_poids_fichier:>,#ENV{tri,nom}|=={taille},ajax})]</th>
 			<th scope='col'>[(#SELF|parametre_url{tri,date}|ancre_url{##ENV{id,sauvegardes}}|lien_ou_expose{<:public:date:>,#ENV{tri,nom}|=={date},ajax})]</th>
+			[(#ENV{download,''}|oui)
+			<th scope='col'></th>
+			]
 		</tr>
 		</thead>
 		<tbody>
@@ -17,7 +20,7 @@
 								[(#ENV{#ENV{name}}|=={#VALEUR{fichier}}|oui)checked="checked"]
 								/></td>]
 					<td class="principale">
-						<label for="dump_#COMPTEUR_BOUCLE" style="word-wrap:break-word;">#VALEUR{fichier}</label>
+						<label for="dump_#COMPTEUR_BOUCLE" style="word-wrap:break-word;">[(#VALEUR{fichier}|basename{.sqlite})]</label>
 					</td>
 					<td style="text-align:right">
 						[(#VALEUR{taille}|taille_en_octets)]
@@ -25,6 +28,11 @@
 					<td>
 						[(#VAL{'Y-m-d H:i:s'}|date{#VALEUR{date}}|affdate_heure)]
 					</td>
+					[(#ENV{download,''}|oui)
+					<td>
+						<a href="#URL_ACTION_AUTEUR{telecharger_dump,#VALEUR{fichier}}" title="<:bouton_download|attribut_html:>">[(#CHEMIN_IMAGE{telecharger-16.png}|balise_img{<:bouton_download:>})]</a>
+					</td>
+					]
 				</tr>
 			</BOUCLE_dump>
 		</tbody>

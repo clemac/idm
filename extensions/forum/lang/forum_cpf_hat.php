@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -79,10 +79,10 @@ patisipasyon yo zitilizatè tout ke pa afiche sou sitwèb piblik si yon komandé
 	'icone_supprimer_messages' => 'Supprimer ces messages', # NEW
 	'icone_valider_message' => 'Konfime mesaj la',
 	'icone_valider_messages' => 'Valider ces messages', # NEW
-	'icone_valider_repondre_message' => 'Valider &amp; Répondre à ce message', # NEW
+	'icone_valider_repondre_message' => 'Valider & Répondre à ce message', # NEW
 	'info_1_message_forum' => '1 message de forum', # NEW
 	'info_activer_forum_public' => '<i>Pou fowom piblik mache, mési chwazi manyir modèr a y otomatikman
-:</i>',
+:</i>', # MODIF
 	'info_appliquer_choix_moderation' => 'Fè mache chwa nan pou modéwasyon :',
 	'info_config_forums_prive' => 'Dans l’espace privé du site, vous pouvez activer plusieurs types de forums :', # NEW
 	'info_config_forums_prive_admin' => 'Un forum réservé aux administrateurs du site :', # NEW
@@ -160,7 +160,7 @@ ak yon limèl. W vle itilize opsyon nan ?', # MODIF
 	'text_article_propose_publication_forum' => 'N\'hésitez pas à donner votre avis grâce au forum attaché à cet article (en bas de page).', # NEW
 	'texte_en_cours_validation' => 'Les articles, brèves, forums ci dessous sont proposés à la publication.', # NEW
 	'texte_en_cours_validation_forum' => 'N\'hésitez pas à donner votre avis grâce aux forums qui leur sont attachés.', # NEW
-	'texte_messages_publics' => 'Messages publics sur&nbsp;:', # NEW
+	'texte_messages_publics' => 'Messages publics sur :', # NEW
 	'titre_cadre_forum_administrateur' => 'Fowom privé pou komandè yo',
 	'titre_cadre_forum_interne' => 'Fowom andedan',
 	'titre_config_forums_prive' => 'Forums de l’espace privé', # NEW

@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -72,9 +72,9 @@ suministrado. Si no estás inscrito/a, debes',
 	'icone_supprimer_messages' => 'Supprimer ces messages', # NEW
 	'icone_valider_message' => 'Validar este mensaje',
 	'icone_valider_messages' => 'Valider ces messages', # NEW
-	'icone_valider_repondre_message' => 'Valider &amp; Répondre à ce message', # NEW
+	'icone_valider_repondre_message' => 'Valider & Répondre à ce message', # NEW
 	'info_1_message_forum' => '1 message de forum', # NEW
-	'info_activer_forum_public' => '<i>Para activar los foros públicos, seleccionar un modo de moderación por omisión:</i>',
+	'info_activer_forum_public' => '<i>Para activar los foros públicos, seleccionar un modo de moderación por omisión:</i>', # MODIF
 	'info_appliquer_choix_moderation' => 'Aplicar este tipo de moderación',
 	'info_config_forums_prive' => 'En el espacio privado del sitio, se pueden activar varios tipos de foros :',
 	'info_config_forums_prive_admin' => 'Un foro reservado a los administradores del sitio :',
@@ -96,8 +96,8 @@ suministrado. Si no estás inscrito/a, debes',
 	'info_nb_messages_forum' => '@nb@ messages de forum', # NEW
 	'info_option_email' => 'Cuando se deposita una nueva contribución en un foro asociado a un artículo, se puede notificarlo por correo electrónico a los autores y autoras del artículo. ¿Deseas utilizar esta opción?',
 	'info_pas_de_forum' => 'sin foro',
-	'info_question_visiteur_ajout_document_forum' => 'Si desea autorizar que los visitantes puedan depositar documentos (imágenes, sonidos...) en sus mensajes sobre los foros, indique aquí debajo la lista de extensiones para los docuemnos autorizados en los foros (por ejemplo: gif, jpg, png, mp3).',
-	'info_question_visiteur_ajout_document_forum_format' => 'Si desea autorizar todos los tipos de documentos considerados como fiables por SPIP, coloque un asterisco. Para no autorizar ninguno, dejar en blanco.',
+	'info_question_visiteur_ajout_document_forum' => 'Si desea autorizar que los visitantes puedan depositar documentos (imágenes, sonidos...) en sus mensajes sobre los foros, indique aquí debajo la lista de extensiones para los docuemnos autorizados en los foros (por ejemplo: gif, jpg, png, mp3).', # MODIF
+	'info_question_visiteur_ajout_document_forum_format' => 'Si desea autorizar todos los tipos de documentos considerados como fiables por SPIP, coloque un asterisco. Para no autorizar ninguno, dejar en blanco.', # MODIF
 	'interface_formulaire' => 'Interface formulaire', # NEW
 	'interface_onglets' => 'Interface avec onglets', # NEW
 	'item_activer_forum_administrateur' => 'Activar el foro del equipo de administración.',
@@ -149,7 +149,7 @@ suministrado. Si no estás inscrito/a, debes',
 	'text_article_propose_publication_forum' => 'Expresa tu opinión mediante el foro adjunto al artículo (en la parte inferior de la página).',
 	'texte_en_cours_validation' => 'Les articles, brèves, forums ci dessous sont proposés à la publication.', # NEW
 	'texte_en_cours_validation_forum' => 'No dudes en dar tu opinión mediante los foros adjuntos.',
-	'texte_messages_publics' => 'Messages publics sur&nbsp;:', # NEW
+	'texte_messages_publics' => 'Messages publics sur :', # NEW
 	'titre_cadre_forum_administrateur' => 'Foro administradores',
 	'titre_cadre_forum_interne' => 'Foro interno',
 	'titre_config_forums_prive' => 'Foros del espacio privado',

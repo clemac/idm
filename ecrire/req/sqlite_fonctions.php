@@ -32,7 +32,8 @@ function _sqlite_init_functions(&$sqlite){
 		
 		'DATE_FORMAT'	=> array( '_sqlite_func_strftime'		,2),
 		'DAYOFMONTH'	=> array( '_sqlite_func_dayofmonth'		,1),
-		
+
+		'EXTRAIRE_MULTI' => array( '_sqlite_func_extraire_multi', 2), // specifique a SPIP/sql_multi()
 		'EXP'			=> array( 'exp'							,1),//exponentielle
 		'FIND_IN_SET'	=> array( '_sqlite_func_find_in_set'	,2),
 		'FLOOR'      => array( '_sqlite_func_floor', 1), // absent de sqlite2
@@ -162,12 +163,8 @@ function _sqlite_func_instr ($s, $search) {
 
 // http://doc.spip.org/@_sqlite_func_least
 function _sqlite_func_least () {
-	$numargs = func_num_args();
 	$arg_list = func_get_args();
-	$least=$arg_list[0];
-	for ($i = 0; $i < $numargs; $i++) {
-		if ($arg_list[$i] < $least) $least=$arg_list[$i];
-	}
+    $least = min($arg_list);
 	#spip_log("Passage avec LEAST : $least",'sqlite.'._LOG_DEBUG);
 	return $least;
 }
@@ -201,6 +198,19 @@ function _sqlite_func_preg_replace($quoi, $cherche, $remplace) {
 	return $return;
 }
 
+/**
+ * Extrait une langue d'un texte <multi>[fr] xxx [en] yyy</multi>
+ * 
+ * @param string $quoi le texte contenant ou non un multi
+ * @param string $lang la langue a extraire
+ * @return string, l'extrait trouve.
+**/
+function _sqlite_func_extraire_multi($quoi, $lang) {
+	$cherche = "<multi>.*[\[]" . $lang . "[\]]([^\[]*).*</multi>";  
+	$return = preg_replace('%'.$cherche.'%sS', '$1', $quoi);
+	return $return;
+}
+
 
 // http://doc.spip.org/@_sqlite_func_rand
 function _sqlite_func_rand() {
@@ -226,9 +236,16 @@ function _sqlite_func_strftime($date, $conv){
 	return strftime($conv, is_int($date)?$date:strtotime($date));
 }
 
-// http://doc.spip.org/@_sqlite_func_to_days
+/**
+ * Nombre de jour entre 0000-00-00 et $d
+ * http://doc.spip.org/@_sqlite_func_to_days
+ * cf http://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_to-days
+ * @param string $d
+ * @return int
+ */
 function _sqlite_func_to_days ($d) {
-	$result = date("z", _sqlite_func_unix_timestamp($d));
+    $offset = 719528; // nb de jour entre 0000-00-00 et timestamp 0=1970-01-01
+	$result = $offset+(int)ceil(_sqlite_func_unix_timestamp($d)/(24*3600));
 	#spip_log("Passage avec TO_DAYS : $d, $result",'sqlite.'._LOG_DEBUG);
 	return $result;
 }

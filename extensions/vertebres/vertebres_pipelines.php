@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 /*
  * Determiner l'utilisation du vertebreur
  * lorsque l'on passe un appel spip.php?page=table:articles

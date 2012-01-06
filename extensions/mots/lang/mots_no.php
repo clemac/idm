@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => '<NEW> les visiteurs du site public lorsqu\'ils postent un message dans un forum.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => '<NEW> Créer un nouveau groupe de mots',
@@ -78,9 +78,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => '<NEW> Nouveau mot',
 	'titre_config_groupe_mots_cles' => '<NEW> Configuration des groupes de mots-clés',
 	'titre_gauche_mots_edit' => '<NEW> MOT NUMÉRO :',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
 	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => '<NEW> Mots-clés dans les forums du site public',
 	'titre_mots_tous' => '<NEW> Les mots-clés',
 	'titre_nouveau_groupe' => '<NEW> Nouveau groupe',

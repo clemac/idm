@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_sites_syndiques_probleme' => 'Estos sitios sindicaos tuvieron problemes',
 
 	// B
+	'bouton_exporter' => 'Exporter', # NEW
+	'bouton_importer' => 'Importer', # NEW
 	'bouton_radio_modere_posteriori' => 'moderación a posteriori',
 	'bouton_radio_modere_priori' => 'moderación a priori',
 	'bouton_radio_non_syndication' => 'Ensin sindicación',
@@ -35,6 +37,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'entree_adresse_fichier_syndication' => 'Señes de l\'archivu de sindicación:',
 	'entree_adresse_site' => '<b>Señes del sitiu</b> [Obligatorio]',
 	'entree_description_site' => 'Descripción del sitiu',
+	'erreur_fichier_format_inconnu' => 'Le format du fichier @fichier@ n\'est pas pris en charge.', # NEW
+	'erreur_fichier_incorrect' => 'Impossible de lire le fichier.', # NEW
 
 	// F
 	'form_prop_nom_site' => 'Nome del sitiu',
@@ -51,12 +55,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_article' => 'Valider cet article', # NEW
 	'icone_valider_articles' => 'Valider ces articles', # NEW
 	'icone_voir_sites_references' => 'Ver los sitios referenciaos',
+	'info_1_site_importe' => '1 site a été importé', # NEW
 	'info_a_valider' => '[a validar]',
+	'info_aucun_site_importe' => 'Aucun site n\'a pu être importé', # NEW
 	'info_bloquer' => 'bloquiar',
 	'info_bloquer_lien' => 'bloquiar esti enllace',
 	'info_derniere_syndication' => 'La cabera sindicación d\'esti sitiu efeutuose el',
 	'info_liens_syndiques_1' => 'enllaces sindicaos',
 	'info_liens_syndiques_2' => 'tan esperando validación.',
+	'info_nb_sites_importes' => '@nb@ sites ont été importés', # NEW
 	'info_nom_site_2' => '<b>Nome del sitiu</b> [Obligatoriu]',
 	'info_panne_site_syndique' => 'Sitiu sindicau ensin serviciu',
 	'info_probleme_grave' => 'problema de',
@@ -84,6 +91,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_syndication' => 'Utilizar la sindicación automática',
 
 	// L
+	'label_exporter_avec_mots_cles_1' => 'Exporter les mots-clés sous forme de tags', # NEW
+	'label_exporter_id_parent' => 'Exporter les sites de la rubrique', # NEW
+	'label_exporter_publie_seulement_1' => 'Exporter uniquement les sites publiés', # NEW
+	'label_fichier_import' => 'Fichier HTML', # NEW
+	'label_importer_les_tags_1' => 'Importer les tags sous forme de mot-clé', # NEW
+	'label_importer_statut_publie_1' => 'Publier automatiquement les sites', # NEW
 	'lien_mise_a_jour_syndication' => 'Actualizar agora',
 	'lien_nouvelle_recuperation' => 'Tentar una nueva recuperación de los datos',
 	'lien_purger_syndication' => 'Effacer tous les articles syndiqués', # NEW
@@ -106,6 +119,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syndic_options' => 'Opciones de sindicación:',
 
 	// T
+	'texte_expliquer_export_bookmarks' => 'Vous pouvez exporter une liste de sites au format Marque-page HTML,
+	pour vous permettre ensuite de l\'importer dans votre navigateur ou dans un service en ligne', # NEW
+	'texte_expliquer_import_bookmarks' => 'Vous pouvez importer une liste de sites au format Marque-page HTML,
+	en provenance de votre navigateur ou d\'un service en ligne de gestion des Marques-pages.', # NEW
 	'texte_liens_sites_syndiques' => 'Los enllaces surdíos de los sitios sindicaos
    puen bloquiase a priori; l\'axuste de
    más embaxo indica l\'axuste por omisión de
@@ -125,6 +142,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   dende\'l to sitiu web.</i></blockquote>',
 	'titre_articles_syndiques' => 'Artículos sindicaos vinientes d\'esti sitiu',
 	'titre_dernier_article_syndique' => 'Caberos artículos sindicaos',
+	'titre_exporter_bookmarks' => 'Exporter des Marques-pages', # NEW
+	'titre_importer_bookmarks' => 'Importer des Marques-pages', # NEW
+	'titre_importer_exporter_bookmarks' => 'Importer et Exporter des Marques-pages', # NEW
 	'titre_page_sites_tous' => 'Los sitios referenciaos',
 	'titre_referencement_sites' => 'Referenciación de sitios y sindicación',
 	'titre_site_numero' => 'SITIU NÚMBERU:',

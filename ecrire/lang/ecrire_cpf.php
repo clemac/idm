@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -325,7 +325,7 @@ inn liv-zimaz (sédir inn galri).',
 'info_classement_2' => '<sup>èm</sup> si @liste@',
 'info_code_acces' => 'Oubliy pa out prop bann kod-laksé !',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => 'Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'Si ladrès-la lé inn ladrès po inlistmèl, ou pé présiz anba tèrla kosa i lé ladrès out bann vizitèr i pé inskri azot. Ladrès-la i pé èt in sinp URL (lapaz pou linskrisyon si lo sit-minm), o in ladrès imèl, po un sizé pli spésifik(égsanp: <tt>@ladrès_swivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'Ou pé abonn aou po gigny lo listmèl  lo sit-. Ou sar gigny in limèl pou tout bann zanons èk bann tite-nouvèl sat ni propoz po lapiblikasyon  si lo sit.',
@@ -358,7 +358,7 @@ inn liv-zimaz (sédir inn galri).',
 'info_ecrire_article' => 'Ou i dwa dabor kré inn promyé rubrik avand ékri out bann zartik.',
 'info_email_envoi' => 'Ladrès po lanvwa inn lilèl(lépa obligatwar)',
 'info_email_envoi_txt' => 'Mèrsi indiké tèrla out ladrès pou anvwa bann zimèl (sinonsa ladrès déstinatèr li sra ansèrvi osi kom ladrès lanvwa) :',
-'info_email_webmestre' => 'Ladrès imèl lo wèbmèt (lé pa obligatwar)',
+'info_email_webmestre' => 'Ladrès imèl lo wèbmèt (lé pa obligatwar)', # MODIF
 'info_entrer_code_alphabet' => 'Mèt isi lo kod lalfabé ifo anserv :',
 'info_envoi_email_automatique' => 'Anvwa inn limèl otomatikman',
 'info_envoyer_maintenant' => 'Anvwa astèr',
@@ -395,7 +395,7 @@ SPIP anba-la, i sava pa marsé.',
 'info_historique_texte' => 'Lo swivi sat la sanzé i pèrmé gard listwar out bann sanzman andann zartik, è afisé bann diférans sanm tout bann versyon.',
 'info_identification_publique' => 'Out lidantité piblik...',
 'info_image_process' => 'Mersi swazi lo méyèr manyir pou fabrik out bann vinyèt sam apiyé si limaz i korespon.',
-'info_image_process2' => '<b>Pangar</b> <i>Si néna okinn zimaz sat i pé vwar an liny, i pé dir lo sèrvèr li ébèrz out sitwèb lé pa kofigiré po akèy bann zouti-la. Ifo zot i koz èk lo résponsab po domann ali tout bann zekstansyon «GD» ou «Imagick».</i>',
+'info_image_process2' => '<b>Pangar</b> <i>Si néna okinn zimaz sat i pé vwar an liny, i pé dir lo sèrvèr li ébèrz out sitwèb lé pa kofigiré po akèy bann zouti-la. Ifo zot i koz èk lo résponsab po domann ali tout bann zekstansyon «GD» ou «Imagick».</i>', # MODIF
 'info_images_auto' => 'Ban zimaz-la lé kalkilé otomatikman',
 'info_informations_personnelles' => 'Sinkyèm étap : <b>Bann zinformasyon personèl</b>',
 'info_inscription_automatique' => 'Pou inskri otomatikman tout bann nouvo lotèr',
@@ -512,7 +512,7 @@ sak i dégrèn lanvwa bann limèl sir zot bann servèr : dann kala, linskrisyon
 'info_question_utilisation_moteur_recherche' => 'Indik si ou vé ansèrv lo rodèr-dodan SPIP
 (si ou défalk ali, lo sistèm lé pli rapid.)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'Rasin lo sitwèb',
 'info_recharger_page' => 'Mersi rosarz lapazwèb-la disi inn ti moman.',
 'info_recherche_auteur_a_affiner' => 'Néna trod bann rézilta pou "@cherche_auteur@" ; mersi kadr myé kosa i rod.',
@@ -779,6 +779,7 @@ sanm in koulèr i présiz son léta :',
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -790,7 +791,7 @@ sanm in koulèr i présiz son léta :',
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -798,6 +799,7 @@ sanm in koulèr i présiz son léta :',
 'plugins_liste' => 'La lis bann plugin',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

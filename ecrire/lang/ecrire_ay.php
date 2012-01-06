@@ -310,7 +310,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 ',
 'info_code_acces' => '¡Mantañ chimpunakam jan armasimti!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => 'Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'Si cette adresse correspond à une mailing-list, vous pouvez indiquer ci-dessous l\'adresse à laquelle les participants au site peuvent s\'inscrire. Cette adresse peut être une URL (par exemple la page d\'inscription à la liste par le Web), ou une adresse email dotée d\'un sujet spécifique (par exemple: <tt>@adresse_suivi@?subject=subscribe</tt>):', # NEW
 'info_config_suivi_explication' => 'Tanta aruskipayiriru aka qamawitxa qillqayasismaw. Aruskipayiritxa qillqatanakat yatiyawinak qatuqata ukatsti jisk\'aptat amtatanak yatiyatawiru.',
@@ -343,7 +343,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'Janir qillqatanak qillqasinxa, mä t\'aqa uñstayañamawa.',
 'info_email_envoi' => 'Apaw aruskipayirit utjawipa (ajlliñatakiwa)',
 'info_email_envoi_txt' => 'Indiquez ici l\'adresse à utiliser pour envoyer les emails (à défaut, l\'adresse destinataire sera utilisée comme adresse d\'envoi) :', # NEW
-'info_email_webmestre' => 'Aruskipayirit utjawipa webmaster ukata (ajlliñatakiwa)',
+'info_email_webmestre' => 'Aruskipayirit utjawipa webmaster ukata (ajlliñatakiwa)', # MODIF
 'info_entrer_code_alphabet' => 'Qillqa chimputampi lurkatax uk uchantam',
 'info_envoi_email_automatique' => 'Aruskipayirinakat justup apayawi',
 'info_envoyer_maintenant' => 'Jichhaki apayaña',
@@ -383,7 +383,7 @@ exige d\'avoir un accès FTP au site Web.</p>', # NEW
 'info_historique_texte' => 'Le suivi des révisions permet de conserver un historique de toutes les modifications apportées au contenu d\'un article, et d\'afficher les différences entre les versions successives.', # NEW
 'info_identification_publique' => 'Uñacht\'ayawima...',
 'info_image_process' => 'Veuillez sélectionner la meilleure méthode de fabrication des vignettes en cliquant sur l\'image correspondante.', # NEW
-'info_image_process2' => '<b>N.B.</b> <i>Si aucune image n\'apparaît, alors le serveur qui héberge votre site n\'a pas été configuré pour utiliser de tels outils. Si vous souhaitez utiliser ces fonctions, contactez le responsable technique et demandez les extensions «GD» ou «Imagick».</i>', # NEW
+'info_image_process2' => 'Si aucune image n\'apparaît, alors le serveur qui héberge votre site n\'a pas été configuré pour utiliser de tels outils. Si vous souhaitez utiliser ces fonctions, contactez le responsable technique et demandez les extensions «GD» ou «Imagick».', # NEW
 'info_images_auto' => 'Images calculées automatiquement', # NEW
 'info_informations_personnelles' => 'Informations personnelles', # NEW
 'info_inscription_automatique' => 'Inscription automatique de nouveaux rédacteurs', # NEW
@@ -494,12 +494,12 @@ exige d\'avoir un accès FTP au site Web.</p>', # NEW
 'info_question_inscription_nouveaux_redacteurs' => 'Acceptez-vous les inscriptions de nouveaux rédacteurs à
   partir du site public ? Si vous acceptez, les visiteurs pourront s\'inscrire
   depuis un formulaire automatisé et accéderont alors à l\'espace privé pour
-  proposer leurs propres articles. <blockquote><i>Lors de la phase d\'inscription,
+  proposer leurs propres articles. <div class="notice">Lors de la phase d\'inscription,
   les utilisateurs reçoivent un courrier électronique automatique
   leur fournissant leurs codes d\'accès au site privé. Certains
   hébergeurs désactivent l\'envoi de mails depuis leurs
   serveurs : dans ce cas, l\'inscription automatique est
-  impossible.</i></blockquote>', # NEW
+  impossible.</div>', # NEW
 'info_question_utilisation_moteur_recherche' => 'Souhaitez-vous utiliser le moteur de recherche intégré à SPIP ?
 	(le désactiver accélère le fonctionnement du système.)', # NEW
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
@@ -770,6 +770,7 @@ dans une couleur qui indique leur état :', # NEW
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -781,7 +782,7 @@ dans une couleur qui indique leur état :', # NEW
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -789,6 +790,7 @@ dans une couleur qui indique leur état :', # NEW
 'plugins_liste' => 'Liste des plugins', # NEW
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

@@ -10,13 +10,14 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
 
 /**
  * Ajouter les sites et syndication a valider sur les rubriques 
  *
  * @param array $flux
  * @return array
-**/
+ */
 function sites_rubrique_encours($flux){
 	if ($flux['args']['type'] == 'rubrique') {
 		$lister_objets = charger_fonction('lister_objets','inc');
@@ -76,7 +77,7 @@ function sites_affiche_milieu($flux){
  *
  * @param array $flux
  * @return array
-**/
+ */
 function sites_accueil_encours($flux){
 	$lister_objets = charger_fonction('lister_objets','inc');
 	
@@ -118,7 +119,7 @@ function sites_accueil_encours($flux){
  *
  * @param array $flux
  * @return array
-**/
+ */
 function sites_affiche_enfants($flux) {
 	if ($e = trouver_objet_exec($flux['args']['exec'])
 	  AND $e['type'] == 'rubrique'
@@ -161,7 +162,7 @@ function sites_configurer_liste_metas($metas){
  *
  * @param array $taches_generales
  * @return array
-**/
+ */
 function sites_taches_generales_cron($taches_generales){
 
 	if ($GLOBALS['meta']["activer_syndic"] == "oui") {

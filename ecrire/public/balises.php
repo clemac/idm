@@ -130,8 +130,8 @@ function balise_DATE_MODIF_dist ($p) {
 // http://doc.spip.org/@balise_DATE_NOUVEAUTES_dist
 function balise_DATE_NOUVEAUTES_dist($p) {
 	$p->code = "((\$GLOBALS['meta']['quoi_de_neuf'] == 'oui'
-	AND @is_readable(_DIR_TMP . 'mail.lock')) ?
-	@filemtime(_DIR_TMP . 'mail.lock') :
+	AND isset(\$GLOBALS['meta']['dernier_envoi_neuf'])) ?
+	\$GLOBALS['meta']['dernier_envoi_neuf'] :
 	\"'0000-00-00'\")";
 	$p->interdire_scripts = false;
 	return $p;
@@ -457,7 +457,8 @@ function balise_RANG_dist($p) {
 			$t=$desc['titre'];
 		  if (preg_match(';(^|,)([^,]*titre)(,|$);',$t,$m)){
 			  $m = explode(' ',trim($m[2]));
-		    $champ_titre = reset($m);
+			// attention, lorsque : '' as titre, '' as lang
+		    $champ_titre = trim(reset($m), "'");
 		  }
 		}
 		$_titre = champ_sql($champ_titre, $p);
@@ -610,41 +611,70 @@ function balise_CHEMIN_IMAGE_dist($p) {
 	return $p;
 }
 
-//
-// #ENV
-// l'"environnement", id est le $contexte (ou $contexte_inclus)
-//
-// en standard on applique |entites_html, mais si vous utilisez
-// [(#ENV*{toto})] il *faut* vous assurer vous-memes de la securite
-// anti-javascript (par exemple en filtrant avec |safehtml)
-//
-// La syntaxe #ENV{toto, rempl} renverra 'rempl' si $toto est vide
-//
-// Si le tableau est vide on renvoie '' (utile pour #SESSION)
-//
-// http://doc.spip.org/@balise_ENV_dist
+
+/**
+ * La balise #ENV permet de recuperer
+ * le contexte d'environnement transmis au calcul d'un squelette,
+ * par exemple #ENV{id_rubrique}
+ *
+ * La syntaxe #ENV{toto, valeur par defaut}
+ * renverra 'valeur par defaut' si $toto est vide
+ *
+ * La recherche de la cle s'appuyant sur la fonction table_valeur
+ * il est possible de demander un sous element d'un tableau
+ * #ENV{toto/sous/element, valeur par defaut} retournera l'equivalent de
+ * #ENV{toto}|table_valeur{sous/element} c'est a dire en quelque sorte
+ * $env['toto']['sous']['element'] s'il existe, sinon la valeur par defaut.
+ *
+ * Si le tableau est vide on renvoie '' (utile pour #SESSION)
+ *
+ * Enfin, la balise utilisee seule #ENV retourne le tableau complet
+ * de l'environnement. A noter que ce tableau est retourne serialise.
+ *
+ * 
+ * En standard est applique |entites_html, mais si l'etoile est
+ * utilisee pour desactiver les filtres par defaut, par exemple avec
+ * [(#ENV*{toto})] , il *faut* s'assurer de la securite
+ * anti-javascript, par exemple en filtrant avec |safehtml : [(#ENV*{toto}|safehtml)]
+ * 
+ *
+ * @param array $p
+ * 		Pile ; arbre de syntaxe abstrait positionne au niveau de la balise.
+ *
+ * @param array $src
+ * 		Tableau dans lequel chercher la cle demandee en parametre de la balise.
+ * 		Par defaut prend dans le contexte du squelette.
+ *  
+ * @return array $p
+ * 		Pile completee du code PHP d'execution de la balise
+**/
 function balise_ENV_dist($p, $src = NULL) {
-	// le tableau de base de la balise (cf #META ci-dessous)
 
+	// cle du tableau desiree
 	$_nom = interprete_argument_balise(1,$p);
+	// valeur par defaut
 	$_sinon = interprete_argument_balise(2,$p);
-
+	
+	// $src est un tableau de donnees sources eventuellement transmis
+	// en absence, on utilise l'environnement du squelette $Pile[0]
+	
 	if (!$_nom) {
 		// cas de #ENV sans argument : on retourne le serialize() du tableau
 		// une belle fonction [(#ENV|affiche_env)] serait pratique
-		$p->code = $src
-		? ('(is_array($a = ('.$src.')) ? serialize($a) : "")')
-		: '@serialize($Pile[0])';
+		if ($src) {
+			$p->code = '(is_array($a = ('.$src.')) ? serialize($a) : "")';
+		} else {
+			$p->code = '@serialize($Pile[0])';
+		}
 	} else {
-		// admet deux arguments : nom de variable, valeur par defaut si vide
-		$p->code = $src
-		? ('is_array($a = ('.$src.')) ? $a[(string)'.$_nom.'] : ""')
-		: ('@$Pile[0][(string)' . $_nom . ']');
-		if ($_sinon)
-			$p->code = 'sinon('.
-				$p->code.",$_sinon)";
-		else
-			$p->code = '('.$p->code.')';
+		if (!$src) {
+			$src = '@$Pile[0]';
+		}
+		if ($_sinon) {
+			$p->code = "sinon(table_valeur($src, (string)$_nom), $_sinon)";
+		} else {
+			$p->code = "table_valeur($src, (string)$_nom)";
+		}
 	}
 	#$p->interdire_scripts = true;
 

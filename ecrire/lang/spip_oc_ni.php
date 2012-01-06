@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -227,6 +227,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'envoi_via_le_site' => 'Mandadís mé lo biais dau sit web',
 'erreur' => 'Error',
 'erreur_balise_non_fermee' => 'darrièra balisa non tapada :',
+'erreur_technique_enregistrement_champs' => 'Une erreur technique a empêché l\'enregistrement correct du champ @champs@.', # NEW
+'erreur_technique_enregistrement_impossible' => 'Une erreur technique a empêché l\'enregistrement.', # NEW
 'erreur_texte' => 'error(s)',
 'etape' => 'Étape', # NEW
 
@@ -610,6 +612,7 @@ e vos tornar connectar au sit.
 'suivant' => 'seguent',
 
 // T
+'taille_go' => '@taille@ Go', # NEW
 'taille_ko' => '@taille@ Ko',
 'taille_mo' => '@taille@ Mo',
 'taille_octets' => '@taille@ octets',

@@ -727,7 +727,9 @@
 						
 						if (e.keyCode === 9) { // Tab key
 							if (shiftKey == true || ctrlKey == true || altKey == true) {
-								return false; // true ?
+								// permettre un retour a l'action naturelle
+								// du navigateur via shift+tab 
+								return true; 
 							}
 							if (caretOffset !== -1) {
 								get();

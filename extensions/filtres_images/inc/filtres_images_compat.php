@@ -15,6 +15,8 @@
  *  
  */
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 function couleur_dec_to_hex($red, $green, $blue) {include_spip('filtres/images_lib');return _couleur_dec_to_hex($red, $green, $blue);}
 function couleur_hex_to_dec($couleur) {include_spip('filtres/images_lib');return _couleur_hex_to_dec($couleur);}
 function couleur_rgb2hsv($R,$G,$B) {include_spip('filtres/images_lib');return _couleur_rgb2hsv($R,$G,$B);}

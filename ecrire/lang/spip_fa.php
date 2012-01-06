@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -222,6 +222,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'envoi_via_le_site' => 'ارسال از طريق سايت',
 'erreur' => 'اشتباه',
 'erreur_balise_non_fermee' => 'آخرین برچسب (Tag) بسته نشده:',
+'erreur_technique_enregistrement_champs' => 'يك خطاي فني از حق ثبت نام ميدان @champs@ جلوگيري كرده است.',
+'erreur_technique_enregistrement_impossible' => 'يك خطاي فني مانع از ثبت نام است. ',
 'erreur_texte' => 'اشتباه',
 'etape' => 'مرحله',
 
@@ -580,6 +582,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'suivant' => 'بعدى',
 
 // T
+'taille_go' => '@taille@ Go', # NEW
 'taille_ko' => '@taille@ kb',
 'taille_mo' => '@taille@ Mb',
 'taille_octets' => '@taille@ bits',

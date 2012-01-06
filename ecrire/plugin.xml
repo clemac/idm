@@ -190,19 +190,6 @@ Le programme est n&eacute; en 2001 d'une initiative du minir&eacute;zo, un colle
 		<titre>plugin_titre_modifier</titre>
 		<url>admin_plugin</url>
 	</onglet>
-<!-- 
-	<onglet id='admin_plugin' parent="plugins">
-		<icone>images/plugin-24.png</icone>
-		<titre>plugins_liste</titre>
-		<url>admin_plugin</url>
-		<args>voir=tous</args>
-	</onglet>
- -->
-	<onglet id='charger_plugin' parent="plugins">
-		<icone>images/spip-pack-24.png</icone>
-		<titre>plugin_titre_automatique_ajouter</titre>
-		<url>charger_plugin</url>
-	</onglet>
 
 	<pipeline><nom>accueil_encours</nom><action></action></pipeline>
 	<pipeline><nom>accueil_informations</nom><action></action></pipeline>
@@ -229,6 +216,7 @@ Le programme est n&eacute; en 2001 d'une initiative du minir&eacute;zo, un colle
 	<pipeline><nom>affiche_droite</nom><action></action></pipeline>
 	<pipeline><nom>affiche_gauche</nom><action></action></pipeline>
 	<pipeline><nom>affiche_milieu</nom><action>f_queue_affiche_milieu</action></pipeline>
+	<pipeline><nom>affiche_pied</nom><action></action></pipeline>
 	<pipeline><nom>affiche_enfants</nom><action></action></pipeline>
 	<pipeline><nom>affiche_hierarchie</nom><action></action></pipeline>
 	<pipeline><nom>affiche_formulaire_login</nom>
@@ -287,6 +275,7 @@ Le programme est n&eacute; en 2001 d'une initiative du minir&eacute;zo, un colle
 		<action>cvtautosave_formulaire_traiter</action>
 		<inclure>inc/cvt_autosave.php</inclure>
 	</pipeline>
+	<pipeline><nom>formulaire_fond</nom><action></action></pipeline>
 	<pipeline><nom>formulaire_admin</nom><action></action></pipeline>
 	<pipeline><nom>header_prive</nom>
 		<action>f_jQuery_prive</action>

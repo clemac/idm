@@ -1,4 +1,7 @@
 <?php
+
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 # not usefull as this file is include by the engine itself
 # require_once 'engine/textwheel.php';
 
@@ -11,6 +14,7 @@ function tw_liste_close($t){
 }
 
 function tw_liste_item($t,$quoi='item'){
+	
 	global $class_spip, $class_spip_plus;
 	static $niveau;
 	static $pile_li;

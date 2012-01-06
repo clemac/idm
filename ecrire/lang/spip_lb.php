@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -227,6 +227,8 @@ Dës Prozedur ass am Detail am Installatiouns-Guide beschriwwen.<p>
 'envoi_via_le_site' => 'Via ären Site schécken',
 'erreur' => 'Fehler',
 'erreur_balise_non_fermee' => 'Läschten Tag deen nët zou ass:',
+'erreur_technique_enregistrement_champs' => 'Une erreur technique a empêché l\'enregistrement correct du champ @champs@.', # NEW
+'erreur_technique_enregistrement_impossible' => 'Une erreur technique a empêché l\'enregistrement.', # NEW
 'erreur_texte' => 'Fehler(en)',
 'etape' => 'Etape',
 
@@ -597,6 +599,7 @@ Dir kënnt do e neit Passwuert agin an Iech um Site umelden.
 'suivant' => 'Weider',
 
 // T
+'taille_go' => '@taille@ Go', # NEW
 'taille_ko' => '@taille@ kB',
 'taille_mo' => '@taille@ MB',
 'taille_octets' => '@taille@ Byte',

@@ -17,27 +17,43 @@ if (!defined('_INC_DISTANT_CONTENT_ENCODING')) define('_INC_DISTANT_CONTENT_ENCO
 if (!defined('_INC_DISTANT_USER_AGENT')) define('_INC_DISTANT_USER_AGENT', 'SPIP-' .$GLOBALS['spip_version_affichee']. " (" .$GLOBALS['home_server']. ")");
 
 //@define('_COPIE_LOCALE_MAX_SIZE',2097152); // poids (inc/utils l'a fait)
-//
-// Cree au besoin la copie locale d'un fichier distant
-// mode = 'test' - ne faire que tester
-// mode = 'auto' - charger au besoin
-// mode = 'modif' - Si deja present, ne charger que si If-Modified-Since
-// mode = 'force' - charger toujours (mettre a jour)
-//
-// Prend en argument un chemin relatif au rep racine, ou une URL
-// Renvoie un chemin relatif au rep racine, ou false
-//
-// http://doc.spip.org/@copie_locale
-function copie_locale($source, $mode='auto') {
+
+/**
+ * Cree au besoin la copie locale d'un fichier distant
+ *
+ *
+ * Prend en argument un chemin relatif au rep racine, ou une URL
+ * Renvoie un chemin relatif au rep racine, ou false
+ *
+ * http://doc.spip.org/@copie_locale
+ *
+ * @param $source
+ * @param string $mode
+ *   'test' - ne faire que tester
+ *   'auto' - charger au besoin
+ *   'modif' - Si deja present, ne charger que si If-Modified-Since
+ *   'force' - charger toujours (mettre a jour)
+ * @param string $local
+ *   permet de specifier le nom du fichier local (stockage d'un cache par exemple, et non document IMG)
+ * @return bool|string
+ */
+function copie_locale($source, $mode='auto', $local=null) {
 
 	// si c'est la protection de soi-meme
 	$reg = ',' . $GLOBALS['meta']['adresse_site']
 	  . "/?spip.php[?]action=acceder_document.*file=(.*)$,";
 
-	if (preg_match($reg, $source, $local)) return substr(_DIR_IMG,strlen(_DIR_RACINE)) . urldecode($local[1]);
+	if (preg_match($reg, $source, $m)) return substr(_DIR_IMG,strlen(_DIR_RACINE)) . urldecode($m[1]);
 
-	$local = fichier_copie_locale($source);
+	if (is_null($local))
+		$local = fichier_copie_locale($source);
+	else {
+		if (_DIR_RACINE
+		    AND strncmp(_DIR_RACINE,$local,strlen(_DIR_RACINE))==0)
+			$local = substr($local,strlen(_DIR_RACINE));
+	}
 	$localrac = _DIR_RACINE.$local;
+
 	$t = ($mode=='force') ? false  : @file_exists($localrac);
 
 	// test d'existence du fichier
@@ -448,12 +464,22 @@ function recuperer_infos_distantes($source, $max=0, $charger_si_petite_image = t
 		while (isset($mime_alias[$mime_type]))
 			$mime_type = $mime_alias[$mime_type];
 
-		// Si on a text/plain, c'est peut-etre que le serveur ne sait pas
+		// Si on a un mime-type insignifiant
+		// text/plain,application/octet-stream ou vide
+		// c'est peut-etre que le serveur ne sait pas
 		// ce qu'il sert ; on va tenter de detecter via l'extension de l'url
+		// ou le Content-Disposition: attachment; filename=...
 		$t = null;
-		if (($mime_type == 'text/plain' OR $mime_type == '')
-		AND preg_match(',\.([a-z0-9]+)(\?.*)?$,', $source, $rext)) {
-			$t = sql_fetsel("extension", "spip_types_documents", "extension=" . sql_quote($rext[1]));
+		if (in_array($mime_type,array('text/plain','','application/octet-stream'))){
+			if (!$t
+				AND preg_match(',\.([a-z0-9]+)(\?.*)?$,i', $source, $rext)) {
+				$t = sql_fetsel("extension", "spip_types_documents", "extension=" . sql_quote($rext[1]));
+			}
+			if (!$t
+				  AND preg_match(",^Content-Disposition:\s*attachment;\s*filename=(.*)$,Uims",$headers,$m)
+					AND preg_match(',\.([a-z0-9]+)(\?.*)?$,i', $m[1], $rext)){
+				$t = sql_fetsel("extension", "spip_types_documents", "extension=" . sql_quote($rext[1]));
+			}
 		}
 
 		// Autre mime/type (ou text/plain avec fichier d'extension inconnue)
@@ -464,7 +490,7 @@ function recuperer_infos_distantes($source, $max=0, $charger_si_petite_image = t
 		// On essaie de nouveau avec l'extension
 		if (!$t
 		AND $mime_type != 'text/plain'
-		AND preg_match(',\.([a-z0-9]+)(\?.*)?$,', $source, $rext)) {
+		AND preg_match(',\.([a-z0-9]+)(\?.*)?$,i', $source, $rext)) {
 			$t = sql_fetsel("extension", "spip_types_documents", "extension=" . sql_quote($rext[1]));
 		}
 

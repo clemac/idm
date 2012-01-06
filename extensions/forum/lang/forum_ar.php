@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -45,23 +45,23 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'forum_cliquer_retour' => 'انقر <a href=\'@retour_forum@\'>هنا</a> للمتابعة.',
 	'forum_forum' => 'منتدى',
 	'forum_info_modere' => 'هذا المنتدى مراقب استباقياً: لن تظهر مشاركتك إلا بعد التصديق عليها من قبل أحد مديري الموقع.',
-	'forum_lien_hyper' => '<b>وصلة هايبرتكست</b>  (اختيارية)', # MODIF
-	'forum_message' => 'Votre message', # NEW
+	'forum_lien_hyper' => 'رابط هايبرتكست',
+	'forum_message' => 'مشاركتك',
 	'forum_message_definitif' => 'مشاركة نهائية: إرسال إلى الموقع',
 	'forum_message_trop_long' => 'مشاركتك طويلة جداً. لا يجب أن تتعدى الحد الأقصى 20000 حرف.',
 	'forum_ne_repondez_pas' => 'لا ترد على هذه الرسالة بل في المنتدى على العنوان التالي:',
 	'forum_page_url' => '(إذا كانت مشاركتك تشير إلى مقال منشور على النسيج أو صفحة توفر المزيد من المعلومات، الرجاء إدخال اسم هذه الصفحة وعنوانها أدناه).',
-	'forum_permalink' => 'Lien permanent vers le commentaire', # NEW
+	'forum_permalink' => 'رابط دائم الى التعليق',
 	'forum_poste_par' => 'مشاركة مرسلة@parauteur@ تعقيباً على المقال «@titre@».',
-	'forum_qui_etes_vous' => '<b>من أنت؟</b>  (اختياري)', # MODIF
-	'forum_saisie_texte_info' => 'Ce formulaire accepte les raccourcis SPIP <code>[-&gt;url] {{gras}} {italique} &lt;quote&gt; &lt;code&gt;</code> et le code HTML <code>&lt;q&gt; &lt;del&gt; &lt;ins&gt;</code>. Pour créer des paragraphes, laissez simplement des lignes vides.', # NEW
-	'forum_texte' => 'نص المشاركة:', # MODIF
-	'forum_titre' => 'الموضوع:', # MODIF
-	'forum_url' => 'عنوان URL:', # MODIF
+	'forum_qui_etes_vous' => 'من أنت؟',
+	'forum_saisie_texte_info' => 'تدعم هذه الاستمارة اختصارات SPIP <code>[-&gt;url] {{أسود}} {مائل} &lt;quote&gt; &lt;code&gt;</code> وعلامات HTML <code>&lt;q&gt; &lt;del&gt; &lt;ins&gt;</code>. لإنشاء فقرات أترك اسطر فارغة.',
+	'forum_texte' => 'نص المشاركة',
+	'forum_titre' => 'الموضوع',
+	'forum_url' => 'موقعك',
 	'forum_valider' => 'التصديق على هذا الخيار',
-	'forum_voir_avant' => 'معاينة هذه المشاركة قبل إرسالها', # MODIF
-	'forum_votre_email' => 'عنوانك الإلكتروني:', # MODIF
-	'forum_votre_nom' => 'اسمك (أو لقبك):', # MODIF
+	'forum_voir_avant' => 'معاينة',
+	'forum_votre_email' => 'عنوانك الإلكتروني',
+	'forum_votre_nom' => 'اسمك',
 	'forum_vous_enregistrer' => 'قبل الاشتراك في
   هذا المنتدى، يجب أن تسجل نفسك. الرجاء
   إدخال أدناه المعرّف الشخصي الذي
@@ -82,7 +82,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_valider_repondre_message' => 'التصديق على هذه المشاركة والرد عليها',
 	'info_1_message_forum' => 'مشاركة منتدى واحدة',
 	'info_activer_forum_public' => 'لتفعيل المنتديات العامة، الرجاء إختيار وضعية
-المراقبة الافتراضية:',
+المراقبة الافتراضية:', # MODIF
 	'info_appliquer_choix_moderation' => 'تطبيق خيار المراقبة هذا:',
 	'info_config_forums_prive' => 'في المجال الخاص، يمكنك تفعيل عدة انواع من المنتديات:',
 	'info_config_forums_prive_admin' => 'منتدى مخصص لمدراء الموقع:',
@@ -103,11 +103,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_liens_texte' => 'الرابط او الروابط الموجودة في نص المشاركة',
 	'info_liens_titre' => 'الرتبط او الروابط الموجودة في عنوان المشاركة',
 	'info_mode_fonctionnement_defaut_forum_public' => 'الوضعية الافتراضية لتشغيل المنتديات العامة',
-	'info_nb_messages_forum' => '@nb@مشركة منتدى',
+	'info_nb_messages_forum' => '@nb@ مشاركة منتدى',
 	'info_option_email' => 'عندما يبعث احد زوار الموقع بمشاركة الى المنتدى المرتبط بأحد المقالات، يمكن إعلام مؤلفي المقال بهذه المشاركة بواسطة البريد الالكتروني. عليك بتحديد استخدام هذا الخيار ام لا لكل نوع من المنتديات.',
 	'info_pas_de_forum' => 'بدون منتديات',
-	'info_question_visiteur_ajout_document_forum' => 'اذا اردت السماح للزوار بإرفاق مستندات (صور، اصوات،...) بمشاركاتهم في المنتدى، حدد هنا لائحة لواحق المستندات المسموح بها في المنتديات (مثلاً: gif او jpg او png او mp3).',
-	'info_question_visiteur_ajout_document_forum_format' => 'اذا اردت السماح بكل انواع المستندات التي يعتبرها SPIP آمنة، ضع نجمة (*).اما اذا اردت عدم السماح بأي نوع، فلا تصع أي شيء.',
+	'info_question_visiteur_ajout_document_forum' => 'اذا اردت السماح للزوار بإرفاق مستندات (صور، اصوات،...) بمشاركاتهم في المنتدى، حدد هنا لائحة لواحق المستندات المسموح بها في المنتديات (مثلاً: gif او jpg او png او mp3).', # MODIF
+	'info_question_visiteur_ajout_document_forum_format' => 'اذا اردت السماح بكل انواع المستندات التي يعتبرها SPIP آمنة، ضع نجمة (*).اما اذا اردت عدم السماح بأي نوع، فلا تصع أي شيء.', # MODIF
 	'interface_formulaire' => 'واجهة الاستمارة',
 	'interface_onglets' => 'واجهة مقسّمة',
 	'item_activer_forum_administrateur' => 'تفعيل منتدى المدراء',
@@ -120,9 +120,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// L
 	'lien_reponse_article' => 'الرد على المقال',
 	'lien_reponse_breve_2' => 'الرد على الخبر',
-	'lien_reponse_message' => 'Réponse au message', # NEW
+	'lien_reponse_message' => 'الرد على المشاركة',
 	'lien_reponse_rubrique' => 'الرد على القسم',
-	'lien_reponse_site_reference' => 'الرد على الموقع المبوب:', # MODIF
+	'lien_reponse_site_reference' => 'الرد على الموقع المبوب',
 
 	// M
 	'messages_aucun' => 'غير موجود',

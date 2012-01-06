@@ -30,7 +30,7 @@ function formulaires_sauvegarder_charger_dist(){
 		'_dir_dump'=>joli_repertoire($dir_dump),
 		'_dir_img'=>joli_repertoire(_DIR_IMG),
 		'_spipnet' => $GLOBALS['home_server'] . '/' .  $GLOBALS['spip_lang'] . '_article1489.html',
-		'nom_sauvegarde' => dump_nom_fichier($dir_dump),
+		'nom_sauvegarde' => basename(dump_nom_fichier($dir_dump,'sqlite'),'.sqlite'),
 		'tout_sauvegarder' => (_request('nom_sauvegarde') AND !_request('tout_sauvegarder'))?'':'oui',
 		'_tables' => "<ol class='spip'><li class='choix'>\n" . join("</li>\n<li class='choix'>",
 		  base_saisie_tables('tables', $tables, $exclude, _request('nom_sauvegarde')?(_request('tables')?_request('tables'):array()):null)
@@ -42,7 +42,7 @@ function formulaires_sauvegarder_charger_dist(){
 
 /**
  * Verifier
- * @return <type>
+ * @return array
  */
 function formulaires_sauvegarder_verifier_dist() {
 	$erreurs = array();
@@ -57,6 +57,7 @@ function formulaires_sauvegarder_verifier_dist() {
 
 /**
  * Traiter
+ * @return array
  */
 function formulaires_sauvegarder_traiter_dist() {
 	$status_file = base_dump_meta_name(0);

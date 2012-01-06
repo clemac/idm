@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_forum_petition' => 'DIỄN ĐÀN &amp; THỈNH NGUYỆN THƯ', # MODIF
+	'bouton_forum_petition' => 'DIỄN ĐÀN & THỈNH NGUYỆN THƯ', # MODIF
 	'bouton_radio_sauvegarde_compressee' => 'lưu trữ lại dưới dạng nén trong
 @fichier@', # MODIF
 	'bouton_radio_sauvegarde_non_compressee' => 'lưu trữ lại dưới dạng thường trong
@@ -44,7 +44,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_sauvegarde_auteurs' => 'Dự trữ các tác giả',
 	'info_sauvegarde_breves' => 'Dự trữ các tin ngắn',
 	'info_sauvegarde_documents' => 'Dự trữ tài liệu',
-	'info_sauvegarde_echouee' => 'Nếu dự trữ thất bại (&laquo;quá tối đa thời gian thực hiện&raquo;),',
+	'info_sauvegarde_echouee' => 'Nếu dự trữ thất bại («quá tối đa thời gian thực hiện»),',
 	'info_sauvegarde_forums' => 'Dự trữ các diễn đàn',
 	'info_sauvegarde_groupe_mots' => 'Dự trữ nhóm từ then chốt',
 	'info_sauvegarde_messages' => 'Dự trữ nhắn tin',

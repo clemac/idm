@@ -15,7 +15,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'les visiteurs du site public lorsqu\'ils postent un message dans un forum.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé',
+	'creer_et_associer_un_mot' => 'Créer et associer un mot-clé',
 
 	// I
 	'icone_creation_groupe_mots' => 'Créer un nouveau groupe de mots',
@@ -76,9 +76,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'Nouveau mot',
 	'titre_config_groupe_mots_cles' => 'Configuration des groupes de mots-clés',
 	'titre_gauche_mots_edit' => 'MOT NUMÉRO :',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s',
+	'titre_groupe_mots' => 'Groupe de mots-clés',
 	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :',
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s',
+	'titre_groupes_mots' => 'Groupes de mots-clés',
 	'titre_mots_cles_dans_forum' => 'Mots-clés dans les forums du site public',
 	'titre_mots_tous' => 'Les mots-clés',
 	'titre_nouveau_groupe' => 'Nouveau groupe',

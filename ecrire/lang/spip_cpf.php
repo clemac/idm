@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -57,7 +57,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'barre_euro' => 'Mèt lo sinbol €',
 'barre_gras' => 'Pou ékri {{an gro}}',
 'barre_guillemets' => 'Pou mèt bann « giymé fransé »',
-'barre_guillemets_simples' => 'Pou m&egrave; bann „giym&eacute;“',
+'barre_guillemets_simples' => 'Pou mè bann „giymé“',
 'barre_intertitre' => 'Mèt sa-la kom in {{{lintèrtitr}}}',
 'barre_italic' => 'Mèt sa-la an {litalik}',
 'barre_lien' => 'Mèt sa-la kom in [gatir wèb->http://...]',
@@ -237,6 +237,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'envoi_via_le_site' => 'Envwa samn lo sit',
 'erreur' => 'Kanard',
 'erreur_balise_non_fermee' => 'dernyé baliz lé pa fermé :',
+'erreur_technique_enregistrement_champs' => 'Une erreur technique a empêché l\'enregistrement correct du champ @champs@.', # NEW
+'erreur_technique_enregistrement_impossible' => 'Une erreur technique a empêché l\'enregistrement.', # NEW
 'erreur_texte' => 'kanard(s)',
 'etape' => 'Étape', # NEW
 
@@ -614,6 +616,7 @@ Aprésa, ou i poura mèt in nouvo modpas
 'suivant' => 'dèryèr',
 
 // T
+'taille_go' => '@taille@ Go', # NEW
 'taille_ko' => '@taille@ ko',
 'taille_mo' => '@taille@ Mo',
 'taille_octets' => '@taille@  bann zokté',

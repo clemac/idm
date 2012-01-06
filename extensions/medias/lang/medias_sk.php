@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -135,9 +135,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'media_file' => 'Ostatné',
 	'media_image' => 'Obrázky',
 	'media_video' => 'Videá',
+	'miniature_automatique_active' => 'SPIP automaticky vytvorí miniatúru obrázka',
 
 	// N
-	'nb_documents_attache_succes' => '@nb@ documents ont bien &eacute;t&eacute; ajout&eacute;s', # NEW
+	'nb_documents_attache_succes' => '@nb@ dokumentov bolo pridaných',
 	'nb_documents_installe_succes' => '@nb@ súborov sa úspešne nahralo',
 
 	// O

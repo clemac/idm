@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -38,7 +38,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'forum_attention_dix_caracteres' => '<b>警告 !</b> あなたのメッセージは長さが１０文字以下です。',
 	'forum_attention_message_non_poste' => 'Attention, vous n\'avez pas posté votre message !', # NEW
 	'forum_attention_trois_caracteres' => '<b>警告 !</b> あなたの題名は長さが３文字以下です。',
-	'forum_attention_trop_caracteres' => '<b>‚&sup2;’ˆ&Oacute;&nbsp;!</b> ‚&plusmn;‚&Igrave;ƒƒbƒZ[ƒW‚&Iacute;’&middot;‰&szlig;‚&not;‚&Uuml;‚&middot;i@compte@ •&para;&#381;&#353;jBƒƒbƒZ[ƒW‚&eth;&#147;o˜&nbsp;‚&middot;‚&eacute;‚&frac12;‚&szlig;‚&Eacute;@max@•&para;&#381;&#353;ˆ&Egrave;‰&ordm;‚&Eacute;‚&micro;‚&Auml;‰&ordm;‚&sup3;‚&cent;B',
+	'forum_attention_trop_caracteres' => '<b>‚²’ˆÓ !</b> ‚±‚ÌƒƒbƒZ[ƒW‚Í’·‰ß‚¬‚Ü‚·i@compte@ •¶ŽšjBƒƒbƒZ[ƒW‚ðo˜ ‚·‚é‚½‚ß‚É@max@•¶ŽšˆÈ‰º‚É‚µ‚Ä‰º‚³‚¢B',
 	'forum_avez_selectionne' => 'あなたの選択:',
 	'forum_cliquer_retour' => '<a href=\'@retour_forum@\'>ここ</a> を押して続けて下さい。',
 	'forum_forum' => '掲示板',
@@ -75,9 +75,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_messages' => 'Supprimer ces messages', # NEW
 	'icone_valider_message' => 'このメッセージを確認',
 	'icone_valider_messages' => 'Valider ces messages', # NEW
-	'icone_valider_repondre_message' => 'Valider &amp; Répondre à ce message', # NEW
+	'icone_valider_repondre_message' => 'Valider & Répondre à ce message', # NEW
 	'info_1_message_forum' => '1 message de forum', # NEW
-	'info_activer_forum_public' => '<i>公開掲示板を利用可能にするため、それらの検査方法の標準を選択して下さい:</i>',
+	'info_activer_forum_public' => '<i>公開掲示板を利用可能にするため、それらの検査方法の標準を選択して下さい:</i>', # MODIF
 	'info_appliquer_choix_moderation' => 'この検査方法を使う:',
 	'info_config_forums_prive' => 'Dans l’espace privé du site, vous pouvez activer plusieurs types de forums :', # NEW
 	'info_config_forums_prive_admin' => 'Un forum réservé aux administrateurs du site :', # NEW
@@ -99,8 +99,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_nb_messages_forum' => '@nb@ messages de forum', # NEW
 	'info_option_email' => 'サイトの訪問者が、記事に関連している掲示板にメッセージを投稿した時、記事の著者たちにe-mailによってこのメッセージを通知できます。あなたはこのオプションを使いたいですか ？', # MODIF
 	'info_pas_de_forum' => '掲示板無し',
-	'info_question_visiteur_ajout_document_forum' => 'Si vous souhaitez autoriser les visiteurs à joindre des documents (images, sons...) à leurs messages de forum, indiquer ci-dessous la liste des extensions de documents autorisés pour les forums (ex: gif, jpg, png, mp3).', # NEW
-	'info_question_visiteur_ajout_document_forum_format' => 'Si vous souhaitez autoriser tous les types de documents considérés comme fiables par SPIP, mettre une étoile. Pour ne rien autoriser, ne rien indiquer.', # NEW
+	'info_question_visiteur_ajout_document_forum' => 'Si vous souhaitez autoriser les visiteurs à joindre des documents (images, sons...) à leurs messages de forum, indiquez ci-dessous la liste des extensions de documents autorisés pour les forums (ex: gif, jpg, png, mp3).', # NEW
+	'info_question_visiteur_ajout_document_forum_format' => 'Si vous souhaitez autoriser tous les types de documents considérés comme fiables par SPIP, mettez une étoile. Pour ne rien autoriser, n\'indiquez rien.', # NEW
 	'interface_formulaire' => 'Interface formulaire', # NEW
 	'interface_onglets' => 'Interface avec onglets', # NEW
 	'item_activer_forum_administrateur' => '管理者用の掲示板を作る',
@@ -152,7 +152,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'text_article_propose_publication_forum' => 'N\'hésitez pas à donner votre avis grâce au forum attaché à cet article (en bas de page).', # NEW
 	'texte_en_cours_validation' => 'Les articles, brèves, forums ci dessous sont proposés à la publication.', # NEW
 	'texte_en_cours_validation_forum' => 'N\'hésitez pas à donner votre avis grâce aux forums qui leur sont attachés.', # NEW
-	'texte_messages_publics' => 'Messages publics sur&nbsp;:', # NEW
+	'texte_messages_publics' => 'Messages publics sur :', # NEW
 	'titre_cadre_forum_administrateur' => '管理者のプライベートな掲示板',
 	'titre_cadre_forum_interne' => '関係者用の掲示板',
 	'titre_config_forums_prive' => 'Forums de l’espace privé', # NEW

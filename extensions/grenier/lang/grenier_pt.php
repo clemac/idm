@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_forum_petition' => 'FÓRUM &amp; ABAIXO-ASSINADO', # MODIF
+	'bouton_forum_petition' => 'FÓRUM & ABAIXO-ASSINADO', # MODIF
 	'bouton_radio_sauvegarde_compressee' => 'Salvaguarda comprimida como @fichier@', # MODIF
 	'bouton_radio_sauvegarde_non_compressee' => 'salvaguarda não comprimida como   @fichier@', # MODIF
 

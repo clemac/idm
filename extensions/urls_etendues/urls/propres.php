@@ -50,13 +50,13 @@ if (!defined('_debut_urls_propres')) define ('_debut_urls_propres', '');
 $config_urls_propres = isset($GLOBALS['meta']['urls_propres'])?unserialize($GLOBALS['meta']['urls_propres']):array();
 // pour choisir le caractere de separation titre-id en cas de doublon
 // (ne pas utiliser '/')
-define ('_url_propres_sep_id',',');
 if (!defined('_url_propres_sep_id')) define('_url_propres_sep_id',isset($config_urls_propres['url_propres_sep_id'])?$config_urls_propres['url_propres_sep_id']:'-');
 // option pour tout passer en minuscules
 if (!defined('_url_minuscules')) define('_url_minuscules',isset($config_urls_propres['url_minuscules'])?$config_urls_propres['url_minuscules']:0);
 if (!defined('_URLS_PROPRES_MAX')) define('_URLS_PROPRES_MAX', isset($config_urls_propres['URLS_PROPRES_MAX'])?$config_urls_propres['URLS_PROPRES_MAX']:35);
 if (!defined('_URLS_PROPRES_MIN')) define('_URLS_PROPRES_MIN', isset($config_urls_propres['URLS_PROPRES_MIN'])?$config_urls_propres['URLS_PROPRES_MIN']:3);
 
+if (!defined('_url_sep_id')) define('_url_sep_id',_url_propres_sep_id);
 
 // Ces chaines servaient de marqueurs a l'epoque ou les URL propres devaient
 // indiquer la table ou les chercher (articles, auteurs etc),
@@ -325,11 +325,11 @@ function urls_propres_dist($i, $entite, $args='', $ancre='') {
 
 	// Compatibilite avec les anciens marqueurs d'URL propres
 	// Tester l'entree telle quelle (avec 'url_libre' des sites ont pu avoir des entrees avec marqueurs dans la table spip_urls)
-	if (!$row = sql_fetsel('id_objet, type, date', 'spip_urls', 'url='.sql_quote($url_propre))) {
+	if (!$row = sql_fetsel('id_objet, type, date, url', 'spip_urls', 'url='.sql_quote($url_propre))) {
 		// Sinon enlever les marqueurs eventuels
 		$url_propre2 = retirer_marqueurs_url_propre($url_propre);
 
-		$row = sql_fetsel('id_objet, type, date', 'spip_urls', 'url='.sql_quote($url_propre2));
+		$row = sql_fetsel('id_objet, type, date, url', 'spip_urls', 'url='.sql_quote($url_propre2));
 	}
 
 	if ($row) {
@@ -341,7 +341,8 @@ function urls_propres_dist($i, $entite, $args='', $ancre='') {
 		// Si l'url est vieux, donner le nouveau
 		if ($recent = sql_fetsel('url, date', 'spip_urls',
 		'type='.sql_quote($row['type']).' AND id_objet='.sql_quote($row['id_objet'])
-		.' AND date>'.sql_quote($row['date']), '', 'date DESC', 1)) {
+		.' AND date>'.sql_quote($row['date'])
+		.' AND url<>'.sql_quote($row['url']), '', 'date DESC', 1)) {
 			// Mode compatibilite pour conserver la distinction -Rubrique-
 			if (_MARQUEUR_URL) {
 				$marqueur = unserialize(_MARQUEUR_URL);

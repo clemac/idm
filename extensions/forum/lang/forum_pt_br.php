@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -71,9 +71,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_messages' => 'Supprimer ces messages', # NEW
 	'icone_valider_message' => 'Validar esta mensagem',
 	'icone_valider_messages' => 'Valider ces messages', # NEW
-	'icone_valider_repondre_message' => 'Valider &amp; Répondre à ce message', # NEW
+	'icone_valider_repondre_message' => 'Valider & Répondre à ce message', # NEW
 	'info_1_message_forum' => '1 message de forum', # NEW
-	'info_activer_forum_public' => '<i>Para ativar os fóruns públicos, por favor, escolha o modo padrão de moderação:</i>',
+	'info_activer_forum_public' => '<i>Para ativar os fóruns públicos, por favor, escolha o modo padrão de moderação:</i>', # MODIF
 	'info_appliquer_choix_moderation' => 'Atribuir esta escolha de moderação:',
 	'info_config_forums_prive' => 'Na área restrita do site, você pode ativar diversos tipos de fóruns:',
 	'info_config_forums_prive_admin' => 'Um fórum reservado aos administradores do site:',
@@ -95,8 +95,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_nb_messages_forum' => '@nb@ messages de forum', # NEW
 	'info_option_email' => 'Sempre que um visitante postar uma nova mensagem no fórum associado a uma matéria, os autores da matéria podem ser avisados dessa mensagem por e-mail. Informe para cada tipo de fórum se esta oção deve ser usada.',
 	'info_pas_de_forum' => 'sem fórum',
-	'info_question_visiteur_ajout_document_forum' => 'Se você deseja autorizar os visitantes a anexarem documentos (imagens, áudios...) às suas mensagens em fóruns, indique abaixo a lista das extensões de arquivos permitidos para os fóruns (ex.: gif, jpg, png, mp3).',
-	'info_question_visiteur_ajout_document_forum_format' => 'Se você deseja permitir todos os tipos de documentos considerados como seguros pelo SPIP, digite * (asterisco). Para não permitir, deixe em branco.',
+	'info_question_visiteur_ajout_document_forum' => 'Se você deseja autorizar os visitantes a anexarem documentos (imagens, áudios...) às suas mensagens em fóruns, indique abaixo a lista das extensões de arquivos permitidos para os fóruns (ex.: gif, jpg, png, mp3).', # MODIF
+	'info_question_visiteur_ajout_document_forum_format' => 'Se você deseja permitir todos os tipos de documentos considerados como seguros pelo SPIP, digite * (asterisco). Para não permitir, deixe em branco.', # MODIF
 	'interface_formulaire' => 'Interface formulaire', # NEW
 	'interface_onglets' => 'Interface avec onglets', # NEW
 	'item_activer_forum_administrateur' => 'Ativar o fórum dos administradores',
@@ -148,7 +148,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'text_article_propose_publication_forum' => 'Não hesite a dar a sua contribuição no fórum associado a esta matéria (no pé da página).',
 	'texte_en_cours_validation' => 'Les articles, brèves, forums ci dessous sont proposés à la publication.', # NEW
 	'texte_en_cours_validation_forum' => 'Não hesite a dar a sua opinião sobre as mesmas nos fóruns a elas associados.',
-	'texte_messages_publics' => 'Messages publics sur&nbsp;:', # NEW
+	'texte_messages_publics' => 'Messages publics sur :', # NEW
 	'titre_cadre_forum_administrateur' => 'Fórum privado dos administradores',
 	'titre_cadre_forum_interne' => 'Fórum interno',
 	'titre_config_forums_prive' => 'Fóruns da área privada',

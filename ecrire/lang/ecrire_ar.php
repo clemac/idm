@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -301,7 +301,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => 'من أصل @liste@ مقال',
 'info_code_acces' => 'لا تنسى بيانات الدخول الخاصة بك!',
 'info_compatibilite_html' => 'مقاييس HTML التي يجب اتباعها',
-'info_compresseur_gzip' => '<b>ملاحظة</b>: ننصح بالتأكد أولاً ما اذا كان المضيف يضغط بشكل منتظم ملفات php. للتأكد، يمكنك مثلاًاستخدام الخدمة التالية: @testgzip@',
+'info_compresseur_gzip' => 'ننصح بالتأكد أولاً ما اذا كان المضيف يضغط بشكل منتظم ملفات php. للتأكد، يمكنك مثلاًاستخدام الخدمة التالية: @testgzip@',
 'info_compresseur_texte' => 'اذا كان خادم موقعك لا يضغت صفحات html آلياً قبل ارسالها الى الزوار، يمكنك محاولة فرض هذا الضغط لتخفيض وزن الصفحات المرسلة. <b>تحذير</b>: هذا الامر قد يؤدي الى ابطاء بعض اجهزة الخدمة بشكل ملحوظ.',
 'info_config_suivi' => 'اذا كان هذا العنوان يدل الى قائمة بريدية، يمكنك ادخال العنوان حيث يقوم المشاركون في الموفع بتسجيل انفسهم، ادناه. ويمكن لهذا العنوان ان يكون عنوان URL (مثلاً صفحة التسجيل في القائمة عبر النسيج) او عنوان بريدي يحمل موضوعاً محدداً (مثلاً: <tt>@adresse_suivi@?subject=subscribe</tt>):',
 'info_config_suivi_explication' => 'يمكنك الاشتراك في القائمة البريدية في هذا الموقع. ستحصل عندها آلياً في رسالة الكترونية على اعلانات حول المقالات والاخبار المقترحة للنشر. ',
@@ -334,7 +334,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'قبل التمكن من كتابة مقالات، يجب عليك إنشاء قسم واحد على الأقل.',
 'info_email_envoi' => 'العنوان الالكتروني للارسال (اختياري)',
 'info_email_envoi_txt' => 'ادخل هنا العنوان المطلوب استخدامه لبعث الرسائل (والا، سيتم استخدام عنوان المرسل اليه كعنوان ارسال):',
-'info_email_webmestre' => 'عنوان بريد مدير الموقع (إختياري)',
+'info_email_webmestre' => 'عنوان بريد المشرف على الموقع', # MODIF
 'info_entrer_code_alphabet' => 'إدخال رمز طقم الحروف المطلوب استخدامه:',
 'info_envoi_email_automatique' => 'إرسال البريد الآلي',
 'info_envoyer_maintenant' => 'إرسال الآن',
@@ -367,7 +367,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 في مجال الموقع العام (المنتديات بالاشتراك).',
 'info_generation_miniatures_images' => 'إنشاء مصغرات الصور',
 'info_gerer_trad' => 'ادارة وصلات الترجمة',
-'info_gerer_trad_objets' => '@objets@: إدارة روابك الترجمة',
+'info_gerer_trad_objets' => '@objets@: إدارة روابط الترجمة',
 'info_hebergeur_desactiver_envoi_email' => '</i>بعض خدام المواقع يوقفون إرسال البريد الآلي
 في أجهزتهم. في هذه الحال، لا يمكن تفعيل
 وظائف SPIP التالية.<i>',
@@ -379,7 +379,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => 'تتيح متابعة التعديلات الحفاظ على وصف تاريخي لكل التعديلات التي دخلت على مادة المقال وعرض الفوارق بين الاصدارات المتتالية.',
 'info_identification_publique' => 'هويتك العمومية...',
 'info_image_process' => 'الرجاء اختيار افضل طريقة لإنشاء المصغرات بالنقر على الصورة المناسبة.',
-'info_image_process2' => '<b>ملاحظة</b> <i>اذا لم تظهر اية صورة يكون جهاز الخدمة الذي يضيف موقعك غير معدّ لاستخدام هذه الادوات. اذا رغبت في استخدام هذه الوظائف، اتصل بالمسؤول التقني واطلب تثبيت احد الملحقين «GD» او «Imagick».</i>',
+'info_image_process2' => 'اذا لم تظهر اية صورة يكون جهاز الخدمة الذي يستضيف موقعك غير معدّ لاستخدام هذه الأدوات. اذا رغبت في استخدام هذه الوظائف، اتصل بالمسؤول التقني واطلب تثبيت أحد الملحقين «GD» او «Imagick».', # MODIF
 'info_images_auto' => 'يتم حساب هذه الصور آلياً',
 'info_informations_personnelles' => 'المعلومات الشخصية',
 'info_inscription_automatique' => 'تسجيل آلي للمحررين الجدد',
@@ -488,18 +488,18 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_publies' => 'مقالاتك المنشورة',
 'info_question_accepter_visiteurs' => 'اذا كانت صفحات موقعك النموذجية تفسح المجال للزوار الذين لا يتمتعون بحق الدخول الى المجال الخاص لتسجيل انفسهم، قم بتفعيل الخيار التالي:',
 'info_question_inscription_nouveaux_redacteurs' => 'هل تسمح بتسجيل محررين جدد من
-الموقع العام؟ إذا وافقت، سيتمكن الزوار من التسجيل
+الموقع العمومي؟ إذا وافقت، سيتمكن الزوار من التسجيل
 عبر إستمارة آلية والدخول الى المجال الخاص
-لعرض مقالاتهم. <blockquote>خلال عملية التسجيل،
+لعرض مقالاتهم. <div class="notice">خلال عملية التسجيل،
 يحصل المستخدمون على رسالة آلية
 تزودهم ببيانات الدخول الى المجال الخاص. إلا ان بعض
  خدام المواقع يعطلون إرسال البريد الآلي في
 أجهزتهم: في هذه الحال، لا يمكن تفعيل
-التسجيل الآلي.</blockquote>',
+التسجيل الآلي.</div>', # MODIF
 'info_question_utilisation_moteur_recherche' => 'هل ترغب في استخدام محرك البحث المدمج في SPIP؟
 (ايقافه يسرّع أداء النظام)',
 'info_question_vignettes_referer_non' => 'عدم عرض مصغرات عن مواقع مصدر الزيارات',
-'info_qui_edite' => '@nom_auteur_modif@ عمل على هذا المحتوى منذ @date_diff@ دقيقة ',
+'info_qui_edite' => '@nom_auteur_modif@ عمل على هذا المحتوى منذ @date_diff@ دقيقة ', # MODIF
 'info_racine_site' => 'أصل الموقع',
 'info_recharger_page' => 'الرجاء إعادة تحميل الصفحة بعد لحظات.',
 'info_recherche_auteur_a_affiner' => 'تم العثور على عدد كبير جداً من النتائج لـ "@cherche_auteur@" ، الرجاء زيادة دقة البحث.',
@@ -511,8 +511,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_redacteurs' => 'محررون',
 'info_redaction_en_cours' => 'قيد التحرير',
 'info_redirection' => 'إعادة توجيه',
-'info_redirection_activee' => 'La redirection est activée.', # NEW
-'info_redirection_desactivee' => 'La redirection a été supprimée.', # NEW
+'info_redirection_activee' => 'تم تفعيل إعادة التحويل.',
+'info_redirection_desactivee' => 'تم حذف إعادة التحويل.',
 'info_refuses' => 'مقالاتك المرفوضة',
 'info_reglage_ldap' => 'خيارات: <b>ضبط جلب LDAP </b>',
 'info_renvoi_article' => '<b>إعادة توجيه.</b> هذا المقال يحيل الى الصفحة: ',
@@ -766,6 +766,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugin_titre_automatique' => 'تثبيت آلي',
 'plugin_titre_automatique_ajouter' => 'إضافة ملحقات',
 'plugin_titre_installation' => 'تثبيت الملحق @plugin@',
+'plugin_titre_modifier' => 'ملحقاتي',
 'plugin_zip_active' => 'تابع للتفعيل',
 'plugin_zip_adresse' => 'ادخل ادناه عنوان ملف zip لملحق مطلوب تحميله او عنوان لائحة ملاحق.',
 'plugin_zip_adresse_champ' => 'عنوان الملحق او اللائحة ',
@@ -777,7 +778,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_actif_aucun' => 'لا يوجد ملحقات نشطة',
 'plugins_actif_un' => 'ملحق واحد نشط.',
 'plugins_actifs' => '@count@ ملحق ناشط.',
-'plugins_actifs_liste' => 'الملحقات النشطة',
+'plugins_actifs_liste' => 'النشطة',
 'plugins_compte' => '@count@ ملحق',
 'plugins_disponible_un' => 'ملحق واحد متاح.',
 'plugins_disponibles' => '@count@ ملحق متوافر.',
@@ -785,6 +786,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_liste' => 'لائحة الملحقات',
 'plugins_liste_extensions' => 'الإضافات',
 'plugins_recents' => 'أحدث الملحقات.',
+'plugins_tous_liste' => 'الكل',
 'plugins_vue_hierarchie' => 'الهرمية',
 'plugins_vue_liste' => 'لائحة',
 'protocole_ldap' => 'إصدار البروتوكول:',

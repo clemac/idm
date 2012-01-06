@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'popularita: @popularite@, návštev: @visites@',
 	'info_popularite_5' => 'popularita:',
 	'info_previsions' => 'predpovede:',
-	'info_question_gerer_statistiques' => 'Chcete mať na vašej stránke štatistiku?',
 	'info_question_vignettes_referer' => 'Keď sa pozriete do štatistiky, uvidíte ukážku každej stránky, z ktorej prišiel nejaký návštevník. ',
 	'info_question_vignettes_referer_oui' => 'Zobraziť obrázky odkazujúcich stránok',
 	'info_restauration_sauvegarde_insert' => 'Vloženie archívu @archive@ do databázy',
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'Návštev:',
 	'info_visites_plus_populaires' => 'Zobraziť návštevy <b>najčítanejších</b> a <b>najnovších publikovaných článkov:</b>',
 	'info_zoom' => 'lupa',
-	'item_gerer_statistiques' => 'Riadiť štatistiky',
+	'item_gerer_statistiques' => 'Riadiť štatistiky návštev',
 
 	// O
 	'onglet_origine_visites' => 'Pôvod návštev',

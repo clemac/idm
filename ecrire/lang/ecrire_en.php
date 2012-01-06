@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -28,18 +28,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'avis_deplacement_rubrique' => 'Warning! This section contains @contient_breves@ news item@scb@: if you move it, please check this box to confirm.',
 'avis_destinataire_obligatoire' => 'To send a message, you must select a recipient.',
 'avis_erreur_connexion_mysql' => 'SQL connection error',
-'avis_erreur_version_archive' => '<b>Warning! The file @archive@ was created by
-    a version of SPIP other than the one you have
-    installed.</b> You are likely to encounter
-    serious problems, including destroying your database,
-    or serious site malfunctions. Do not
-    submit this import request.<p>For more
-    information, please see <a href="@spipnet@">
-                                the SPIP documentation</a>.</p>',
+'avis_erreur_version_archive' => '<b>Warning! The file @archive@ was created by a version of SPIP other than the one you have installed.</b>
+You are likely to encounter serious problems, including destroying your database, or serious site malfunctions.
+Do not submit this import request.<p>For more information, please see <a href="@spipnet@">the SPIP documentation</a>.</p>',
 'avis_espace_interdit' => '<b>Forbidden area</b><div>SPIP is already installed.</div>',
 'avis_lecture_noms_bases_1' => 'The installer could not read the names of any databases already installed.',
-'avis_lecture_noms_bases_2' => 'Either no database is available, or the option for listing databases was disabled
-  for security reasons (which is the case with a lot of hosting services).',
+'avis_lecture_noms_bases_2' => 'Either no database is available, or the option for listing databases was disabled for security reasons (which is the case with a lot of hosting services).',
 'avis_lecture_noms_bases_3' => 'In the second case, it is possible that a database named after your login would be usable:',
 'avis_non_acces_message' => 'You do not have access to this message.',
 'avis_non_acces_page' => 'You do not have access to this page.',
@@ -50,7 +44,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'avis_version_mysql' => 'Your version of SQL (@version_mysql@) does not allow autorepair of the database tables.',
 
 // B
-'bouton_acces_ldap' => 'Add LDAP access >>',
+'bouton_acces_ldap' => 'Add LDAP access',
 'bouton_ajouter' => 'Add',
 'bouton_ajouter_participant' => 'ADD A PARTICIPANT:',
 'bouton_annonce' => 'ANNOUNCEMENT',
@@ -138,7 +132,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'entree_informations_connexion_ldap' => 'Please fill this form with the LDAP connection information provided by your system or network administrator.',
 'entree_infos_perso' => 'Who are you?',
 'entree_infos_perso_2' => 'Who is the author?',
-'entree_interieur_rubrique' => 'In section:',
+'entree_interieur_rubrique' => 'In the section:',
 'entree_liens_sites' => '<b>Hyperlink</b> (reference, site to visit etc.)',
 'entree_login' => 'Your login',
 'entree_login_connexion_1' => 'Connection login',
@@ -152,7 +146,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'entree_nom_pseudo_1' => '(Your name or alias)',
 'entree_nom_pseudo_2' => 'Name or alias',
 'entree_nom_site' => 'Name of your site',
-'entree_nom_site_2' => 'Author\'s site name',
+'entree_nom_site_2' => 'Name of the author\'s site',
 'entree_nouveau_passe' => 'New password',
 'entree_passe_ldap' => 'Password',
 'entree_port_annuaire' => 'Port number of the directory',
@@ -162,7 +156,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'entree_url_2' => 'Site URL',
 'erreur_connect_deja_existant' => 'There is already a server with that name ',
 'erreur_nom_connect_incorrect' => 'Server name not allowed',
-'erreur_plugin_desinstalation_echouee' => 'The plugin uninstallation failed. However, you may deactivate it.',
+'erreur_plugin_desinstalation_echouee' => 'Uninstallation of the plugin failed. However, you may deactivate it.',
 'erreur_plugin_fichier_absent' => 'File missing',
 'erreur_plugin_fichier_def_absent' => 'Definition file missing',
 'erreur_plugin_nom_fonction_interdit' => 'Prohibited function name',
@@ -332,7 +326,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'Before writing any articles, you must create at least one section.',
 'info_email_envoi' => 'Sender\'s email address (optional)',
 'info_email_envoi_txt' => 'Enter the sender\'s email address used for sending emails (by default, the recipient\'s address is used as the sender\'s address) :',
-'info_email_webmestre' => 'Webmaster\'s email address (optional)',
+'info_email_webmestre' => 'Webmaster\'s email address',
 'info_entrer_code_alphabet' => 'Enter the code of the character set to be used:',
 'info_envoi_email_automatique' => 'Automated mailing',
 'info_envoyer_maintenant' => 'Send now',
@@ -375,7 +369,7 @@ via FTP.</p>',
 'info_historique_texte' => 'Revision tracking allows you to view changes  made to an article and displays the differences between successive versions.',
 'info_identification_publique' => 'Your public identity...',
 'info_image_process' => 'Select the best method to create thumbnails by clicking on the corresponding picture.',
-'info_image_process2' => '<b>N.B.</b> <i>If you can\'t see any images, then your server is not configured to use such tools. If you want to use these features, contact your provider\'s technical support and ask for the «GD» or «Imagick» extensions to be installed.</i>',
+'info_image_process2' => 'If you can\'t see any images, then your server is not configured to use such tools. If you want to use these features, contact your provider\'s technical support and ask for the «GD» or «Imagick» extensions to be installed.',
 'info_images_auto' => 'Images calculated automatically',
 'info_informations_personnelles' => 'Personal information',
 'info_inscription_automatique' => 'Automatic registration for new editors',
@@ -486,16 +480,15 @@ via FTP.</p>',
 'info_question_inscription_nouveaux_redacteurs' => 'Do you wish to allow new editors to register
  via the public site? If you agree to this, visitors will be able to  register
   using an automatic form, and then access the private area to
-  write their own articles. <blockquote><i>During the registration process,
-  users receive an automatic email
+  write their own articles. <div class="notice">During the registration process, users receive an automatic email
   giving them their access code for the private area. Some
   service providers disallow the sending of email from their
   servers: in that case, automated registration cannot be
-  implemented.</i></blockquote>',
+  implemented.</div>',
 'info_question_utilisation_moteur_recherche' => 'Do you wish to use SPIP\'s integrated search engine?
  (Disabling it speeds up system performance.)',
 'info_question_vignettes_referer_non' => 'Do not show screenshots of referring sites',
-'info_qui_edite' => '@nom_auteur_modif@ worked on the contents @date_diff@ minutes ago',
+'info_qui_edite' => '@nom_auteur_modif@ worked on the contents @date_diff@ minutes ago', # MODIF
 'info_racine_site' => 'Site root',
 'info_recharger_page' => 'Please wait a few moments, then reload this page.',
 'info_recherche_auteur_a_affiner' => 'Too many results for "@cherche_auteur@"; please refine your search.',
@@ -507,8 +500,8 @@ via FTP.</p>',
 'info_redacteurs' => 'Editors',
 'info_redaction_en_cours' => 'EDITING IN PROGRESS',
 'info_redirection' => 'Redirection',
-'info_redirection_activee' => 'La redirection est activée.', # NEW
-'info_redirection_desactivee' => 'La redirection a été supprimée.', # NEW
+'info_redirection_activee' => 'Redirection is enabled.',
+'info_redirection_desactivee' => 'Redirection is deleted.',
 'info_refuses' => 'Your rejected articles ',
 'info_reglage_ldap' => 'Options: <b>Adjusting LDAP import</b>',
 'info_renvoi_article' => '<b>Redirection.</b> This article redirects to:',
@@ -762,6 +755,7 @@ and their status is colour-coded:',
 'plugin_titre_automatique' => 'Automatic installation',
 'plugin_titre_automatique_ajouter' => 'Add plugins',
 'plugin_titre_installation' => 'Installation of the @plugin@ plugin',
+'plugin_titre_modifier' => 'My plugins',
 'plugin_zip_active' => 'Continue in order to activate',
 'plugin_zip_adresse' => 'To load a zipped plugin file, or a list of plugins, enter the path below.',
 'plugin_zip_adresse_champ' => 'Path of the plugin or list ',
@@ -773,7 +767,7 @@ and their status is colour-coded:',
 'plugins_actif_aucun' => 'No plugins active.',
 'plugins_actif_un' => 'One plugin active',
 'plugins_actifs' => '@count@ active plugins.',
-'plugins_actifs_liste' => 'Active plugins',
+'plugins_actifs_liste' => 'Enabled',
 'plugins_compte' => '@count@ plugins',
 'plugins_disponible_un' => 'One plugin available',
 'plugins_disponibles' => '@count@ plugins available.',
@@ -781,6 +775,7 @@ and their status is colour-coded:',
 'plugins_liste' => 'List of plugins',
 'plugins_liste_extensions' => 'Extensions',
 'plugins_recents' => 'Recent plugins',
+'plugins_tous_liste' => 'All',
 'plugins_vue_hierarchie' => 'Hierarchy',
 'plugins_vue_liste' => 'List',
 'protocole_ldap' => 'Protocol version:',

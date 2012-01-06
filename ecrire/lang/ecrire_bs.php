@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -287,7 +287,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => '<sup>e</sup> iz @liste@',
 'info_code_acces' => 'Ne zaboravite vas kod za pristup!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'Ako ova adresa odgovara mailing listi, ispod mozete naznaciti adresu na koju se ucesnici mogu registrovati. Ta adresa moze biti URL (npr. strana za  upisivanje na listu putem web-a), ili e-mail adresa opremljena  specificnim subjektom(npr.:  <tt>@adresse_suivi@?subject=prijava</tt>):',
 'info_config_suivi_explication' => 'Mozete se prikljuciti mailing-listi ove stranice. Poslije cete u elektronskim putem primiti najave clanaka i kratkih poruka, koje su predlozene za publikaciju',
@@ -320,7 +320,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'Prije nego mozete pisati clanke, morate kreirati najmanje jednu rubriku.',
 'info_email_envoi' => 'E-mail adresa za slanje (fakultativno)',
 'info_email_envoi_txt' => 'Ovdje oznacite adresu za slanje e-mailova (po standardu ce adresa primaoca biti koristena kao adresa za slanje):',
-'info_email_webmestre' => 'E-mail adresa webmastera (fakultativno)',
+'info_email_webmestre' => 'E-mail adresa webmastera (fakultativno)', # MODIF
 'info_entrer_code_alphabet' => 'Unesite kod alfabeta koji ce se koristiti:',
 'info_envoi_email_automatique' => 'Automatsko slanje e-mailova',
 'info_envoyer_maintenant' => 'Posalji sada',
@@ -353,7 +353,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => 'Pracenje revizija omogucuje ocuvanje historije svih izmjena na sadrzaju clanka i  prikazivanje razlika verzija koje slijede.',
 'info_identification_publique' => 'Vas javni identitet...',
 'info_image_process' => 'Izaberite najbolju metodu pravljenja vinjeta tako sto cete kliknuti na odgovarajucu sliku.',
-'info_image_process2' => '<b>N.B.</b> <i>Ako se ne pojavljuje nijedna slika, onda vas server nije konfigurisan za koristenje tih funkcija. Ako zelite koristiti te funkcije, kontaktirajte ososbu odgovornu za tehnicko odrzavanje i pitajte za extenzije «GD» ili  «Imagick».</i>',
+'info_image_process2' => '<b>N.B.</b> <i>Ako se ne pojavljuje nijedna slika, onda vas server nije konfigurisan za koristenje tih funkcija. Ako zelite koristiti te funkcije, kontaktirajte ososbu odgovornu za tehnicko odrzavanje i pitajte za extenzije «GD» ili  «Imagick».</i>', # MODIF
 'info_images_auto' => 'Automatski izracunate slike',
 'info_informations_personnelles' => 'Peta etapa: <b>Licne informacije</b>', # MODIF
 'info_inscription_automatique' => 'Automatsko upisivanje novih urednika',
@@ -457,7 +457,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_question_inscription_nouveaux_redacteurs' => 'Da li prihvatate upisivanje novih urednika u javnom prostoru  stranice? Ako prihvatate, posjetioci ce se moci registrovati putem automatskog formulara, a zatim ce moci pristupiti privatnom prostoru i predlagati svoje clanke. <blockquote><i>Tokom faze upisivanja, korisnici ce primiti  automatski e-mail sa kodom za pristup u privatnu stranicu. Neki kompjuteri sprecavaju slanje mailova putem njihovih servera: u tom slucaju ce automatsko upisivanje biti nemoguce.', # MODIF
 'info_question_utilisation_moteur_recherche' => 'Zelite li koristiti motor pretrage koji je integrisan u SPIP? (dezaktiviranje ove opcije ubrzava funkcionisanje sistema.)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'Korjen stranice',
 'info_recharger_page' => 'Restartujte ovu stranicu za nekoliko momenata.',
 'info_recherche_auteur_a_affiner' => 'Previse rezultata za "@cherche_auteur@"; redefinisite opcije pretrage.',
@@ -723,6 +723,7 @@ Prevodi su (sa bojom koja ukazuje na njihovo stanje) povezani sa originalnim cla
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -734,7 +735,7 @@ Prevodi su (sa bojom koja ukazuje na njihovo stanje) povezani sa originalnim cla
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -742,6 +743,7 @@ Prevodi su (sa bojom koja ukazuje na njihovo stanje) povezani sa originalnim cla
 'plugins_liste' => 'Plugin lista',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'Version du protocole :', # NEW

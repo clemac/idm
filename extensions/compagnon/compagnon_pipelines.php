@@ -10,9 +10,9 @@ function compagnon_affiche_milieu($flux) {
 function compagnon_affiche_gauche($flux) {
 	return compagnonage($flux, 'affiche_gauche');
 }
-
-
-
+function compagnon_affiche_droite($flux) {
+	return compagnonage($flux, 'affiche_droite');
+}
 
 /**
  *  

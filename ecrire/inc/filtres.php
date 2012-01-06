@@ -465,7 +465,7 @@ function textebrut($texte) {
 // Remplace les liens SPIP en liens ouvrant dans une nouvelle fenetre (target=blank)
 // http://doc.spip.org/@liens_ouvrants
 function liens_ouvrants ($texte) {
-	return preg_replace(",<a ([^>]*https?://[^>]*class=[\"']spip_(out|url)\b[^>]+)>,",
+	return preg_replace(",<a\s+([^>]*https?://[^>]*class=[\"']spip_(out|url)\b[^>]+)>,",
 		"<a \\1 target=\"_blank\">", $texte);
 }
 
@@ -532,9 +532,11 @@ function majuscules($texte) {
 function taille_en_octets ($taille) {
 	if ($taille < 1024) {$taille = _T('taille_octets', array('taille' => $taille));}
 	else if ($taille < 1024*1024) {
-		$taille = _T('taille_ko', array('taille' => ((floor($taille / 102.4))/10)));
+		$taille = _T('taille_ko', array('taille' => round($taille/1024, 1)));
+	} else if ($taille < 1024*1024*1024) {
+		$taille = _T('taille_mo', array('taille' => round($taille/1024/1024, 1)));
 	} else {
-		$taille = _T('taille_mo', array('taille' => ((floor(($taille / 1024) / 102.4))/10)));
+		$taille = _T('taille_go', array('taille' => round($taille/1024/1024/1024, 2)));
 	}
 	return $taille;
 }
@@ -592,10 +594,23 @@ function securiser_acces($id_auteur, $cle, $dir, $op='', $args='')
 	return verifier_low_sec($id_auteur, $cle, $dir);
 }
 
-// sinon{texte, rien} : affiche "rien" si la chaine est vide,
-// affiche la chaine si non vide ;
-// attention c'est compile directement dans inc/references
-// http://doc.spip.org/@sinon
+/**
+ * La fonction sinon retourne le second parametre lorsque
+ * le premier est considere vide, sinon retourne le premier parametre.
+ *
+ * En php sinon($a, 'rien') retourne $a ou 'rien' si $a est vide.
+ * En filtre spip |sinon{#TEXTE, rien} : affiche #TEXTE ou "rien" si #TEXTE est vide,
+ *
+ * Note : l'utilisation de |sinon en tant que filtre de squelette
+ * est directement compile dans public/references par la fonction filtre_logique()
+ * 
+ * @param mixed $texte
+ * 		Contenu de reference a tester
+ * @param mixed $sinon
+ * 		Contenu a retourner si le contenu de reference est vide
+ * @return mixed
+ * 		Retourne $texte, sinon $sinon.
+**/
 function sinon ($texte, $sinon='') {
 	if ($texte OR (!is_array($texte) AND strlen($texte)))
 		return $texte;
@@ -923,6 +938,10 @@ function affdate_base($numdate, $vue, $options = array()) {
 			return $annee;
 
 	case 'nom_mois':
+		$param = ((isset($options['param']) AND $options['param']) ? '_'.$options['param'] : '');
+		if ($param and $mois) {
+			return _T('date_mois_'.$mois.$param);
+		}
 		return $nommois;
 
 	case 'mois':
@@ -978,8 +997,9 @@ function mois($numdate) {
 }
 
 // http://doc.spip.org/@nom_mois
-function nom_mois($numdate) {
-	return affdate_base($numdate, 'nom_mois');
+function nom_mois($numdate, $forme='') {
+	if(!($forme == 'abbr')) $forme = '';
+	return affdate_base($numdate, 'nom_mois', $forme);
 }
 
 // http://doc.spip.org/@annee
@@ -1956,22 +1976,39 @@ function url_absolue_css ($css) {
 	return $f;
 }
 
-// filtre table_valeur
-// permet de recuperer la valeur d'un tableau pour une cle donnee
-// prend en entree un tableau serialise ou non (ce qui permet d'enchainer le filtre)
-// ou un objet
-// Si la cle est de la forme a.b, on renvoie $table[a][b]
-// http://doc.spip.org/@table_valeur
-function table_valeur($table,$cle,$defaut=''){
-	foreach (explode('/', $cle) as $k) if ($k !== "") {
-		$table= is_string($table) ? unserialize($table) : $table;
 
-		if (is_object($table))
-			$table = isset($table->$k) ? $table->$k : $defaut;
-		else if (is_array($table))
+
+/**
+ * Le filtre table_valeur
+ * permet de recuperer la valeur d'une cle donnee
+ * dans un tableau (ou un objet).
+ * 
+ * @param mixed $table
+ * 		Tableau ou objet
+ * 		(ou chaine serialisee de tableau, ce qui permet d'enchainer le filtre)
+ * 		
+ * @param string $cle
+ * 		Cle du tableau (ou parametre public de l'objet)
+ * 		Cette cle peut contenir des caracteres / pour selectionner
+ * 		des sous elements dans le tableau, tel que "sous/element/ici"
+ * 		pour obtenir la valeur de $tableau['sous']['element']['ici']
+ *
+ * @param mixed $defaut
+ * 		Valeur par defaut retournee si la cle demandee n'existe pas
+ * 
+ * @return mixed Valeur trouvee ou valeur par defaut.
+**/
+function table_valeur($table, $cle, $defaut='') {
+	foreach (explode('/', $cle) as $k) {
+		$table = is_string($table) ? unserialize($table) : $table;
+
+		if (is_object($table)) {
+			$table =  (($k !== "") and isset($table->$k)) ? $table->$k : $defaut;
+		} elseif (is_array($table)) {
 			$table = isset($table[$k]) ? $table[$k] : $defaut;
-		else
+		} else {
 			$table = $defaut;
+		}
 	}
 	return $table;
 }
@@ -2247,36 +2284,60 @@ function filtre_puce_statut_dist($statut,$objet,$id_objet=0,$id_parent=0){
  */
 function encoder_contexte_ajax($c,$form='', $emboite=NULL, $ajaxid='') {
 	if (is_string($c)
-	AND !is_null(@unserialize($c)))
+	AND !is_null(@unserialize($c))) {
 		$c = unserialize($c);
+	}
 
 	// supprimer les parametres debut_x
 	// pour que la pagination ajax ne soit pas plantee
 	// si on charge la page &debut_x=1 : car alors en cliquant sur l'item 0,
 	// le debut_x=0 n'existe pas, et on resterait sur 1
-	foreach ($c as $k => $v)
-		if (strpos($k,'debut_') === 0)
+	foreach ($c as $k => $v) {
+		if (strpos($k,'debut_') === 0) {
 			unset($c[$k]);
-
+		}
+	}
+	
 	if (!function_exists('calculer_cle_action'))
 		include_spip("inc/securiser_action");
 	$cle = calculer_cle_action($form.(is_array($c)?serialize($c):$c));
 	$c = serialize(array($c,$cle));
 
-	if ((defined('_CACHE_CONTEXTES_AJAX') AND _CACHE_CONTEXTES_AJAX)
-		AND $dir = sous_repertoire(_DIR_CACHE, 'contextes')) {
+	// on ne stocke pas les contextes dans des fichiers caches
+	// par defaut, sauf si cette configuration a ete forcee
+	// OU que la longueur de l''argument generee est plus long
+	// que ce que telere Suhosin.
+	$cache_contextes_ajax = (defined('_CACHE_CONTEXTES_AJAX') AND _CACHE_CONTEXTES_AJAX);
+
+	if (!$cache_contextes_ajax) {
+		$env = $c;
+		if (function_exists('gzdeflate') && function_exists('gzinflate')) {
+			$env = gzdeflate($env);
+		}
+		$env = _xor($env);
+		$env = base64_encode($env);
+		// tester Suhosin et la valeur maximale des variables en GET...
+		if ($max_len = @ini_get('suhosin.get.max_value_length')
+		and $max_len < ($len = strlen($env))) {
+			$cache_contextes_ajax = true;
+			spip_log("Contextes AJAX forces en fichiers !"
+				. " Cela arrive lorsque la valeur du contexte"
+				. " depasse la longueur maximale autorisee par Suhosin"
+				. " ($max_len) dans 'suhosin.get.max_value_length'. Ici : $len."
+				. " Vous devriez modifier les parametres de Suhosin"
+				. " pour accepter au moins 1024 caracteres.", _LOG_AVERTISSEMENT);
+		}
+	}
+	
+	if ($cache_contextes_ajax) {
+		$dir = sous_repertoire(_DIR_CACHE, 'contextes');
 		// stocker les contextes sur disque et ne passer qu'un hash dans l'url
 		$md5 = md5($c);
 		ecrire_fichier("$dir/c$md5",$c);
-		$c = $md5;
-	} else {
-		if (function_exists('gzdeflate') && function_exists('gzinflate'))
-			$c = gzdeflate($c);
-		$c = _xor($c);
-		$c = base64_encode($c);
-	}
+		$env = $md5;
+	} 
 	
-	if ($emboite === NULL) return $c;
+	if ($emboite === NULL) return $env;
 	if (!trim($emboite)) return "";
 	// toujours encoder l'url source dans le bloc ajax
 	$r = self();
@@ -2286,7 +2347,7 @@ function encoder_contexte_ajax($c,$form='', $emboite=NULL, $ajaxid='') {
 		$class .= ' ajax-id-'.$ajaxid;
 	}
 	$compl = "aria-live='polite' aria-atomic='true' ";
-	return "<div class='$class' ".$compl."data-ajax-env='$c'$r>\n$emboite</div><!--ajaxbloc-->\n";
+	return "<div class='$class' ".$compl."data-ajax-env='$env'$r>\n$emboite</div><!--ajaxbloc-->\n";
 }
 
 // la procedure inverse de encoder_contexte_ajax()
@@ -2567,19 +2628,35 @@ function tri_protege_champ($t){
  * pour la clause order
  * 'multi xxx' devient simplement 'multi' qui est calcule dans le select
  * @param string $t
+ * @param array $from
  * @return string
  */
-function tri_champ_order($t){
-	if (strncmp($t,'num ',4)==0){
-		$t = substr($t,4);
-		$t = preg_replace(',\s,','',$t);
-		$t = "0+$t";
-		return $t;
-	}
-	elseif(strncmp($t,'multi ',6)==0){
+function tri_champ_order($t, $from=null){
+	if(strncmp($t,'multi ',6)==0){
 		return "multi";
 	}
-	return preg_replace(',\s,','',$t);
+
+	$champ = $t;
+
+	if (strncmp($t,'num ',4)==0)
+		$champ = substr($t,4);
+	// enlever les autres espaces non evacues par tri_protege_champ
+	$champ = preg_replace(',\s,','',$champ);
+
+	if (is_array($from)){
+		$trouver_table = charger_fonction('trouver_table','base');
+		foreach($from as $idt=>$table_sql){
+			if ($desc = $trouver_table($table_sql)
+				AND isset($desc['field'][$champ])){
+				$champ = "$idt.$champ";
+				break;
+			}
+		}
+	}
+	if (strncmp($t,'num ',4)==0)
+		return "0+$champ";
+	else
+		return $champ;
 }
 
 /**
@@ -2587,6 +2664,7 @@ function tri_champ_order($t){
  * pour la clause select
  * 'multi xxx' devient select "...." as multi
  * les autres cas ne produisent qu'une chaine vide '' en select
+ * 'hasard' devient 'rand() AS hasard' dans le select
  *
  * @param string $t
  * @return string
@@ -2597,6 +2675,9 @@ function tri_champ_select($t){
 		$t = preg_replace(',\s,','',$t);
 		$t = sql_multi($t,$GLOBALS['spip_lang']);
 		return $t;
+	}
+	if(trim($t)=='hasard'){
+		return 'rand() AS hasard';
 	}
 	return "''";
 }

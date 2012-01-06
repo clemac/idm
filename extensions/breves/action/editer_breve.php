@@ -93,7 +93,7 @@ function breve_inserer($id_rubrique) {
  *
  * @param int $id_breve
  * @param array $set
- * @return
+ * @return string|bool
  */
 function breve_modifier ($id_breve, $set=null) {
 
@@ -114,13 +114,14 @@ function breve_modifier ($id_breve, $set=null) {
 		$indexation = true;
 	}
 
-	modifier_contenu('breve', $id_breve,
+	if ($err = objet_modifier_champs('breve', $id_breve,
 		array(
-			'nonvide' => array('titre' => _T('info_sans_titre')),
+			'nonvide' => array('titre' => _T('breves:titre_nouvelle_breve')." "._T('info_numero_abbreviation').$id_breve),
 			'invalideur' => $invalideur,
 			'indexation' => $indexation
 		),
-		$c);
+		$c))
+		return $err;
 
 	$c = collecter_requests(array('id_parent', 'statut'),array(),$set);
 	$err = breve_instituer($id_breve, $c);

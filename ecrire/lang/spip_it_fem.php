@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -227,6 +227,8 @@ di ciascuna di queste cartelle. La procedura è spiegata in dettaglio nella guid
 'envoi_via_le_site' => 'Invio tramite il sito',
 'erreur' => 'Errore',
 'erreur_balise_non_fermee' => 'ultimo tag non chiuso:',
+'erreur_technique_enregistrement_champs' => 'Une erreur technique a empêché l\'enregistrement correct du champ @champs@.', # NEW
+'erreur_technique_enregistrement_impossible' => 'Une erreur technique a empêché l\'enregistrement.', # NEW
 'erreur_texte' => 'errore/i',
 'etape' => 'Fase',
 
@@ -608,6 +610,7 @@ e riconnetterti all\'area riservata.
 'suivant' => 'successivo',
 
 // T
+'taille_go' => '@taille@ Go', # NEW
 'taille_ko' => '@taille@ Kb',
 'taille_mo' => '@taille@ Mb',
 'taille_octets' => '@taille@ byte',

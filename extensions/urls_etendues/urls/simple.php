@@ -42,9 +42,10 @@ function _generer_url_simple($type,$id, $args='', $ancre='') {
 // http://doc.spip.org/@urls_page_dist
 function urls_simple_dist($i, &$entite, $args='', $ancre='')
 {
-	if (is_numeric($i))
+	if (is_numeric($i)){
+		include_spip('urls/page');
 		return _generer_url_page($entite, $i, $args, $ancre);
-
+	}
 	// traiter les injections du type domaine.org/spip.php/cestnimportequoi/ou/encore/plus/rubrique23
 	if ($GLOBALS['profondeur_url']>0 AND $entite=='sommaire'){
 		return array(array(),'404');

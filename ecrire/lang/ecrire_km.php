@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -291,7 +291,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_classement_2' => ' out of @liste@',
 'info_code_acces' => 'កុំភ្លេច អក្សរកូដចូលទៅ ផ្ទាល់ខ្លួន របស់អ្នក!',
 'info_compatibilite_html' => 'Norme HTML à suivre', # NEW
-'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # NEW
+'info_compresseur_gzip' => '<b>N. B. :</b> Il est recommandé de vérifier au préalable si l\'hébergeur compresse déjà systématiquement les scripts php ; pour cela, vous pouvez par exemple utiliser le service suivant : @testgzip@', # MODIF
 'info_compresseur_texte' => 'Si votre serveur ne comprime pas automatiquement les pages html pour les envoyer aux internautes, vous pouvez essayer de forcer cette compression pour diminuer le poids des pages téléchargées. <b>Attention</b> : cela peut ralentir considerablement certains serveurs.', # NEW
 'info_config_suivi' => 'បើអាសយដ្ឋាននេះ ត្រូវតាម បញ្ជីផ្ញើមែវល៍, អ្នក អាចបង្ហាញខាងក្រោម អាសយដ្ឋាន ដែលពួកអ្នកចូលរួម សៃថ៍ អាចចុះឈ្មោះ។ អាសយដ្ឋាននេះ អាចជា មួយអាសយដ្ឋាន URL (ជា ឧទាហរ ទំព័រចុះឈ្មោះ ទៅបញ្ជី​តាមរយះវ៉ែប), ឬ អាសយដ្ឋានអ៊ីមែវល៍ បានមានប្រធានបទ ជាក់លាក់ (ជា ឧទាហរ៖ <tt>@adresse_suivi@?subject=subscribe</tt>)៖',
 'info_config_suivi_explication' => 'អ្នក អាចជាវប្រចាំ ទៅបញ្ជីផ្ញើមែវល៍ នៃសៃថ៍នេះ។ អ្នក នឹងទទួលបាន តាមមែវល៍ រាល់ជំនូនដំណឹង នៃអត្ថបទ​និង​នៃពត៌មានខ្លី បានស្នើ សំរាប់ការបោះផ្សាយ។',
@@ -324,7 +324,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_ecrire_article' => 'មុន​ពេល​អាច​សរសេរ​អត្ថបទ​បាន អ្នក​ត្រូវ​បង្កើត​យ៉ាង​ហោច​ណាស់​មួយ​ផ្នែក ។',
 'info_email_envoi' => 'អាសយដ្ឋានអ៊ីមែវល៍ របស់ម្ចាស់បញ្ញើ (ជាជំរើស)',
 'info_email_envoi_txt' => 'បញ្ចូល អាយដ្ឋានអ៊ីមែវល៍ របស់អ្នកផ្ញើ ធ្លាប់បានប្រើប្រាស់ ពេលផ្ញើអ៊ីមែវល៍ (ជាលំនាំដើម, អាសយដ្ឋានអ្នកទទួល ត្រូវបានប្រើប្រាស់ ជាអាសយដ្ឋានអ្នកផ្ញើ) ៖',
-'info_email_webmestre' => 'អាសយដ្ឋានអ៊ីមែវល៍ របស់អ្នកជំនាញវ៉ែប (ជាជំរើស)',
+'info_email_webmestre' => 'អាសយដ្ឋានអ៊ីមែវល៍ របស់អ្នកជំនាញវ៉ែប (ជាជំរើស)', # MODIF
 'info_entrer_code_alphabet' => 'បញ្ចូល​លេខ​កូដ​នៃ​តួអក្សរ​ដែល​បាន​កំណត់​ត្រូវ​ប្រើប្រាស់ ៖',
 'info_envoi_email_automatique' => 'ការ​ផ្ញើ​មែ​ល​ដោយ​ស្វ័យប្រវត្ដិ',
 'info_envoyer_maintenant' => 'ផ្ញើ ឥឡូវ',
@@ -360,7 +360,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_historique_texte' => 'មុខងារ​ពិនិត្យ​អត្ថបទ​កែសម្រួល​អាច​ឱ្យ​លោក​អ្នក​មើលឃើញ​នូវ​ចំណុច​កែប្រែ ឬ​បន្ថែម​នានា​នៅ​ក្នុង​អត្ថបទ ព្រមទាំង​បង្ហាញ​អំពី​ភាព​ខុស​គ្នា​នៃ​អត្ថបទ​បន្ដបន្ទាប់',
 'info_identification_publique' => 'អត្តសញ្ញា សាធារណះ របស់អ្នក...',
 'info_image_process' => 'ជ្រើសយក វិធីប្រពៃបំផុត សំរាប់បង្កើត កូនរូបភាព ដោយ ចុចលើ រូបភាពទាក់ទិន។',
-'info_image_process2' => '<b>ចំណាំ៖</b> <i>បើគ្មានរូបភាព លេចឡើង, ពេលខំព្យូរើបំរើសេវា ដែលទទួលផ្ទុកវ៉ែបសៃថ៍ របស់អ្នក គ្មានត្រូវបានកំណត់ទំរង់ សំរាប់ប្រើប្រាស់ ឧបករបែបចឹង។ បើអ្នក ចង់ប្រើប្រាស់ មុខងារទាំងនេះ, ទាក់ទងអ្នកទទួលខុសត្រូវ ផ្នែកបច្ចេកទេស និងសួរ ផ្នែកបន្ថែម «GD» ឬ «Imagick»</i>',
+'info_image_process2' => '<b>ចំណាំ៖</b> <i>បើគ្មានរូបភាព លេចឡើង, ពេលខំព្យូរើបំរើសេវា ដែលទទួលផ្ទុកវ៉ែបសៃថ៍ របស់អ្នក គ្មានត្រូវបានកំណត់ទំរង់ សំរាប់ប្រើប្រាស់ ឧបករបែបចឹង។ បើអ្នក ចង់ប្រើប្រាស់ មុខងារទាំងនេះ, ទាក់ទងអ្នកទទួលខុសត្រូវ ផ្នែកបច្ចេកទេស និងសួរ ផ្នែកបន្ថែម «GD» ឬ «Imagick»</i>', # MODIF
 'info_images_auto' => 'រូបភាព​ដែល​ត្រូវ​បាន​រាប់​ដោយ​ស្វ័យប្រវត្ដិ',
 'info_informations_personnelles' => 'ជំហាន​ទី​ប្រាំ ៖ <b>Personal information</b>',
 'info_inscription_automatique' => 'ការចុះឈ្មោះស្វ័យប្រវត្តិ ពួកស្មេរថ្មី',
@@ -467,7 +467,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'info_question_inscription_nouveaux_redacteurs' => 'តើ​លោក​អ្នក​ត្រូវការ​អនុញ្ញាត​ឱ្យ​អ្នក​សរសេរ​អត្ថបទ​ថ្មី​ចុះ​ឈ្មោះ​ពី​វ៉ិ​ប​សាយ​សាធារណៈ​ដែល​ឬទេ​? ប្រសិនបើ​លោក​អ្នក​យល់ព្រម អ្នក​ទស្សនា​នឹង​អាច​ចុះ​ឈ្មោះ​ដោយ​ប្រើប្រាស់​ទម្រង់​ស្វ័យប្រវត្ដិ​មួយ ហើយ​បន្ទាប់​មក​ចូល​ក្នុង​ផ្នែក​ឯកជន​ដើម្បី​បញ្ចូល​អត្ថបទ​ផ្ទា់ល់​របស់​ពួក​គេ​។ <blockquote> ក្នុង​ពេល​ដំណើរការ​ចុះ​ឈ្មោះ អ្នក​ប្រើប្រាស់​ទទួល​បាន​អ៊ី​ម៉ែ​ល​ស្វ័យប្រវត្ដិ​ដែល​ផ្ដល់​ជូន​ពួក​គេ​នូវ​លេខ​កូដ​ចូល​ទៅ​ក្នុង​ផ្នែក​ឯកជន​។ ក្រុមហ៊ុន​ផ្ដល់​សេវា​មួយ​ចំនួន​មិន​អនុញ្ញាត​ចំពោះ​ការ​ផ្ញើ​អ៊ី​ម៉ែ​ល​ម៉ាស៊ីន​មេ (servers)​របស់​ពួក​គេ​ទេ ៖ ក្នុង​ករណី​នោះ ការ​ចុះ​ឈ្មោះ​ដោយ​ស្វ័យប្រវត្ដិ​គឺ​មិន​អាច​អនុវត្ដ​បាន​ទេ​។', # MODIF
 'info_question_utilisation_moteur_recherche' => 'អ្នកចង់ប្រើប្រាស់ ឧបករស្វែងរក ត្រូវបានបញ្ចូលទៅ SPIP ឬ? (ការមិនអនុញ្ញាតវា បង្កើនល្បឿន ភាពប្រពៃ នៃប្រព័ន្ធ។)',
 'info_question_vignettes_referer_non' => 'Ne pas afficher les captures des sites d\'origine des visites', # NEW
-'info_qui_edite' => '@nom_auteur_modif@ a travaill&eacute; sur ce contenu il y a @date_diff@ minutes', # NEW
+'info_qui_edite' => '@nom_auteur_modif@ a travaillé sur ce contenu il y a @date_diff@ minutes', # MODIF
 'info_racine_site' => 'ឫស នៃវ៉ែបសៃថ៍',
 'info_recharger_page' => 'សូម​បញ្ចូល​ទំព័រ​នេះ​ជា​ថ្មី​ម្ដងទៀត​នៅ​មួយសន្ទុះ​ក្រោយ',
 'info_recherche_auteur_a_affiner' => 'លទ្ធផលច្រើនពេក សំរាប់ "@cherche_auteur@"; សូមចំរាញ់ ការស្វែងរក របស់អ្នក។',
@@ -734,6 +734,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugin_titre_automatique' => 'Installation automatique', # NEW
 'plugin_titre_automatique_ajouter' => 'Ajouter des plugins', # NEW
 'plugin_titre_installation' => 'Installation du plugin @plugin@', # NEW
+'plugin_titre_modifier' => 'Mes plugins', # NEW
 'plugin_zip_active' => 'Continuez pour l\'activer', # NEW
 'plugin_zip_adresse' => 'indiquez ci-dessous l\'adresse d\'un fichier zip de plugin à télécharger, ou encore l\'adresse d\'une liste de plugins.', # NEW
 'plugin_zip_adresse_champ' => 'Adresse du plugin ou de la liste ', # NEW
@@ -745,7 +746,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_actif_aucun' => 'Aucun plugin activé.', # NEW
 'plugins_actif_un' => 'Un plugin activé.', # NEW
 'plugins_actifs' => '@count@ plugins activés.', # NEW
-'plugins_actifs_liste' => 'Plugins actifs', # NEW
+'plugins_actifs_liste' => 'Actifs', # NEW
 'plugins_compte' => '@count@ plugins', # NEW
 'plugins_disponible_un' => 'Un plugin disponible.', # NEW
 'plugins_disponibles' => '@count@ plugins disponibles.', # NEW
@@ -753,6 +754,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'plugins_liste' => 'បញ្ជី​កម្មវិធី​ជំនួយ',
 'plugins_liste_extensions' => 'Extensions', # NEW
 'plugins_recents' => 'Plugins récents.', # NEW
+'plugins_tous_liste' => 'Tous', # NEW
 'plugins_vue_hierarchie' => 'Hiérarchie', # NEW
 'plugins_vue_liste' => 'Liste', # NEW
 'protocole_ldap' => 'វឺ​សឹ​ន (version) ពិធីការ',

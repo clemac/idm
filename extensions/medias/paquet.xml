@@ -1,11 +1,11 @@
 <paquet
 	prefix="medias"
 	categorie="multimedia"
-	version="2.4.1"
+	version="2.7.7"
 	etat="test"
 	compatibilite="[3.0.0-alpha2;["
 	logo="prive/themes/spip/images/portfolio-32.png"
-	schema="0.15.0"
+	schema="1.0.1"
 >	
 
 	<nom>Medias</nom>
@@ -33,6 +33,7 @@
 	<pipeline nom="document_desc_actions" />
 	<pipeline nom="editer_document_actions" />
 	<pipeline nom="renseigner_document_distant" />
+	<pipeline nom="afficher_metas_document" action="" />
 
 	<utilise nom="Z" compatibilite="[1.2.1;[" />
 	<utilise nom="mediabox" compatibilite="[0.5.0;[" />
