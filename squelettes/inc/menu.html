@@ -11,11 +11,11 @@
       </ul>
     </li>
 
-    <li><a href="#">Recherche</a>
+    <li><a href="#">Rubriques</a>
       <ul>
-        <li>[(#FORMULAIRE_RECHERCHE)]</li>
-        <li><a href="#URL_PAGE{navigation}">Recherche avanc&eacute;e</a></li>
-        <li><a href="#URL_PAGE{plan}">Plan du site</a></li>
+        <BOUCLE_rubriques(RUBRIQUES) {id_secteur IN 6,26,34,37} {id_rubrique !IN 28,29,37} {par num titre, titre}>
+          <li><a href="#URL_RUBRIQUE">#TITRE</a></li>
+        </BOUCLE_rubriques>
       </ul>
     </li>
 
@@ -31,6 +31,14 @@
       <ul><BOUCLE_liens(ARTICLES) {id_rubrique = 25} {par num titre, titre}>
           <li><a href="#URL_ARTICLE">#TITRE</a></li>
       </BOUCLE_liens></ul>
+    </li>
+
+    <li><a href="#">Recherche</a>
+      <ul>
+        <li>[(#FORMULAIRE_RECHERCHE)]</li>
+        <li><a href="#URL_PAGE{navigation}">Recherche avanc&eacute;e</a></li>
+        <li><a href="#URL_PAGE{plan}">Plan du site</a></li>
+      </ul>
     </li>
 
     <li><a href="#">Divers</a>
