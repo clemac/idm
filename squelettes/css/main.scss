@@ -2,7 +2,7 @@ $red:    #e20000;
 $dark:   #660000;
 $medium: #730000;
 $light:  #830000;
-$bg:     #908080;
+$bg:     #807070;
 $grey:   #bbbbbb;
 
 @mixin shadow { -moz-box-shadow: 5px 5px 15px black; -webkit-box-shadow: 5px 5px 15px black; box-shadow: 5px 5px 15px black; }
@@ -41,7 +41,11 @@ html, body { padding : 0px; margin : 0px; font-family : Arial, sans-serif; text-
         }
       }
 
-#actu { width : 30%; float : right; font-size : small; margin-top : 2.5ex;
+#podcast { background-color : $grey; border-bottom : 1px solid black; margin : 0ex -1em 3ex; padding : 1ex 0; text-align : center;
+           p { margin : 0ex; }
+         }
+
+#actu { width : 30%; float : right; font-size : small; margin-top : 0ex;
         h2 { font-size : large; margin : 0; border-bottom : 2px solid $red; }
         h3 { font-size : normal; margin : 1ex 0; }
         ul { padding : 0; list-style-type : none; }
