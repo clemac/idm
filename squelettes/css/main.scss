@@ -41,7 +41,7 @@ html, body { padding : 0px; margin : 0px; font-family : Arial, sans-serif; text-
         }
       }
 
-#actu { width : 30%; float : right; font-size : small;
+#actu { width : 30%; float : right; font-size : small; margin-top : 2.5ex;
         h2 { font-size : large; margin : 0; border-bottom : 2px solid $red; }
         h3 { font-size : normal; margin : 1ex 0; }
         ul { padding : 0; list-style-type : none; }

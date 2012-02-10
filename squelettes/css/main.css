@@ -20,7 +20,7 @@ html, body { padding: 0px; margin: 0px; font-family: Arial, sans-serif; text-ali
 #menu form input { width: 95%; font-weight: bold; background: white; }
 #menu form input.submit { display: none; }
 
-#actu { width: 30%; float: right; font-size: small; }
+#actu { width: 30%; float: right; font-size: small; margin-top: 2.5ex; }
 #actu h2 { font-size: large; margin: 0; border-bottom: 2px solid #e20000; }
 #actu h3 { font-size: normal; margin: 1ex 0; }
 #actu ul { padding: 0; list-style-type: none; }
