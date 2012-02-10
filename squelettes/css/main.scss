@@ -107,7 +107,6 @@ h1 { text-align : center; margin : 0px; padding : 0px; }
 h2 { text-align : center;
      &.bio { margin-top : 0px; }
      &.plan { border : 2px solid $red; border-width : 0px 0px 2px; }
-     &.spip { text-align : center; padding : 1ex; border-top : 2px solid $red; border-bottom : 2px solid $red; clear : both; }
      &.rdp { margin : 0ex .5em 1ex; text-align : right;
              a { color : black; border-bottom : 2px solid $red;
                  &:hover { color : $red; }
@@ -125,6 +124,7 @@ h3 { text-align : left;
      &.titre { margin : 0px; border-bottom : 2px solid $red; }
      &.auteur { text-align : right; font-weight : normal; }
      &.bio { text-align : right; font-weight : normal; font-size : medium; margin-top : -2ex; }
+     &.spip { text-align : center; padding : 1ex; border-top : 2px solid $red; border-bottom : 2px solid $red; clear : both; }
 }
 
 h4 { text-align : center; font-style : italic; font-weight : bold;
