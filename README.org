@@ -49,10 +49,6 @@ we end up working in a team but so far:
   - [ ] Specific style for small screens (it used to work using
     =max-width=, but apparently that breaks older browsers ...)
   - [ ] Find a way to make login etc. possible
-- One year ago on IdM [33%]
-  - [X] Create the page, basic functionality
-  - [ ] Merge it with =sommaire.html= for maintainability
-  - [ ] Merge the system with the color filtering ?
 *** Next
 - CC per article
 - Loop videos

@@ -1,15 +1,15 @@
 #CACHE{3600}
-<INCLURE{fond=inc/head}{class=nopage}>
+<INCLURE{fond=inc/head}{class=nopage}{env}>
 
 <B_podcast>
   <div id="podcast">
-    <BOUCLE_podcast(ARTICLES) {id_rubrique = 38} {age < 7} {0,1} {doublons}>
+    <BOUCLE_podcast(ARTICLES) {id_rubrique = 38} {age_relatif < 7} {age_relatif >= 0} {0,1} {doublons}>
       <p>Le podcast de la semaine : <a href="#URL_ARTICLE">#TITRE</a></p>
     </BOUCLE_podcast>
   </div>
 </B_podcast>
 
-<BOUCLE_rdp(ARTICLES) {id_rubrique=26} {age < 8} {par date} {inverse} {0,1}>
+<BOUCLE_rdp(ARTICLES) {id_rubrique=26} {age_relatif < 8} {age_relatif >= 0} {par date} {inverse} {0,1}>
 <h2 class="rdp"><a href="#URL_ARTICLE">La revue de presse du [(#DATE|affdate)]</a></h2>
 </BOUCLE_rdp>
 
@@ -19,7 +19,7 @@
 
     <h3>Quelques br&egrave;ves :</h3>
     <ul>
-      <BOUCLE_actu(BREVES) {id_rubrique=26} {age>=0} {par date} {inverse} {0,2}>
+      <BOUCLE_actu(BREVES) {id_rubrique=26} {age_relatif >= 0} {par date} {inverse} {0,2}>
       <li>[(#DATE|affdate)] - <a href="#URL_BREVE">#TITRE</a></li>
       </BOUCLE_actu>
       <li class="archives"><a href="[(#URL_PAGE{breves,id_rubrique=26})]">Archives</a></li>
@@ -28,7 +28,7 @@
     <B_evts>
     <h3>&Eacute;v&eacute;nements &agrave; venir :</h3>
     <ul>
-      <BOUCLE_evts(BREVES) {id_rubrique=33} {age<0} {par date}>
+      <BOUCLE_evts(BREVES) {id_rubrique=33} {age_relatif < 0} {par date} {0,3} >
       <li><a href="#URL_BREVE">#TITRE</a></li>
       </BOUCLE_evts>
       <li class="archives"><a href="[(#URL_PAGE{breves,id_rubrique=33})]">Archives</a></li>
@@ -37,7 +37,7 @@
 
     <h3>Revues de presse :</h3>
     <ul>
-      <BOUCLE_rdpall(ARTICLES) {id_rubrique=26} {par date} {inverse} {0,2}>
+      <BOUCLE_rdpall(ARTICLES) {id_rubrique=26} {par date} {age_relatif >= 0} {inverse} {0,2}>
       <li><a href="#URL_ARTICLE">[(#DATE|affdate)]</a></li>
       </BOUCLE_rdpall>
       <li class="archives"><a href="#URL_RUBRIQUE{26}">Archives</a></li>
@@ -45,7 +45,7 @@
 
     <h3 style="margin-top:1ex;">Courrier des lecteurs :</h3>
     <ul>
-      <BOUCLE_courrier(ARTICLES) {id_rubrique=34} {age>=0} {par date} {inverse} {0,2}>
+      <BOUCLE_courrier(ARTICLES) {id_rubrique=34} {age_relatif >= 0} {par date} {inverse} {0,2}>
       <li>[(#DATE|affdate)] - <a href="#URL_ARTICLE">#TITRE</a></li>
       </BOUCLE_courrier>
       <li class="archives"><a href="#URL_RUBRIQUE{34}">Archives</a></li>
@@ -59,7 +59,7 @@
   <BOUCLE_nospecial(ARTICLES) {id_secteur = 18} {doublons}> </BOUCLE_nospecial>
   <BOUCLE_nodouble(ARTICLES) {titre_mot=double} {doublons}> </BOUCLE_nodouble>
 
-  <BOUCLE_edito(ARTICLES) {titre_mot=editorial} {par date} {inverse} {age<14} {0,1} {doublons}>
+  <BOUCLE_edito(ARTICLES) {titre_mot=editorial} {par date} {inverse} {age_relatif < 14} {0,1} {doublons}>
   <div id="edito" style="display:none;">
     <div class="article">
       <div class="titre"><h2>#TITRE</h2></div>
@@ -79,14 +79,14 @@
   </BOUCLE_edito>
 
   <div id="une">
-    <BOUCLE_une(ARTICLES) {id_secteur IN 37,26} {par date} {inverse} {0,1} {doublons}>
+    <BOUCLE_une(ARTICLES) {id_secteur IN 37,26} {par date} {inverse} {age_relatif >= 0} {0,1} {doublons}>
       [(#INCLURE{fond=inc/resume_une}{id_article})]
     </BOUCLE_une>
   </div>
 
   <B_featured>
     <div id="featured">
-      <BOUCLE_featured(ARTICLES) {titre_mot=featured} {par date} {inverse} {age<7} {doublons}>
+      <BOUCLE_featured(ARTICLES) {titre_mot=featured} {par date} {inverse} {age_relatif < 7} {age_relatif >= 0} {doublons}>
         [(#INCLURE{fond=inc/resume}{id_article})]
       </BOUCLE_featured>
     </div>
@@ -96,7 +96,7 @@
 <div id="front">
   <div id="billets">
     <h2 class="button"><a href="#URL_RUBRIQUE{6}">Les billets des habitu&eacute;s</a></h2>
-    <BOUCLE_billets(ARTICLES) {id_rubrique = 6} {par date} {age>=0} {inverse} {0,5} {doublons}>
+    <BOUCLE_billets(ARTICLES) {id_rubrique = 6} {par date} {age_relatif >= 0} {inverse} {0,5} {doublons}>
       [(#INCLURE{fond=inc/resume}{id_article})]
     </BOUCLE_billets>
     <h2 class="button"><a href="#URL_RUBRIQUE{6}">Tous les billets</a></h2>
@@ -104,7 +104,7 @@
 
   <div id="recents">
     <h2 class="button"><a href="#URL_RUBRIQUE{37}">Quelques articles r&eacute;cents</a></h2>
-    <BOUCLE_old(ARTICLES) {id_secteur = 37} {par date} {inverse} {0,5} {doublons}>
+    <BOUCLE_old(ARTICLES) {id_secteur = 37} {par date} {inverse} {age_relatif >= 0} {0,5} {doublons}>
       [(#INCLURE{fond=inc/resume}{id_article})]
     </BOUCLE_old>
     <h2 class="button"><a href="#URL_RUBRIQUE{37}">Tous les articles</a></h2>

@@ -3,7 +3,9 @@ html, body { padding: 0px; margin: 0px; font-family: Arial, sans-serif; text-ali
 #head { background: #e20000; color: white; }
 #head h1 img { vertical-align: top; padding: 2px; }
 
-#logo { position: absolute; top: 0px; left: 2em; }
+#date { background: black; color: white; padding: 1ex 1em; }
+
+#logo { height: 0px; margin-left: 2em; }
 
 #menu { float: left; width: 100%; background: #660000; color: white; }
 #menu ul { margin: 0; padding: 0; list-style: none; float: right; position: relative; right: 50%; }
