@@ -64,7 +64,11 @@ we end up working in a team but so far:
 - re-install =forms_et_tables= (3.0, doesn't work yet)
 *** Backburner
 - Buttons to write to groups of people
-- Filter display by color
+- Filter display by color, possibly merge with ?date=-1year
+- Article validator to test various things [0%]
+  - [ ] Accents
+  - [ ] Links
+  - [ ] Divs
 - Floating picture
 - Relecteur occasionnel
 - Translation encouragement
