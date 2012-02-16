@@ -83,7 +83,6 @@ we end up working in a team but so far:
 - Files which are patched versions of upstream (store as a patch for upgrades)
   - =.htaccess= (from =htaccess.txt=)
   - =formulaires/inc-forum_previsu.html=
-  - =prive/objets/infos/article.html=
 - Use the =|unique= filter instead of doing it by hand
   - =squelettes/iphone.html=
   - =squelettes/lexique.html=
