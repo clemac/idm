@@ -75,7 +75,6 @@ we end up working in a team but so far:
 - Unify the permissions
 - Put =#SPIP_CRON= on specific pages but not on =sommaire.html=
 - Use =#HTTP_HEADER= rather than php in =inc/head.php=
-- Merge =inc/forum-message= and =inc/forum-message-prive=
 - In =formulaires/relecteurs_vote.php=, the SQL update code should be
   elsewhere, the rest should go
 *** Geekeries and SPIPeries
