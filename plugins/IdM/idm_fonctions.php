@@ -261,4 +261,47 @@ function idm_prenom_nom ($texte) {
   return $texte;
 }
 
+function idm_validate_billet ($id_auteur, $id_article) {
+  $today = time(); $today -= $today % (24*3600); // Midnight this morning
+
+  $previous = sql_getfetsel ("UNIX_TIMESTAMP(date)",
+    "spip_auteurs_liens,spip_articles",
+    "(spip_auteurs_liens.objet='article') AND (spip_articles.id_article=spip_auteurs_liens.id_objet) AND (id_auteur=$id_auteur) AND (statut='publie')",
+    array(), "date DESC", "1");
+  $previous -= $previous % (24*3600); // Their last contribution to the site
+
+  $when = max ($today + 2*24*3600, $previous + 7*24*3600); // Publish the day after tomorrow, with one week minimum for the same contributor.
+  $when += 7*3600; // Publish at 7:00 AM
+
+  $threshold = 2;
+  while (true) {
+    $sqldate = date("Y-m-d H:i:s", $when);
+    $howmany = sql_countsel('spip_articles', "(id_rubrique=6) AND (statut='publie') AND (date='$sqldate')");
+    if ($howmany<$threshold) break;
+    $when += 24*3600;
+    $threshold += 1;
+  }
+
+  $date = date("Y-m-d H:i:s", $when);
+
+  sql_updateq ("spip_articles", array ("statut" => "publie", "date" => $date), "id_article = $id_article");
+
+  $idm_team_billets = array();
+  foreach (sql_allfetsel ("*", "spip_idm_teams", "team = 'billets'") as $e) $idm_team_billets[] = $e['id_auteur'];
+
+  $today = ($today/(24*3600)) % count($idm_team_billets);
+  $gars = $idm_team_billets [$today];
+
+  $qui   = sql_getfetsel ("nom",   "spip_auteurs",  "id_auteur = $id_auteur");
+  $titre = sql_getfetsel ("titre", "spip_articles", "id_article = $id_article");
+
+  $subject = "Un nouveau billet pour Images des Maths";
+
+  $texte = _T('idm:mail_billet_valide', array('auteur'     => $qui,
+                                              'titre'      => $titre,
+                                              'date'       => $date,
+                                              'id_article' => $id_article));
+
+  idm_notify (array(0,$gars), $texte, $subject);
+}
 ?>
