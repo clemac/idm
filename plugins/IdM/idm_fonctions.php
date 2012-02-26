@@ -216,13 +216,13 @@ function idm_pre_typo ($texte) {
 
 function idm_insert_head ($texte) {
   $mj_insert = <<<END
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js">
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js">
       MathJax.Hub.Config({
-        extensions: ["tex2jax.js", "jsMath2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
-        jax:        ["input/TeX",  "output/HTML-CSS"],
-        tex2jax: {
-          inlineMath:          [ ['$','$'],   ["\\\\(","\\\\)"] ],
-          processEnvironments: false,
+        jax: [ "input/TeX", "output/HTML-CSS" ],
+        extensions: [ "tex2jax.js", "jsMath2jax.js" ],
+        tex2jax: { inlineMath: [ ['$','$'], ["\\\\(","\\\\)"] ], processEnvironments: false },
+        TeX: {
+          extensions: ["AMSmath.js", "AMSsymbols.js"],
         }
       });
     </script>

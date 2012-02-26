@@ -52,9 +52,10 @@ we end up working in a team but so far:
 *** Next
 - CC per article
 - Loop videos
-- Upgrade Mathjax [66%]
+- Upgrade Mathjax [75%]
   - [X] Wait for label/ref to be in mainline mathjax
   - [X] Wait for it to be in a stable release (2.0-beta is rather stable)
+  - [X] Use version 2.0
   - [ ] Remove the previous hack
 - Choose the member in the billets team differently
 - =squelettes/propose.html=
