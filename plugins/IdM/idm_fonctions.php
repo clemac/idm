@@ -175,19 +175,6 @@ function idm_clean_TeX ($texte) {
   return $texte;
 }
 
-function idm_labelref ($texte) {
-  $texte = preg_replace ('/\$\$\\s*\\\\label\{([^\}]*)\}/',
-                         '<div class="mjlabel_top" id="eq_\1">(\1)</div>$$',
-                         $texte);
-  $texte = preg_replace ('/\\\\label\{([^\}]*)\}\\s*\$\$/',
-                         '$$<div class="mjlabel_bot" id="eq_\1">(\1)</div>',
-                         $texte);
-  $texte = preg_replace ('/\$*\\\\ref\{([^\}]*)\}\$*/',
-                         '<a href="#eq_\1">(\1)</a>',
-                         $texte);
-  return $texte;
-}
-
 function idm_protect_TeX ($texte) {
   $texte = str_replace ('\[', '$$', $texte);
   $texte = str_replace ('\]', '$$', $texte);
@@ -207,7 +194,6 @@ function idm_protect_TeX ($texte) {
 }
 
 function idm_pre_typo ($texte) {
-  $texte = idm_labelref ($texte);
   $texte = idm_protect_TeX ($texte);
   $texte = idm_clean_TeX ($texte);
 
@@ -223,6 +209,7 @@ function idm_insert_head ($texte) {
         tex2jax: { inlineMath: [ ['$','$'], ["\\\\(","\\\\)"] ], processEnvironments: false },
         TeX: {
           extensions: ["AMSmath.js", "AMSsymbols.js"],
+          equationNumbers: { autoNumber: "all" },
         }
       });
     </script>
