@@ -18,5 +18,11 @@
 
     [<div class="unelogo">(#LOGO_ARTICLE{#URL_ARTICLE}|image_reduire{600,300})</div>]
     [<div class="introduction"><a class="plain" href="#URL_ARTICLE">(#DESCRIPTIF|sinon{[(#INTRODUCTION|textebrut)]}|PtoBR)</a></div>]
+
+    <BOUCLE_decompte(FORUMS) {id_article} {plat}>#SET{nb,#TOTAL_BOUCLE}</BOUCLE_decompte>
+    <div class="forumlink noprint"><a href="#URL_PAGE{forum,id_article=#ID_ARTICLE}">
+      <!-- [(#GET{nb}|=={0}|?{Pas encore de commentaire})] -->
+      [#GET{nb}&nbsp;(#GET{nb}|singulier_ou_pluriel{commentaire,commentaires})]
+    </a></div>
   </div>
 </BOUCLE_article>

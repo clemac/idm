@@ -55,6 +55,7 @@ html, body { padding: 0px; margin: 0px; font-family: Arial, sans-serif; text-ali
 #une div.introduction a { color: black; }
 #une div.unelogo { text-align: center; }
 #une img.spip_logos { float: none; }
+#une div.forumlink { clear: none; text-align: right; }
 
 #editolink { text-align: center; font-size: 180%; font-weight: bold; margin: .5ex 0em 2.5ex; font-variant: small-caps; }
 #editolink a:hover { text-decoration: underline; }
@@ -223,6 +224,7 @@ div.resume div.rubrique a:hover { color: #e20000; }
 div.resume div.introduction { margin-top: 1ex; font-size: small; font-style: italic; }
 div.resume div.introduction a { font-weight: normal; color: #777777; }
 div.resume img.spip_logos { padding: 0px 0px 0px 1em; background: white; float: right; }
+div.resume div.forumlink { clear: right; margin-top: 1ex; font-size: x-small; }
 
 #TB_window div.article { font-size: 130%; line-height: 1.3; text-align: justify; padding: 1ex 2em; }
 

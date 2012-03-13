@@ -84,6 +84,7 @@ html, body { padding : 0px; margin : 0px; font-family : Arial, sans-serif; text-
     }
     div.unelogo { text-align : center; }
     img.spip_logos { float : none; }
+    div.forumlink { clear : none; text-align : right; }
 }
 
 #editolink { text-align : center; font-size : 180%; font-weight : bold; margin : .5ex 0em 2.5ex; font-variant : small-caps;
@@ -274,6 +275,7 @@ div.resume { margin : 2ex 1em; background : white; padding : 1ex; border : 1px s
                                 a { font-weight : normal; color : #777777; }
                               }
              img.spip_logos { padding : 0px 0px 0px 1em; background : white; float : right; }
+             div.forumlink { clear : right; margin-top : 1ex; font-size : x-small; }
 }
 
 #TB_window div.article { font-size : 130%; line-height : 1.3; text-align : justify; padding : 1ex 2em; }
