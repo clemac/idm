@@ -49,6 +49,7 @@ we end up working in a team but so far:
   - [ ] Specific style for small screens (it used to work using
     =max-width=, but apparently that breaks older browsers ...)
   - [ ] Find a way to make login etc. possible
+- Fix SVG display on Internet Explorer
 *** Next
 - CC per article
 - Loop videos
