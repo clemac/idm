@@ -2,13 +2,26 @@
 
 function idm_boite_infos (&$flux) {
   if ($flux['args']['type'] == 'article') {
-    $id_article = $flux['args']['id'];
-    $statut = sql_getfetsel ('statut', 'spip_articles', "id_article = $id_article");
+    $id_article  = $flux['args']['id'];
+    $id_rubrique = sql_getfetsel ('id_rubrique', 'spip_articles', "id_article = $id_article");
+    $statut      = sql_getfetsel ('statut',      'spip_articles', "id_article = $id_article");
 
     if ($statut == "prop") {
       $message = "G&eacute;rer la relecture";
       $url = generer_url_public ("propose", array('id_article' => $id_article));
       $flux['data'] .= icone_horizontale ($message, $url, "relecteurs-24.png");
+    }
+
+    if (($id_rubrique == 6) && (($statut=="prepa")||($statut=="prop"))) {
+      $moi = $GLOBALS['auteur_session']['id_auteur'];
+      $validable = false;
+      if (sql_countsel ('spip_auteurs_liens', "objet = \"article\" AND id_objet = $id_article AND id_auteur = $moi") > 0) $validable = true;
+      if (sql_countsel ('spip_idm_teams',     "team = \"billets\" AND id_auteur = $moi") > 0) $validable = true;
+      if ($validable) {
+        $message = "Valider ce billet";
+        $url = generer_url_action ("idm_validate", "id_article=$id_article");
+        $flux['data'] .= icone_horizontale ($message, $url);
+      }
     }
   }
 
