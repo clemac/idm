@@ -14,9 +14,15 @@ function idm_boite_infos (&$flux) {
 
     if (($id_rubrique == 6) && (($statut=="prepa")||($statut=="prop"))) {
       $moi = $GLOBALS['auteur_session']['id_auteur'];
+      $billettiste = sql_getfetsel ('billettiste', 'spip_auteurs', "id_auteur = $moi");
       $validable = false;
-      if (sql_countsel ('spip_auteurs_liens', "objet = \"article\" AND id_objet = $id_article AND id_auteur = $moi") > 0) $validable = true;
-      if (sql_countsel ('spip_idm_teams',     "team = \"billets\" AND id_auteur = $moi") > 0) $validable = true;
+
+      if (($billettiste=="oui") &&
+          (sql_countsel ('spip_auteurs_liens', "objet = \"article\" AND id_objet = $id_article AND id_auteur = $moi") > 0))
+        $validable = true;
+      if (sql_countsel ('spip_idm_teams',     "team = \"billets\" AND id_auteur = $moi") > 0)
+        $validable = true;
+
       if ($validable) {
         $message = "Valider ce billet";
         $url = generer_url_action ("idm_validate", "id_article=$id_article");
