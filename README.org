@@ -3,20 +3,30 @@
 This documents the /squelette/ of the website at
 http://images.math.cnrs.fr/ and complements the documentation there
 (which is mainly addressed at article authors and editors --- this one
-is full of SPIP ang PHP and geek stuff).
+is full of SPIP and PHP and geek stuff).
 
 * Features added to SPIP
-*** Visible
-***** Refereeing support
-***** Billettistes
-***** Planning
-***** MathJax
-***** Video and sound
-*** In the backgroung
-***** E-mail notification of teams
-***** LaTeX export
+
+** Visible
+
+*** Refereeing support
+
+*** Billettistes
+
+*** Planning
+
+*** MathJax
+
+*** Video and sound
+
+** In the background
+
+*** E-mail notification of teams
+
+*** LaTeX export
 
 * Code management
+
 This is done in Git, and there are 4 branches to keep track of (plus
 temporary ones for experimental features, if needed). That can change if
 we end up working in a team but so far:
@@ -34,10 +44,14 @@ we end up working in a team but so far:
   merged into =idm= the same day
 
 * Issues
-*** Urgent
+
+** Urgent
+
 - Allow for several articles per referee [0%]
   - [ ] Do not free a referee completely when an article is published
-*** In progress
+
+** In progress
+
 - Podcasts
 - Merge =div.plan= and =div.lexique=
 - Overhaul of the search engine [33%]
@@ -50,7 +64,9 @@ we end up working in a team but so far:
     =max-width=, but apparently that breaks older browsers ...)
   - [ ] Find a way to make login etc. possible
 - Fix SVG display on Internet Explorer
-*** Next
+
+** Next
+
 - CC per article
 - Loop videos
 - Choose the member in the billets team differently
@@ -59,7 +75,9 @@ we end up working in a team but so far:
 - =squelettes/navigation.html=
   - should be re-done completely
 - re-install =forms_et_tables= (3.0, doesn't work yet)
-*** Backburner
+
+** Back-burner
+
 - Make teams into editorial objects?
 - Buttons to write to groups of people
 - Filter display by color, possibly merge with ?date=-1year
@@ -75,7 +93,9 @@ we end up working in a team but so far:
 - Use =#HTTP_HEADER= rather than php in =inc/head.php=
 - In =formulaires/relecteurs_vote.php=, the SQL update code should be
   elsewhere, the rest should go
-*** Geekeries and SPIPeries
+
+** Geekeries and SPIPeries
+
 - In a loop, =#_parent:TITRE=
 - Files which are patched versions of upstream (store as a patch for upgrades)
   - =.htaccess= (from =htaccess.txt=)
