@@ -216,6 +216,7 @@ div.notes a.spip_note { padding-left: 14px; background: url("/squelettes/img/up.
 
 div.resume { margin: 2ex 1em; background: white; padding: 1ex; border: 1px solid black; -moz-box-shadow: 5px 5px 15px black; -webkit-box-shadow: 5px 5px 15px black; box-shadow: 5px 5px 15px black; }
 div.resume h3.titre a:hover { color: #e20000; }
+div.resume h3.titre span.soustitre { font-size: small; font-style: italic; }
 div.resume h4.auteur { font-size: 90%; text-align: right; }
 div.resume h4.auteur a:hover { color: #e20000; }
 div.resume h4.auteur a { color: black; }
