@@ -231,6 +231,11 @@ div.forum-message-delauteur { background-color : #ffcccc; }
 
 div.forum-notes { border-top : 1px solid $red; margin-top : 2ex; padding-top : .5ex; }
 
+div.forumident { background-color : $grey; border-radius : 10px; margin : 2ex 2em 0; padding : 1ex 1em; font-size : small;
+                 fieldset { border : none; }
+                 legend { display : none; }
+}
+
 div.lexique {
     span.mot { font-size : 110%; font-weight : bold; }
     span.descriptif { font-style : italic; }

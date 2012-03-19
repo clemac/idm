@@ -191,6 +191,10 @@ div.forum-message-delauteur { background-color: #ffcccc; }
 
 div.forum-notes { border-top: 1px solid #e20000; margin-top: 2ex; padding-top: .5ex; }
 
+div.forumident { background-color: #bbbbbb; border-radius: 10px; margin: 2ex 2em 0; padding: 1ex 1em; font-size: small; }
+div.forumident fieldset { border: none; }
+div.forumident legend { display: none; }
+
 div.lexique span.mot { font-size: 110%; font-weight: bold; }
 div.lexique span.descriptif { font-style: italic; }
 div.lexique span.heading { display: block; text-align: center; font-size: x-large; font-weight: bold; border-bottom: 2px solid #e20000; margin: 1ex 0px; }
