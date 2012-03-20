@@ -26,7 +26,7 @@ function idm_boite_infos (&$flux) {
       if ($validable) {
         $message = "Valider ce billet";
         $url = generer_url_action ("idm_validate", "id_article=$id_article");
-        $flux['data'] .= icone_horizontale ($message, $url);
+        $flux['data'] .= icone_horizontale ($message, $url, "billet-24.png");
       }
     }
   }
