@@ -272,6 +272,8 @@ div.mjlabel_top { color: #e20000; text-align: right; margin-bottom: -4.5ex; font
 
 div.mjlabel_bot { color: #e20000; text-align: right; margin-top: -4.5ex; margin-bottom: 2ex; font-weight: bold; }
 
+div.spip_documents_center div.mejs-container { margin: 0px auto; }
+
 @media print { html, body { font-family: Times, serif; }
   .noprint, div.spip-admin-float { display: none; }
   div.page, div.courrier, div.billet { width: 100%; border: none; margin: 0; padding: 0; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; }

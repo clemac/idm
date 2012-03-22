@@ -2,9 +2,24 @@
 	"folders":
 	[
 		{
-			"path": ".",
-			"folder_exclude_patterns": [".dbdump", "applets", "files", "IMG", "local", "media", "pdf*", "tmp"],
-			"file_exclude_patterns": ["*.gif", "*.png", ".ok"]
+			"file_exclude_patterns":
+			[
+				"*.gif",
+				"*.png",
+				".ok"
+			],
+			"folder_exclude_patterns":
+			[
+				".dbdump",
+				"applets",
+				"files",
+				"IMG",
+				"local",
+				"media",
+				"pdf*",
+				"tmp"
+			],
+			"path": "/Users/vincent/IdM/site"
 		}
 	]
 }
