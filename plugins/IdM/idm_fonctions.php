@@ -237,7 +237,10 @@ END;
 }
 
 function idm_header_prive ($texte) {
-  return idm_insert_head ($texte);
+  $texte = idm_insert_head ($texte);
+  $texte .= "<script type=\"text/javascript\">\$(document).ready(function(){\$('video,audio').mediaelementplayer();});</script>\n";
+  $texte .= "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"" . find_in_path("mediaelement/mediaelementplayer.min.css") . "\"/>\n";
+  return $texte;
 }
 
 function idm_initiale ($mot) {
