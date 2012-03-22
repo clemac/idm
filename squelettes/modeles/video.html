@@ -1,22 +1,11 @@
-#SET{base_url,http://images.math.cnrs.fr/media/#ENV{id}}
+#SET{base_url,/media/#ENV{id}}
 #SET{base_url,http://vbeffara.disque.math.cnrs.fr/bulk/#ENV{id}}
-<?php
-  $url = "#GET{base_url}/data";
-  eval(file_get_contents($url));
-?>
+
+<?php eval(file_get_contents (find_in_path ("media/#ENV{id}/data"))); ?>
 
 <div class='spip_documents spip_documents_center[ spip_document_video(#ENV{id})]'>
-  <p id='dummy_video_#ENV{id}'><a href="#GET{base_url}/video.mp4"><img src="#GET{base_url}/video.jpg"></a>
-  <br /><em style="font-size : small">Cliquez sur l'image pour t&eacute;l&eacute;charger cette vid&eacute;o,<br /> ou installez Flash Player pour la voir dans cette page.</em></p>
+  <video width="<?php print $img_width; ?>" height="<?php print $img_height; ?>" poster="#GET{base_url}/video.jpg">
+    <source src="#GET{base_url}/video.mp4" type="video/mp4">
+  </video>
   <div class='spip_doc_titre'><?php print $img_title; ?></div>
 </div>
-<script type='text/javascript' src='#CHEMIN{javascript/swfobject.js}'></script>
-<script type='text/javascript'>
-  var s = new SWFObject('#CHEMIN{swf/player.swf}','player','<?php print $img_width; ?>','<?php print $img_height; ?>','9');
-  s.addParam('allowfullscreen',  'true');
-  s.addParam('allowscriptaccess','always');
-  s.addVariable('controlbar',    'over');
-  s.addVariable('file', '#GET{base_url}/video.mp4');
-  s.addVariable('image','#GET{base_url}/video.jpg');
-  s.write('dummy_video_#ENV{id}');
-</script>
