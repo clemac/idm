@@ -228,7 +228,7 @@ function idm_insert_head ($texte) {
         tex2jax: { inlineMath: [ ['$','$'], ["\\\\(","\\\\)"] ], processEnvironments: false },
         TeX: {
           extensions: ["AMSmath.js", "AMSsymbols.js"],
-          equationNumbers: { autoNumber: "all" },
+          equationNumbers: { autoNumber: "AMS" },
         }
       });
     </script>
