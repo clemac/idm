@@ -117,7 +117,7 @@ img.spip_logos { padding: 0px 0px 1ex 2em; }
 
 .spip_documents { text-align: center; }
 
-.spip_documents_center { width: 100%; margin: auto; }
+.spip_documents_center { width: 100%; margin: auto; clear: both; }
 
 .spip_documents_left { float: left; margin-right: 2em; margin-bottom: 1ex; }
 
